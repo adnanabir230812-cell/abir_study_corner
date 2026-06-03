@@ -38,7 +38,7 @@ app.get('/uploads/:filename', (req, res) => {
 app.use('/', routes);
 
 // Database Sync and Server Startup
-async function startServer() {
+async function initDb() {
   try {
     console.log('Connecting to SQLite database...');
     // Sync models - creates tables if they don't exist without dropping existing data
@@ -50,17 +50,21 @@ async function startServer() {
     if (!fs.existsSync(uploadsDir)) {
       fs.mkdirSync(uploadsDir);
     }
-
-    app.listen(PORT, () => {
-      console.log(`===============================================`);
-      console.log(`Abir's Study Corner is running at:`);
-      console.log(`👉 http://localhost:${PORT}`);
-      console.log(`===============================================`);
-    });
   } catch (error) {
-    console.error('Failed to start server:', error);
-    process.exit(1);
+    console.error('Failed to initialize database:', error);
   }
 }
 
-startServer();
+// Initialize database connection
+initDb();
+
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`===============================================`);
+    console.log(`Abir's Study Corner is running at:`);
+    console.log(`👉 http://localhost:${PORT}`);
+    console.log(`===============================================`);
+  });
+}
+
+module.exports = app;
