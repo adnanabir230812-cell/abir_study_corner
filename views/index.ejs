@@ -132,22 +132,20 @@
 
   </div>
 
-  <!-- Right Side (1/3 width): Exam Routine Styled as a Premium Progress Timeline -->
-  <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-3xl p-6 shadow-sm flex flex-col">
+  <!-- Right Side (1/3 width): Exam Routine Styled as a Premium Planner Cards -->
+  <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-3xl p-6 shadow-sm flex flex-col justify-between">
     <div class="flex items-center justify-between pb-4 border-b border-slate-100 dark:border-slate-700 mb-6">
       <h2 class="text-lg font-extrabold text-slate-850 dark:text-white flex items-center gap-2">
-        <span>📅</span> Exam Routine
+        <span class="flex items-center justify-center w-7 h-7 bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 rounded-lg text-sm">📅</span> 
+        Exam Routine
       </h2>
-      <span class="text-[10px] font-bold text-slate-400 px-2 py-0.5 bg-slate-50 dark:bg-slate-900 rounded-md">SCHEDULE</span>
+      <span class="text-[9px] font-bold text-indigo-600 dark:text-indigo-400 px-2.5 py-0.5 bg-indigo-50 dark:bg-indigo-950/50 rounded-full border border-indigo-100/30">Planner</span>
     </div>
 
     <% if (!exams || exams.length === 0) { %>
-      <p class="text-sm text-slate-400 dark:text-slate-500 text-center py-6 flex-1 flex items-center justify-center">No exams scheduled.</p>
+      <p class="text-sm text-slate-400 dark:text-slate-500 text-center py-12 flex-1 flex items-center justify-center">No exams scheduled.</p>
     <% } else { %>
-      <div class="relative pl-6 space-y-6 flex-1 flex flex-col justify-between">
-        <!-- Vertical timeline line -->
-        <div class="absolute left-2 top-2 bottom-2 w-0.5 bg-slate-100 dark:bg-slate-700"></div>
-
+      <div class="relative space-y-4 flex-1 flex flex-col justify-start">
         <% 
           const now = new Date();
           exams.forEach((exam, idx) => {
@@ -157,39 +155,60 @@
             const diffTime = examDateDay - todayDay;
             const diffDays = Math.round(diffTime / (1000 * 60 * 60 * 24));
             
+            // Format calendar date details
+            const monthShort = examDate.toLocaleDateString(undefined, { month: 'short' });
+            const dayNum = examDate.getDate();
+            
             let statusText = '';
             let statusClass = '';
-            let dotClass = '';
+            let cardBorderClass = 'border-slate-100 dark:border-slate-700/60 hover:border-slate-200 dark:hover:border-slate-600';
+            let calendarBgClass = 'bg-slate-50 dark:bg-slate-900 border-slate-100 dark:border-slate-750';
+            let calendarHeaderClass = 'bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-350';
             
             if (diffDays < 0) {
               statusText = 'Completed';
-              statusClass = 'bg-slate-100 text-slate-500 dark:bg-slate-700/50 dark:text-slate-400';
-              dotClass = 'bg-slate-300 dark:bg-slate-600 ring-4 ring-slate-100 dark:ring-slate-800/40';
+              statusClass = 'bg-slate-100 text-slate-400 dark:bg-slate-700/50 dark:text-slate-500';
+              cardBorderClass = 'border-slate-100 dark:border-slate-700/40 opacity-60';
+              calendarBgClass = 'bg-slate-50/50 dark:bg-slate-900/50 border-slate-100 dark:border-slate-800';
+              calendarHeaderClass = 'bg-slate-100 dark:bg-slate-850 text-slate-400 dark:text-slate-500';
             } else if (diffDays === 0) {
               statusText = 'TODAY';
-              statusClass = 'bg-rose-100 text-rose-700 dark:bg-rose-950/40 dark:text-rose-450 animate-pulse font-extrabold';
-              dotClass = 'bg-rose-500 ring-4 ring-rose-100 dark:ring-rose-950/50 animate-ping';
+              statusClass = 'bg-rose-500/10 text-rose-600 dark:bg-rose-500/20 dark:text-rose-400 border border-rose-500/20 animate-pulse font-extrabold';
+              cardBorderClass = 'border-rose-400/40 dark:border-rose-500/30 bg-rose-500/[0.02] dark:bg-rose-500/[0.01] hover:border-rose-400/60 shadow-sm shadow-rose-100 dark:shadow-none';
+              calendarBgClass = 'bg-rose-50 dark:bg-slate-900 border-rose-100 dark:border-slate-700';
+              calendarHeaderClass = 'bg-rose-600 text-white';
             } else {
               statusText = `${diffDays} Days`;
-              statusClass = 'bg-indigo-50 text-indigo-600 dark:bg-indigo-950/40 dark:text-indigo-400';
-              dotClass = 'bg-indigo-600 dark:bg-indigo-400 ring-4 ring-indigo-50 dark:ring-indigo-950/30';
+              statusClass = 'bg-indigo-50 text-indigo-600 dark:bg-indigo-950/60 dark:text-indigo-400 border border-indigo-100/30';
+              cardBorderClass = 'border-slate-200/60 dark:border-slate-700 hover:border-indigo-200/50 dark:hover:border-slate-600 hover:shadow-sm';
+              calendarBgClass = 'bg-indigo-50/40 dark:bg-slate-900 border-indigo-100/20 dark:border-slate-700';
+              calendarHeaderClass = 'bg-indigo-600 dark:bg-indigo-500 text-white';
             }
         %>
-          <div class="relative flex items-start justify-between gap-4">
-            <!-- Timeline dot -->
-            <div class="absolute -left-[22px] top-1 h-3.5 w-3.5 rounded-full z-15 <%= dotClass %>"></div>
-            
-            <div class="flex-1 min-w-0">
-              <h3 class="font-bold text-sm leading-tight truncate <%= diffDays < 0 ? 'text-slate-400 dark:text-slate-500 line-through' : 'text-slate-800 dark:text-slate-200' %>">
-                <%= exam.subjectName %>
-              </h3>
-              <p class="text-[10px] text-slate-400 dark:text-slate-500 mt-1 font-medium">
-                <%= examDate.toLocaleDateString(undefined, { month: 'short', day: 'numeric' }) %> &bull; 
-                <%= examDate.toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit' }) %>
-              </p>
+          <div class="flex items-center gap-4 p-3.5 border rounded-2xl transition-all duration-300 group <%= cardBorderClass %>">
+            <!-- Calendar tear-away sheet icon -->
+            <div class="flex-shrink-0 flex flex-col items-center justify-center w-12 h-12 rounded-xl overflow-hidden shadow-sm border <%= calendarBgClass %>">
+              <span class="text-[8px] font-black uppercase tracking-wider w-full text-center py-0.5 text-center leading-none <%= calendarHeaderClass %>"><%= monthShort %></span>
+              <span class="text-lg font-black text-slate-850 dark:text-slate-100 leading-none mt-1.5"><%= dayNum %></span>
             </div>
             
-            <span class="text-[9px] font-extrabold px-2 py-0.5 rounded-md tracking-wider uppercase <%= statusClass %> self-start">
+            <!-- Exam details -->
+            <div class="flex-1 min-w-0">
+              <h3 class="font-extrabold text-sm leading-snug truncate <%= diffDays < 0 ? 'text-slate-400 dark:text-slate-500 line-through' : 'text-slate-800 dark:text-slate-200 group-hover:text-indigo-600 dark:group-hover:text-indigo-400' %> transition-colors">
+                <%= exam.subjectName %>
+              </h3>
+              <div class="flex items-center gap-1.5 mt-1">
+                <svg class="h-3 w-3 text-slate-400 dark:text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="text-[10px] text-slate-400 dark:text-slate-500 font-bold">
+                  <%= examDate.toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit' }) %>
+                </span>
+              </div>
+            </div>
+            
+            <!-- Status Badge -->
+            <span class="text-[9px] font-black px-2.5 py-0.5 rounded-full tracking-wider uppercase <%= statusClass %> select-none">
               <%= statusText %>
             </span>
           </div>
