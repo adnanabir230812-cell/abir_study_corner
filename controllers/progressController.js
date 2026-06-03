@@ -1,47 +1,46 @@
-const { Question, Topic, Progress, Section } = require('../models');
+const { Question, Topic } = require('../models');
 
 exports.updateProgress = async (req, res) => {
   try {
     const { questionId } = req.params;
     const { solved } = req.body;
+    const qId = parseInt(questionId, 10);
 
-    const question = await Question.findByPk(questionId, {
-      include: {
-        model: Topic,
-        include: [Section]
-      }
-    });
-
+    const question = await Question.findByPk(qId);
     if (!question) {
       return res.status(404).json({ error: 'Question not found' });
     }
 
     const sectionId = question.Topic.sectionId;
 
-    // Find or create Progress row
-    let progressRow = await Progress.findOne({ where: { questionId } });
-    if (!progressRow) {
-      progressRow = await Progress.create({
-        questionId,
-        solved: solved || false,
-        solvedDate: solved ? new Date() : null
-      });
-    } else {
-      progressRow.solved = solved || false;
-      progressRow.solvedDate = solved ? new Date() : null;
-      await progressRow.save();
+    // Retrieve current solved list from cookie
+    let solvedIds = [];
+    if (req.headers.cookie) {
+      const match = req.headers.cookie.match(/solved_questions=([^;]+)/);
+      if (match) {
+        try {
+          solvedIds = JSON.parse(decodeURIComponent(match[1]));
+        } catch (e) {}
+      }
     }
 
-    // Recalculate section-level progress metrics
-    const topics = await Topic.findAll({
-      where: { sectionId },
-      include: [
-        {
-          model: Question,
-          include: [Progress]
-        }
-      ]
+    // Update list
+    if (solved) {
+      if (!solvedIds.includes(qId)) {
+        solvedIds.push(qId);
+      }
+    } else {
+      solvedIds = solvedIds.filter(id => id !== qId);
+    }
+
+    // Set updated cookie for 1 year
+    res.cookie('solved_questions', JSON.stringify(solvedIds), {
+      maxAge: 365 * 24 * 60 * 60 * 1000,
+      path: '/'
     });
+
+    // Recalculate section-level progress metrics
+    const topics = await Topic.findAll({ where: { sectionId } });
 
     let totalCount = 0;
     let solvedCount = 0;
@@ -49,7 +48,7 @@ exports.updateProgress = async (req, res) => {
     topics.forEach(topic => {
       topic.Questions.forEach(q => {
         totalCount++;
-        if (q.Progress && q.Progress.solved) {
+        if (solvedIds.includes(q.id)) {
           solvedCount++;
         }
       });

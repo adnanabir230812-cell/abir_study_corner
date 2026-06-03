@@ -57,6 +57,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // Sync localStorage and Cookies for dual redundancy
+  const getCookie = (name) => {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+    return '';
+  };
+  
+  const setCookie = (name, value, days) => {
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = `${name}=${value}; expires=${date.toUTCString()}; path=/`;
+  };
+
+  const solvedCookie = getCookie('solved_questions');
+  const solvedLocal = localStorage.getItem('solved_questions');
+
+  if (!solvedCookie && solvedLocal) {
+    setCookie('solved_questions', encodeURIComponent(solvedLocal), 365);
+    window.location.reload();
+  } else if (solvedCookie && !solvedLocal) {
+    try {
+      const parsed = JSON.parse(decodeURIComponent(solvedCookie));
+      localStorage.setItem('solved_questions', JSON.stringify(parsed));
+    } catch(e) {}
+  }
+
   // 2. AJAX Progress Checkboxes
   const solvedCheckboxes = document.querySelectorAll('.solved-checkbox');
   solvedCheckboxes.forEach(checkbox => {
@@ -64,6 +91,16 @@ document.addEventListener('DOMContentLoaded', () => {
       const questionId = e.target.dataset.questionId;
       const sectionId = e.target.dataset.sectionId;
       const solved = e.target.checked;
+      const qIdInt = parseInt(questionId, 10);
+
+      // Optimistically update localStorage
+      let solvedList = JSON.parse(localStorage.getItem('solved_questions') || '[]');
+      if (solved) {
+        if (!solvedList.includes(qIdInt)) solvedList.push(qIdInt);
+      } else {
+        solvedList = solvedList.filter(id => id !== qIdInt);
+      }
+      localStorage.setItem('solved_questions', JSON.stringify(solvedList));
 
       try {
         const response = await fetch(`/progress/${questionId}`, {
@@ -89,8 +126,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       } catch (err) {
         console.error(err);
-        // revert checkbox state on error
+        // revert checkbox & localStorage state on error
         e.target.checked = !solved;
+        let revertedList = JSON.parse(localStorage.getItem('solved_questions') || '[]');
+        if (solved) {
+          revertedList = revertedList.filter(id => id !== qIdInt);
+        } else {
+          if (!revertedList.includes(qIdInt)) revertedList.push(qIdInt);
+        }
+        localStorage.setItem('solved_questions', JSON.stringify(revertedList));
         alert('Could not update progress. Please check your connection.');
       }
     });

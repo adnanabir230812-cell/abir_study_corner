@@ -1,6 +1,34 @@
 const { Course, Section, Topic, Question, Progress, Note, Pdf, Exam } = require('../models');
-const { Op } = require('sequelize');
 const { marked } = require('marked');
+
+// Helper to parse solved question IDs from cookie
+const getSolvedFromCookie = (req) => {
+  if (!req.headers.cookie) return [];
+  const match = req.headers.cookie.match(/solved_questions=([^;]+)/);
+  if (!match) return [];
+  try {
+    return JSON.parse(decodeURIComponent(match[1]));
+  } catch (e) {
+    return [];
+  }
+};
+
+// Helper to inject progress states dynamically into course questions
+const injectProgress = (courses, solvedIds) => {
+  courses.forEach(c => {
+    c.Sections.forEach(s => {
+      s.Topics.forEach(t => {
+        t.Questions.forEach(q => {
+          if (solvedIds.includes(q.id)) {
+            q.Progress = { solved: true };
+          } else {
+            q.Progress = null;
+          }
+        });
+      });
+    });
+  });
+};
 
 // Curated Islamic motivational quotes in Bengali (selected dynamically by date)
 const islamicQuotes = [
@@ -31,29 +59,14 @@ marked.setOptions({
 
 exports.getDashboard = async (req, res) => {
   try {
-    const courses = await Course.findAll({
-      include: [
-        {
-          model: Section,
-          include: [
-            {
-              model: Topic,
-              include: [
-                {
-                  model: Question,
-                  include: [Progress]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    });
+    const courses = await Course.findAll();
 
     // Fetch all scheduled exams ordered by date
-    const exams = await Exam.findAll({
-      order: [['examDate', 'ASC']]
-    });
+    const exams = await Exam.findAll();
+
+    // Inject solved question states dynamically from cookies
+    const solvedIds = getSolvedFromCookie(req);
+    injectProgress(courses, solvedIds);
 
     let totalCourses = courses.length;
     let totalTopics = 0;
@@ -128,28 +141,15 @@ exports.getDashboard = async (req, res) => {
 
 exports.getCourse = async (req, res) => {
   try {
-    const course = await Course.findByPk(req.params.id, {
-      include: [
-        {
-          model: Section,
-          include: [
-            {
-              model: Topic,
-              include: [
-                {
-                  model: Question,
-                  include: [Progress]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    });
+    const course = await Course.findByPk(req.params.id);
 
     if (!course) {
       return res.status(404).send('Course not found');
     }
+
+    // Inject solved question states dynamically from cookies
+    const solvedIds = getSolvedFromCookie(req);
+    injectProgress([course], solvedIds);
 
     // Process section statistics
     const sections = course.Sections.map(section => {
@@ -222,23 +222,23 @@ exports.getQA = async (req, res) => {
   try {
     const { sec } = req.query;
     const course = await Course.findByPk(req.params.id);
-    const section = await Section.findByPk(sec, {
-      include: [
-        {
-          model: Topic,
-          include: [
-            {
-              model: Question,
-              include: [Progress]
-            }
-          ]
-        }
-      ]
-    });
+    const section = await Section.findByPk(sec);
 
     if (!course || !section) {
       return res.status(404).send('Course or Section not found');
     }
+
+    // Inject solved question states dynamically from cookies
+    const solvedIds = getSolvedFromCookie(req);
+    section.Topics.forEach(t => {
+      t.Questions.forEach(q => {
+        if (solvedIds.includes(q.id)) {
+          q.Progress = { solved: true };
+        } else {
+          q.Progress = null;
+        }
+      });
+    });
 
     // Process progress and parse answers
     let totalCount = 0;
@@ -321,33 +321,41 @@ exports.getNotes = async (req, res) => {
 
 exports.getSearch = async (req, res) => {
   try {
-    const query = req.query.q || '';
+    const rawQuery = req.query.q || '';
+    const query = rawQuery.trim().toLowerCase();
     if (!query) {
-      return res.render('search', { title: 'Search', query, results: { courses: [], topics: [], questions: [] } });
+      return res.render('search', { title: 'Search', query: rawQuery, results: { courses: [], topics: [], questions: [] } });
     }
 
-    const courses = await Course.findAll({
-      where: { name: { [Op.like]: `%${query}%` } }
-    });
+    const allCourses = await Course.findAll();
+    const courses = allCourses.filter(c => c.name.toLowerCase().includes(query));
 
-    const topics = await Topic.findAll({
-      where: { name: { [Op.like]: `%${query}%` } },
-      include: [{ model: Section, include: [Course] }]
-    });
+    const topics = [];
+    const questions = [];
 
-    const questions = await Question.findAll({
-      where: {
-        [Op.or]: [
-          { questionText: { [Op.like]: `%${query}%` } },
-          { answerText: { [Op.like]: `%${query}%` } }
-        ]
-      },
-      include: [{ model: Topic, include: [{ model: Section, include: [Course] }] }]
+    allCourses.forEach(c => {
+      c.Sections.forEach(s => {
+        s.Topics.forEach(t => {
+          if (t.name.toLowerCase().includes(query)) {
+            const tCopy = JSON.parse(JSON.stringify(t));
+            tCopy.Section = { ...s, Course: c };
+            topics.push(tCopy);
+          }
+
+          t.Questions.forEach(q => {
+            if (q.questionText.toLowerCase().includes(query) || q.answerText.toLowerCase().includes(query)) {
+              const qCopy = JSON.parse(JSON.stringify(q));
+              qCopy.Topic = { ...t, Section: { ...s, Course: c } };
+              questions.push(qCopy);
+            }
+          });
+        });
+      });
     });
 
     res.render('search', {
       title: 'Search Results',
-      query,
+      query: rawQuery,
       results: { courses, topics, questions }
     });
   } catch (err) {
@@ -358,32 +366,37 @@ exports.getSearch = async (req, res) => {
 
 exports.apiSearch = async (req, res) => {
   try {
-    const query = req.query.q || '';
+    const rawQuery = req.query.q || '';
+    const query = rawQuery.trim().toLowerCase();
     if (!query) {
       return res.json({ courses: [], topics: [], questions: [] });
     }
 
-    const courses = await Course.findAll({
-      where: { name: { [Op.like]: `%${query}%` } },
-      limit: 5
-    });
+    const allCourses = await Course.findAll();
+    const courses = allCourses.filter(c => c.name.toLowerCase().includes(query)).slice(0, 5);
 
-    const topics = await Topic.findAll({
-      where: { name: { [Op.like]: `%${query}%` } },
-      include: [{ model: Section, include: [Course] }],
-      limit: 5
-    });
+    const topics = [];
+    const questions = [];
 
-    const questions = await Question.findAll({
-      where: {
-        [Op.or]: [
-          { questionText: { [Op.like]: `%${query}%` } },
-          { answerText: { [Op.like]: `%${query}%` } }
-        ]
-      },
-      include: [{ model: Topic, include: [{ model: Section, include: [Course] }] }],
-      limit: 5
-    });
+    for (const c of allCourses) {
+      for (const s of c.Sections) {
+        for (const t of s.Topics) {
+          if (t.name.toLowerCase().includes(query) && topics.length < 5) {
+            const tCopy = JSON.parse(JSON.stringify(t));
+            tCopy.Section = { ...s, Course: c };
+            topics.push(tCopy);
+          }
+
+          for (const q of t.Questions) {
+            if ((q.questionText.toLowerCase().includes(query) || q.answerText.toLowerCase().includes(query)) && questions.length < 5) {
+              const qCopy = JSON.parse(JSON.stringify(q));
+              qCopy.Topic = { ...t, Section: { ...s, Course: c } };
+              questions.push(qCopy);
+            }
+          }
+        }
+      }
+    }
 
     res.json({ courses, topics, questions });
   } catch (err) {
