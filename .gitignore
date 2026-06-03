@@ -1,0 +1,25 @@
+# Dependency directories
+node_modules/
+
+# Environment variables
+.env
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Test PDFs and temporary output PDFs
+*.pdf
+test_section1.pdf
+test_section2.pdf
+test_ext.pdf
+C:\Users\Lenovo\.gemini\antigravity\scratch\toppr\test_section1.pdf
+C:\Users\Lenovo\.gemini\antigravity\scratch\toppr\test_section2.pdf
+C:\Users\Lenovo\.gemini\antigravity\scratch\toppr\test_ext.pdf
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+*.log

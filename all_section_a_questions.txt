@@ -1,0 +1,657 @@
+=====================================
+ID: 97 | Question: [✦ Repeated ×4] What is parasitism? What is pathogenicity and parasitism?
+=====================================
+## Answer
+
+Parasite: An organism that lives on and derives food from another organism.
+Parasitism: The relationship between a parasite and its host is called parasitism.
+Pathogen: An agent that can incite a disease.
+Pathogenicity: It is the ability of the pathogen to cause disease.
+
+=====================================
+ID: 98 | Question: [✦ Repeated ×3] "Symbiotic relationship is a parasitism" — explain with example
+=====================================
+## Answer
+
+Symbiotic relationship refers to any close and long-term interaction between two organisms, including mutualism, commensalism, and parasitism.
+Parasitism is a specific type of symbiosis where one organism, the parasite, benefits by exploiting the host for nutrients, water, or shelter, causing harm to the host.
+Pathogen like fungi (Puccinia graminis) is a plant parasite. These pathogens attach to, penetrate, infect, and invade host tissues, leading to symptoms such as necrosis, wilting, and reduced yield.
+While all parasitism is symbiotic, not all symbiosis is parasitic — mutualism and commensalism do not harm the host. For example, mycorrhizae and root nodule bacteria show mutualism — they are symbiotic but not parasitic.
+
+=====================================
+ID: 99 | Question: "All pathogens are parasites but all parasites are not pathogens" — explain
+=====================================
+## Answer
+
+A parasite is not necessarily a pathogen and a pathogen is not necessarily a parasite.
+Some organisms are parasites but do not cause disease — e.g., mycorrhizae or root nodule bacteria derive nutrients from the host but do not harm it (mutualism).
+Some pathogens can cause disease without being true parasites — they may act through toxins without living on/in the host.
+So the relationship between parasitism and pathogenicity is not absolute.
+
+=====================================
+ID: 100 | Question: "Most but not all pathogens are parasites, most but not all parasites are pathogens" — explain
+=====================================
+## Answer
+
+Parasite: An organism that lives on and derives food from another organism.
+Pathogen: An agent that can incite a disease.
+Most pathogens are parasites because they live in/on the host and derive nutrition while causing disease (e.g., Puccinia graminis causing rust). However, not all pathogens are parasites — some cause disease through toxins without direct parasitic relationship.
+Similarly, most parasites cause some harm (making them pathogens), but some parasites like mycorrhizal fungi and Rhizobium in root nodules are beneficial — they are parasites but not pathogens.
+
+=====================================
+ID: 101 | Question: Write a short note on necrotrophic parasite
+=====================================
+## Answer
+
+Necrotrophs (Facultative parasites) — Biochemical and morphological features:
+Host cell rapidly killed
+Toxins and cytolytic enzymes produced
+No special parasitic structures formed
+Host penetration via wounds or natural openings
+Ecological features:
+Wide host range
+Able to grow saprophytically away from the host
+Attack juvenile, debilitated or senescing tissues
+
+=====================================
+ID: 102 | Question: Compare between biotrophs and necrotrophs
+=====================================
+## Answer
+
+### Comparison: Biotrophs vs. Necrotrophs
+
+| Feature | Biotrophs | Necrotrophs |
+| :--- | :--- | :--- |
+| **Host cell killing** | Not rapidly killed | Rapidly killed |
+| **Toxins & enzymes** | Few or none produced | Toxins and cytolytic enzymes produced |
+| **Special structures** | Haustoria formed | No special structures |
+| **Host range** | Narrow | Wide |
+| **Growth away from host** | Unable | Able (saprophytic) |
+| **Penetration** | Direct or natural openings | Wounds or natural openings |
+| **Host attacked** | Healthy hosts at all stages | Juvenile, debilitated or senescing tissues |
+
+=====================================
+ID: 103 | Question: [✦ Repeated ×2] What is meant by pathogenesis? Diagrammatically represent the disease cycle
+=====================================
+## Answer
+
+Pathogenesis: The chain of events involved in disease development, including the stages of development of the pathogen and the effect of disease on the host is called disease cycle or pathogenesis.
+Stages in the development of disease:
+Inoculation
+Pre-penetration Phenomena
+Penetration
+Infection
+Invasion
+Growth and Reproduction of the Pathogen
+Dissemination of the Pathogen
+Over-wintering / over-summering of the Pathogen
+Diagram (Sequential Cycle):
+Inoculum → Pre-penetration → Penetration → Infection → Invasion → Reproduction → Dissemination → Overwintering → [back to Inoculum]
+
+=====================================
+ID: 104 | Question: What is meant by disease cycle, parasitism and obligate parasite?
+=====================================
+## Answer
+
+Disease cycle: The chain of events involved in disease development is called a disease cycle or pathogenesis.
+Parasitism: The relationship between a parasite and its host is parasitism.
+Obligate parasites (Biotrophs): Pathogens that can only live on a living host and cannot grow away from it. They have a narrow host range, attack healthy hosts at all stages of development, form special parasitic structures such as haustoria, and produce few or no toxins.
+
+=====================================
+ID: 105 | Question: What do you mean by pathogenesis? If penetration phase does not occur in disease cycle then what will happen?
+=====================================
+## Answer
+
+Pathogenesis: The chain of events involved in disease development is called pathogenesis or disease cycle.
+If penetration does not occur:
+No establishment of pathogen in host tissue
+Disruption of disease cycle
+Limited pathogen spread
+No infection or disease development
+Pathogen survival is jeopardized
+The host remains unaffected and the disease cycle is effectively interrupted.
+
+=====================================
+ID: 106 | Question: Which are inocula? Why are all propagules not inocula?
+=====================================
+## Answer
+
+Inoculum: The pathogen or its parts that can cause infection; that portion brought into contact with the host.
+Inocula include:
+Fungi: spores/conidia, mycelium, sclerotia
+Bacteria and viruses: individual cells/particles
+Nematodes: the organism itself or its eggs
+Parasitic flowering plants: seeds
+Why all propagules are NOT inocula: Not all propagules land on a susceptible host or reach a suitable environment. When displaced pathogen does not get any medium for survival (e.g., falls on a stone), it is called ineffective dispersal — so it is a propagule but not an effective inoculum. Only when displacement occurs on a susceptible host under suitable environmental conditions does the propagule act as true inoculum (effective dispersal).
+
+=====================================
+ID: 107 | Question: Differentiate between infection and invasion with examples
+=====================================
+## Answer
+
+### Comparison: Infection vs. Invasion
+
+| Feature | Infection | Invasion |
+| :--- | :--- | :--- |
+| **Definition** | Establishment of contact by the pathogen with the host plant. | Spread of the pathogen into the host after infection. |
+| **Process** | Pathogen grows/multiplies, colonizes host. | Pathogen moves through host tissues. |
+| **Result** | Appearance of symptoms (or latent infection). | Systemic or local spread. |
+| **Example** | *Phytophthora infestans* infects potato | *Apple scab* (*Venturia inaequalis*) grows between cuticle and epidermis. |
+
+=====================================
+ID: 108 | Question: Illustrate the direct penetration process of fungus into host cell
+=====================================
+## Answer
+
+Direct penetration through intact plant surfaces (fungi, nematodes, parasitic plants):
+The penetration is through mechanical force and softening of the cell walls by an enzyme.
+Most fungi form an appressorium at the end of the germ tube.
+A penetration peg emerges from the flat surface of the appressorium and pierces the cuticle and cell wall.
+The peg grows into fine hyphae then reaches normal diameter once inside the cell.
+
+=====================================
+ID: 109 | Question: [✦ Repeated ×2] Explain the mechanism of using physical weapons by fungi and nematodes to penetrate directly into the host surface
+=====================================
+## Answer
+
+Fungi: Form an appressorium at the end of the germ tube. A penetration peg emerges from the flat surface and pierces the cuticle and cell wall using both mechanical force and cell-wall-softening enzymes. The peg grows into fine hyphae inside the cell.
+Nematodes: Penetrate using their stylet (a needle-like structure). Insert the stylet or the entire nematode enters the plant tissue. They are attracted to the root by CO₂ and some amino acids associated with root growth.
+
+=====================================
+ID: 110 | Question: Distinguish among pathotoxin, vivotoxin and phytotoxin
+=====================================
+## Answer
+
+### Comparison: Vivotoxin, Pathotoxin, and Phytotoxin
+
+| Feature | Vivotoxin | Pathotoxin | Phytotoxin |
+| :--- | :--- | :--- | :--- |
+| **Definition** | Substance produced in infected host by pathogen/host that functions in disease but is not the initial inciting agent. | Chemical of biological origin; host-specific toxin producing almost all disease symptoms even in the absence of the causal organism. | Poisonous substances synthesized by plants or plant pathogens through biochemical reactions. |
+| **Host Specificity** | Non-specific | Host specific | Defensive agent / Non-specific |
+| **Role in Disease** | Partial role | Causal/primary role | Defensive/protective role |
+| **Examples** | Fusaric acid, Pyricularin | T-toxin, Victorin, HC-toxin, Wildfire toxin | Against pests, insects, environmental stress |
+
+=====================================
+ID: 111 | Question: [✦ Repeated ×3] Note down the target site of toxins in plant cells / Role of toxins in disease development
+=====================================
+## Answer
+
+Toxins are injurious substances secreted by micro-organism host complex that act on living host protoplast to affect disease symptoms. Mechanisms of phytotoxicity:
+1. Changes in Cell Wall Permeability:
+Toxins alter permeability of plasma membrane
+Cause loss of water and electrolyte leakage (K⁺, Na⁺, Ca²⁺, Cl⁻, PO₄³⁻, Mg²⁺)
+Allow unrestricted entry of substances including the toxin itself
+2. Disruption of Normal Metabolic Processes:
+Toxins affect the cellular transport system of H⁺/K⁺ exchange in cell membrane
+Disrupt potassium-regulated enzyme activity and photosynthesis/ATP production
+3. Malfunctioning of Enzyme System:
+Tabtoxin: inactivates glutamine synthetase → ammonia accumulates → destroys thylakoid membranes → chlorosis and necrosis
+Phaseolotoxin: inactivates ornithine carbamoyl transferase → accumulates ornithine, depletes arginine
+Tentoxin: inhibits polyphenol oxidases
+4. Interference with Growth Regulatory System:
+Cause hormonal imbalance → overgrowths, rosetting, excessive root branching, leaf epinasty, defoliation
+5. Inhibit Root Growth:
+Fusarium moniliforme produces a thermostable toxin causing browning of roots and restricts development
+
+=====================================
+ID: 112 | Question: [✦ Repeated ×2] Write down the toxin hypothesis in disease development / State the toxin hypothesis with an example
+=====================================
+## Answer
+
+Toxin Hypothesis (Vivotoxin concept — Diamond & Waggoner, 1953):
+A vivotoxin is defined as a substance produced in the infected host by the pathogen and/or its host, which functions in the production of disease but is not itself the initial inciting agent of disease.
+Criteria:
+Reproducible separation of the toxin from the sick plant
+Purification or chemical characterization of the toxin
+Induction of at least a portion of the disease symptoms by placing the toxin in a healthy plant
+Example: Fusaric acid and pyricularin are typical vivotoxins — produced inside the infected host and contribute to disease symptoms, but they are not the initial cause of infection.
+
+=====================================
+ID: 113 | Question: State the criteria of vivotoxin
+=====================================
+## Answer
+
+Criteria of vivotoxin (same as toxin hypothesis criteria):
+Reproducible separation of the toxin from the sick plant
+Purification or chemical characterization
+Induction of at least a portion of the disease symptoms by placing the toxin in a healthy plant
+Typical examples: Fusaric acid and pyricularin
+
+=====================================
+ID: 114 | Question: [✦ Repeated ×2] "Pathogens interfere with the normal mechanism of photosynthesis of a plant" — explain
+=====================================
+## Answer
+
+Damage to leaf tissues — reduced photosynthetic area; e.g., blights and leaf spots
+Destruction of chloroplasts — some diseases destroy chloroplasts and cause their disintegration
+Toxin production — pathogens produce toxins such as tentoxin and tabtoxin which inhibit enzymes involved in photosynthesis
+Vascular pathogens — reduce chlorophyll content; photosynthesis stops before wilting occurs
+Viruses and mollicutes — cause chlorosis and stunting; photosynthesis is greatly reduced
+
+=====================================
+ID: 115 | Question: How does pathogen interfere with the translocation of organic nutrient through phloem?
+=====================================
+## Answer
+
+Pathogens may interfere with movement of nutrients from leaf cells to phloem.
+Rusts and mildews cause accumulation of photosynthetic products in areas invaded by pathogens.
+Infected areas are characterized by reduced photosynthesis and increased respiration.
+Canker causes pathogens to attack the stem and remain confined there.
+Pathogen may attack and destroy phloem elements — interfering with downward translocation of nutrients.
+
+=====================================
+ID: 116 | Question: How does nutrient imbalance influence plant predisposition?
+=====================================
+## Answer
+
+Disease caused by biotrophs are favored by good nutrient status but disease caused by necrotrophs are favored by poor soil status.
+Higher nitrogenous fertilizer application leads to dense canopy, predisposing plants to disease.
+Balanced fertilizer application is treated as a control measure to kill or inhibit pathogens in the field.
+Vascular pathogens affect movement of nutrients from soil to leaves — rest of plant is deprived of nutrients, making it predisposed to further disease.
+
+=====================================
+ID: 117 | Question: [✦ Repeated ×2] "Dissemination is an important phenomenon of disease spread" — explain / Importance and ways of plant pathogen dissemination
+=====================================
+## Answer
+
+Definition: Displacement of a plant pathogen from its place of production/origin to a suitable place where it can grow/establish; transport of spores or infectious bodies from one host to another resulting in spread of disease.
+Importance of Dissemination:
+Necessary for food and nutrition of pathogen
+Ensures survival of pathogen
+Allows pathogen to complete its life cycle
+Enables reproduction and continuation of the species
+Ways/Agents of Dissemination:
+Wind, Water, Soil, Seed
+Animal, Human, Machinery, Transport system
+Insects and other vectors
+Phanerogamic parasites (e.g., Dodder/Cuscuta)
+
+=====================================
+ID: 118 | Question: Describe the process of plant disease dissemination by air
+=====================================
+## Answer
+
+Characteristics of wind-disseminated fungi:
+Numerous spores, discharged with sufficient force
+Light in weight, smaller size, thick outer wall, less affinity to water
+Short distance dissemination:
+Sporangia of downy mildew fungi, conidia of powdery mildew fungi, and basidiospores of rust fungi
+Long distance dissemination:
+Uredospores of rust fungi, Chlamydospores of smut fungi and conidia of Alternaria, Helminthosporium and Pyricularia
+Examples:
+P. graminis tritici — Horizontal: 600 km, Altitude: 500 m above infected field
+P. infestans — 200 m to 600 km horizontal
+Mold spores (Aspergillus, Penicillium, Cladosporium) — altitude up to 2000 m
+Factors affecting wind dissemination:
+Periodicity (diurnal/nocturnal)
+Air current (steady-horizontal, breeze and turbulence-vertical, irregular-multidimensional)
+
+=====================================
+ID: 119 | Question: [✦ Repeated ×2] Define epidemic and endemic / Define endemic, pandemic and sporadic. Write down the elements of epidemic
+=====================================
+## Answer
+
+Epidemic (Epiphytotic): A sudden outbreak of disease periodically over a widespread area in devastatingly severe form causing severe losses. E.g., wheat stem rust (Puccinia graminis tritici), late blight of potato — Irish famine 1845–1846, rice blast — Bengal famine 1943.
+Endemic (Enphytotic): When a disease is more or less constantly occurring year after year in a moderate to severe form in a locality. E.g., wart disease of potato (Synchytrium endobioticum) in Darjeeling; citrus canker in Asia.
+Pandemic: When an epidemic spreads over continents/subcontinents and involves mass mortality. E.g., black stem rust of wheat in India during 1947.
+Sporadic: Diseases occurring at irregular intervals over limited areas. E.g., Fusarium wilt of cotton, loose smut of wheat.
+Elements of Epidemic (Disease Triangle + Time + Humans):
+Susceptible host
+Virulent pathogen
+Favorable environment
+Time
+Human influence — These interactions are described by the disease pyramid
+
+=====================================
+ID: 120 | Question: In epidemiological study disease development differs by monocyclic and polycyclic model — explain with example
+=====================================
+## Answer
+
+Monocyclic (simple interest model):
+Pathogens complete one disease cycle per year
+Primary inoculum is the only inoculum for the entire season — no secondary inoculum/secondary infection
+Disease progress represented as saturation curve
+Equation: X = Q·R·t (Vanderplank)
+Examples: Loose smut of wheat, Blackleg of potato (Erwinia caratovora), Verticillium wilt
+Polycyclic (compound interest model):
+Pathogens go through 2–30 disease cycles in one growing season
+Large amounts of asexual spores produced as secondary inoculum at each infection site
+Each cycle multiplies inoculum manyfold
+Disease progress represented as sigmoid curve
+Equation: X = X₀·e^(rt)
+Examples: Late blight of potato, downy mildews, powdery mildews, grain rusts, aphid-borne viruses
+
+=====================================
+ID: 121 | Question: Analyze the equation X = X₀eʳᵗ of polycyclic disease
+=====================================
+## Answer
+
+This is the Vanderplank polycyclic model (compound interest disease model):
+X = amount of disease at time t
+X₀ = initial amount of disease (initial inoculum)
+r = apparent infection rate (rate of disease increase)
+t = time (duration of epidemic)
+e = base of natural logarithm
+Implications:
+If r is very high, reducing X₀ only delays the epidemic
+If r is very high, X₀ must be reduced to very low levels to have significant effect
+Reducing r has relatively greater effect on epidemic than reducing X₀
+Reducing X₀ makes strategic sense only if r is also low or being reduced
+Three ways to reduce disease: (1) Reduce X₀, (2) Reduce r, (3) Reduce duration t
+
+=====================================
+ID: 122 | Question: What is progressive epidemic? Illustrate disease gradient curve
+=====================================
+## Answer
+
+Progressive epidemic: If the epidemic is considered as an increase of disease in extensity (spreading outward), that is called a progressive epidemic.
+Disease Gradient Curve (DGC): The pattern of epidemic (in terms of number of lesions, amount of diseased tissues or number of diseased plants) as it spreads over distance is given by a curve called disease gradient curve.
+What DGC reveals:
+The amount of disease is generally greater near the source of inoculum and decreases with increasing distance.
+The number of diseased plants and severity of disease decrease steeply until they reach zero.
+As distance from inoculum source increases, disease severity decreases.
+% Disease
+100 |\.
+|  \.
+50 |    \.
+|      \___
+0 |__________\___
+Source     Distance (m/km)
+
+=====================================
+ID: 123 | Question: Differentiate among disease triangle, disease tetrahedron and disease pyramid with neat labeled diagram
+=====================================
+## Answer
+
+Disease Triangle: Interactions of three components — host, pathogen and environment. Each side represents one component. The area of the triangle is the amount of disease.
+Disease Tetrahedron: Adds a 4th dimension — Time. Time affects when and for how long conditions are favorable.
+Disease Pyramid: Adds a 5th component — Human influence (cultural practices, site selection, disease control measures, introduction of new pathogens). All five interactions are described by the disease pyramid.
+
+=====================================
+ID: 124 | Question: [✦ Repeated ×2] "Plant changes their susceptibility to disease with age" — explain with diagram
+=====================================
+## Answer
+
+Pattern 1a: Susceptible only during earliest growth period, become resistant during adult stage. Example: Pythium damping-off, downy mildew, systemic smuts.
+Pattern 1b: Susceptible only in the stages of maximum growth. Example: Rusts and viral infections.
+Pattern II: Blossoms or fruits are resistant during growth and early adult period but become susceptible near ripening. Example: Infections due to Botrytis, Penicillium, Monilia, and Glomerella.
+Pattern III: A juvenile susceptibility is followed by a period of relative resistance in early adult stage and then further susceptibility after maturity. Example: Potato late blight and tomato early blight.
+
+=====================================
+ID: 125 | Question: Why moisture is an important factor for development of plant disease in epidemic form?
+=====================================
+## Answer
+
+Moisture is the predominant factor in the development of most epidemics caused by fungi (blights, downy mildews, leaf spots, rusts, anthracnoses), bacteria (leaf spots, blights, soft rots), and nematodes.
+
+### Major Effects of Moisture:
+
+* **Effects on Host:** Moisture promotes succulent, lush growth of the host, making it physically more susceptible to pathogen penetration.
+* **Effects on Pathogen:**
+  * Increases sporulation of fungi and rapid multiplication of bacteria.
+  * Favors spore release by many fungi and oozing of bacterial cells.
+  * Enables fungal spores to germinate and allows motile zoospores, bacteria, and nematodes to move through water films to reach hosts.
+  * High soil moisture directly increases the activity and survival of soil-borne pathogens like *Pythium*, *Phytophthora*, *Rhizoctonia*, and *Plasmodiophora brassicae*.
+* **Effects on Disease Cycle:** Different moisture levels influence different events — e.g., *Pyricularia oryzae* sporulates at moderate moisture (85–90%) but release of spores, dissemination, and infections require high moisture (92–100%).
+* **Effects on Vector:** High humidity reduces the activity of insect vectors but enhances the activity of fungal and nematode vectors.
+
+=====================================
+ID: 126 | Question: [✦ Repeated ×2] Write down the Vanderplank&apos;s Equivalence theorem correlated with disease triangle
+=====================================
+## Answer
+
+Vanderplank&apos;s Equivalence Theorem: "Effects of host, pathogen and environment can be translated into terms of the rate parameter of an epidemic."
+Changes in any component has an equivalent effect on disease:
+More/less susceptible host
+More/less favorable environment
+More/less amount of aggressive pathogen = same proportional change in disease
+Correlation with Disease Triangle: The disease triangle has three sides: Host, Pathogen, and Environment. According to Vanderplank&apos;s theorem, any change in any side has an equivalent and proportional effect on the area of the triangle — which represents the amount of disease. Therefore, disease management principles are centered around manipulating one or more components of the disease triangle.
+
+=====================================
+ID: 127 | Question: How do dense planting and excessive nitrogen application modify epidemiological factors?
+=====================================
+## Answer
+
+Dense planting: Creates a humid, protected canopy environment that favors diseases that spread in moist conditions. It increases foliar density, which favors development of Phytophthora infestans during periods of favorable weather.
+Excessive nitrogen application: Promotes succulent, lush plant growth — making the host more susceptible. Disease caused by biotrophs are favored by good nutrient status. Higher nitrogen leads to faster vegetative growth, providing more susceptible tissue for pathogen establishment and increasing the rate of epidemic (r).
+
+=====================================
+ID: 128 | Question: How does the fluctuation of day and night temperature affect epidemic development?
+=====================================
+## Answer
+
+Temperature directly dictates the geographic distribution and seasonal occurrence of plant disease epidemics.
+
+### Key Temperature Fluctuation Effects:
+
+* **Effects of Temperature on Hosts:**
+  * Temperatures higher or lower than the optimum range for the host plant reduce the plant's metabolic activity, making it stressed and predisposed to disease infection.
+* **Effects on Pathogen:**
+  * Favorable temperature helps polycyclic pathogens complete their lifecycle within a very short time, exponentially increasing inoculum production.
+  * Low temperature reduces the viability of fungi and bacteria.
+  * High temperature reduces the viability of viruses and mycoplasmas.
+  * *Pyricularia oryzae* produces spores more rapidly at 28°C; in *Phytophthora infestans*, zoospore germination occurs at 10–12°C while direct conidial germination occurs at 24°C.
+* **Effects of Day/Night Temperature Cycles:**
+  * Sporulation of *Pyricularia oryzae* occurs primarily during the daytime and decreases with the reduction of light.
+  * Dissemination of spores begins at night and ceases at sunrise.
+  * This day/night temperature and light cycle creates periodic peaks of inoculum that drive epidemic cycles.
+
+=====================================
+ID: 129 | Question: [✦ Repeated ×2] Describe briefly the principles of plant disease control
+=====================================
+## Answer
+
+The 6 principles (APTREE):
+1. Avoidance: Avoiding disease by altering planting time or planting in areas where inoculum is ineffective due to environmental conditions. Done through choice of geographical area, time of sowing, field selection, disease-escaping varieties.
+2. Protection: Preventing infection by creating a chemical toxic barrier between plants and pathogens. Done through chemical treatment, control of insect vectors, modification of environment.
+3. Therapy: Reducing the severity of disease in an already infected individual by chemicals (chemotherapy), tree surgery, heat therapy. E.g., Bordeaux Mixture.
+4. Resistance (Resistant Varieties): Preventing infection or reducing effects by managing the host through genetic improvement. Includes selection, hybridization, and mutation for disease resistance.
+5. Eradication: Eliminating a pathogen after it is introduced into an area but before it has widely spread. Done through crop rotation, soil treatment, burning infected residues, biological control.
+6. Exclusion: Preventing inoculum from entering or establishing in the field. Done through seed treatment, inspection, certification, quarantine, cleaned farm equipment.
+
+=====================================
+ID: 130 | Question: "Crop rotation is considered as ancient preventive measure of plant disease management" — explain with examples
+=====================================
+## Answer
+
+Crop rotation is the most widely employed control measure in agriculture. It manipulates the environment to reduce pathogen inoculum levels by rotating crops and varieties over seasons.
+Mechanism:
+When the same crop is grown year after year, soil-borne pathogens and their inoculum build up
+Rotation to a non-host crop deprives the pathogen of its food source
+Without a susceptible host, the pathogen population declines
+Examples:
+Rotate soybean with corn to control soybean cyst nematode
+Fusarium wilt pathogens decline when susceptible crops are rotated with non-host crops
+Blackleg of potato (Erwinia caratovora) managed by not planting potato consecutively in same field
+
+=====================================
+ID: 131 | Question: Mention the advantages of biological control over chemical control of plant disease
+=====================================
+## Answer
+
+Advantages of Biological Control:
+Non-toxic to human; not a water contaminant concern
+Once colonized may last for years (unlike chemicals requiring yearly treatments)
+Host specific — only affects one or few species, not broad spectrum
+Biocontrol agents give protection throughout the crop period
+Leaves no residual problem; application is safer to environment and to the applicator
+Can eliminate pathogens from the site of infection
+Not only controls disease but also enhances root and plant growth by encouraging beneficial soil microflora
+Increases crop yield
+Chemical pesticides are broad spectrum — toxic to both beneficial and pathogenic species — and implicated in ecological, environmental, and human health problems.
+
+=====================================
+ID: 132 | Question: Differentiate between systemic and contact fungicides
+=====================================
+## Answer
+
+### Comparison: Systemic vs. Contact (Non-systemic) Fungicides
+
+| Feature | Systemic Fungicides | Contact (Non-systemic) Fungicides |
+| :--- | :--- | :--- |
+| **Movement** | Moves inside plant through vascular bundles (xylem/phloem). | Remains on the plant surface where applied. |
+| **Mode** | Effective at sites other than where sprayed (translocation). | Only effective where directly applied. |
+| **Action** | Curative and protective. | Mainly protective/preventative. |
+| **Mobility Types** | Apoplastic, Symplastic, Amphimobile, Translaminar. | No translocation. |
+| **Examples** | Benomyl, Propiconazole, Carbendazim, Tricyclazole. | Bordeaux mixture, Mancozeb, Captan, Zineb, Thiram. |
+
+=====================================
+ID: 133 | Question: Enumerate the criteria of a good fungicide used in agriculture
+=====================================
+## Answer
+
+High field performance
+Low phytotoxicity
+Low toxicity to human beings
+Storage stability
+Stability after dilution
+Available in different formulations
+Cheaper
+Easy to transport
+
+=====================================
+ID: 134 | Question: [✦ Repeated ×3] "Biological control is prioritized in disease management program" — justify / What does biological control mean? Discuss the mechanism of antagonism
+=====================================
+## Answer
+
+### 1. Definition of Biological Control
+**Biological control** is the suppression of a plant pathogen population by another organism (referred to as the antagonist/biocontrol agent). It is a population-leveling process in which the population of the antagonist lowers the survival or density of the pathogen. First coined by **Harry Smith**.
+
+### 2. Why Biological Control is Prioritized:
+* **Eco-friendly:** Chemical pesticides are highly toxic to non-target beneficial organisms, leave residues, and cause massive soil/water pollution. Biocontrol agents are non-toxic and biodegradable.
+* **Pathogen Resistance:** Pathogens frequently develop rapid resistance to single-site chemical fungicides. Development of resistance to multi-site biocontrol mechanisms is highly unlikely.
+* **Sustainability:** Chemical pesticides require repeated treatments, while established biocontrol populations can self-replicate and persist in the rhizosphere for years.
+
+### 3. Mechanisms of Antagonism (How BCA Suppresses Pathogen):
+* **A. Antibiosis:** Inhibition of one organism by another through the secretion of antibiotics or toxic metabolites.
+  * *Example:* *Bacillus cereus* produces *Zwittermicin A* against *Phytophthora* root rot in alfalfa; *Bacillus subtilis* produces *Iturin A* against *Botrytis cinerea*.
+* **B. Nutrient Competition:** Direct competition between BCA and pathogen for vital resources like Carbon, Nitrogen, Oxygen, or Iron.
+  * *Example:* *Pseudomonas fluorescens* prevents bacterial blotch by competing with *Pseudomonas tolaasii*.
+* **C. Mycoparasitism / Hyperparasitism:** The antagonist directly invades and feeds on the pathogen hyphae.
+  * *Example:* *Trichoderma harzianum* coils around host hyphae, secretes cell-wall-degrading enzymes (chitinases, glucanases), and penetrates *Fusarium culmorum*.
+* **D. Lytic Enzymes:** Release of enzymes (chitinase, β-1,3-glucanase, protease) that directly hydrolyze and rupture pathogen cell walls.
+* **E. Siderophore Secretion:** BCA releases high-affinity iron chelators (**siderophores**) that bind free Fe³⁺, making it unavailable to rhizosphere pathogens.
+* **F. Induced Systemic Resistance (ISR):** Colonization of roots by PGPRs (*Pseudomonas*, *Trichoderma*) induces plant systemic resistance depending on ethylene and jasmonic acid pathways.
+* **G. Cross Protection:** Inoculation with a mild virus strain protects the host against severe virulent strains of the same virus (e.g., Citrus Tristeza Virus).
+
+=====================================
+ID: 135 | Question: What is host resistance? Delineate the physical method of seed treatment with an example
+=====================================
+## Answer
+
+Host Resistance: The ability of an organism to exclude or overcome pathogens completely or in some degree. Includes true resistance (gene controlled — vertical and horizontal) and apparent resistance (disease escape or disease tolerance).
+Physical method of seed treatment — Hot Water Treatment:
+Pre-soaking the seed
+Pre-heating at 10°C for 1–2 min
+Hot water soak at appropriate temperature
+Drying
+Cooling
+Example — Tomato seed protocol:
+Preheat seed for 10 min at 100°F (37°C)
+Transfer to 122°F (50°C) for 25 min
+Cool immediately and dry completely prior to sowing or re-packaging
+May be treated with fungicidal dust when dry
+For mung bean: Hot water at 55°C/20 min, 60°C/10 min, 70°C/5 min, or 80°C/2 min — none reduced germination below 95%.
+
+=====================================
+ID: 136 | Question: [✦ Repeated ×2] Suggest the best cultural technique with its mechanism for the control of late blight of potato when it appears every year on same piece of land
+=====================================
+## Answer
+
+Late blight is caused by Phytophthora infestans — a polycyclic pathogen.
+Best cultural technique: Crop Rotation
+Mechanism:
+P. infestans survives in infected tubers (vegetative mycelium in tubers = dormant inoculum)
+Growing potato every year in the same land allows the pathogen to persist and build up inoculum (X₀)
+Rotating with a non-host crop (e.g., wheat, rice) for 1–2 seasons starves the pathogen of its host
+This reduces initial inoculum (X₀) and delays epidemic onset
+Supporting measures:
+Sanitation: Remove and destroy infected crop residues and cull piles after harvest (eliminates overwintering inoculum)
+Selection: Use certified, disease-free seed tubers
+Chemical protection if needed: Mancozeb + Metalaxyl (Ridomil Gold) or Copper Oxychloride (Blitox)
+Why this is best: Since late blight is a polycyclic disease, reducing initial inoculum (X₀) combined with removing the substrate from the same field directly breaks the disease cycle and prevents the sigmoid epidemic from initiating.
+
+=====================================
+ID: 137 | Question: [✦ Repeated ×3] Differentiate vertical resistance from horizontal resistance. Which one do you prefer and why?
+=====================================
+## Answer
+
+### Comparison: Vertical vs. Horizontal Resistance
+
+| Feature | Vertical Resistance (VR) | Horizontal Resistance (HR) |
+| :--- | :--- | :--- |
+| **Definition** | Complete resistance to some races of a pathogen but not to others. | Partial resistance equally effective against all races of a pathogen. |
+| **Gene Basis** | Monogenic or oligogenic (major genes). | Polygenic (minor genes). |
+| **Host Specificity** | Race-specific / Host specific. | Race non-specific / Host non-specific. |
+| **Effect on Pathogen** | VR does not allow the pathogen to establish in the host — no increase of disease. | HR allows the pathogen to establish but decreases the rate of disease increase. |
+| **Epidemiological Implication** | Epidemic cannot develop until breakdown by a new pathogen race. | Epidemic development depends on the level of HR and environmental conditions. |
+| **Durability** | Less durable — can be rapidly overcome by new virulent races. | More durable. |
+
+### Preference & Justification:
+We strongly prefer **Horizontal Resistance (HR)** in broad-scale agricultural systems for the following reasons:
+1. **Durability:** Since it is governed by multiple minor genes (polygenic), the pathogen cannot overcome it with a single nucleotide mutation. Thus, it lasts much longer in the field.
+2. **Stability:** It provides stable, race-non-specific protection. Unlike the "boom and bust" cycle of Vertical Resistance, there is no threat of sudden complete crop failure when new pathogen races evolve.
+3. **Epidemic Suppression:** Although it allows the pathogen to establish at minor, non-damaging levels, it directly slows down the rate of epidemic progress ($r$), keeping disease severity below economic injury levels.
+
+=====================================
+ID: 138 | Question: "Mixed cropping reduces disease incidence" — briefly discuss the reasons
+=====================================
+## Answer
+
+Reduces the density of any single host species in a field, lowering the chance of rapid pathogen spread from plant to plant
+Acts similarly to crop rotation in disrupting the disease cycle
+Genetically diverse host population reduces the effectiveness of host-specific pathogens
+Physical barriers between susceptible plants reduce wind and rain-splash dissemination of inoculum
+Reduces genetic uniformity — genetically uniform (monoculture) host plants are most susceptible to epidemics; mixed cropping increases genetic diversity, helping to develop epidemic resistance
+
+=====================================
+ID: 139 | Question: List two advantages and limitations of biological control agents in plant disease control
+=====================================
+## Answer
+
+Advantages:
+Non-toxic to human; not a water contaminant concern; safer to environment
+Once colonized may last for years; host specific; also enhances plant growth
+Limitations:
+Biocontrol agents are not broad spectrum and are less effective than fungicides; slow effect
+Short shelf life; unavailable in larger quantities; only preventive, not curative; efficiency mainly decided by environmental conditions
+
+=====================================
+ID: 140 | Question: Why do resistant varieties sometimes breakdown in the field?
+=====================================
+## Answer
+
+From the content on Vertical Resistance (VR) and epidemiological implications:
+Vertical resistance provides complete resistance to some races of a pathogen but not to others
+When a new race of the pathogen evolves (through mutation or genetic recombination), this new race can overcome the VR of the previously resistant variety
+This is called breakdown of resistance
+Epidemics cannot develop in VR varieties until breakdown by a new pathogen race
+VR does not allow the pathogen to establish, but once a virulent race appears, the host becomes completely susceptible and epidemic can develop even under favorable environment
+
+=====================================
+ID: 141 | Question: Discuss the importance of host resistance within Integrated Disease Management (IDM)
+=====================================
+## Answer
+
+Host resistance is one of the 6 basic types of control measures in plant disease management
+Prevents infection or reduces the effect of infection by managing the host through genetic improvement
+Vertical resistance reduces the effective amount of incoming inoculum (avirulent races cannot infect)
+Horizontal resistance decreases the rate of disease development (r) for all races
+Resistant varieties are the most economical, environmentally safe control measure
+They reduce reliance on chemical fungicides, reduce cost of production, and provide season-long protection
+Within IDM, resistant varieties form the backbone while cultural, biological and chemical methods supplement
+
+=====================================
+ID: 142 | Question: Analyze how cultural measures contribute to climate-smart disease management
+=====================================
+## Answer
+
+Crop rotation: reduces inoculum levels without any chemical input — sustainable
+Selection of planting date: avoids pathogen peak activity periods — adapts to changing climate patterns
+Adjusted seeding rate and canopy density: reduces humid microclimate within canopy — reduces disease favorable conditions
+Balanced fertilizer application: maintains plant health without promoting excessive susceptible growth
+Sanitation: (burning/plowing residues) reduces overwintering inoculum
+Irrigation management: avoiding overhead irrigation to reduce leaf wetness, which is critical since moisture is the predominant epidemic factor
+Trap crops and cover crops: reduce pathogen movement and provide physical barriers
+These methods collectively reduce initial inoculum (X₀) and rate of epidemic (r) without environmental contamination — making them climate-smart.
+

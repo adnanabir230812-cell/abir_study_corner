@@ -1,0 +1,66 @@
+<%- include('partials/header') %>
+
+<!-- Back Link -->
+<div class="mb-6">
+  <a href="/courses/<%= course.id %>" class="inline-flex items-center gap-1.5 text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors">
+    <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+    </svg>
+    Back to Course Overview
+  </a>
+</div>
+
+<!-- Header -->
+<div class="mb-10">
+  <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-slate-800 px-3 py-1 rounded-full uppercase tracking-wider">Revision Mode</span>
+  <h1 class="text-3xl font-extrabold text-slate-900 dark:text-white mt-3 tracking-tight">Topic-Wise Questions</h1>
+  <p class="text-slate-500 dark:text-slate-400 mt-1"><%= course.name %> (<%= course.code %>) &bull; <%= section.name %> (<%= section.teacherName %>)</p>
+</div>
+
+<!-- Topics and Questions -->
+<div class="space-y-10">
+  <% if (topics && topics.length > 0) { %>
+    <% topics.forEach((topic, idx) => { %>
+      <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-6 md:p-8 shadow-sm">
+        <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3">
+          <span class="flex items-center justify-center h-8 w-8 text-sm font-extrabold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-slate-900 rounded-xl">
+            <%= idx + 1 %>
+          </span>
+          <%= topic.name %>
+        </h2>
+
+        <% if (topic.Questions && topic.Questions.length > 0) { %>
+          <div class="divide-y divide-slate-100 dark:divide-slate-700">
+            <% topic.Questions.forEach((question, qIdx) => { %>
+              <div class="py-4 first:pt-0 last:pb-0 flex items-start justify-between gap-4 group">
+                <div class="flex items-start gap-3">
+                  <span class="text-sm font-bold text-slate-400 dark:text-slate-500 mt-0.5"><%= idx + 1 %>.<%= qIdx + 1 %></span>
+                  <p class="text-slate-700 dark:text-slate-200 font-medium text-base group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                    <%= question.questionText %>
+                  </p>
+                </div>
+                
+                <!-- Quick jump button -->
+                <a href="/courses/<%= course.id %>/qa?sec=<%= section.id %>#question-<%= question.id %>" class="flex-shrink-0 flex items-center gap-1 text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors">
+                  Check Answer
+                  <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            <% }) %>
+          </div>
+        <% } else { %>
+          <p class="text-sm text-slate-400 dark:text-slate-500">No questions loaded for this topic.</p>
+        <% } %>
+      </div>
+    <% }) %>
+  <% } else { %>
+    <div class="bg-white dark:bg-slate-800 rounded-2xl p-12 text-center border border-slate-200 dark:border-slate-700">
+      <div class="text-3xl mb-4">📝</div>
+      <h3 class="text-base font-bold text-slate-800 dark:text-white mb-1">No topics defined in this section</h3>
+    </div>
+  <% } %>
+</div>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,303 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --color-brand-light: #4f46e5; /* Indigo 600 */
+  --color-brand-dark: #818cf8;  /* Indigo 400 */
+  --color-bg-light: #f9fafb;     /* Gray 50 */
+  --color-bg-dark: #0f172a;      /* Slate 900 */
+  --color-card-light: #ffffff;
+  --color-card-dark: #1e293b;    /* Slate 800 */
+}
+
+/* Premium CSS for rendering Raw Markdown contents correctly and beautifully */
+.markdown-content {
+  line-height: 1.8;
+  font-size: 0.975rem;
+}
+
+.markdown-content h1 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #0f172a; /* Slate 900 */
+}
+.dark .markdown-content h1 {
+  color: #f8fafc; /* Slate 50 */
+}
+
+.markdown-content h2 {
+  font-size: 1.35rem;
+  font-weight: 750;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  color: #1e1b4b; /* Indigo 950 */
+  border-left: 4px solid #6366f1; /* Indigo 500 */
+  padding-left: 0.75rem;
+}
+.dark .markdown-content h2 {
+  color: #e0e7ff; /* Indigo 100 */
+  border-left-color: #818cf8; /* Indigo 400 */
+}
+
+.markdown-content h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #4338ca; /* Indigo 700 */
+}
+.dark .markdown-content h3 {
+  color: #a5b4fc; /* Indigo 300 */
+}
+
+.markdown-content p {
+  margin-bottom: 1.25rem;
+  color: #334155; /* Slate 700 */
+}
+.dark .markdown-content p {
+  color: #cbd5e1; /* Slate 300 */
+}
+
+.markdown-content strong {
+  font-weight: 700;
+  color: #1e1b4b; /* Indigo 950 */
+}
+.dark .markdown-content strong {
+  color: #f472b6; /* Pink 400 - high contrast highlight */
+}
+
+.markdown-content ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.markdown-content ul > li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.6rem;
+  color: #334155; /* Slate 700 */
+  line-height: 1.75;
+}
+.dark .markdown-content ul > li {
+  color: #cbd5e1; /* Slate 300 */
+}
+
+/* Premium Glowing Indigo Bullets */
+.markdown-content ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0.45rem;
+  top: 0.6rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #6366f1; /* Indigo 500 */
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+  transition: all 0.2s ease;
+}
+.dark .markdown-content ul > li::before {
+  background-color: #818cf8; /* Indigo 400 */
+  box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.25);
+}
+
+/* Sub-bullets (Nested Lists) Styled as Elegant Hollow Rings */
+.markdown-content ul ul,
+.markdown-content ol ul {
+  padding-left: 1.5rem;
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+.markdown-content ul ul > li::before,
+.markdown-content ol ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  top: 0.625rem;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1.5px solid #6366f1;
+  box-shadow: none;
+}
+.dark .markdown-content ul ul > li::before,
+.dark .markdown-content ol ul > li::before {
+  border-color: #818cf8;
+}
+
+/* Custom Styled Numbered Lists */
+.markdown-content ol {
+  list-style-type: none;
+  counter-reset: item;
+  padding-left: 0;
+  margin-top: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.markdown-content ol > li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.6rem;
+  color: #334155;
+  line-height: 1.75;
+}
+.dark .markdown-content ol > li {
+  color: #cbd5e1;
+}
+
+.markdown-content ol > li::before {
+  content: counter(item) ".";
+  counter-increment: item;
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+  color: #6366f1; /* Indigo 500 */
+}
+.dark .markdown-content ol > li::before {
+  color: #818cf8; /* Indigo 400 */
+}
+
+/* Nested Numbered Lists */
+.markdown-content ol ol,
+.markdown-content ul ol {
+  padding-left: 1.5rem;
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+/* Premium Responsive Table Card Design */
+.markdown-content table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  text-align: left;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+}
+.dark .markdown-content table {
+  border-color: #334155;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+.markdown-content th {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  color: #334155;
+  font-weight: 700;
+  padding: 0.85rem 1.2rem;
+  border-bottom: 2px solid #e2e8f0;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+.dark .markdown-content th {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  color: #cbd5e1;
+  border-bottom: 2px solid #475569;
+}
+
+.markdown-content td {
+  padding: 0.85rem 1.2rem;
+  border-bottom: 1px solid #f1f5f9;
+  color: #475569;
+  background-color: #ffffff;
+}
+.dark .markdown-content td {
+  border-bottom: 1px solid #334155;
+  color: #94a3b8;
+  background-color: #1e293b;
+}
+
+.markdown-content tr:last-child td {
+  border-bottom: none;
+}
+
+.markdown-content tr:nth-child(even) td {
+  background-color: #f8fafc;
+}
+.dark .markdown-content tr:nth-child(even) td {
+  background-color: #1b2535;
+}
+
+.markdown-content tr:hover td {
+  background-color: #f1f5f9;
+}
+.dark .markdown-content tr:hover td {
+  background-color: #243046;
+}
+
+/* Premium Blockquotes styled as custom alert boxes */
+.markdown-content blockquote {
+  background-color: #f0fdf4; /* Light green */
+  border-left: 4px solid #22c55e;
+  border-radius: 8px;
+  padding: 0.85rem 1.25rem;
+  margin: 1.5rem 0;
+  color: #166534;
+}
+.dark .markdown-content blockquote {
+  background-color: rgba(34, 197, 94, 0.08);
+  border-left-color: #4ade80;
+  color: #a7f3d0;
+}
+
+.markdown-content blockquote p {
+  margin-bottom: 0;
+  color: inherit;
+  font-weight: 500;
+}
+
+/* Premium In-line code highlights */
+.markdown-content code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.85em;
+  background-color: #e0e7ff; /* Light Indigo */
+  color: #4f46e5;
+  padding: 0.15rem 0.35rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
+.dark .markdown-content code {
+  background-color: rgba(99, 102, 241, 0.15);
+  color: #c7d2fe;
+}
+
+/* Horizontal Rules */
+.markdown-content hr {
+  border: 0;
+  border-top: 1px solid #e2e8f0;
+  margin: 1.75rem 0;
+}
+.dark .markdown-content hr {
+  border-top-color: #334155;
+}
+
+/* Custom Image Wrapper */
+.markdown-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.375rem;
+  margin: 1.5rem auto;
+  display: block;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Transitions */
+.accordion-content {
+  transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+}
+.accordion-content.open {
+  transition: max-height 0.3s cubic-bezier(0.9, 0, 0.8, 0.2);
+}

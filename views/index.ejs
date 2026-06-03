@@ -1,0 +1,295 @@
+<%- include('partials/header') %>
+
+<!-- TOP HERO ZONE: Exams, Alerts & Motivation (2-Column Premium Layout) -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10 items-stretch">
+  
+  <!-- Left Side (2/3 width): Live Countdown & Daily Bengali Motivation -->
+  <div class="lg:col-span-2 flex flex-col justify-between gap-6">
+    
+    <!-- Live Countdown Banner -->
+    <% if (exams && exams.length > 0) { 
+        const now = new Date();
+        const upcomingExams = exams.filter(e => new Date(e.examDate) > now);
+        const nextExam = upcomingExams.length > 0 ? upcomingExams[0] : null;
+        
+        let warningMessage = "";
+        let warningClass = "";
+        
+        const toBn = (num) => {
+          const bnNums = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
+          return num.toString().replace(/\d/g, d => bnNums[d]);
+        };
+        
+        if (nextExam) {
+          const examDate = new Date(nextExam.examDate);
+          
+          // Standard time differences
+          const diffTime = examDate - now;
+          const diffHours = Math.floor((diffTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const diffMinutes = Math.floor((diffTime % (1000 * 60 * 60)) / (1000 * 60));
+          
+          // Check if exam is today on the calendar
+          const isToday = examDate.getDate() === now.getDate() && 
+                          examDate.getMonth() === now.getMonth() && 
+                          examDate.getFullYear() === now.getFullYear();
+                          
+          const tomorrow = new Date(now);
+          tomorrow.setDate(now.getDate() + 1);
+          const isTomorrow = examDate.getDate() === tomorrow.getDate() && 
+                             examDate.getMonth() === tomorrow.getMonth() && 
+                             examDate.getFullYear() === tomorrow.getFullYear();
+          
+          if (isToday) {
+            warningMessage = "🚨 পরীক্ষা আজই! সব পড়া বন্ধ করে দ্রুত ফাইনাল রিভিশন দাও! আল্লাহ সহায় হোন।";
+            warningClass = "bg-rose-500/10 border-rose-500/20 text-rose-300 animate-pulse font-black";
+          } else if (isTomorrow) {
+            warningMessage = `⚠️ মাত্র ১ দিন (বা ${toBn(diffHours)} ঘণ্টা ${toBn(diffMinutes)} মিনিট) বাকি! মোবাইল দূরে রাখো, ফেসবুক বন্ধ করো এবং এখনই পড়তে বসো!`;
+            warningClass = "bg-rose-500/20 border-rose-500/30 text-rose-200 font-extrabold animate-pulse";
+          } else {
+            // Count remaining calendar days
+            const examDateDay = new Date(examDate.getFullYear(), examDate.getMonth(), examDate.getDate());
+            const todayDay = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+            const calendarDiffDays = Math.round((examDateDay - todayDay) / (1000 * 60 * 60 * 24));
+            
+            if (calendarDiffDays <= 3) {
+              warningMessage = `⏳ আর মাত্র ${toBn(calendarDiffDays)} দিন বাকি! অবহেলা একদম বন্ধ করো! সব সিলেবাস শেষ করেছ তো?`;
+              warningClass = "bg-amber-500/10 border-amber-500/20 text-amber-200 font-bold";
+            } else if (calendarDiffDays <= 7) {
+              warningMessage = `⏰ আর মাত্র ${toBn(calendarDiffDays)} দিন বাকি! পড়া ফেলে রেখো না, এখনই রিভিশন শেষ করো!`;
+              warningClass = "bg-yellow-500/10 border-yellow-500/20 text-yellow-150 font-semibold";
+            } else if (calendarDiffDays <= 14) {
+              warningMessage = `📚 পরীক্ষার আর মাত্র ${toBn(calendarDiffDays)} দিন বাকি! অলসতা দূর করো, সময় নষ্ট কোরো না!`;
+              warningClass = "bg-indigo-500/10 border-indigo-500/20 text-indigo-200 font-medium";
+            } else {
+              warningMessage = `🎯 পরীক্ষার আর ${toBn(calendarDiffDays)} দিন বাকি। রুটিন মাফিক নিয়মিত পড়াশোনা করো!`;
+              warningClass = "bg-emerald-500/10 border-emerald-500/20 text-emerald-300 font-medium";
+            }
+          }
+        }
+    %>
+      <% if (nextExam) { %>
+        <div class="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 rounded-3xl p-6 md:p-8 text-white shadow-xl relative overflow-hidden border border-indigo-500/20 flex-1 flex flex-col justify-between gap-6">
+          <div class="absolute -right-10 -bottom-10 w-44 h-44 bg-indigo-500 rounded-full blur-3xl opacity-10 pointer-events-none"></div>
+          <div class="absolute -left-10 -top-10 w-44 h-44 bg-pink-500 rounded-full blur-3xl opacity-10 pointer-events-none"></div>
+          
+          <div class="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div>
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[10px] font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 uppercase tracking-widest animate-pulse">
+                🚨 Next Exam Countdown
+              </span>
+              <h2 class="text-2xl md:text-3xl font-extrabold text-white mt-3 tracking-tight"><%= nextExam.subjectName %></h2>
+              <p class="text-indigo-200/80 text-xs mt-1">
+                Scheduled: <strong><%= new Date(nextExam.examDate).toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) %></strong> at <strong><%= new Date(nextExam.examDate).toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit' }) %></strong>
+              </p>
+            </div>
+            
+            <!-- Live Countdown Grid -->
+            <div class="flex items-center gap-2.5 sm:gap-3.5 select-none" id="exam-countdown" data-date="<%= nextExam.examDate %>">
+              <div class="flex flex-col items-center bg-white/10 backdrop-blur-md rounded-xl p-2.5 w-14 sm:w-16 border border-white/15">
+                <span class="text-xl sm:text-2xl font-black tracking-tight" id="cd-days">00</span>
+                <span class="text-[9px] font-bold text-indigo-200 uppercase mt-0.5">Days</span>
+              </div>
+              <div class="flex flex-col items-center bg-white/10 backdrop-blur-md rounded-xl p-2.5 w-14 sm:w-16 border border-white/15">
+                <span class="text-xl sm:text-2xl font-black tracking-tight" id="cd-hours">00</span>
+                <span class="text-[9px] font-bold text-indigo-200 uppercase mt-0.5">Hours</span>
+              </div>
+              <div class="flex flex-col items-center bg-white/10 backdrop-blur-md rounded-xl p-2.5 w-14 sm:w-16 border border-white/15">
+                <span class="text-xl sm:text-2xl font-black tracking-tight" id="cd-minutes">00</span>
+                <span class="text-[9px] font-bold text-indigo-200 uppercase mt-0.5">Mins</span>
+              </div>
+              <div class="flex flex-col items-center bg-indigo-600/50 backdrop-blur-md rounded-xl p-2.5 w-14 sm:w-16 border border-indigo-500/20">
+                <span class="text-xl sm:text-2xl font-black tracking-tight text-indigo-300" id="cd-seconds">00</span>
+                <span class="text-[9px] font-bold text-indigo-200 uppercase mt-0.5">Secs</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alert / Warning Message Banner (Voy Dibe) -->
+          <div class="relative z-10 p-4 rounded-2xl border text-sm flex items-center gap-3 <%= warningClass %>">
+            <span class="text-xl">⚠️</span>
+            <p class="leading-relaxed"><%= warningMessage %></p>
+          </div>
+        </div>
+      <% } %>
+    <% } %>
+
+    <!-- Islamic Motivation Quote Card (in Bengali) -->
+    <% if (locals.quote) { %>
+      <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-3xl p-5 shadow-sm flex items-start gap-4 transition-all hover:shadow-md relative overflow-hidden">
+        <div class="absolute right-0 top-0 w-24 h-24 bg-emerald-500/5 rounded-full blur-2xl pointer-events-none"></div>
+        <div class="p-3 bg-emerald-50/70 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 rounded-2xl flex-shrink-0">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m2.828 0l-.707-.707m12.728-12.728l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+          </svg>
+        </div>
+        <div>
+          <span class="text-[9px] font-extrabold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/50 px-2 py-0.5 rounded-md uppercase tracking-widest">Daily Islamic Motivation</span>
+          <p class="text-slate-700 dark:text-slate-200 font-semibold text-base mt-2.5 italic leading-relaxed">"<%= quote.text %>"</p>
+          <p class="text-slate-400 dark:text-slate-500 text-xs font-bold mt-2">— <%= quote.source %></p>
+        </div>
+      </div>
+    <% } %>
+
+  </div>
+
+  <!-- Right Side (1/3 width): Exam Routine Styled as a Premium Progress Timeline -->
+  <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-3xl p-6 shadow-sm flex flex-col">
+    <div class="flex items-center justify-between pb-4 border-b border-slate-100 dark:border-slate-700 mb-6">
+      <h2 class="text-lg font-extrabold text-slate-850 dark:text-white flex items-center gap-2">
+        <span>📅</span> Exam Routine
+      </h2>
+      <span class="text-[10px] font-bold text-slate-400 px-2 py-0.5 bg-slate-50 dark:bg-slate-900 rounded-md">SCHEDULE</span>
+    </div>
+
+    <% if (!exams || exams.length === 0) { %>
+      <p class="text-sm text-slate-400 dark:text-slate-500 text-center py-6 flex-1 flex items-center justify-center">No exams scheduled.</p>
+    <% } else { %>
+      <div class="relative pl-6 space-y-6 flex-1 flex flex-col justify-between">
+        <!-- Vertical timeline line -->
+        <div class="absolute left-2 top-2 bottom-2 w-0.5 bg-slate-100 dark:bg-slate-700"></div>
+
+        <% 
+          const now = new Date();
+          exams.forEach((exam, idx) => {
+            const examDate = new Date(exam.examDate);
+            const examDateDay = new Date(examDate.getFullYear(), examDate.getMonth(), examDate.getDate());
+            const todayDay = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+            const diffTime = examDateDay - todayDay;
+            const diffDays = Math.round(diffTime / (1000 * 60 * 60 * 24));
+            
+            let statusText = '';
+            let statusClass = '';
+            let dotClass = '';
+            
+            if (diffDays < 0) {
+              statusText = 'Completed';
+              statusClass = 'bg-slate-100 text-slate-500 dark:bg-slate-700/50 dark:text-slate-400';
+              dotClass = 'bg-slate-300 dark:bg-slate-600 ring-4 ring-slate-100 dark:ring-slate-800/40';
+            } else if (diffDays === 0) {
+              statusText = 'TODAY';
+              statusClass = 'bg-rose-100 text-rose-700 dark:bg-rose-950/40 dark:text-rose-450 animate-pulse font-extrabold';
+              dotClass = 'bg-rose-500 ring-4 ring-rose-100 dark:ring-rose-950/50 animate-ping';
+            } else {
+              statusText = `${diffDays} Days`;
+              statusClass = 'bg-indigo-50 text-indigo-600 dark:bg-indigo-950/40 dark:text-indigo-400';
+              dotClass = 'bg-indigo-600 dark:bg-indigo-400 ring-4 ring-indigo-50 dark:ring-indigo-950/30';
+            }
+        %>
+          <div class="relative flex items-start justify-between gap-4">
+            <!-- Timeline dot -->
+            <div class="absolute -left-[22px] top-1 h-3.5 w-3.5 rounded-full z-15 <%= dotClass %>"></div>
+            
+            <div class="flex-1 min-w-0">
+              <h3 class="font-bold text-sm leading-tight truncate <%= diffDays < 0 ? 'text-slate-400 dark:text-slate-500 line-through' : 'text-slate-800 dark:text-slate-200' %>">
+                <%= exam.subjectName %>
+              </h3>
+              <p class="text-[10px] text-slate-400 dark:text-slate-500 mt-1 font-medium">
+                <%= examDate.toLocaleDateString(undefined, { month: 'short', day: 'numeric' }) %> &bull; 
+                <%= examDate.toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit' }) %>
+              </p>
+            </div>
+            
+            <span class="text-[9px] font-extrabold px-2 py-0.5 rounded-md tracking-wider uppercase <%= statusClass %> self-start">
+              <%= statusText %>
+            </span>
+          </div>
+        <% }) %>
+      </div>
+    <% } %>
+  </div>
+
+</div>
+
+<!-- Stats Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+  <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-6 shadow-sm">
+    <div class="text-slate-400 dark:text-slate-500 text-sm font-semibold uppercase tracking-wider mb-2">Total Courses</div>
+    <div class="text-3xl font-extrabold text-slate-900 dark:text-white"><%= stats.totalCourses %></div>
+  </div>
+  
+  <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-6 shadow-sm">
+    <div class="text-slate-400 dark:text-slate-500 text-sm font-semibold uppercase tracking-wider mb-2">Total Topics</div>
+    <div class="text-3xl font-extrabold text-slate-900 dark:text-white"><%= stats.totalTopics %></div>
+  </div>
+
+  <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-6 shadow-sm">
+    <div class="text-slate-400 dark:text-slate-500 text-sm font-semibold uppercase tracking-wider mb-2">Total Questions</div>
+    <div class="text-3xl font-extrabold text-slate-900 dark:text-white"><%= stats.totalQuestions %></div>
+  </div>
+
+  <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-6 shadow-sm flex flex-col justify-between">
+    <div>
+      <div class="text-slate-400 dark:text-slate-500 text-sm font-semibold uppercase tracking-wider mb-2">Study Progress</div>
+      <div class="text-3xl font-extrabold text-indigo-600 dark:text-indigo-400"><%= stats.overallPercentage %>%</div>
+    </div>
+    <div class="w-full bg-slate-100 dark:bg-slate-700 h-2 rounded-full overflow-hidden mt-4">
+      <div class="bg-indigo-600 dark:bg-indigo-400 h-full rounded-full transition-all duration-300 progress-bar-fill" style="width: <%= stats.overallPercentage %>%"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Mobile Search Block -->
+<div class="block sm:hidden mb-8 relative">
+  <div class="relative">
+    <input type="text" id="mobile-search-input" placeholder="Search courses, topics..." 
+      class="block w-full pl-4 pr-10 py-3 border border-slate-200 dark:border-slate-700 rounded-xl bg-white dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm transition-all shadow-sm">
+  </div>
+  <div id="mobile-search-results-dropdown" class="absolute left-0 right-0 mt-2 w-full bg-white dark:bg-slate-800 rounded-xl shadow-xl border border-slate-200 dark:border-slate-700 max-h-96 overflow-y-auto hidden z-50"></div>
+</div>
+
+<!-- Courses Section -->
+<div class="mb-10">
+  <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">Your Courses</h2>
+  
+  <% if (courses.length === 0) { %>
+    <div class="bg-white dark:bg-slate-800 rounded-2xl p-12 text-center border border-slate-200 dark:border-slate-700">
+      <div class="text-4xl mb-4">📚</div>
+      <h3 class="text-lg font-bold text-slate-800 dark:text-white mb-1">No courses imported yet</h3>
+      <p class="text-slate-500 dark:text-slate-400 max-w-sm mx-auto text-sm">Please follow Phase 2 content population steps to seed your database.</p>
+    </div>
+  <% } else { %>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <% courses.forEach(course => { %>
+        <a href="/courses/<%= course.id %>" class="group bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-indigo-100 dark:hover:border-slate-600 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between animate-scale-up">
+          <div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors"><%= course.name %> (<%= course.code %>)</h3>
+            
+            <% if (course.sections && course.sections.length > 0) { %>
+              <p class="text-xs text-slate-400 dark:text-slate-500 mt-2 font-medium">
+                Instructors: 
+                <%= course.sections.map(s => s.teacherName).filter(t => t).join(', ') %>
+              </p>
+            <% } %>
+
+            <div class="flex items-center gap-4 mt-6 text-sm text-slate-500 dark:text-slate-400">
+              <span class="flex items-center gap-1.5">
+                <svg class="h-4 w-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                </svg>
+                <%= course.topicsCount %> Topics
+              </span>
+              <span class="flex items-center gap-1.5">
+                <svg class="h-4 w-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <%= course.questionsCount %> Questions
+              </span>
+            </div>
+          </div>
+
+          <div class="mt-8 border-t border-slate-100 dark:border-slate-700 pt-4">
+            <div class="flex justify-between items-center text-xs font-bold text-slate-400 dark:text-slate-500 mb-1.5">
+              <span>PROGRESS</span>
+              <span><%= course.percentage %>%</span>
+            </div>
+            <div class="w-full bg-slate-100 dark:bg-slate-700 h-1.5 rounded-full overflow-hidden">
+              <div class="bg-indigo-600 dark:bg-indigo-400 h-full rounded-full transition-all duration-300" style="width: <%= course.percentage %>%"></div>
+            </div>
+          </div>
+        </a>
+      <% }) %>
+    </div>
+  <% } %>
+</div>
+
+<%- include('partials/footer') %>

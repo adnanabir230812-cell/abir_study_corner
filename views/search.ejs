@@ -1,0 +1,77 @@
+<%- include('partials/header') %>
+
+<!-- Back Link -->
+<div class="mb-6">
+  <a href="/" class="inline-flex items-center gap-1.5 text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors">
+    <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+    </svg>
+    Back to Dashboard
+  </a>
+</div>
+
+<!-- Title -->
+<div class="mb-10">
+  <h1 class="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">Search Results</h1>
+  <p class="text-slate-500 dark:text-slate-400 mt-1">Showing matches for "<%= query %>"</p>
+</div>
+
+<!-- Results -->
+<div class="space-y-8">
+
+  <!-- Matches: Courses -->
+  <% if (results.courses && results.courses.length > 0) { %>
+    <div>
+      <h2 class="text-lg font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-4">Courses (<%= results.courses.length %>)</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <% results.courses.forEach(c => { %>
+          <a href="/courses/<%= c.id %>" class="block bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-5 hover:border-indigo-500 hover:shadow-md transition-all">
+            <h3 class="font-bold text-slate-800 dark:text-white text-base"><%= c.name %></h3>
+          </a>
+        <% }) %>
+      </div>
+    </div>
+  <% } %>
+
+  <!-- Matches: Topics -->
+  <% if (results.topics && results.topics.length > 0) { %>
+    <div>
+      <h2 class="text-lg font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-4">Topics (<%= results.topics.length %>)</h2>
+      <div class="grid grid-cols-1 gap-4">
+        <% results.topics.forEach(t => { %>
+          <a href="/courses/<%= t.Section.courseId %>/qa#topic-<%= t.id %>" class="block bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-5 hover:border-indigo-500 hover:shadow-md transition-all">
+            <h3 class="font-bold text-slate-800 dark:text-white text-base mb-1"><%= t.name %></h3>
+            <p class="text-xs text-slate-400 dark:text-slate-500"><%= t.Section.Course.name %> &bull; <%= t.Section.name %></p>
+          </a>
+        <% }) %>
+      </div>
+    </div>
+  <% } %>
+
+  <!-- Matches: Questions -->
+  <% if (results.questions && results.questions.length > 0) { %>
+    <div>
+      <h2 class="text-lg font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-4">Questions (<%= results.questions.length %>)</h2>
+      <div class="grid grid-cols-1 gap-4">
+        <% results.questions.forEach(q => { %>
+          <a href="/courses/<%= q.Topic.Section.courseId %>/qa?question=<%= q.id %>#question-<%= q.id %>" class="block bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-5 hover:border-indigo-500 hover:shadow-md transition-all">
+            <h3 class="font-bold text-slate-800 dark:text-white text-base mb-2"><%= q.questionText %></h3>
+            <p class="text-xs text-slate-400 dark:text-slate-500"><%= q.Topic.Section.Course.name %> &bull; <%= q.Topic.Section.name %> &bull; Topic: <%= q.Topic.name %></p>
+          </a>
+        <% }) %>
+      </div>
+    </div>
+  <% } %>
+
+  <!-- Zero Results -->
+  <% if ((!results.courses || results.courses.length === 0) && (!results.topics || results.topics.length === 0) && (!results.questions || results.questions.length === 0)) { %>
+    <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-12 text-center">
+      <div class="text-4xl mb-4">🔍</div>
+      <h3 class="text-lg font-bold text-slate-850 dark:text-white">No matches found</h3>
+      <p class="text-sm text-slate-400 dark:text-slate-500 mt-1">Try searching with other keywords or course names.</p>
+    </div>
+  <% } %>
+
+</div>
+
+<%- include('partials/footer') %>

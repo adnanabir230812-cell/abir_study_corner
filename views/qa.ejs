@@ -1,0 +1,108 @@
+<%- include('partials/header') %>
+
+<!-- Back Link -->
+<div class="mb-6">
+  <a href="/courses/<%= course.id %>" class="inline-flex items-center gap-1.5 text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors">
+    <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+    </svg>
+    Back to Course Overview
+  </a>
+</div>
+
+<!-- Header with Real-Time Progress -->
+<div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 pb-8 border-b border-slate-200 dark:border-slate-700">
+  <div>
+    <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-slate-800 px-3 py-1 rounded-full uppercase tracking-wider">Study Vault</span>
+    <h1 class="text-3xl font-extrabold text-slate-900 dark:text-white mt-3 tracking-tight">Questions &amp; Answers</h1>
+    <p class="text-slate-500 dark:text-slate-400 mt-1"><%= course.name %> (<%= course.code %>) &bull; <%= section.name %> (<%= section.teacherName %>)</p>
+  </div>
+  
+  <div class="bg-white dark:bg-slate-850 border border-slate-200 dark:border-slate-700 rounded-2xl p-4 shadow-sm min-w-[280px]">
+    <div class="flex justify-between items-center text-xs font-bold text-slate-400 dark:text-slate-500 mb-1.5">
+      <span>SOLVED STATUS</span>
+      <span class="progress-text"><%= section.solvedCount %>/<%= section.totalCount %> Solved (<%= section.percentage %>%)</span>
+    </div>
+    <div class="w-full bg-slate-100 dark:bg-slate-700 h-2 rounded-full overflow-hidden">
+      <div class="bg-indigo-600 dark:bg-indigo-400 h-full rounded-full transition-all duration-300 progress-bar-fill" style="width: <%= section.percentage %>%"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Topics & Collapsible Questions Accordion -->
+<div class="space-y-8">
+  <% if (topics && topics.length > 0) { %>
+    <% topics.forEach((topic, tIdx) => { %>
+      <div id="topic-<%= topic.id %>" class="scroll-mt-20">
+        <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2.5">
+          <span class="flex items-center justify-center h-7 w-7 text-xs font-black text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-slate-800 rounded-lg">
+            <%= tIdx + 1 %>
+          </span>
+          <%= topic.name %>
+        </h2>
+
+        <% if (topic.Questions && topic.Questions.length > 0) { %>
+          <div class="space-y-3">
+            <% topic.Questions.forEach((question) => { %>
+              <div class="accordion-item border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" id="item-<%= question.id %>">
+                
+                <!-- Accordion Header -->
+                <div class="accordion-header flex items-center justify-between p-4 sm:p-5 cursor-pointer select-none gap-4">
+                  <div class="flex items-start gap-4 flex-1">
+                    <!-- Solved checkbox -->
+                    <input type="checkbox" 
+                      class="solved-checkbox mt-1 h-5 w-5 rounded border-slate-300 dark:border-slate-650 text-indigo-600 focus:ring-indigo-500 dark:focus:ring-offset-slate-800 cursor-pointer" 
+                      data-question-id="<%= question.id %>"
+                      data-section-id="<%= section.id %>"
+                      onclick="event.stopPropagation()"
+                      <%= (question.Progress && question.Progress.solved) ? 'checked' : '' %>>
+                    
+                    <span class="font-semibold text-slate-800 dark:text-slate-100 text-base leading-relaxed">
+                      <%= question.questionText %>
+                    </span>
+                  </div>
+
+                  <!-- Accordion Toggle Icon -->
+                  <svg class="accordion-icon h-5 w-5 text-slate-400 dark:text-slate-500 transform transition-transform duration-200 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+
+                <!-- Accordion Content -->
+                <div class="accordion-content max-h-0 overflow-hidden bg-slate-50/50 dark:bg-slate-900/30 border-t border-transparent transition-all duration-300">
+                  <div class="p-5 sm:p-6 border-t border-slate-100 dark:border-slate-700/60">
+                    <!-- Verified Answer Guide Label -->
+                    <div class="inline-flex items-center gap-1.5 text-xs font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/30 px-2.5 py-1 rounded-md mb-4 border border-indigo-100/30">
+                      <span>📖</span>
+                      <span>Verified Answer Guide</span>
+                    </div>
+
+                    <!-- Rendered raw answer text -->
+                    <div class="markdown-content text-slate-600 dark:text-slate-300 text-base leading-relaxed">
+                      <%- question.parsedAnswer %>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            <% }) %>
+          </div>
+        <% } else { %>
+          <div class="p-4 bg-slate-100 dark:bg-slate-850 rounded-xl text-center text-sm text-slate-400 dark:text-slate-500">
+            No questions defined under this topic.
+          </div>
+        <% } %>
+      </div>
+    <% }) %>
+  <% } else { %>
+    <div class="bg-white dark:bg-slate-800 rounded-2xl p-12 text-center border border-slate-200 dark:border-slate-700">
+      <h3 class="text-lg font-bold text-slate-800 dark:text-white">No topics available</h3>
+      <p class="text-sm text-slate-400 dark:text-slate-500">Create topics and questions to study.</p>
+    </div>
+  <% } %>
+</div>
+
+<!-- Include client script specific to study page -->
+<script src="/js/qa.js"></script>
+
+<%- include('partials/footer') %>
