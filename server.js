@@ -48,7 +48,11 @@ async function initDb() {
     // Ensure uploads directory exists
     const uploadsDir = path.join(__dirname, 'uploads');
     if (!fs.existsSync(uploadsDir)) {
-      fs.mkdirSync(uploadsDir);
+      try {
+        fs.mkdirSync(uploadsDir);
+      } catch (err) {
+        console.warn('Could not create uploads directory in read-only filesystem:', err.message);
+      }
     }
   } catch (error) {
     console.error('Failed to initialize database:', error);
