@@ -25,7 +25,7 @@ app.get('/uploads/:filename', (req, res) => {
   const filename = req.params.filename;
   // Sanitize filename to prevent directory traversal attacks (e.g. ../../../etc/passwd)
   const safeFilename = path.basename(filename);
-  const filePath = path.join(__dirname, 'uploads', safeFilename);
+  const filePath = path.join(process.cwd(), 'uploads', safeFilename);
   
   if (fs.existsSync(filePath)) {
     res.sendFile(filePath);
@@ -46,7 +46,7 @@ async function initDb() {
     console.log('SQLite database synchronized.');
 
     // Ensure uploads directory exists
-    const uploadsDir = path.join(__dirname, 'uploads');
+    const uploadsDir = path.join(process.cwd(), 'uploads');
     if (!fs.existsSync(uploadsDir)) {
       try {
         fs.mkdirSync(uploadsDir);

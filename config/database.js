@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 require('dotenv').config();
 
-let dbPath = path.resolve(__dirname, '..', process.env.DB_PATH || 'database.sqlite');
+let dbPath = path.join(process.cwd(), process.env.DB_PATH || 'database.sqlite');
 
 // Vercel serverless environment check - copy sqlite file to writable /tmp directory
 if (process.env.VERCEL) {
@@ -16,6 +16,8 @@ if (process.env.VERCEL) {
       } else {
         console.log('SQLite DB already exists in /tmp storage.');
       }
+    } else {
+      console.warn('Source SQLite DB file not found at:', dbPath);
     }
     dbPath = tempDbPath;
   } catch (err) {
