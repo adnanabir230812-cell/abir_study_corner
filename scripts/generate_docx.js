@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { Document, Packer, Paragraph, TextRun, HeadingLevel, Table, TableRow, TableCell, WidthType, BorderStyle } = require('docx');
+const { Document, Packer, Paragraph, TextRun, HeadingLevel, Table, TableRow, TableCell, WidthType } = require('docx');
 
 const dbPath = path.join(__dirname, '..', 'database.json');
 const downloadsDir = path.join(__dirname, '..', 'public', 'downloads');
@@ -17,19 +17,42 @@ function parseMarkdownToDocx(mdText) {
   
   let currentTableRows = [];
   let inTable = false;
+  let inCodeBlock = false;
 
   for (let i = 0; i < lines.length; i++) {
-    const line = lines[i].trim();
+    const line = lines[i];
+    const trimmed = line.trim();
+
+    // Handle Code Blocks (e.g. diagrams enclosed in ```)
+    if (trimmed.startsWith('```')) {
+      inCodeBlock = !inCodeBlock;
+      continue;
+    }
+
+    if (inCodeBlock) {
+      // In a code block, preserve layout using Consolas (monospaced)
+      children.push(new Paragraph({
+        children: [
+          new TextRun({
+            text: line, // Preserve original spacing/indentation
+            font: "Consolas",
+            size: 18 // 9pt to avoid line-wrap breakage
+          })
+        ],
+        spacing: { after: 40 }
+      }));
+      continue;
+    }
 
     // Handle Tables
-    if (line.startsWith('|')) {
+    if (trimmed.startsWith('|')) {
       inTable = true;
       // Skip markdown separator lines like |---|---|
-      if (line.includes('---') || line.includes(':---')) {
+      if (trimmed.includes('---') || trimmed.includes(':---')) {
         continue;
       }
       
-      const cols = line.split('|').map(c => c.trim()).filter((c, idx, arr) => idx > 0 && idx < arr.length - 1);
+      const cols = trimmed.split('|').map(c => c.trim()).filter((c, idx, arr) => idx > 0 && idx < arr.length - 1);
       
       const tableCells = cols.map(colText => {
         // Parse bold markers inside table cell
@@ -57,42 +80,42 @@ function parseMarkdownToDocx(mdText) {
       }
     }
 
-    if (!line) {
-      // Empty line, add a tiny space
+    if (!trimmed) {
+      // Empty line
       continue;
     }
 
     // Headers
-    if (line.startsWith('# ')) {
+    if (trimmed.startsWith('# ')) {
       children.push(new Paragraph({
-        text: line.replace('# ', ''),
+        text: trimmed.replace('# ', ''),
         heading: HeadingLevel.HEADING_1,
         spacing: { before: 200, after: 100 }
       }));
-    } else if (line.startsWith('## ')) {
+    } else if (trimmed.startsWith('## ')) {
       children.push(new Paragraph({
-        text: line.replace('## ', ''),
+        text: trimmed.replace('## ', ''),
         heading: HeadingLevel.HEADING_2,
         spacing: { before: 180, after: 80 }
       }));
-    } else if (line.startsWith('### ')) {
+    } else if (trimmed.startsWith('### ')) {
       children.push(new Paragraph({
-        text: line.replace('### ', ''),
+        text: trimmed.replace('### ', ''),
         heading: HeadingLevel.HEADING_3,
         spacing: { before: 150, after: 60 }
       }));
-    } else if (line.startsWith('* ') || line.startsWith('- ')) {
+    } else if (trimmed.startsWith('* ') || trimmed.startsWith('- ')) {
       // Bullet lists
-      const text = line.substring(2);
+      const text = trimmed.substring(2);
       const runs = parseInlineFormatting(text);
       children.push(new Paragraph({
         children: runs,
         bullet: { level: 0 },
         spacing: { after: 100 }
       }));
-    } else if (/^\d+\.\s/.test(line)) {
+    } else if (/^\d+\.\s/.test(trimmed)) {
       // Numbered lists
-      const text = line.replace(/^\d+\.\s/, '');
+      const text = trimmed.replace(/^\d+\.\s/, '');
       const runs = parseInlineFormatting(text);
       children.push(new Paragraph({
         children: runs,
@@ -101,7 +124,7 @@ function parseMarkdownToDocx(mdText) {
       }));
     } else {
       // Standard paragraph
-      const runs = parseInlineFormatting(line);
+      const runs = parseInlineFormatting(trimmed);
       children.push(new Paragraph({
         children: runs,
         spacing: { after: 120 }
@@ -159,6 +182,126 @@ function parseInlineFormatting(text) {
   return runs;
 }
 
+// Course Document Generator
+async function generateDocxForCourse(course, includeAnswers) {
+  const docChildren = [];
+
+  // 1. Cover Page Title
+  docChildren.push(new Paragraph({
+    text: course.name.toUpperCase(),
+    heading: HeadingLevel.TITLE,
+    alignment: "center",
+    spacing: { before: 800, after: 200 }
+  }));
+
+  // Course Code Subtitle
+  docChildren.push(new Paragraph({
+    children: [
+      new TextRun({
+        text: `Course Code: ${course.code}\n`,
+        bold: true,
+        size: 28,
+        color: "4B5563"
+      }),
+      new TextRun({
+        text: includeAnswers ? `Previous Year Questions with Solutions\n` : `Previous Year Questions Compilation\n`,
+        italics: true,
+        size: 24,
+        color: "6B7280"
+      }),
+      new TextRun({
+        text: `Generated by Abir's Study Corner\n`,
+        size: 20,
+        color: "9CA3AF"
+      })
+    ],
+    alignment: "center",
+    spacing: { after: 1200 }
+  }));
+
+  // Page Break/Separator
+  docChildren.push(new Paragraph({
+    text: "--------------------------------------------------------------------------------",
+    alignment: "center",
+    spacing: { after: 400 }
+  }));
+
+  let questionCount = 0;
+
+  // 2. Add content by sections and topics
+  course.Sections.forEach(section => {
+    docChildren.push(new Paragraph({
+      text: `SECTION: ${section.name} (Instructor: ${section.teacherName || 'N/A'})`,
+      heading: HeadingLevel.HEADING_1,
+      spacing: { before: 400, after: 200 }
+    }));
+
+    section.Topics.forEach(topic => {
+      docChildren.push(new Paragraph({
+        text: `Topic: ${topic.name}`,
+        heading: HeadingLevel.HEADING_2,
+        spacing: { before: 300, after: 150 }
+      }));
+
+      topic.Questions.forEach((q, idx) => {
+        questionCount++;
+        
+        // Clean Question Text from any markdown backticks
+        const cleanQuestionText = q.questionText.replace(/`/g, '');
+
+        // Question Header
+        docChildren.push(new Paragraph({
+          children: [
+            new TextRun({
+              text: `Q${idx + 1}. ${cleanQuestionText}`,
+              bold: true,
+              color: "1E3A8A", // Indigo-900 / Dark blue
+              size: 26 // 13pt
+            })
+          ],
+          spacing: { before: 200, after: 100 }
+        }));
+
+        if (includeAnswers) {
+          // Question Answer Body
+          if (q.answerText) {
+            const parsedAns = parseMarkdownToDocx(q.answerText);
+            docChildren.push(...parsedAns);
+          } else {
+            docChildren.push(new Paragraph({
+              text: "No solution uploaded yet.",
+              italics: true,
+              spacing: { after: 100 }
+            }));
+          }
+        }
+
+        // Separator between questions
+        docChildren.push(new Paragraph({
+          text: "",
+          spacing: { after: 200 }
+        }));
+      });
+    });
+  });
+
+  // 3. Package and Save Document
+  const doc = new Document({
+    sections: [{
+      properties: {},
+      children: docChildren
+    }]
+  });
+
+  const suffix = includeAnswers ? 'solve' : 'questions';
+  const filename = `course_${course.id}_${suffix}.docx`;
+  const outputPath = path.join(downloadsDir, filename);
+
+  const buffer = await Packer.toBuffer(doc);
+  fs.writeFileSync(outputPath, buffer);
+  console.log(`Generated styled Word document for ${course.name} [${suffix}]: ${filename} (${questionCount} questions)`);
+}
+
 // Main generation function
 async function generateAllDocx() {
   try {
@@ -171,116 +314,10 @@ async function generateAllDocx() {
     console.log(`Starting Word document generation for ${db.courses.length} courses...`);
 
     for (const course of db.courses) {
-      const docChildren = [];
-
-      // 1. Cover Page Title
-      docChildren.push(new Paragraph({
-        text: course.name.toUpperCase(),
-        heading: HeadingLevel.TITLE,
-        alignment: "center",
-        spacing: { before: 800, after: 200 }
-      }));
-
-      // Course Code Subtitle
-      docChildren.push(new Paragraph({
-        children: [
-          new TextRun({
-            text: `Course Code: ${course.code}\n`,
-            bold: true,
-            size: 28,
-            color: "4B5563"
-          }),
-          new TextRun({
-            text: `Previous Year Questions Compilation\n`,
-            italics: true,
-            size: 24,
-            color: "6B7280"
-          }),
-          new TextRun({
-            text: `Generated by Abir's Study Corner\n`,
-            size: 20,
-            color: "9CA3AF"
-          })
-        ],
-        alignment: "center",
-        spacing: { after: 1200 }
-      }));
-
-      // Page Break/Separator
-      docChildren.push(new Paragraph({
-        text: "--------------------------------------------------------------------------------",
-        alignment: "center",
-        spacing: { after: 400 }
-      }));
-
-      let courseQuestionCount = 0;
-
-      // 2. Add content by sections and topics
-      course.Sections.forEach(section => {
-        docChildren.push(new Paragraph({
-          text: `SECTION: ${section.name} (Instructor: ${section.teacherName || 'N/A'})`,
-          heading: HeadingLevel.HEADING_1,
-          spacing: { before: 400, after: 200 }
-        }));
-
-        section.Topics.forEach(topic => {
-          docChildren.push(new Paragraph({
-            text: `Topic: ${topic.name}`,
-            heading: HeadingLevel.HEADING_2,
-            spacing: { before: 300, after: 150 }
-          }));
-
-          topic.Questions.forEach((q, idx) => {
-            courseQuestionCount++;
-            
-            // Question Header
-            docChildren.push(new Paragraph({
-              children: [
-                new TextRun({
-                  text: `Q${idx + 1}. ${q.questionText}`,
-                  bold: true,
-                  color: "1E3A8A", // Indigo-900 / Dark blue
-                  size: 26 // 13pt
-                })
-              ],
-              spacing: { before: 200, after: 100 }
-            }));
-
-            // Question Answer Body
-            if (q.answerText) {
-              const parsedAns = parseMarkdownToDocx(q.answerText);
-              docChildren.push(...parsedAns);
-            } else {
-              docChildren.push(new Paragraph({
-                text: "No solution uploaded yet.",
-                italics: true,
-                spacing: { after: 100 }
-              }));
-            }
-
-            // Separator between questions
-            docChildren.push(new Paragraph({
-              text: "",
-              spacing: { after: 200 }
-            }));
-          });
-        });
-      });
-
-      // 3. Package and Save Document
-      const doc = new Document({
-        sections: [{
-          properties: {},
-          children: docChildren
-        }]
-      });
-
-      const filename = `course_${course.id}.docx`;
-      const outputPath = path.join(downloadsDir, filename);
-
-      const buffer = await Packer.toBuffer(doc);
-      fs.writeFileSync(outputPath, buffer);
-      console.log(`Generated styled Word document for ${course.name}: ${filename} (${courseQuestionCount} questions)`);
+      // Generate questions only file
+      await generateDocxForCourse(course, false);
+      // Generate questions with solved answers file
+      await generateDocxForCourse(course, true);
     }
 
     console.log('All course Word documents generated successfully!');
