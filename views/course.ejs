@@ -39,7 +39,15 @@
       <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-all">
         <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 pb-6 border-b border-slate-100 dark:border-slate-700">
           <div>
-            <h2 class="text-2xl font-bold text-slate-900 dark:text-white"><%= section.name %></h2>
+            <div class="flex items-center gap-3 flex-wrap">
+              <h2 class="text-2xl font-bold text-slate-900 dark:text-white"><%= section.name %></h2>
+              <button onclick="openAnalysisModal('<%= section.id %>', '<%= section.name %>')" class="inline-flex items-center gap-1.5 bg-indigo-50 hover:bg-indigo-100 dark:bg-indigo-950 dark:hover:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs font-extrabold px-3 py-1.5 rounded-lg border border-indigo-100 dark:border-indigo-900 transition-all cursor-pointer">
+                <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+                Question Analysis
+              </button>
+            </div>
             <p class="text-sm font-medium text-slate-500 dark:text-slate-400 mt-1">Instructor: <%= section.teacherName || 'Not Specified' %></p>
           </div>
           
@@ -115,5 +123,168 @@
     </div>
   <% } %>
 </div>
+
+<!-- Question Analysis Modal -->
+<div id="analysis-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm transition-opacity duration-250 opacity-0 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+  <div class="fixed inset-0 transition-opacity" onclick="closeAnalysisModal()"></div>
+  
+  <div class="relative bg-white dark:bg-slate-800 rounded-2xl max-w-2xl w-full max-h-[85vh] shadow-2xl border border-slate-200 dark:border-slate-700/80 modal-content-panel transform scale-95 opacity-0 transition-all duration-250 flex flex-col overflow-hidden">
+    <!-- Header -->
+    <div class="bg-white dark:bg-slate-800 border-b border-slate-100 dark:border-slate-700 px-6 py-4 flex items-center justify-between z-10">
+      <div>
+        <h3 class="text-xl font-extrabold text-slate-900 dark:text-white flex items-center gap-2">
+          <span>📊</span> Question Analysis: <span id="modal-section-title">Section A</span>
+        </h3>
+        <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Instructor: <span id="modal-teacher-name" class="font-semibold text-indigo-600 dark:text-indigo-400">Sabiha Mam</span></p>
+      </div>
+      <button onclick="closeAnalysisModal()" class="text-slate-400 hover:text-slate-600 dark:hover:text-white p-1.5 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-xl transition-all cursor-pointer">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    
+    <!-- Body -->
+    <div class="p-6 overflow-y-auto space-y-6 flex-1 max-h-[calc(85vh-130px)]">
+      
+      <!-- Style Description Badge & text -->
+      <div class="bg-indigo-50/50 dark:bg-slate-900/40 p-4 rounded-xl border border-indigo-100/50 dark:border-slate-700/50">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="text-xs font-bold bg-indigo-600 text-white px-2.5 py-0.5 rounded-full uppercase tracking-wider" id="modal-style-badge">Conceptual & Mechanism-Oriented</span>
+          <span class="text-xs font-bold text-slate-400 dark:text-slate-500">Question Style</span>
+        </div>
+        <p class="text-sm text-slate-650 dark:text-slate-305 leading-relaxed" id="modal-desc">
+          Sabiha Mam focuses heavily on the basic biological mechanisms of plant diseases...
+        </p>
+      </div>
+
+      <!-- High Yield Topics -->
+      <div>
+        <h4 class="text-base font-extrabold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
+          <span>🔥</span> High-Yield & Important Topics
+        </h4>
+        <div class="grid grid-cols-1 gap-3.5" id="modal-topics-list">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+
+      <!-- Question Pattern Analysis -->
+      <div>
+        <h4 class="text-base font-extrabold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
+          <span>🎯</span> Teacher's Question Pattern & Style
+        </h4>
+        <div class="space-y-3" id="modal-pattern-list">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+
+      <!-- Prep Tips -->
+      <div>
+        <h4 class="text-base font-extrabold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
+          <span>💡</span> Preparation Action Plan
+        </h4>
+        <ul class="space-y-2.5 bg-emerald-50/30 dark:bg-emerald-950/10 p-5 rounded-xl border border-emerald-100/30 dark:border-emerald-900/30 list-none" id="modal-tips-list">
+          <!-- Dynamically populated -->
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="border-t border-slate-100 dark:border-slate-750 px-6 py-4 flex justify-end bg-slate-50 dark:bg-slate-900/30">
+      <button onclick="closeAnalysisModal()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 px-6 rounded-xl text-sm transition-all shadow-md shadow-indigo-200 dark:shadow-none cursor-pointer">
+        Got it, thanks!
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Dynamic client data injected from Express Course object
+  const sectionsAnalysis = <%- JSON.stringify(course.Sections.reduce((acc, sec) => { acc[sec.id] = sec.analysis; return acc; }, {})) %>;
+  
+  function openAnalysisModal(sectionId, sectionName) {
+    const analysis = sectionsAnalysis[sectionId];
+    if (!analysis) return;
+    
+    // Set title and subtitle
+    document.getElementById('modal-section-title').textContent = sectionName;
+    document.getElementById('modal-teacher-name').textContent = analysis.teacher || 'the Instructor';
+    document.getElementById('modal-style-badge').textContent = analysis.style || 'Standard Style';
+    document.getElementById('modal-desc').textContent = analysis.desc || '';
+    
+    // Render Important Topics
+    const topicsContainer = document.getElementById('modal-topics-list');
+    topicsContainer.innerHTML = '';
+    analysis.importantTopics.forEach(topic => {
+      let weightColor = 'bg-slate-100 text-slate-800 dark:bg-slate-700 dark:text-slate-200';
+      if (topic.weight === 'Critical') {
+        weightColor = 'bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-200 border border-rose-200 dark:border-rose-900';
+      } else if (topic.weight === 'Very High') {
+        weightColor = 'bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-200 border border-amber-200 dark:border-amber-900';
+      } else if (topic.weight === 'High') {
+        weightColor = 'bg-indigo-100 text-indigo-800 dark:bg-indigo-950 dark:text-indigo-200 border border-indigo-200 dark:border-indigo-900';
+      }
+      
+      const topicEl = document.createElement('div');
+      topicEl.className = 'border border-slate-150 dark:border-slate-700/60 p-4 rounded-xl bg-slate-50/50 dark:bg-slate-900/40';
+      topicEl.innerHTML = `
+        <div class="flex items-center justify-between gap-3 flex-wrap">
+          <h4 class="font-bold text-sm text-slate-800 dark:text-slate-250">${topic.name}</h4>
+          <span class="text-[10px] font-bold px-2 py-0.5 rounded-full ${weightColor}">${topic.weight}</span>
+        </div>
+        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1.5 leading-relaxed">${topic.details}</p>
+      `;
+      topicsContainer.appendChild(topicEl);
+    });
+    
+    // Render Pattern Analysis
+    const patternContainer = document.getElementById('modal-pattern-list');
+    patternContainer.innerHTML = '';
+    analysis.patternAnalysis.forEach(pattern => {
+      const patternEl = document.createElement('div');
+      patternEl.className = 'flex gap-3 items-start';
+      patternEl.innerHTML = `
+        <span class="text-indigo-500 mt-0.5 text-base">📌</span>
+        <div>
+          <span class="block font-bold text-sm text-slate-700 dark:text-slate-300">${pattern.aspect}</span>
+          <span class="block text-xs text-slate-500 dark:text-slate-400 mt-0.5 leading-relaxed">${pattern.explanation}</span>
+        </div>
+      `;
+      patternContainer.appendChild(patternEl);
+    });
+    
+    // Render Prep Tips
+    const tipsContainer = document.getElementById('modal-tips-list');
+    tipsContainer.innerHTML = '';
+    analysis.prepTips.forEach(tip => {
+      const tipEl = document.createElement('li');
+      tipEl.className = 'flex gap-2.5 items-start text-xs text-slate-650 dark:text-slate-300 leading-relaxed';
+      tipEl.innerHTML = `
+        <span class="text-emerald-500 font-bold select-none">✓</span>
+        <span>${tip}</span>
+      `;
+      tipsContainer.appendChild(tipEl);
+    });
+    
+    // Show Modal
+    const modal = document.getElementById('analysis-modal');
+    modal.classList.remove('hidden');
+    // Trigger animations
+    setTimeout(() => {
+      modal.classList.remove('opacity-0');
+      modal.querySelector('.modal-content-panel').classList.remove('scale-95', 'opacity-0');
+    }, 10);
+  }
+  
+  function closeAnalysisModal() {
+    const modal = document.getElementById('analysis-modal');
+    modal.classList.add('opacity-0');
+    modal.querySelector('.modal-content-panel').classList.add('scale-95', 'opacity-0');
+    setTimeout(() => {
+      modal.classList.add('hidden');
+    }, 250);
+  }
+</script>
 
 <%- include('partials/footer') %>

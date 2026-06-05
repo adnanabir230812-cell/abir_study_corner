@@ -182,6 +182,76 @@ function parseInlineFormatting(text) {
   return runs;
 }
 
+function deduplicateQuestions(questions) {
+  const unique = [];
+  const map = new Map();
+
+  questions.forEach(q => {
+    // 1. Find all bracketed text
+    const tags = [];
+    const rx = /\[([^\]]+)\]/g;
+    let match;
+    while ((match = rx.exec(q.questionText)) !== null) {
+      tags.push(match[1]);
+    }
+
+    // 2. Clean question text of any brackets and extra spaces
+    let cleanText = q.questionText.replace(/\[[^\]]+\]/g, '').trim();
+    cleanText = cleanText.replace(/\s+/g, ' ').trim();
+
+    // 3. Normalize for matching
+    const normalized = cleanText.toLowerCase().replace(/[^a-z0-9]/g, '').trim();
+
+    if (map.has(normalized)) {
+      const existing = map.get(normalized);
+      existing.count += 1;
+      existing.tags.push(...tags);
+      // Merge answer text if existing doesn't have it but this one does
+      if (!existing.answerText && q.answerText) {
+        existing.answerText = q.answerText;
+      }
+    } else {
+      const entry = {
+        ...q,
+        cleanText,
+        tags,
+        count: 1
+      };
+      map.set(normalized, entry);
+      unique.push(entry);
+    }
+  });
+
+  // Re-build final question text for each unique question
+  return unique.map(item => {
+    // Merge and deduplicate tags
+    let mergedTags = [];
+    item.tags.forEach(tagGroup => {
+      const parts = tagGroup.split(/[,;]/);
+      parts.forEach(p => {
+        const cleaned = p.trim();
+        // Skip tags that are just "Repeated x..."
+        if (cleaned && !cleaned.toLowerCase().includes('repeated') && !mergedTags.includes(cleaned)) {
+          mergedTags.push(cleaned);
+        }
+      });
+    });
+
+    let finalQuestionText = item.cleanText;
+    if (mergedTags.length > 0) {
+      finalQuestionText += ` [${mergedTags.join(', ')}]`;
+    }
+    if (item.count > 1) {
+      finalQuestionText += ` (x${item.count})`;
+    }
+
+    return {
+      ...item,
+      questionText: finalQuestionText
+    };
+  });
+}
+
 // Course Document Generator
 async function generateDocxForCourse(course, includeAnswers) {
   const docChildren = [];
@@ -243,7 +313,8 @@ async function generateDocxForCourse(course, includeAnswers) {
         spacing: { before: 300, after: 150 }
       }));
 
-      topic.Questions.forEach((q, idx) => {
+      const deduplicatedQuestions = deduplicateQuestions(topic.Questions);
+      deduplicatedQuestions.forEach((q, idx) => {
         questionCount++;
         
         // Clean Question Text from any markdown backticks
