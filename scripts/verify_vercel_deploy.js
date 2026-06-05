@@ -1,6 +1,6 @@
 const http = require('https');
 
-const url = 'abir-study-corner.vercel.app';
+const url = 'abirporbe.vercel.app';
 console.log(`Checking deployment status of ${url}...`);
 
 const checkUrl = () => {

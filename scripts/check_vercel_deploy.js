@@ -1,9 +1,7 @@
 const http = require('https');
 
 const urls = [
-  'abir-study-corner.vercel.app',
-  'abir-study-corner-adnanabir230812-cell.vercel.app',
-  'abir-study-corner-adnanabir230812-cells-projects.vercel.app'
+  'abirporbe.vercel.app'
 ];
 
 console.log('Pinging potential Vercel deployment URLs...');

@@ -1,7 +1,7 @@
 const https = require('https');
 
 const options = {
-  hostname: 'abir-study-corner.vercel.app',
+  hostname: 'abirporbe.vercel.app',
   port: 443,
   path: '/',
   method: 'GET',
