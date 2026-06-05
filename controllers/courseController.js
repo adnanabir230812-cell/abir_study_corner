@@ -148,42 +148,43 @@ const courseAnalyses = {
       teacher: "Sabiha Mam",
       style: "Conceptual & Mechanism-Oriented",
       desc: "Sabiha Mam focuses heavily on the basic biological mechanisms of plant diseases. Questions are design-based and test your conceptual understanding rather than simple memorization.",
+      examStructure: "Section A: 4 questions total, must answer 3. Total marks: 30.",
+      teacherPersona: "Sabiha Mam appreciates precise scientific definitions and logical flow. In questions about penetration or pathogenesis, she expects step-by-step descriptions. Labeled hand-drawn diagrams showing fungal structures (like appressoria and penetration pegs) invading host cells are crucial for securing full marks. Focus on 'how' and 'why' rather than just 'what'.",
       importantTopics: [
         {
           name: "Pathogenesis & Entry Mechanisms",
-          weight: "Very High",
-          details: "How pathogens penetrate host barriers. Pay close attention to Direct Penetration (appressorium, penetration peg) vs. Indirect (natural openings like stomata, lenticels, hydathodes) and wounds."
+          weight: "Critical",
+          typicalQuestions: "Explain the mechanism of direct penetration through cuticle/epidermis. Compare direct vs indirect penetration through natural openings (stomata, hydathodes, lenticels).",
+          scoringTips: "Draw a clear diagram showing the appressorium, penetration peg, and cuticle layers. Label the mechanical pressure and enzymatic dissolution zones."
         },
         {
           name: "Enzymes & Toxins in Pathogenesis",
-          weight: "High",
-          details: "Understand the classification of toxins. Host-specific (e.g. Victorin/HV toxin, T-toxin) vs. Non-specific (e.g. Tentoxin, Tabtoxin/Wildfire toxin). Memorize their causal fungi/bacteria and mechanism of action."
+          weight: "Very High",
+          typicalQuestions: "Classify toxins with examples. Describe the mode of action and causal pathogen of Victorin or Tentoxin.",
+          scoringTips: "Create a clear comparison table showing Host-Specific (Victorin, T-toxin) vs Non-Specific (Tentoxin, Tabtoxin). Mention their specific causal pathogens."
         },
         {
           name: "Pathophysiology of Diseased Plants",
           weight: "High",
-          details: "How diseases disrupt basic physiology: effect on photosynthesis (chloroplast destruction) and respiration (rapid initial increase, uncoupling of oxidative phosphorylation)."
+          typicalQuestions: "Explain how respiration is altered in diseased plants. Detail the effect of pathogens on photosynthesis.",
+          scoringTips: "Explain the 'respiratory burst' (initial increase in respiration) and the uncoupling of oxidative phosphorylation in bullet points."
         },
         {
           name: "Epidemiology & Control Principles",
           weight: "High",
-          details: "The Disease Triangle (Host, Pathogen, Environment). Conditions favoring epiphytotics. Exclusion (quarantine), Protection (chemical barrier), and Eradication."
+          typicalQuestions: "Describe the components of the Disease Triangle & Tetrahedron. Explain the principles of exclusion (quarantine) and protection.",
+          scoringTips: "Draw the Disease Triangle and Disease Tetrahedron diagrams. For control principles, specify the difference between exclusion (quarantine) and eradication (crop rotation/sanitation)."
         }
       ],
-      patternAnalysis: [
-        {
-          aspect: "Question Framing",
-          explanation: "Mam often asks comparison questions (e.g., 'Differentiate between Biotrophs and Necrotrophs', 'Host-Specific vs Non-Specific Toxins'). Direct definitions are usually combined with mechanical explanations."
-        },
-        {
-          aspect: "Biological Diagrams",
-          explanation: "Labeled illustrations of penetration structures (appressorium, infection peg, haustorium) are highly appreciated and carry significant marks."
-        }
+      chronologicalTrends: [
+        "Toxin mechanisms (specifically Victorin vs Tentoxin differences) are asked almost every alternate year.",
+        "Respiration changes in pathophysiology are highly recurrent, appearing in 80% of final exams.",
+        "Questions comparing direct vs indirect penetration are highly typical and repeat frequently."
       ],
       prepTips: [
-        "Create tabular comparison charts for different toxins and their features.",
-        "Practice drawing clean diagrams showing host cell penetration and fungal structures.",
-        "Be precise with definitions (e.g., Pathogenicity, Infection Court, Incubation Period)."
+        "Practice drawing the penetration peg diagram at least 3 times.",
+        "Memorize the comparison tables for Biotrophs vs Necrotrophs, and Host-Specific vs Non-Specific Toxins.",
+        "Review definitions of Pathogenicity, Infection Court, and Incubation Period."
       ]
     },
     // Section ID: 2 (Section B - Rezaul Sir)
@@ -191,42 +192,49 @@ const courseAnalyses = {
       teacher: "Rezaul Sir",
       style: "Structured & Cycle-Oriented",
       desc: "Rezaul Sir's section covers specific crop diseases. The questions are highly structured and standardized. Correct scientific names (causal agents) and clean disease cycle diagrams are essential.",
+      examStructure: "Section B: 4 questions total, must answer 3. Total marks: 30.",
+      teacherPersona: "Rezaul Sir looks for structured answers. Answers should be divided into: Causal Organism, Symptoms (growth-stage wise), Disease Cycle (diagrammatic), and Management. Causal agents must be written with correct scientific names and underlined. Clean, closed-loop disease cycle diagrams showing primary inoculum, secondary infection, survival, and dissemination are mandatory.",
       importantTopics: [
         {
-          name: "Rice Diseases (Major focus)",
+          name: "Rice Diseases (Blast & Brown Spot)",
           weight: "Critical",
-          details: "Blast of Rice (symptoms at different growth stages like leaf, node, neck blast; favorable conditions). Brown Spot (symptoms, cycle, causal agent: Bipolaris oryzae). Bacterial Leaf Blight (BLB) (symptoms, kresek stage, and cycle)."
+          typicalQuestions: "Describe the symptoms of Blast of Rice at different growth stages. Draw and describe the disease cycle of Brown Spot of Rice.",
+          scoringTips: "Blast symptoms must cover leaf blast, node blast, and neck blast. Scientific names like Pyricularia oryzae and Bipolaris oryzae must be spelled correctly and underlined separately."
+        },
+        {
+          name: "Bacterial Leaf Blight (BLB) of Rice",
+          weight: "Very High",
+          typicalQuestions: "Describe the symptoms and disease cycle of BLB of Rice.",
+          scoringTips: "Mention the 'Kresek stage' (wilt stage in seedlings) and draw the bacterial ooze test or cycle. Causal agent: Xanthomonas oryzae pv. oryzae."
         },
         {
           name: "Red Rot of Sugarcane",
           weight: "Very High",
-          details: "Causal agent: Colletotrichum falcatum. Detailed symptoms on leaf/stalk (red tissue with white cross bands) and full disease cycle."
+          typicalQuestions: "Describe the symptoms of red rot of sugarcane and draw its disease cycle.",
+          scoringTips: "Causal agent: Colletotrichum falcatum. Emphasize key diagnostic symptoms: red discoloration of internal pith with white cross bands, and acidic smell."
         },
         {
           name: "Tikka Disease of Groundnut",
           weight: "High",
-          details: "Comparison of early tikka (Cercospora arachidicola) vs. late tikka (Cercosporidium personatum) based on halo, spot color, and size."
+          typicalQuestions: "Distinguish between early and late tikka diseases of groundnut.",
+          scoringTips: "Draw a table comparing early tikka (Cercospora arachidicola - brown halo, larger spot) vs. late tikka (Cercosporidium personatum - no halo, smaller dark spot)."
         },
         {
           name: "Jute Stem Rot & Black Band",
           weight: "High",
-          details: "Compare and contrast symptoms of Stem Rot (Macrophomina phaseolina) vs. Black Band (Diplodia corchori)."
+          typicalQuestions: "Compare symptoms of stem rot and black band of jute. Draw the disease cycle of stem rot.",
+          scoringTips: "Highlight causal organisms: Macrophomina phaseolina (stem rot) and Diplodia corchori (black band)."
         }
       ],
-      patternAnalysis: [
-        {
-          aspect: "Causal Organisms",
-          explanation: "Always write the correct, underlined scientific name of the causal agent. Spelling mistakes here will cost you the majority of marks."
-        },
-        {
-          aspect: "Disease Cycles",
-          explanation: "Draw clear flowcharts showing primary inoculum, secondary infection, dissemination, survival/overwintering, and penetration. Clean circles are preferred over paragraphs."
-        }
+      chronologicalTrends: [
+        "Blast of rice symptoms and Red Rot of sugarcane cycle are high-yield questions that alternate years.",
+        "A comparison question (Tikka early/late or Jute stem rot/black band) appears in almost every exam paper.",
+        "Listing causal agents for major rice diseases is a high-frequency short question."
       ],
       prepTips: [
-        "Make a summary sheet listing: Crop -> Disease -> Causal Organism (Scientific name) -> Diagnostic Symptom.",
-        "Practice drawing full, closed-loop disease cycle diagrams for Rice Blast, Brown Spot, Red Rot, and Stem Rot of Jute.",
-        "Learn the specific environmental conditions (humidity, temperature range) that trigger each major disease outbreak."
+        "Make a summary table: Crop -> Disease -> Scientific Name -> Diagnostic Symptom.",
+        "Practice drawing disease cycles as clean flowcharts with arrows indicating primary vs secondary inoculum.",
+        "Ensure scientific names are written as Genus species, with both terms underlined separately (e.g. Pyricularia oryzae)."
       ]
     }
   }
@@ -237,28 +245,30 @@ const getFallbackAnalysis = (sectionName, teacherName) => {
     teacher: teacherName || "the Instructor",
     style: "General Syllabus Focus",
     desc: `This section covers the syllabus modules guided by ${teacherName || 'the instructor'}. Preparation should focus on fundamental understanding, core concepts, and reviewing previous year question trends.`,
+    examStructure: "Standard exam structure: 4 questions total, must answer 3. Total marks: 30.",
+    teacherPersona: `The instructor emphasizes clarity, structure, and direct answers to the point. Focus on covering all lectures and matching definitions with textbook standards.`,
     importantTopics: [
       {
-        name: "Core Definitions and Classifications",
+        name: "Core Definitions & Terms",
         weight: "High",
-        details: "Ensure you have memorized all basic terminology, definitions, classifications, and foundational concepts introduced in the lectures."
+        typicalQuestions: "Explain the basic terminology and core classifications of the subject.",
+        scoringTips: "Write concise, accurate definitions and support them with typical examples."
       },
       {
-        name: "Main Concepts & Models",
+        name: "Main Theoretical Principles",
         weight: "Very High",
-        details: "Focus on primary mechanisms, models, or formulas taught in class. These form the backbone of multiple-part questions."
+        typicalQuestions: "Describe the primary theories, models, or processes discussed in lectures.",
+        scoringTips: "Use bullet points to explain steps of a process or model, and include diagrams where relevant."
       }
     ],
-    patternAnalysis: [
-      {
-        aspect: "Past Papers Analysis",
-        explanation: "Questions typically repeat core themes from the last 3-5 years. Look for high-frequency topics in the previous year question document."
-      }
+    chronologicalTrends: [
+      "Exam questions typically repeat core themes from the last 3-5 years.",
+      "Pay attention to topics that were heavily emphasized during classroom lectures."
     ],
     prepTips: [
       "Review the downloaded Previous Year Questions document to identify repeating patterns.",
-      "Solve the practice questions and double check your answers against standard course textbooks.",
-      "Pay attention to diagrams, tables, and comparison charts from the lectures."
+      "Use bullet points and bold headers in your exam script to improve readability.",
+      "Draw diagrams, flowcharts, or comparison tables to explain complex processes."
     ]
   };
 };
