@@ -537,8 +537,8 @@
                 {
                   "id": 126,
                   "topicId": 45,
-                  "questionText": "[✦ Repeated ×2] Write down the Vanderplank&apos;s Equivalence theorem correlated with disease triangle",
-                  "answerText": "## Answer\n\nVanderplank&apos;s Equivalence Theorem: \"Effects of host, pathogen and environment can be translated into terms of the rate parameter of an epidemic.\"\n### Changes in any component has an equivalent effect on disease:\n* More/less susceptible host\n* More/less favorable environment\n* More/less amount of aggressive pathogen = same proportional change in disease\n* Correlation with Disease Triangle: The disease triangle has three sides: Host, Pathogen, and Environment. According to Vanderplank&apos;s theorem, any change in any side has an equivalent and proportional effect on the area of the triangle — which represents the amount of disease. Therefore, disease management principles are centered around manipulating one or more components of the disease triangle."
+                  "questionText": "[✦ Repeated ×2] Write down the Vanderplank's Equivalence theorem correlated with disease triangle",
+                  "answerText": "## Answer\n\nVanderplank's Equivalence Theorem: \"Effects of host, pathogen and environment can be translated into terms of the rate parameter of an epidemic.\"\n### Changes in any component has an equivalent effect on disease:\n* More/less susceptible host\n* More/less favorable environment\n* More/less amount of aggressive pathogen = same proportional change in disease\n* Correlation with Disease Triangle: The disease triangle has three sides: Host, Pathogen, and Environment. According to Vanderplank's theorem, any change in any side has an equivalent and proportional effect on the area of the triangle — which represents the amount of disease. Therefore, disease management principles are centered around manipulating one or more components of the disease triangle."
                 },
                 {
                   "id": 296,
@@ -1776,7 +1776,7 @@
             {
               "id": 100,
               "sectionId": 4,
-              "name": "Ecosystem: Definition &amp; Classification",
+              "name": "Ecosystem: Definition & Classification",
               "Questions": [
                 {
                   "id": 1000,
@@ -1787,7 +1787,7 @@
                 {
                   "id": 1001,
                   "topicId": 100,
-                  "questionText": "Classify ecosystem with examples.",
+                  "questionText": "Classify ecosystem with examples.  [3]  (2019)",
                   "answerText": "Ecosystems are classified as follows:\n* Natural Ecosystems:\n  * Terrestrial: Forests, grasslands, deserts.\n  * Aquatic:\n    * Lentic (Stagnant water): Ponds, lakes.\n    * Lotic (Flowing water): Rivers, streams, oceans.\n* Artificial (Man-made) Ecosystems:\n  * Examples: Croplands, gardens, aquariums, parks, and kitchen gardens."
                 },
                 {
@@ -1801,18 +1801,18 @@
             {
               "id": 101,
               "sectionId": 4,
-              "name": "Ecosystem as the Basic Structural &amp; Functional Unit",
+              "name": "Ecosystem as the Basic Structural & Functional Unit",
               "Questions": [
                 {
                   "id": 1003,
                   "topicId": 101,
-                  "questionText": "&apos;Ecosystem is the basic structural and functional unit of ecology&apos; — comprehend.",
+                  "questionText": "'Ecosystem is the basic structural and functional unit of ecology' — comprehend.  [4]  (2023)",
                   "answerText": "An ecosystem is considered the basic structural and functional unit of ecology because it encompasses all the living components and physical factors, along with their dynamic interactions, required to sustain life.\n\n* Structural Unit:\n  * Biotic Components: Comprises living organisms (producers, consumers, and decomposers) that maintain ecological balance.\n  * Abiotic Components: Includes non-living factors (sunlight, water, soil, air, and nutrients) that create the physical environment for living beings.\n* Functional Unit:\n  * Energy Flow: Energy enters the system via photosynthesis (by producers), flows through food chains to consumers, and exits as heat (following thermodynamic laws).\n  * Nutrient Cycling: Essential nutrients (carbon, nitrogen, phosphorus) are continuously recycled between abiotic and biotic components.\n  * Self-Sustenance: Ecosystems are self-regulating systems capable of maintaining stability (homeostasis) through feedback mechanisms."
                 },
                 {
                   "id": 1004,
                   "topicId": 101,
-                  "questionText": "&apos;Ecosystem is the basic structural and functional unit of ecology&apos; — explain.",
+                  "questionText": "'Ecosystem is the basic structural and functional unit of ecology' — explain.  [4]  (2019, 2021 (same Q))",
                   "answerText": "An ecosystem is considered the basic structural and functional unit of ecology because it encompasses all the living components and physical factors, along with their dynamic interactions, required to sustain life.\n\n* Structural Unit:\n  * Biotic Components: Comprises living organisms (producers, consumers, and decomposers) that maintain ecological balance.\n  * Abiotic Components: Includes non-living factors (sunlight, water, soil, air, and nutrients) that create the physical environment for living beings.\n* Functional Unit:\n  * Energy Flow: Energy enters the system via photosynthesis (by producers), flows through food chains to consumers, and exits as heat (following thermodynamic laws).\n  * Nutrient Cycling: Essential nutrients (carbon, nitrogen, phosphorus) are continuously recycled between abiotic and biotic components.\n  * Self-Sustenance: Ecosystems are self-regulating systems capable of maintaining stability (homeostasis) through feedback mechanisms."
                 }
               ]
@@ -1825,13 +1825,13 @@
                 {
                   "id": 1005,
                   "topicId": 102,
-                  "questionText": "Give an outline of the components of ecosystem in maize field.",
+                  "questionText": "Give an outline of the components of ecosystem in maize field.  [3]  (2025)",
                   "answerText": "A maize field ecosystem consists of biotic and abiotic components structured specifically for agricultural production:\n\n* Abiotic Components:\n  * Soil: Acts as a nutrient pool and anchors crop roots.\n  * Water: Crucial for crop growth and nutrient transport.\n  * Climate and Solar Radiation: Sunlight drives photosynthesis; temperature regulates growth rates.\n  * Inorganic Nutrients: Nitrogen, phosphorus, potassium, and carbon dioxide in the air.\n* Biotic Components:\n  * Primary Producers: The main crop (maize plants) and weeds growing alongside.\n  * Consumers (Heterotrophs):\n    * Primary Consumers (Herbivores): Insects (stem borers, leafhoppers), snails, birds, and small rodents feeding on crops.\n    * Secondary Consumers (Carnivores): Frogs, spiders, predatory insects, and snakes feeding on herbivores.\n  * Decomposers (Saprotrophs): Soil microorganisms (bacteria, actinomycetes, fungi) and nematodes that break down crop residues and organic matter."
                 },
                 {
                   "id": 1006,
                   "topicId": 102,
-                  "questionText": "Write down the components of ecosystem in rice field.",
+                  "questionText": "Write down the components of ecosystem in rice field.  [5]  (2024)",
                   "answerText": "A rice field ecosystem consists of biotic and abiotic components structured specifically for agricultural production:\n\n* Abiotic Components:\n  * Soil: Acts as a nutrient pool and anchors crop roots.\n  * Water: Crucial for crop growth and nutrient transport.\n  * Climate and Solar Radiation: Sunlight drives photosynthesis; temperature regulates growth rates.\n  * Inorganic Nutrients: Nitrogen, phosphorus, potassium, and carbon dioxide in the air.\n* Biotic Components:\n  * Primary Producers: The main crop (rice plants) and weeds growing alongside.\n  * Consumers (Heterotrophs):\n    * Primary Consumers (Herbivores): Insects (stem borers, leafhoppers), snails, birds, and small rodents feeding on crops.\n    * Secondary Consumers (Carnivores): Frogs, spiders, predatory insects, and snakes feeding on herbivores.\n  * Decomposers (Saprotrophs): Soil microorganisms (bacteria, actinomycetes, fungi) and nematodes that break down crop residues and organic matter."
                 },
                 {
@@ -1851,18 +1851,18 @@
             {
               "id": 103,
               "sectionId": 4,
-              "name": "Agroecosystem: Attributes &amp; Properties",
+              "name": "Agroecosystem: Attributes & Properties",
               "Questions": [
                 {
                   "id": 1009,
                   "topicId": 103,
-                  "questionText": "Assess the attributes of an agroecosystem.",
+                  "questionText": "Assess the attributes of an agroecosystem.  [4]  (2025)",
                   "answerText": "An agroecosystem is an ecological system modified by humans to produce agricultural products. It has four main properties/attributes:\n\n* Productivity: The net increment of valued products per unit of resources (land, labor, energy, capital). It is commonly measured as annual yield per hectare.\n* Stability: The degree to which productivity remains constant despite normal small-scale fluctuations in environmental variables (such as climate) or market conditions.\n* Sustainability: The ability of the system to maintain its productivity when subjected to stress or perturbation.\n  * Stress: Regular, predictable, relatively small, and continuous disturbance (e.g., rising soil salinity).\n  * Perturbation: Irregular, infrequent, relatively large, and unpredictable disturbance (e.g., drought or flood).\n* Equitability: A measure of how evenly the produce of the agroecosystem is distributed among its human beneficiaries."
                 },
                 {
                   "id": 1010,
                   "topicId": 103,
-                  "questionText": "Draw and explain the pathway of flow of energy in an agroecosystem.",
+                  "questionText": "Draw and explain the pathway of flow of energy in an agroecosystem.  [4]  (2019)",
                   "answerText": "Energy flow in an agroecosystem is an open, managed pathway driven by solar energy and human inputs:\n\n* Sunlight: The primary source of energy, captured by crop plants (producers) via photosynthesis.\n* Human Energy Inputs: Additional energy is introduced by the farmer (in the form of tillage, fossil fuels, fertilizers, irrigation, and seeds) to maximize crop output.\n* Crop Harvesting: Unlike natural systems where energy stays within, energy in an agroecosystem is exported out of the system in the form of harvested crop yield (food/fodder) for human consumption.\n* Energy Loss: At each energy transfer step, a large portion of energy (around 90%) is lost as heat due to respiration and metabolic work (second law of thermodynamics), meaning only about 10% is transferred to herbivores or decomposers."
                 },
                 {
@@ -1876,12 +1876,12 @@
             {
               "id": 104,
               "sectionId": 4,
-              "name": "Energy Flow &amp; Laws of Thermodynamics",
+              "name": "Energy Flow & Laws of Thermodynamics",
               "Questions": [
                 {
                   "id": 1012,
                   "topicId": 104,
-                  "questionText": "&apos;Energy flow in an ecosystem follows the laws of thermodynamics&apos; — argue / explain.  [3–4]  (2023, 2020-21, 2017-18)",
+                  "questionText": "'Energy flow in an ecosystem follows the laws of thermodynamics' — argue / explain.  [3–4]  (2023, 2020-21, 2017-18)",
                   "answerText": "The flow of energy through an ecosystem strictly follows the first and second laws of thermodynamics:\n\n* First Law of Thermodynamics (Law of Energy Conservation):\n  * Energy cannot be created or destroyed, only transformed from one form to another.\n  * In an ecosystem, solar energy is captured by green plants and converted into chemical energy (carbohydrates) via photosynthesis.\n* Second Law of Thermodynamics (Law of Energy Degradation):\n  * During energy transfers, some energy is degraded and lost as heat, making the transfer inefficient.\n  * In a food chain, as energy passes from producers to primary consumers and then to secondary consumers, about 90% of the energy is lost as respiratory heat and work at each level.\n  * Only about 10% of the energy is transferred to the next level (10% Rule). This loss of energy degrades the energy potential and limits the length of food chains to 4 or 5 levels."
                 }
               ]
@@ -1889,7 +1889,7 @@
             {
               "id": 105,
               "sectionId": 4,
-              "name": "Food Chain &amp; Food Web",
+              "name": "Food Chain & Food Web",
               "Questions": [
                 {
                   "id": 1013,
@@ -1906,13 +1906,13 @@
                 {
                   "id": 1015,
                   "topicId": 105,
-                  "questionText": "Sketch a &apos;food-chain&apos; and a &apos;food-web&apos;.  [2]  (2019-20)",
+                  "questionText": "Sketch a 'food-chain' and a 'food-web'.  [2]  (2019-20)",
                   "answerText": "* Food Chain Schematic:\n  `Sun -> Green Grass (Producer) -> Grasshopper (Primary Consumer) -> Frog (Secondary Consumer) -> Snake (Tertiary Consumer) -> Hawk (Top Predator)`\n\n* Food Web Schematic:\n  ```\n     /--> Grasshopper --> Frog ---\\\n  Grass                   |---> Snake ---> Hawk\n     \\--> Rabbit -----------------/\n  ```"
                 },
                 {
                   "id": 1016,
                   "topicId": 105,
-                  "questionText": "State the importance of food chain.",
+                  "questionText": "State the importance of food chain.  [2]  (2024)",
                   "answerText": "The importance of food chains in an ecosystem include:\n* Energy Flow: They serve as the primary pathways for transferring energy from the sun (via producers) to consumers.\n* Nutrient Cycling: They facilitate the movement of essential nutrients through the biotic components of the ecosystem and back to the soil via decomposers.\n* Population Regulation: They help maintain ecological balance by regulating the populations of prey and predators.\n* Ecosystem Stability: They aid in assessing the overall health and stability of the environment. If any link is broken, it can disrupt the entire ecosystem."
                 },
                 {
@@ -1931,19 +1931,19 @@
                 {
                   "id": 1018,
                   "topicId": 106,
-                  "questionText": "Compare and contrast between pyramid of number and pyramid of biomass with diagram.",
+                  "questionText": "Compare and contrast between pyramid of number and pyramid of biomass with diagram.  [4]  (2025)",
                   "answerText": "* Comparison:\n  * Pyramid of Number: Represents the total number of individual organisms at each trophic level. It can be upright (in grasslands) or inverted (in parasitic or detritus food chains where many organisms feed on a single host).\n  * Pyramid of Biomass: Represents the total weight of living organic matter (biomass) at each level. It is upright in terrestrial systems but inverted in marine ecosystems (where small phytoplankton biomass supports larger zooplankton and fish biomass).\n\n* Schematic Representation:\n  * Upright Pyramid (Numbers/Biomass):\n    ```\n         [ Carnivores ]\n       [   Herbivores   ]\n     [     Producers      ]\n    ```\n  * Inverted Pyramid (Marine Biomass / Parasitic Numbers):\n    ```\n     [     Consumers      ]\n       [   Herbivores   ]\n         [ Producers  ]\n    ```"
                 },
                 {
                   "id": 1019,
                   "topicId": 106,
-                  "questionText": "Briefly describe different types of ecological pyramids.",
+                  "questionText": "Briefly describe different types of ecological pyramids.  [3]  (2024)",
                   "answerText": "An ecological pyramid is a graphical representation of the relationship between organisms at different trophic levels. The three types of Eltonian pyramids are:\n* Pyramid of Number: Shows the total number of individual organisms at each level. Usually upright (e.g., grassland), but can be inverted in detritus/parasitic systems.\n* Pyramid of Biomass: Shows the total living weight (biomass) at each level. Upright in terrestrial systems, but inverted in oceans (phytoplankton vs. zooplankton).\n* Pyramid of Energy: Shows the total energy present at each level. It is **always upright** because energy flow is unidirectional and about 90% is lost as heat at each transfer."
                 },
                 {
                   "id": 1020,
                   "topicId": 106,
-                  "questionText": "Schematically show different types of Eltonian pyramids.",
+                  "questionText": "Schematically show different types of Eltonian pyramids.  [3]  (2023)",
                   "answerText": "The three types of Eltonian pyramids can be schematically represented as follows:\n\n* Pyramid of Number (Upright grassland type):\n  ```\n       [ Carnivores ]\n     [   Herbivores   ]\n   [     Producers      ]\n  ```\n* Pyramid of Biomass (Inverted aquatic type):\n  ```\n   [  Zooplankton / Fish  ]\n     [  Phytoplankton  ]\n  ```\n* Pyramid of Energy (Always upright):\n  ```\n       [ Carnivores (10 J) ]\n     [   Herbivores (100 J)   ]\n   [     Producers (1000 J)     ]\n  ```"
                 },
                 {
@@ -1957,7 +1957,7 @@
             {
               "id": 107,
               "sectionId": 4,
-              "name": "Trophic Level &amp; Productivity",
+              "name": "Trophic Level & Productivity",
               "Questions": [
                 {
                   "id": 1022,
@@ -1968,7 +1968,7 @@
                 {
                   "id": 1023,
                   "topicId": 107,
-                  "questionText": "&apos;Productivity of an ecosystem is greatly influenced by environment&apos; — justify.",
+                  "questionText": "'Productivity of an ecosystem is greatly influenced by environment' — justify.  [3]  (2019)",
                   "answerText": "Primary productivity in ecosystems is limited and controlled by several key environmental factors:\n* Temperature: Regulates enzymatic and chemical reaction rates. Higher temperatures double reaction rates, increasing productivity in tropical regions compared to arctic ones.\n* Water (Precipitation): Crucial for terrestrial ecosystems. High soil moisture and rainfall increase transpiration and photosynthesis, boosting primary productivity.\n* Light: Sunlight is the source of energy. While terrestrial systems are rarely light-limited (except under dense canopies), aquatic systems are heavily limited by light attenuation with depth.\n* Nutrients: Terrestrial productivity is primarily limited by nitrogen availability, whereas aquatic systems are limited by phosphorus. Increased nutrients result in higher productivity."
                 },
                 {
@@ -1995,12 +1995,12 @@
             {
               "id": 109,
               "sectionId": 4,
-              "name": "Eutrophication &amp; Dead Zones",
+              "name": "Eutrophication & Dead Zones",
               "Questions": [
                 {
                   "id": 1026,
                   "topicId": 109,
-                  "questionText": "Explain the concept of &apos;eutrophication&apos; and &apos;dead zones&apos;.  [2]  (2019-20)",
+                  "questionText": "Explain the concept of 'eutrophication' and 'dead zones'.  [2]  (2019-20)",
                   "answerText": "* Eutrophication: It is the enrichment of water bodies with nutrients (principally nitrogen and phosphorus), often from sewage discharge or agricultural fertilizer runoff. This excess of nutrients leads to rapid growth of algae (algal blooms). When the algae die, decomposers (bacteria) multiply and consume large amounts of dissolved oxygen (D.O.) to break down the organic matter.\n* Dead Zones: As oxygen levels deplete sharply (hypoxia or anoxia), the aquatic environment becomes inhabitable. Fish and other active marine animals either migrate or suffocate and die. These oxygen-deprived regions are called dead zones."
                 }
               ]
@@ -2008,18 +2008,18 @@
             {
               "id": 110,
               "sectionId": 4,
-              "name": "Crop Association: Definition &amp; Forms",
+              "name": "Crop Association: Definition & Forms",
               "Questions": [
                 {
                   "id": 1027,
                   "topicId": 110,
-                  "questionText": "Explain crop association.",
+                  "questionText": "Explain crop association.  [2]  (2024)",
                   "answerText": "Crop association is the simultaneous production of a number of crops at the same time in the same farming area to maximize the synergies and biological interactions among them. It is the planting of two or more species in the same space and time. Crop cycles are parallel or overlapping, and these associations harmonize depending on their configuration in space and time."
                 },
                 {
                   "id": 1028,
                   "topicId": 110,
-                  "questionText": "What is crop association? Illustrate different forms of crop association.",
+                  "questionText": "What is crop association? Illustrate different forms of crop association.  [4]  (2023)",
                   "answerText": "Crop association is the simultaneous production of a number of crops at the same time in the same farming area to maximize the synergies and biological interactions among them.\n\nThe forms of crop association include:\n* Mixed Crops: A mixture of several crops grown at the same time without a specific spatial configuration but with specific densities (e.g., amaranth, cabbage).\n* Strip Crops: A mixture of several cropsArranged in alternating rows or strips (e.g., lines of zucchinis + strips of onions).\n* Intercalated Crops: Planting a short-cycle crop under cover or between the main crop (e.g., radish + onion + lettuce).\n* Intercropping (Relay): Sowing a second crop when the first has reached its reproductive stage but has not yet been harvested (e.g., alfalfa + turnip).\n* Satellite Crops: Sowing a few plants of one specific crop in or around the main crop as trap plants (e.g., eggplants around potatoes to attract Colorado beetles)."
                 },
                 {
@@ -2031,13 +2031,13 @@
                 {
                   "id": 1030,
                   "topicId": 110,
-                  "questionText": "Enumerate the basic principles of crop association.",
+                  "questionText": "Enumerate the basic principles of crop association.  [3]  (2019)",
                   "answerText": "The basic principles of crop association are:\n* Avoid cultivating plants of the same family twice consecutively to reduce pest/disease pressure.\n* Avoid cultivating plants for the same harvested part (fruit, leaf, root) twice consecutively to prevent soil nutrient depletion.\n* Plant nutrient-demanding crops at the beginning of the succession to exploit organic matter.\n* Wait 3-4 years before cultivating the same plant on the same farming area.\n* Combine crops with complementary root depths (e.g., cabbage + lettuce) and light requirements (e.g., ginger under papaya).\n* Plant legume crops with non-legumes to improve soil nitrogen levels.\n* Group crops with similar water needs."
                 },
                 {
                   "id": 1031,
                   "topicId": 110,
-                  "questionText": "Enumerate the limitations of crop association.",
+                  "questionText": "Enumerate the limitations of crop association.  [2]  (2024)",
                   "answerText": "The limitations of crop association include:\n* Labor Difficulty: It increases the complexity of hand labor, weeding, and seedbed preparation for multiple crop types.\n* Mechanization Limits: It is difficult or impossible to use heavy agricultural machinery for sowing, cultivating, and harvesting.\n* Resource Competition: If poor combinations are chosen, crops can compete intensely for nutrients, water, and sunlight, leading to yield loss.\n* Disease and Pest Spread: Some insect pests and diseases can spread more easily across different species in a mixed habitat if wrong choices are made."
                 }
               ]
@@ -2056,7 +2056,7 @@
                 {
                   "id": 1033,
                   "topicId": 111,
-                  "questionText": "Compare and contrast between mixed intercropping and row intercropping.",
+                  "questionText": "Compare and contrast between mixed intercropping and row intercropping.  [3]  (2024, 2023)",
                   "answerText": "| Features | Mixed Intercropping | Row Intercropping |\n| :--- | :--- | :--- |\n| **Row Arrangement** | Crops are grown simultaneously with no distinct row pattern. | One or more crops are sown in clear, specific rows. |\n| **Management** | Difficult to perform weeding, spraying, and harvesting. | Sowing in rows facilitates weeding, interculture, and spraying. |\n| **Examples** | Maize and pigeon pea broadcasted or mixed randomly. | Alternate rows of Jute and Blackgram / Jute and Sesame. |"
                 },
                 {
@@ -2075,7 +2075,7 @@
                 {
                   "id": 1035,
                   "topicId": 112,
-                  "questionText": "Distinguish between relay cropping and ratoon cropping.",
+                  "questionText": "Distinguish between relay cropping and ratoon cropping.  [3]  (2023)",
                   "answerText": "* Relay Cropping: Involves growing two or more crops simultaneously during part of their life cycles, where the second crop is sown into the standing first crop when the first reaches its reproductive stage (e.g., mustard sown in Aman rice before harvest).\n* Ratoon Cropping: Involves harvesting the main crop but leaving the roots and lower parts in the soil to grow a new crop (ratoon) from the stubble (e.g., sugarcane ratooning, where a second harvest is gathered from the same root system)."
                 }
               ]
@@ -2088,7 +2088,7 @@
                 {
                   "id": 1036,
                   "topicId": 113,
-                  "questionText": "Discuss the differences between mixed cropping and intercropping.",
+                  "questionText": "Discuss the differences between mixed cropping and intercropping.  [3]  (2025)",
                   "answerText": "| Features | Intercropping | Mixed Cropping |\n| :--- | :--- | :--- |\n| **Sowing Pattern** | Crops are grown in specific row arrangements/patterns. | Seeds are mixed together and sown with no row configuration. |\n| **Main Objective** | To utilize space left between rows of the main crop. | To secure at least one crop harvest under risky, unfavorable conditions. |\n| **Crop Focus** | More emphasis and care is given to the main crop. | All crops are cared for and treated equally. |\n| **Competition** | Minimized by choosing non-competing growth architectures. | High competition exists among all mixed crops. |\n| **Crop Duration** | Intercrops have shorter duration and are harvested early. | Mixed crops have almost the same duration. |\n| **Management** | Fertilizer and pesticide applications can be targeted. | The entire field receives identical applications. |"
                 },
                 {
@@ -2108,18 +2108,18 @@
             {
               "id": 114,
               "sectionId": 4,
-              "name": "Principles &amp; Management of Intercropping",
+              "name": "Principles & Management of Intercropping",
               "Questions": [
                 {
                   "id": 1039,
                   "topicId": 114,
-                  "questionText": "Assess the principles of selecting crops for intercropping.",
+                  "questionText": "Assess the principles of selecting crops for intercropping.  [3]  (2025)",
                   "answerText": "The principles of crop selection for intercropping include:\n* Growth Habit: Combine tall, erect-growing crops with shorter, wide-spreading canopy crops (e.g., maize + beans).\n* Rooting Depth: Match shallow-rooted crops with deep-rooted ones to minimize nutrient competition in the soil profile (e.g., wheat + gram).\n* Maturity: Select species with different maturity times so they do not compete for resources during peak growth phases.\n* Nutrient Complementarity: Plant nitrogen-fixing legumes alongside non-legumes (e.g., cereal + legume).\n* Pest and Disease Mitigation: Choose crop families that do not share the same pests or diseases."
                 },
                 {
                   "id": 1040,
                   "topicId": 114,
-                  "questionText": "Which management practices should be followed during intercropping?",
+                  "questionText": "Which management practices should be followed during intercropping?  [3]  (2019)",
                   "answerText": "Key management practices in intercropping are:\n* Space and Row Arrangement: Implement strict spatial configurations (e.g., 1:1 or 2:1 row arrangements) to allow space for both crops.\n* Water Management: Select crops with similar water requirements to avoid waterlogging one or drying the other.\n* Pest Management: Utilize trap crops (e.g., eggplant to attract beetles away from potatoes) and ban joint-host crops.\n* Weed Control: Ensure intercrops are planted at optimal densities to naturally suppress weeds.\n* Fertilizer Application: Apply fertilizers specifically to rows of the target crop rather than broadcasting."
                 }
               ]
@@ -2127,12 +2127,12 @@
             {
               "id": 115,
               "sectionId": 4,
-              "name": "Multiple Cropping &amp; Cropping Intensity",
+              "name": "Multiple Cropping & Cropping Intensity",
               "Questions": [
                 {
                   "id": 1041,
                   "topicId": 115,
-                  "questionText": "&apos;Multiple cropping is the sole option to increase cropping intensity in Bangladesh&apos; — give your argument.  [4]  (2019-20)",
+                  "questionText": "'Multiple cropping is the sole option to increase cropping intensity in Bangladesh' — give your argument.  [4]  (2019-20)",
                   "answerText": "Multiple cropping is the most viable option to increase cropping intensity in Bangladesh:\n* Limited Arable Land: Bangladesh has high population density and declining agricultural land. Expanding horizontal land area is impossible.\n* Vertical Expansion: Multiple cropping (growing two or more crops on the same land within a year) maximizes the use of space and time.\n* Land Use Efficiency: Using relay cropping, intercropping, and short-duration crops (e.g., mustard between Aman and Boro rice) allows farmers to grow three or four crops annually on a single plot.\n* Climate Suitability: Year-round sunshine and favorable water resources enable continuous cropping cycles."
                 }
               ]
@@ -2140,18 +2140,18 @@
             {
               "id": 116,
               "sectionId": 4,
-              "name": "LER &amp; RYT: Interpretation",
+              "name": "LER & RYT: Interpretation",
               "Questions": [
                 {
                   "id": 1042,
                   "topicId": 116,
-                  "questionText": "Suppose land equivalent ratio (LER) of the intercropping between mungbean and potato is 1.76. Interpret the statement.",
+                  "questionText": "Suppose land equivalent ratio (LER) of the intercropping between mungbean and potato is 1.76. Interpret the statement.  [3]  (2024)",
                   "answerText": "An LER of 1.76 means there is a significant land-use advantage in intercropping mungbean and potato over growing them as monocultures:\n* It implies that the intercrop mixture produces a yield that would require 1.76 hectares of land under monoculture (sole cropping) to achieve.\n* In other words, intercropping mungbean and potato results in a **76% increase in land-use efficiency**, saving 76% more land compared to sole cropping."
                 },
                 {
                   "id": 1043,
                   "topicId": 116,
-                  "questionText": "Land equivalent ratio (LER) of intercropping between sugarcane and potato is 1.45. How can you interpret it?",
+                  "questionText": "Land equivalent ratio (LER) of intercropping between sugarcane and potato is 1.45. How can you interpret it?  [2]  (2023)",
                   "answerText": "An LER of 1.45 indicates a land-use advantage:\n* It means that growing sugarcane and potato together as a mixture requires 1.0 hectare of land to produce the same yield that would require 1.45 hectares of land if they were grown as sole crops (monocultures).\n* This represents a **45% land-use advantage** or efficiency gain."
                 },
                 {
@@ -2171,7 +2171,7 @@
             {
               "id": 117,
               "sectionId": 4,
-              "name": "Food Chain &amp; Food Web [Cross-listed]",
+              "name": "Food Chain & Food Web [Cross-listed]",
               "Questions": [
                 {
                   "id": 1046,
@@ -2184,7 +2184,7 @@
             {
               "id": 118,
               "sectionId": 4,
-              "name": "Pollution &amp; Pollutants: Definitions &amp; Classification",
+              "name": "Pollution & Pollutants: Definitions & Classification",
               "Questions": [
                 {
                   "id": 1047,
@@ -2202,13 +2202,13 @@
                 {
                   "id": 1048,
                   "topicId": 119,
-                  "questionText": "Describe the impact of air pollution on human health.",
+                  "questionText": "Describe the impact of air pollution on human health.  [3]  (2025)",
                   "answerText": "Air pollutants have severe impacts on human health:\n* Particulate Matter/Dust: Causes respiratory diseases like silicosis (cough, cold, sneezing), asbestosis, byssinosis, and lung tissue damage.\n* Carbon Monoxide (CO): Binds to hemoglobin, causing carbon monoxide poisoning, oxygen deprivation, and cardiovascular stress.\n* Nitrogen Dioxide ($NO_2$): Causes lung irritation, bronchitis, and pulmonary edema.\n* Sulfur Dioxide ($SO_2$): Triggers throat/eye irritation, suffocation, and chronic respiratory diseases.\n* Hydrogen Sulfide ($H_2S$): Causes respiratory passage irritation, with risks of paralysis and asphyxiation.\n* Heavy Metals (Lead/Cadmium): Causes brain damage, retards brain activity, and interferes with liver/kidney enzyme functions."
                 },
                 {
                   "id": 1049,
                   "topicId": 119,
-                  "questionText": "Propose some measures to reduce air pollution in Khulna city.",
+                  "questionText": "Propose some measures to reduce air pollution in Khulna city.  [3]  (2024)",
                   "answerText": "Measures to check air pollution in Khulna city include:\n* Relocate brick kilns and heavy industries away from residential areas after EIA studies.\n* Transition vehicles to cleaner fuels (such as Compressed Natural Gas - CNG, or electric vehicles).\n* Mandate electrostatic precipitators, cyclone separators, and scrubbers on industrial chimneys.\n* Carry out regular vehicle emission testing and tune-up engines.\n* Carry out massive roadside and urban tree plantation to absorb gaseous pollutants."
                 },
                 {
@@ -2228,24 +2228,24 @@
             {
               "id": 120,
               "sectionId": 4,
-              "name": "Water Pollution: Sources, Effects &amp; Control",
+              "name": "Water Pollution: Sources, Effects & Control",
               "Questions": [
                 {
                   "id": 1052,
                   "topicId": 120,
-                  "questionText": "Analyze how unnecessary use of agrochemicals leads to water pollution.",
+                  "questionText": "Analyze how unnecessary use of agrochemicals leads to water pollution.  [3.5]  (2025)",
                   "answerText": "Unnecessary use of agrochemicals (pesticides, herbicides, fertilizers) contaminates water bodies through two main pathways:\n* Surface Runoff: Heavy rainfall or irrigation washes excess fertilizers (containing nitrogen and phosphorus) and pesticides from fields into nearby rivers, canals, and ponds.\n* Leaching: Highly soluble agrochemicals (such as nitrates) percolate down through the soil profile into groundwater aquifers, contaminating drinking water sources.\n* Eutrophication: Excess nitrogen and phosphorus runoff acts as plant nutrients in water bodies, triggering rapid algal blooms which deplete oxygen and kill aquatic life."
                 },
                 {
                   "id": 1053,
                   "topicId": 120,
-                  "questionText": "&apos;Continuous water pollution is a leading cause of global fresh water scarcity over the period of time.&apos; Do you agree? Justify.",
+                  "questionText": "'Continuous water pollution is a leading cause of global fresh water scarcity over the period of time.' Do you agree? Justify.  [2]  (2023)",
                   "answerText": "Yes, water pollution is a major cause of freshwater scarcity:\n* Quality Degradation: Although the total volume of water on Earth remains constant, pollution by municipal sewage, industrial effluents, and agrochemicals makes fresh water unsafe and unusable for human consumption, agriculture, and industry.\n* Groundwater Contamination: Toxic chemicals and nitrates leach into aquifers. Once an aquifer is polluted, reclamation is extremely difficult and expensive.\n* Resource Depletion: Eutrophication and heavy metal contamination destroy local freshwater ecosystems (lakes and rivers), forcing communities to seek distant or expensive treated water sources."
                 },
                 {
                   "id": 1054,
                   "topicId": 120,
-                  "questionText": "What is eutrophication? Describe the effects of water pollution on aquatic animals and man.",
+                  "questionText": "What is eutrophication? Describe the effects of water pollution on aquatic animals and man.  [4]  (2023, 2019)",
                   "answerText": "* Eutrophication: The nutrient enrichment of water bodies (via nitrogen and phosphorus runoff from agricultural fertilizers and municipal sewage) that stimulates excessive growth of algae (algal blooms).\n* Effects on Aquatic Animals: Dead algae are decomposed by bacteria, which consumes dissolved oxygen (D.O.), leading to hypoxia. This suffocates fish and other aquatic organisms, creating \"dead zones.\"\n* Effects on Humans: Waterborne pathogens in sewage cause diseases like cholera, typhoid, and dysentery. Heavy metals (mercury, lead) biomagnify and cause toxicity."
                 },
                 {
@@ -2263,7 +2263,7 @@
                 {
                   "id": 1057,
                   "topicId": 120,
-                  "questionText": "Clarify eutrophication.",
+                  "questionText": "Clarify eutrophication.  [2]  (2024)",
                   "answerText": "Eutrophication is the nutrient enrichment of water bodies (principally nitrogen and phosphorus), often from sewage discharge or agricultural fertilizer runoff. This excess of nutrients leads to rapid growth of algae (algal blooms). When the algae die, decomposers (bacteria) multiply and consume large amounts of dissolved oxygen (D.O.) to break down the organic matter, suffocating fish and creating dead zones."
                 }
               ]
@@ -2276,19 +2276,19 @@
                 {
                   "id": 1058,
                   "topicId": 121,
-                  "questionText": "What are bioaccumulation and biomagnification?",
+                  "questionText": "What are bioaccumulation and biomagnification?  [2]  (2024)",
                   "answerText": "* Bioaccumulation: The accumulation of a toxic chemical (such as DDT or methylmercury) in the tissues of a single organism over its lifetime because it is lipid-soluble and cannot be easily excreted.\n* Biomagnification: The progressive increase in concentration of non-biodegradable toxic substances at successive, higher trophic levels of a food chain (e.g., from plankton to fish to fish-eating birds/humans)."
                 },
                 {
                   "id": 1059,
                   "topicId": 121,
-                  "questionText": "What is Minamata disease?",
+                  "questionText": "What is Minamata disease?  [2]  (2024)",
                   "answerText": "Minamata disease is a severe neurological syndrome caused by methylmercury poisoning:\n* It was first discovered in 1953 in Minamata Bay, Japan, where industrial effluents containing mercury were discharged into the bay.\n* The mercury was converted by bacteria into organic methylmercury, which accumulated in fish.\n* Symptoms in humans who consumed the contaminated fish included numbness of body parts, vision and hearing loss, abnormal mental behavior, paralysis, and death."
                 },
                 {
                   "id": 1060,
                   "topicId": 121,
-                  "questionText": "Explain Itai-Itai disease.",
+                  "questionText": "Explain Itai-Itai disease.  [1.5]  (2025)",
                   "answerText": "Itai-Itai disease is a painful bone-softening disease caused by chronic cadmium poisoning:\n* It occurred in Japan due to the consumption of cadmium-contaminated rice.\n* The rice fields were irrigated with mining drainage water containing cadmium.\n* The disease targets the bones (causing severe joint and spine pain, and fractures), liver, kidneys, lungs, pancreas, and thyroid."
                 }
               ]
@@ -2296,12 +2296,12 @@
             {
               "id": 122,
               "sectionId": 4,
-              "name": "Soil &amp; Land Pollution",
+              "name": "Soil & Land Pollution",
               "Questions": [
                 {
                   "id": 1061,
                   "topicId": 122,
-                  "questionText": "Suggest some measures to reduce soil pollution in our country.",
+                  "questionText": "Suggest some measures to reduce soil pollution in our country.  [3]  (2023)",
                   "answerText": "Measures to reduce soil pollution in our country include:\n* Adopt the 3Rs (Reduce, Reuse, Recycle) for municipal solid wastes to minimize landfill loads.\n* Reduce reliance on chemical inputs in farming by adopting crop rotation, organic manures, and Integrated Pest Management (IPM).\n* Treat industrial and mining wastes to remove heavy metals before land application.\n* Enforce strict regulations against air/water-borne toxic chemical discharge.\n* Restore vegetation cover and plant grass/trees to prevent soil erosion and land degradation."
                 }
               ]
@@ -2309,42 +2309,42 @@
             {
               "id": 123,
               "sectionId": 4,
-              "name": "Agricultural Pollution &amp; Agrochemicals",
+              "name": "Agricultural Pollution & Agrochemicals",
               "Questions": [
                 {
                   "id": 1062,
                   "topicId": 123,
-                  "questionText": "Develop strategies to reduce environmental pollution caused by agrochemicals.",
+                  "questionText": "Develop strategies to reduce environmental pollution caused by agrochemicals.  [3.5]  (2025)",
                   "answerText": "Strategies to reduce environmental pollution caused by agrochemicals:\n* Judicious Application: Train farmers to apply the right quantity of fertilizers and pesticides based on soil tests.\n* Buffer Strips: Plant grasses, shrubs, or trees along field borders and near water bodies to filter out chemicals from surface runoff.\n* Integrated Pest Management (IPM): Combine biological controls, mechanical traps, and crop rotation to reduce chemical pesticide use.\n* Cover Crops: Plant cover crops (e.g., oats, vetch, cowpeas) during fallow periods to stabilize soil and prevent nutrient leaching.\n* Nitrogen-fixing Plants: Integrate legumes (e.g., mungbean, lentil) into crop rotations to naturally enrich soil nitrogen."
                 },
                 {
                   "id": 1063,
                   "topicId": 123,
-                  "questionText": "&apos;Improper use of agrochemicals is a great threat to human health.&apos; — Evaluate.",
+                  "questionText": "'Improper use of agrochemicals is a great threat to human health.' — Evaluate.  [3]  (2024)",
                   "answerText": "Improper use of agrochemicals (fertilizers and pesticides) poses severe threats to human health:\n* Direct Exposure: Farmers spraying chemicals without protective gear inhale toxins, leading to acute poisoning, skin diseases, and respiratory disorders.\n* Food Contamination: Pesticide residues remain on harvested crops. When consumed, they can act as carcinogens and cause endocrine disruptions.\n* Water Contamination: Soluble nitrates leach into drinking water wells, causing Blue Baby Syndrome (methemoglobinemia) in infants, and forming cancer-causing compounds in the stomach.\n* Biomagnification: Non-biodegradable chemicals like DDT build up in lipid tissues and bioaccumulate, causing long-term damage to the liver, kidneys, and nervous system."
                 },
                 {
                   "id": 1064,
                   "topicId": 123,
-                  "questionText": "&apos;Improper use of agrochemicals is a potential threat to human health in Bangladesh&apos; — analyze.  [3]  (2019-20)",
+                  "questionText": "'Improper use of agrochemicals is a potential threat to human health in Bangladesh' — analyze.  [3]  (2019-20)",
                   "answerText": "Improper use of agrochemicals (fertilizers and pesticides) poses severe threats to human health in Bangladesh:\n* Direct Exposure: Farmers spraying chemicals without protective gear inhale toxins, leading to acute poisoning, skin diseases, and respiratory disorders.\n* Food Contamination: Pesticide residues remain on harvested crops. When consumed, they can act as carcinogens and cause endocrine disruptions.\n* Water Contamination: Soluble nitrates leach into drinking water wells, causing Blue Baby Syndrome (methemoglobinemia) in infants, and forming cancer-causing compounds in the stomach.\n* Biomagnification: Non-biodegradable chemicals like DDT build up in lipid tissues and bioaccumulate, causing long-term damage to the liver, kidneys, and nervous system."
                 },
                 {
                   "id": 1065,
                   "topicId": 123,
-                  "questionText": "&apos;Improper use of insecticides is a great threat to human health&apos;. Evaluate the statement.  [3]  (2017-18)",
+                  "questionText": "'Improper use of insecticides is a great threat to human health'. Evaluate the statement.  [3]  (2017-18)",
                   "answerText": "Improper use of insecticides is a great threat to human health:\n* Direct Exposure: Farmers spraying chemicals without protective gear inhale toxins, leading to acute poisoning, skin diseases, and respiratory disorders.\n* Food Contamination: Pesticide residues remain on harvested crops. When consumed, they can act as carcinogens and cause endocrine disruptions.\n* Water Contamination: Soluble nitrates leach into drinking water wells, causing Blue Baby Syndrome (methemoglobinemia) in infants, and forming cancer-causing compounds in the stomach.\n* Biomagnification: Non-biodegradable chemicals like DDT build up in lipid tissues and bioaccumulate, causing long-term damage to the liver, kidneys, and nervous system."
                 },
                 {
                   "id": 1066,
                   "topicId": 123,
-                  "questionText": "&apos;Agrochemicals are potential threats for maintaining soil fertility and productivity&apos;. Explain.  [4]  (2020-21)",
+                  "questionText": "'Agrochemicals are potential threats for maintaining soil fertility and productivity'. Explain.  [4]  (2020-21)",
                   "answerText": "Agrochemicals can severely degrade soil quality and long-term productivity:\n* Destruction of Soil Biota: Excess chemical pesticides and fertilizers kill beneficial soil microorganisms (bacteria, fungi, actinomycetes) and earthworms, disrupting natural decomposition and nutrient cycling.\n* Soil Acidification/Salinization: Continuous use of synthetic nitrogenous fertilizers alters soil pH (causing acidification) and leaves salt residues that hinder root absorption.\n* Organic Matter Depletion: Crops are harvested and removed, leaving soil poor in organic matter. Without natural manure replenishment, soil structures degrade, causing compaction and erosion."
                 },
                 {
                   "id": 1067,
                   "topicId": 123,
-                  "questionText": "What might be the remedial measures to reduce the detrimental effects of agrochemicals on environment?",
+                  "questionText": "What might be the remedial measures to reduce the detrimental effects of agrochemicals on environment?  [3]  (2019)",
                   "answerText": "Remedial measures to reduce the detrimental effects of agrochemicals on environment:\n* Judicious Application: Train farmers to apply the right quantity of fertilizers and pesticides based on soil tests.\n* Buffer Strips: Plant grasses, shrubs, or trees along field borders and near water bodies to filter out chemicals from surface runoff.\n* Integrated Pest Management (IPM): Combine biological controls, mechanical traps, and crop rotation to reduce chemical pesticide use.\n* Cover Crops: Plant cover crops (e.g., oats, vetch, cowpeas) during fallow periods to stabilize soil and prevent nutrient leaching.\n* Nitrogen-fixing Plants: Integrate legumes (e.g., mungbean, lentil) into crop rotations to naturally enrich soil nitrogen."
                 },
                 {
@@ -2363,7 +2363,7 @@
                 {
                   "id": 1069,
                   "topicId": 124,
-                  "questionText": "Review the role of bioremediation in controlling environmental pollution.",
+                  "questionText": "Review the role of bioremediation in controlling environmental pollution.  [3]  (2025)",
                   "answerText": "Bioremediation is the use of living organisms (such as bacteria, fungi, or plants) to break down, remove, or neutralize hazardous environmental pollutants:\n* Microbial Action: Specialized soil and water bacteria digest organic pollutants (such as hydrocarbons, oil spills, and pesticides), converting them into harmless substances like water and carbon dioxide.\n* Phytoremediation: Plants are used to absorb, accumulate, and concentrate heavy metals (such as lead, cadmium, and arsenic) or organic contaminants from polluted soils and water.\n* Cost-effectiveness: It is a natural, less disruptive, and highly cost-effective alternative to mechanical soil excavation or chemical cleanup."
                 }
               ]
@@ -2376,7 +2376,7 @@
                 {
                   "id": 1070,
                   "topicId": 125,
-                  "questionText": "&apos;Plant acts as ameliorator of environment quality&apos; — judge / explain.  [2–4]  (2020-21, 2019)",
+                  "questionText": "'Plant acts as ameliorator of environment quality' — judge / explain.  [2–4]  (2020-21, 2019)",
                   "answerText": "Plants act as natural cleaners and ameliorators of environmental quality in several ways:\n* Air Purification: Plants absorb carbon dioxide and release oxygen during photosynthesis. They also filter out airborne particulates (dust, soot) and absorb gaseous pollutants like $SO_2$ and $NO_x$.\n* Phytoremediation: Many plant species absorb and stabilize toxic heavy metals and chemical pollutants in contaminated soil and water.\n* Riparian Buffer Zones: Trees and grasses planted along water bodies act as natural filters, intercepting agricultural nutrient runoff and preventing eutrophication.\n* Indoor Air Quality: Specific indoor plants (e.g., spider plant, peace lily, English ivy) absorb indoor volatile organic compounds (VOCs) and solvents.\n* Soil and Water Conservation: Plant roots bind soil, preventing erosion and runoff, while promoting water infiltration into aquifers."
                 }
               ]
@@ -2384,12 +2384,12 @@
             {
               "id": 126,
               "sectionId": 4,
-              "name": "Halophytes &amp; Salinity Tolerance",
+              "name": "Halophytes & Salinity Tolerance",
               "Questions": [
                 {
                   "id": 1071,
                   "topicId": 126,
-                  "questionText": "How do halophytes cope with salinity?",
+                  "questionText": "How do halophytes cope with salinity?  [3]  (2023)",
                   "answerText": "Halophytes are specialized plants adapted to survive in highly saline environments through several mechanisms:\n* Salt Exclusion: Root membranes filter and exclude salt ions ($Na^+$, $Cl^-$) from entering the vascular system while absorbing water.\n* Salt Secretion: Some halophytes possess specialized salt glands on their leaves that actively secrete excess salts.\n* Salt Accumulation (Succulence): Excess salt is stored in vacuoles of fleshy leaves or stems, diluting the internal salt concentration.\n* Osmotic Adjustment: Accumulation of organic solutes (like proline) inside cells maintains a lower osmotic potential, allowing water uptake from saline soil."
                 }
               ]
@@ -2397,12 +2397,12 @@
             {
               "id": 127,
               "sectionId": 4,
-              "name": "Ecological Hazard &amp; Disaster Management [2016-17 specific]",
+              "name": "Ecological Hazard & Disaster Management [2016-17 specific]",
               "Questions": [
                 {
                   "id": 1072,
                   "topicId": 127,
-                  "questionText": "&apos;The geographical location of Bangladesh is mostly responsible for ecological hazard&apos; — explain.  [3]  (2016-17)",
+                  "questionText": "'The geographical location of Bangladesh is mostly responsible for ecological hazard' — explain.  [3]  (2016-17)",
                   "answerText": "The geographical location of Bangladesh makes it highly vulnerable to ecological hazards:\n* Deltaic Lowlands: Located on the active Ganges-Brahmaputra-Meghna delta, a vast portion of the country is low-lying and flat, making it prone to riverine flooding during monsoons.\n* Funnel-shaped Bay of Bengal: The coastline funnels tidal waters, which intensifies wind speed and storm surges during tropical cyclones.\n* Hilly Borders: Hilly regions in the east and northeast experience heavy rainfall, causing flash floods and landslides.\n* Climate Vulnerability: Positioned in the monsoon belt, it experiences extreme seasonal rainfall variations, leading to alternating floods and dry-season droughts."
                 },
                 {
@@ -2422,12 +2422,12 @@
             {
               "id": 128,
               "sectionId": 4,
-              "name": "Mangrove: Environmental Conditions &amp; Characteristics",
+              "name": "Mangrove: Environmental Conditions & Characteristics",
               "Questions": [
                 {
                   "id": 1075,
                   "topicId": 128,
-                  "questionText": "Which environmental conditions are essential for the development of mangrove vegetation?",
+                  "questionText": "Which environmental conditions are essential for the development of mangrove vegetation?  [2]  (2019)",
                   "answerText": "The environmental and ecological conditions essential for mangrove development are:\n* Saline/Brackish Water: Regular inundation by tidal seawater mixed with freshwater discharge from rivers.\n* Tropical and Subtropical Latitudes: Warm climates near the equator; mangroves cannot tolerate freezing temperatures.\n* Fine Sedimentary Soil: Low-oxygen (anaerobic), muddy, and unstable soil deposits in deltaic estuaries.\n* Tidal Activity: Periodic flooding to distribute seeds/propagules and wash away salt residues.\n* Protection from High Waves: Low-energy coastlines (estuaries, bays) where silt sediments can settle."
                 },
                 {
@@ -2484,7 +2484,7 @@
                 {
                   "id": 1081,
                   "topicId": 131,
-                  "questionText": "How do halophytes cope with salinity?",
+                  "questionText": "How do halophytes cope with salinity?  [3]  (2023)",
                   "answerText": "Halophytes survive in saline soils through key physiological adaptations:\n* Salt Exclusion: Root membranes act as physical filters that exclude salt ions ($Na^+$, $Cl^-$) from the vascular stream while absorbing water.\n* Salt Secretion: Excreting excess absorbed salts via active transport through specialized salt glands on leaf surfaces.\n* Vacuum Storage (Succulence): Fleshy tissues store water to dilute internal salt concentrations within vacuoles.\n* Osmotic Regulation: Accumulating organic solutes (e.g., proline) to lower root water potential, enabling water absorption from salty ground."
                 }
               ]
@@ -2497,7 +2497,7 @@
                 {
                   "id": 1082,
                   "topicId": 132,
-                  "questionText": "&apos;Mangrove vegetation has great significance on ecological aspects and livelihood development in coastal areas of Bangladesh&apos; — explain.",
+                  "questionText": "'Mangrove vegetation has great significance on ecological aspects and livelihood development in coastal areas of Bangladesh' — explain.  [3]  (2023)",
                   "answerText": "Mangrove forests in Bangladesh (such as the Sundarbans) play a vital dual role in ecological protection and livelihood support:\n* Ecological Significance:\n  * Natural Shield: Protects inland populations and crops by absorbing wind energy and reducing storm surges during cyclones.\n  * Shoreline Stabilization: Dense root systems trap sediment, preventing coastal soil erosion and accelerating land reclamation.\n  * Biodiversity Sanctuary: Serves as a rich breeding ground and habitat for terrestrial and aquatic wildlife (fish, crabs, Royal Bengal Tigers).\n* Livelihood Development:\n  * Natural Resource Harvesting: Provides timber, poles, and firewood.\n  * Non-timber Forest Products: Supports local gatherers who collect Golpata (for roofing), wild honey, wax, and medicinal leaves.\n  * Estuarine Fisheries: Provides crabs, shrimp fry, and fish that sustain thousands of coastal fishermen."
                 },
                 {
@@ -2509,7 +2509,7 @@
                 {
                   "id": 1084,
                   "topicId": 132,
-                  "questionText": "&apos;Mangrove forest is a livelihood option for coastal community&apos; — explain.  [4]  (2016-17)",
+                  "questionText": "'Mangrove forest is a livelihood option for coastal community' — explain.  [4]  (2016-17)",
                   "answerText": "Mangrove forests in Bangladesh (such as the Sundarbans) play a vital dual role in ecological protection and livelihood support:\n* Ecological Significance:\n  * Natural Shield: Protects inland populations and crops by absorbing wind energy and reducing storm surges during cyclones.\n  * Shoreline Stabilization: Dense root systems trap sediment, preventing coastal soil erosion and accelerating land reclamation.\n  * Biodiversity Sanctuary: Serves as a rich breeding ground and habitat for terrestrial and aquatic wildlife (fish, crabs, Royal Bengal Tigers).\n* Livelihood Development:\n  * Natural Resource Harvesting: Provides timber, poles, and firewood.\n  * Non-timber Forest Products: Supports local gatherers who collect Golpata (for roofing), wild honey, wax, and medicinal leaves.\n  * Estuarine Fisheries: Provides crabs, shrimp fry, and fish that sustain thousands of coastal fishermen."
                 }
               ]
@@ -2517,36 +2517,36 @@
             {
               "id": 133,
               "sectionId": 4,
-              "name": "The Sundarbans: Ecological Significance &amp; Biodiversity",
+              "name": "The Sundarbans: Ecological Significance & Biodiversity",
               "Questions": [
                 {
                   "id": 1085,
                   "topicId": 133,
-                  "questionText": "Assess the ecological significance of the Sundarbans for Bangladesh&apos;s environment.",
+                  "questionText": "Assess the ecological significance of the Sundarbans for Bangladesh's environment.  [3.5]  (2025)",
                   "answerText": "The Sundarbans (571,508 ha) is of immense ecological significance to Bangladesh's environment:\n* Storm Protection: It serves as a natural green barrier, absorbing the wind force and storm surges of tropical cyclones from the Bay of Bengal, protecting millions of coastal lives.\n* Carbon Sequestration: The dense biomass acts as a massive sink for atmospheric carbon dioxide, mitigating global climate change.\n* Biodiversity Hotspot: It supports high floral and faunal diversity, including 245 plant genera (e.g., Sundari, Gewa, Goran, Golpata), 234 terrestrial faunal species, and 219 aquatic species."
                 },
                 {
                   "id": 1086,
                   "topicId": 133,
-                  "questionText": "&apos;The Sundarbans is an alternative livelihood option for people of Khulna and Satkhira.&apos; — Assess.",
+                  "questionText": "'The Sundarbans is an alternative livelihood option for people of Khulna and Satkhira.' — Assess.  [3.5]  (2024)",
                   "answerText": "The Sundarbans is a vital alternative livelihood option for the coastal communities of Khulna, Bagerhat, and Satkhira:\n* Non-Timber Forest Products (NTFP): Provides honey and wax collected by local honey gatherers (Mawali) and Golpata leaves (*Nypa fruticans*) used for thatch roofing.\n* Forestry Produce: Source of timber, construction poles, and wood pulp.\n* Fishery Support: The estuarine networks of channels and creeks support crab harvesting and shrimp fry collection, providing income for coastal families."
                 },
                 {
                   "id": 1087,
                   "topicId": 133,
-                  "questionText": "&apos;The Sunderbans is an alternative livelihood option for coastal people of Bangladesh&apos; — assess.  [4]  (2019-20)",
+                  "questionText": "'The Sunderbans is an alternative livelihood option for coastal people of Bangladesh' — assess.  [4]  (2019-20)",
                   "answerText": "The Sundarbans is a vital alternative livelihood option for the coastal communities of Khulna, Bagerhat, and Satkhira:\n* Non-Timber Forest Products (NTFP): Provides honey and wax collected by local honey gatherers (Mawali) and Golpata leaves (*Nypa fruticans*) used for thatch roofing.\n* Forestry Produce: Source of timber, construction poles, and wood pulp.\n* Fishery Support: The estuarine networks of channels and creeks support crab harvesting and shrimp fry collection, providing income for coastal families."
                 },
                 {
                   "id": 1088,
                   "topicId": 133,
-                  "questionText": "&apos;The Sundarbans is an alternative livelihood option for coastal people of Bangladesh&apos;. Justify.  [5]  (2017-18)",
+                  "questionText": "'The Sundarbans is an alternative livelihood option for coastal people of Bangladesh'. Justify.  [5]  (2017-18)",
                   "answerText": "The Sundarbans is a vital alternative livelihood option for the coastal communities of Khulna, Bagerhat, and Satkhira:\n* Non-Timber Forest Products (NTFP): Provides honey and wax collected by local honey gatherers (Mawali) and Golpata leaves (*Nypa fruticans*) used for thatch roofing.\n* Forestry Produce: Source of timber, construction poles, and wood pulp.\n* Fishery Support: The estuarine networks of channels and creeks support crab harvesting and shrimp fry collection, providing income for coastal families."
                 },
                 {
                   "id": 1089,
                   "topicId": 133,
-                  "questionText": "Illustrate the significance of the Sundarbans in coastal community. How can the biodiversity of this forest be conserved?",
+                  "questionText": "Illustrate the significance of the Sundarbans in coastal community. How can the biodiversity of this forest be conserved?  [5]  (2019)",
                   "answerText": "The Sundarbans represents a crucial livelihood and ecological protection shield for the coastal community.\n\nTo conserve the biodiversity of this forest, several strategies must be implemented:\n* Strictly Enforced Sanctuaries: Establish and patrol wildlife sanctuaries and reserve boundaries, banning illegal logging and poaching.\n* Sustainable Harvesting: Regulate the seasonal harvesting of Golpata, honey, and crabs with strict quotas.\n* Community-Based Forestry: Involve local communities (co-management) in conservation, providing alternative income sources to reduce extraction pressure.\n* Limit Agricultural/Industrial Runoff: Regulate upstream chemical waste discharge and pesticide runoff to protect water courses.\n* Control Salinity: Manage freshwater flows through river basins to prevent high soil salinity that causes Sundari \"top-dying\" disease."
                 }
               ]
@@ -2578,13 +2578,13 @@
                 {
                   "id": 1092,
                   "topicId": 135,
-                  "questionText": "Describe the distribution of coastal vegetation along Bangladesh&apos;s shoreline.",
+                  "questionText": "Describe the distribution of coastal vegetation along Bangladesh's shoreline.  [2]  (2025)",
                   "answerText": "The distribution of coastal vegetation along Bangladesh's shoreline is structured as follows:\n* Unstable Coastline: Historically, the 710 km coastline was virtually barren and exposed.\n* Artificial Afforestation: Mangrove plantations were artificially established on newly accreted tidal muds starting in 1966.\n* Pioneer Dominance: Keora (*Sonneratia apetala*) is the most dominant planted species, representing 94.4% of successful mangrove plantations.\n* Regional Preference: Keora grows successfully all along the coastline, whereas Baen (*Avicennia officinalis*) represents 4.8% and is most successful in the eastern coastal belt. Other minor species include Gewa, Goran, and Golpata.\n* Embankments: 37 non-mangrove tree and shrub species are planted on the dry slopes of embankments and roadsides."
                 },
                 {
                   "id": 1093,
                   "topicId": 135,
-                  "questionText": "Write a note on coastal vegetation in Bangladesh.",
+                  "questionText": "Write a note on coastal vegetation in Bangladesh.  [2.5]  (2024)",
                   "answerText": "The coastal vegetation of Bangladesh consists of man-made and natural species:\n* Historic Context: The 710 km coastline was barren. In 1966, the Forest Department initiated a massive afforestation program.\n* Major Objectives: Protect coastal dwellers from cyclones and storm surges (primary), stabilize newly accreted land, and generate local livelihoods (secondary).\n* Dominant Species: Keora (*Sonneratia apetala*) represents 94.4% of the successful plantations. Baen (*Avicennia officinalis*) represents 4.8%, thriving mostly in the eastern part. Other species include Gewa, Goran, Kankra, and Golpata.\n* Non-Mangroves: 37 species are planted on the slopes of coastal embankments and roadsides."
                 },
                 {
