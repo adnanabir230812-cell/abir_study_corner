@@ -237,6 +237,53 @@ const courseAnalyses = {
         "Ensure scientific names are written as Genus species, with both terms underlined separately (e.g. Pyricularia oryzae)."
       ]
     }
+  },
+  // Course ID: 2 (Crop Ecology)
+  2: {
+    // Section ID: 4 (Section B - Sarwar Sir)
+    4: {
+      teacher: "Prof. Dr. Md. Sarwar Jahan",
+      style: "Presentation-Centric & Adaptation-Focused",
+      desc: "Sarwar Sir's section covers the core of ecological principles, agroecosystems, crop associations, and vegetations of Bangladesh. The exam questions directly reflect the slides, requiring structured answers, comparison tables, and labeled diagrams.",
+      examStructure: "Section B: 4 questions total, must answer 3. Total marks: 30.",
+      teacherPersona: "Sarwar Sir looks for structured answers that follow the terminology of his slides. Comparison tables are highly recommended for differences (e.g. food chain vs food web, intercropping vs mixed cropping). Labeled diagrams (pyramids, food webs, or succession cycles) are critical to secure full marks. Write answers in clear paragraphs and concise bullet points.",
+      importantTopics: [
+        {
+          name: "Ecological Pyramids (Eltonian Pyramids)",
+          weight: "Critical",
+          typicalQuestions: "Compare and contrast pyramid of number and pyramid of biomass with diagram. Briefly describe different types of ecological pyramids.",
+          scoringTips: "Draw and label all 3 types (Number, Biomass, Energy). Clearly state that the Pyramid of Energy is always upright because energy flow is unidirectional and degrades (10% Rule) at each level."
+        },
+        {
+          name: "Intercropping vs Mixed Cropping",
+          weight: "Very High",
+          typicalQuestions: "Discuss the differences between mixed cropping and intercropping. Which one should you follow for better yield?",
+          scoringTips: "Use a comparison table covering row arrangements, main objective, crop focus, resource competition, and harvest timing."
+        },
+        {
+          name: "LER and RYT Interpretation",
+          weight: "Very High",
+          typicalQuestions: "Interpret an LER of 1.76 between mungbean and potato. Explain RYT of 1.45 between maize and mungbean.",
+          scoringTips: "State the formula, explain the concept of relative land area required, and interpret the percentage of land-use advantage (e.g., 76% or 45% advantage)."
+        },
+        {
+          name: "Sundarbans & Halophyte Adaptations",
+          weight: "High",
+          typicalQuestions: "Assess the ecological and economic significance of the Sundarbans. Explain root modifications and vivipary in halophytes.",
+          scoringTips: "Describe root modifications (pneumatophores, stilt roots, buttress roots) and vivipary (germination on parent tree) in bullet points, highlighting how they help survival in salty, anaerobic coastal mud."
+        }
+      ],
+      chronologicalTrends: [
+        "Ecological pyramids and food chain vs food web diagrams are extremely frequent, appearing in almost every second exam.",
+        "LER/RYT numerical interpretations are highly typical and guaranteed short questions.",
+        "The ecological and economic significance of the Sundarbans is a staple question for 4-5 marks."
+      ],
+      prepTips: [
+        "Practice drawing upright and inverted pyramids, and basic food web diagrams.",
+        "Memorize the intercropping types (mixed, row, strip, relay) with local crop examples.",
+        "Review the 1st and 2nd laws of thermodynamics and their application to energy flow pathways."
+      ]
+    }
   }
 };
 
