@@ -1,0 +1,978 @@
+{
+  "courseId": 2,
+  "courseName": "Crop Ecology",
+  "courseCode": "3203",
+  "sectionId": 4,
+  "sectionName": "Section B",
+  "chapters": [
+    {
+      "id": 6,
+      "name": "Agroecosystem &amp; Productivity",
+      "topics": [
+        {
+          "id": 1,
+          "localId": 1,
+          "name": "Ecosystem: Definition &amp; Classification",
+          "questions": [
+            {
+              "id": 1000,
+              "questionText": "Write the definition and classification of ecosystem with example.  [3]  (2019-20)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            },
+            {
+              "id": 1001,
+              "questionText": "Classify ecosystem with examples.",
+              "marks": "3",
+              "years": "2019",
+              "answerText": ""
+            },
+            {
+              "id": 1002,
+              "questionText": "Enlist the major ecosystems of the world.  [2]  (2016-17)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "localId": 2,
+          "name": "Ecosystem as the Basic Structural &amp; Functional Unit",
+          "questions": [
+            {
+              "id": 1003,
+              "questionText": "&apos;Ecosystem is the basic structural and functional unit of ecology&apos; — comprehend.",
+              "marks": "4",
+              "years": "2023",
+              "answerText": ""
+            },
+            {
+              "id": 1004,
+              "questionText": "&apos;Ecosystem is the basic structural and functional unit of ecology&apos; — explain.",
+              "marks": "4",
+              "years": "2019, 2021 (same Q)",
+              "answerText": ""
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "localId": 3,
+          "name": "Components of Ecosystem (Crop Field)",
+          "questions": [
+            {
+              "id": 1005,
+              "questionText": "Give an outline of the components of ecosystem in maize field.",
+              "marks": "3",
+              "years": "2025",
+              "answerText": ""
+            },
+            {
+              "id": 1006,
+              "questionText": "Write down the components of ecosystem in rice field.",
+              "marks": "5",
+              "years": "2024",
+              "answerText": ""
+            },
+            {
+              "id": 1007,
+              "questionText": "Briefly describe different components of a crop ecosystem.  [4]  (2019-20)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            },
+            {
+              "id": 1008,
+              "questionText": "Briefly describe the structure of a crop field ecosystem.  [3]  (2017-18)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "localId": 4,
+          "name": "Agroecosystem: Attributes &amp; Properties",
+          "questions": [
+            {
+              "id": 1009,
+              "questionText": "Assess the attributes of an agroecosystem.",
+              "marks": "4",
+              "years": "2025",
+              "answerText": ""
+            },
+            {
+              "id": 1010,
+              "questionText": "Draw and explain the pathway of flow of energy in an agroecosystem.",
+              "marks": "4",
+              "years": "2019",
+              "answerText": ""
+            },
+            {
+              "id": 1011,
+              "questionText": "Describe the attached sketch in terms of efficient agricultural crop production (Attachment 01).  [4]  (2019-20)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "localId": 5,
+          "name": "Energy Flow &amp; Laws of Thermodynamics",
+          "questions": [
+            {
+              "id": 1012,
+              "questionText": "&apos;Energy flow in an ecosystem follows the laws of thermodynamics&apos; — argue / explain.  [3–4]  (2023, 2020-21, 2017-18)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "localId": 6,
+          "name": "Food Chain &amp; Food Web",
+          "questions": [
+            {
+              "id": 1013,
+              "questionText": "Distinguish between food chain and food web.  [3]  (2025, 2016-17)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            },
+            {
+              "id": 1014,
+              "questionText": "Differentiate food chain from food web with diagram.  [3–4]  (2020-21, 2017-18)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            },
+            {
+              "id": 1015,
+              "questionText": "Sketch a &apos;food-chain&apos; and a &apos;food-web&apos;.  [2]  (2019-20)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            },
+            {
+              "id": 1016,
+              "questionText": "State the importance of food chain.",
+              "marks": "2",
+              "years": "2024",
+              "answerText": ""
+            },
+            {
+              "id": 1017,
+              "questionText": "Enumerate the significance of food chain.  [2]  (2016-17)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "localId": 7,
+          "name": "Ecological Pyramids (Eltonian Pyramids)",
+          "questions": [
+            {
+              "id": 1018,
+              "questionText": "Compare and contrast between pyramid of number and pyramid of biomass with diagram.",
+              "marks": "4",
+              "years": "2025",
+              "answerText": ""
+            },
+            {
+              "id": 1019,
+              "questionText": "Briefly describe different types of ecological pyramids.",
+              "marks": "3",
+              "years": "2024",
+              "answerText": ""
+            },
+            {
+              "id": 1020,
+              "questionText": "Schematically show different types of Eltonian pyramids.",
+              "marks": "3",
+              "years": "2023",
+              "answerText": ""
+            },
+            {
+              "id": 1021,
+              "questionText": "Draw and label different types of ecological pyramids.  [3]  (2019-20, 2016-17)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "localId": 8,
+          "name": "Trophic Level &amp; Productivity",
+          "questions": [
+            {
+              "id": 1022,
+              "questionText": "What is trophic level? Differentiate net primary productivity from gross primary productivity.  [3]  (2020-21)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            },
+            {
+              "id": 1023,
+              "questionText": "&apos;Productivity of an ecosystem is greatly influenced by environment&apos; — justify.",
+              "marks": "3",
+              "years": "2019",
+              "answerText": ""
+            },
+            {
+              "id": 1024,
+              "questionText": "How does environment play a role in the productivity of an ecosystem?  [3]  (2016-17)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "localId": 9,
+          "name": "Methods of Measuring Productivity",
+          "questions": [
+            {
+              "id": 1025,
+              "questionText": "Mention the methods of measuring productivity of an ecosystem. Describe any of them.  [3]  (2023, 2020-21, 2017-18)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "localId": 10,
+          "name": "Eutrophication &amp; Dead Zones",
+          "questions": [
+            {
+              "id": 1026,
+              "questionText": "Explain the concept of &apos;eutrophication&apos; and &apos;dead zones&apos;.  [2]  (2019-20)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Crop Association",
+      "topics": [
+        {
+          "id": 11,
+          "localId": 1,
+          "name": "Crop Association: Definition &amp; Forms",
+          "questions": [
+            {
+              "id": 1027,
+              "questionText": "Explain crop association.",
+              "marks": "2",
+              "years": "2024",
+              "answerText": ""
+            },
+            {
+              "id": 1028,
+              "questionText": "What is crop association? Illustrate different forms of crop association.",
+              "marks": "4",
+              "years": "2023",
+              "answerText": ""
+            },
+            {
+              "id": 1029,
+              "questionText": "What is crop association? Write down the principles of mixed cropping.  [3]  (2016-17)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            },
+            {
+              "id": 1030,
+              "questionText": "Enumerate the basic principles of crop association.",
+              "marks": "3",
+              "years": "2019",
+              "answerText": ""
+            },
+            {
+              "id": 1031,
+              "questionText": "Enumerate the limitations of crop association.",
+              "marks": "2",
+              "years": "2024",
+              "answerText": ""
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "localId": 2,
+          "name": "Types of Intercropping",
+          "questions": [
+            {
+              "id": 1032,
+              "questionText": "What is crop association? Illustrate different forms of intercropping with examples.  [4]  (2020-21, 2019-20, 2017-18)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            },
+            {
+              "id": 1033,
+              "questionText": "Compare and contrast between mixed intercropping and row intercropping.",
+              "marks": "3",
+              "years": "2024, 2023",
+              "answerText": ""
+            },
+            {
+              "id": 1034,
+              "questionText": "Briefly describe different forms of row intercropping.  [3]  (2016-17)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "localId": 3,
+          "name": "Relay Cropping vs Ratoon Cropping",
+          "questions": [
+            {
+              "id": 1035,
+              "questionText": "Distinguish between relay cropping and ratoon cropping.",
+              "marks": "3",
+              "years": "2023",
+              "answerText": ""
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "localId": 4,
+          "name": "Intercropping vs Mixed Cropping",
+          "questions": [
+            {
+              "id": 1036,
+              "questionText": "Discuss the differences between mixed cropping and intercropping.",
+              "marks": "3",
+              "years": "2025",
+              "answerText": ""
+            },
+            {
+              "id": 1037,
+              "questionText": "Compare and contrast between intercropping and mixed cropping.  [3]  (2017-18)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            },
+            {
+              "id": 1038,
+              "questionText": "Which one should you follow between intercropping and mixed cropping for better yield? Justify your answer.  [3]  (2020-21)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "localId": 5,
+          "name": "Principles &amp; Management of Intercropping",
+          "questions": [
+            {
+              "id": 1039,
+              "questionText": "Assess the principles of selecting crops for intercropping.",
+              "marks": "3",
+              "years": "2025",
+              "answerText": ""
+            },
+            {
+              "id": 1040,
+              "questionText": "Which management practices should be followed during intercropping?",
+              "marks": "3",
+              "years": "2019",
+              "answerText": ""
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "localId": 6,
+          "name": "Multiple Cropping &amp; Cropping Intensity",
+          "questions": [
+            {
+              "id": 1041,
+              "questionText": "&apos;Multiple cropping is the sole option to increase cropping intensity in Bangladesh&apos; — give your argument.  [4]  (2019-20)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "localId": 7,
+          "name": "LER &amp; RYT: Interpretation",
+          "questions": [
+            {
+              "id": 1042,
+              "questionText": "Suppose land equivalent ratio (LER) of the intercropping between mungbean and potato is 1.76. Interpret the statement.",
+              "marks": "3",
+              "years": "2024",
+              "answerText": ""
+            },
+            {
+              "id": 1043,
+              "questionText": "Land equivalent ratio (LER) of intercropping between sugarcane and potato is 1.45. How can you interpret it?",
+              "marks": "2",
+              "years": "2023",
+              "answerText": ""
+            },
+            {
+              "id": 1044,
+              "questionText": "Relative yield total (RYT) of intercropping between maize and mungbean is 1.45. How will you explain it?  [2]  (2019-20)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            },
+            {
+              "id": 1045,
+              "questionText": "Relative yield total (RYT) of intercropping between maize and blackgram is 1.48. How can you explain it?  [2]  (2016-17)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "localId": 8,
+          "name": "Food Chain &amp; Food Web [Cross-listed]",
+          "questions": [
+            {
+              "id": 1046,
+              "questionText": "Distinguish between food chain and food web.  [2]  (2016-17)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Environmental Pollution &amp; Agrochemicals",
+      "topics": [
+        {
+          "id": 19,
+          "localId": 1,
+          "name": "Pollution &amp; Pollutants: Definitions &amp; Classification",
+          "questions": [
+            {
+              "id": 1047,
+              "questionText": "What are meant by pollution and pollutants? Propose some measures to reduce environmental pollution in Bangladesh.  [4]  (2017-18)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "localId": 2,
+          "name": "Air Pollution",
+          "questions": [
+            {
+              "id": 1048,
+              "questionText": "Describe the impact of air pollution on human health.",
+              "marks": "3",
+              "years": "2025",
+              "answerText": ""
+            },
+            {
+              "id": 1049,
+              "questionText": "Propose some measures to reduce air pollution in Khulna city.",
+              "marks": "3",
+              "years": "2024",
+              "answerText": ""
+            },
+            {
+              "id": 1050,
+              "questionText": "Describe the sources and causes of air pollution.  [3]  (2017-18)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            },
+            {
+              "id": 1051,
+              "questionText": "How is air polluted?  [4]  (2020-21)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            }
+          ]
+        },
+        {
+          "id": 21,
+          "localId": 3,
+          "name": "Water Pollution: Sources, Effects &amp; Control",
+          "questions": [
+            {
+              "id": 1052,
+              "questionText": "Analyze how unnecessary use of agrochemicals leads to water pollution.",
+              "marks": "3.5",
+              "years": "2025",
+              "answerText": ""
+            },
+            {
+              "id": 1053,
+              "questionText": "&apos;Continuous water pollution is a leading cause of global fresh water scarcity over the period of time.&apos; Do you agree? Justify.",
+              "marks": "2",
+              "years": "2023",
+              "answerText": ""
+            },
+            {
+              "id": 1054,
+              "questionText": "What is eutrophication? Describe the effects of water pollution on aquatic animals and man.",
+              "marks": "4",
+              "years": "2023, 2019",
+              "answerText": ""
+            },
+            {
+              "id": 1055,
+              "questionText": "Explain the causes and impact of water pollution for agroecosystem.  [4]  (2020-21)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            },
+            {
+              "id": 1056,
+              "questionText": "Enumerate the sources and causes of water pollution in Khulna region.  [3]  (2019-20)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            },
+            {
+              "id": 1057,
+              "questionText": "Clarify eutrophication.",
+              "marks": "2",
+              "years": "2024",
+              "answerText": ""
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "localId": 4,
+          "name": "Key Terms: Bioaccumulation, Biomagnification, BOD, DO",
+          "questions": [
+            {
+              "id": 1058,
+              "questionText": "What are bioaccumulation and biomagnification?",
+              "marks": "2",
+              "years": "2024",
+              "answerText": ""
+            },
+            {
+              "id": 1059,
+              "questionText": "What is Minamata disease?",
+              "marks": "2",
+              "years": "2024",
+              "answerText": ""
+            },
+            {
+              "id": 1060,
+              "questionText": "Explain Itai-Itai disease.",
+              "marks": "1.5",
+              "years": "2025",
+              "answerText": ""
+            }
+          ]
+        },
+        {
+          "id": 23,
+          "localId": 5,
+          "name": "Soil &amp; Land Pollution",
+          "questions": [
+            {
+              "id": 1061,
+              "questionText": "Suggest some measures to reduce soil pollution in our country.",
+              "marks": "3",
+              "years": "2023",
+              "answerText": ""
+            }
+          ]
+        },
+        {
+          "id": 24,
+          "localId": 6,
+          "name": "Agricultural Pollution &amp; Agrochemicals",
+          "questions": [
+            {
+              "id": 1062,
+              "questionText": "Develop strategies to reduce environmental pollution caused by agrochemicals.",
+              "marks": "3.5",
+              "years": "2025",
+              "answerText": ""
+            },
+            {
+              "id": 1063,
+              "questionText": "&apos;Improper use of agrochemicals is a great threat to human health.&apos; — Evaluate.",
+              "marks": "3",
+              "years": "2024",
+              "answerText": ""
+            },
+            {
+              "id": 1064,
+              "questionText": "&apos;Improper use of agrochemicals is a potential threat to human health in Bangladesh&apos; — analyze.  [3]  (2019-20)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            },
+            {
+              "id": 1065,
+              "questionText": "&apos;Improper use of insecticides is a great threat to human health&apos;. Evaluate the statement.  [3]  (2017-18)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            },
+            {
+              "id": 1066,
+              "questionText": "&apos;Agrochemicals are potential threats for maintaining soil fertility and productivity&apos;. Explain.  [4]  (2020-21)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            },
+            {
+              "id": 1067,
+              "questionText": "What might be the remedial measures to reduce the detrimental effects of agrochemicals on environment?",
+              "marks": "3",
+              "years": "2019",
+              "answerText": ""
+            },
+            {
+              "id": 1068,
+              "questionText": "Propose some options to reduce environmental pollution in our country.  [4]  (2019-20)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            }
+          ]
+        },
+        {
+          "id": 25,
+          "localId": 7,
+          "name": "Bioremediation",
+          "questions": [
+            {
+              "id": 1069,
+              "questionText": "Review the role of bioremediation in controlling environmental pollution.",
+              "marks": "3",
+              "years": "2025",
+              "answerText": ""
+            }
+          ]
+        },
+        {
+          "id": 26,
+          "localId": 8,
+          "name": "Plants as Ameliorators of Environment",
+          "questions": [
+            {
+              "id": 1070,
+              "questionText": "&apos;Plant acts as ameliorator of environment quality&apos; — judge / explain.  [2–4]  (2020-21, 2019)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            }
+          ]
+        },
+        {
+          "id": 27,
+          "localId": 9,
+          "name": "Halophytes &amp; Salinity Tolerance",
+          "questions": [
+            {
+              "id": 1071,
+              "questionText": "How do halophytes cope with salinity?",
+              "marks": "3",
+              "years": "2023",
+              "answerText": ""
+            }
+          ]
+        },
+        {
+          "id": 28,
+          "localId": 10,
+          "name": "Ecological Hazard &amp; Disaster Management [2016-17 specific]",
+          "questions": [
+            {
+              "id": 1072,
+              "questionText": "&apos;The geographical location of Bangladesh is mostly responsible for ecological hazard&apos; — explain.  [3]  (2016-17)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            },
+            {
+              "id": 1073,
+              "questionText": "Illustrate disaster management cycle.  [3]  (2016-17)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            },
+            {
+              "id": 1074,
+              "questionText": "Differentiate between: (i) hazard and disaster; (ii) cyclone and tropical storm.  [4]  (2016-17)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Vegetation of Bangladesh",
+      "topics": [
+        {
+          "id": 29,
+          "localId": 1,
+          "name": "Mangrove: Environmental Conditions &amp; Characteristics",
+          "questions": [
+            {
+              "id": 1075,
+              "questionText": "Which environmental conditions are essential for the development of mangrove vegetation?",
+              "marks": "2",
+              "years": "2019",
+              "answerText": ""
+            },
+            {
+              "id": 1076,
+              "questionText": "State the ecological conditions necessary for mangrove vegetation.  [2]  (2016-17)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            }
+          ]
+        },
+        {
+          "id": 30,
+          "localId": 2,
+          "name": "Root Modifications in Halophytes",
+          "questions": [
+            {
+              "id": 1077,
+              "questionText": "Briefly describe the modification of roots in halophyte.  [3]  (2020-21, 2019)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            },
+            {
+              "id": 1078,
+              "questionText": "Which modifications in root occur in halophyte?  [2]  (2016-17)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            }
+          ]
+        },
+        {
+          "id": 31,
+          "localId": 3,
+          "name": "Vivipary in Halophytes",
+          "questions": [
+            {
+              "id": 1079,
+              "questionText": "How does vivipary help halophytes to survive in saline/coastal environment?  [2]  (2024, 2019-20, 2016-17)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            }
+          ]
+        },
+        {
+          "id": 32,
+          "localId": 4,
+          "name": "How Halophytes Cope with Saline Soil",
+          "questions": [
+            {
+              "id": 1080,
+              "questionText": "How does halophyte cope with saline soil?  [3]  (2017-18)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            },
+            {
+              "id": 1081,
+              "questionText": "How do halophytes cope with salinity?",
+              "marks": "3",
+              "years": "2023",
+              "answerText": ""
+            }
+          ]
+        },
+        {
+          "id": 33,
+          "localId": 5,
+          "name": "Ecological Significance of Mangrove Vegetation",
+          "questions": [
+            {
+              "id": 1082,
+              "questionText": "&apos;Mangrove vegetation has great significance on ecological aspects and livelihood development in coastal areas of Bangladesh&apos; — explain.",
+              "marks": "3",
+              "years": "2023",
+              "answerText": ""
+            },
+            {
+              "id": 1083,
+              "questionText": "State the ecological significance of mangrove vegetation in Bangladesh.  [4]  (2020-21)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            },
+            {
+              "id": 1084,
+              "questionText": "&apos;Mangrove forest is a livelihood option for coastal community&apos; — explain.  [4]  (2016-17)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            }
+          ]
+        },
+        {
+          "id": 34,
+          "localId": 6,
+          "name": "The Sundarbans: Ecological Significance &amp; Biodiversity",
+          "questions": [
+            {
+              "id": 1085,
+              "questionText": "Assess the ecological significance of the Sundarbans for Bangladesh&apos;s environment.",
+              "marks": "3.5",
+              "years": "2025",
+              "answerText": ""
+            },
+            {
+              "id": 1086,
+              "questionText": "&apos;The Sundarbans is an alternative livelihood option for people of Khulna and Satkhira.&apos; — Assess.",
+              "marks": "3.5",
+              "years": "2024",
+              "answerText": ""
+            },
+            {
+              "id": 1087,
+              "questionText": "&apos;The Sunderbans is an alternative livelihood option for coastal people of Bangladesh&apos; — assess.  [4]  (2019-20)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            },
+            {
+              "id": 1088,
+              "questionText": "&apos;The Sundarbans is an alternative livelihood option for coastal people of Bangladesh&apos;. Justify.  [5]  (2017-18)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            },
+            {
+              "id": 1089,
+              "questionText": "Illustrate the significance of the Sundarbans in coastal community. How can the biodiversity of this forest be conserved?",
+              "marks": "5",
+              "years": "2019",
+              "answerText": ""
+            }
+          ]
+        },
+        {
+          "id": 35,
+          "localId": 7,
+          "name": "Succession of Mangrove Vegetation in Sea Coast",
+          "questions": [
+            {
+              "id": 1090,
+              "questionText": "How does the succession of mangrove formation in coastal region greatly affect by the gradual elevation of the sea coast?  [3]  (2020-21)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            },
+            {
+              "id": 1091,
+              "questionText": "Write a note on succession of mangrove vegetation in sea coast.  [2]  (2017-18)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            }
+          ]
+        },
+        {
+          "id": 36,
+          "localId": 8,
+          "name": "Coastal Vegetation of Bangladesh",
+          "questions": [
+            {
+              "id": 1092,
+              "questionText": "Describe the distribution of coastal vegetation along Bangladesh&apos;s shoreline.",
+              "marks": "2",
+              "years": "2025",
+              "answerText": ""
+            },
+            {
+              "id": 1093,
+              "questionText": "Write a note on coastal vegetation in Bangladesh.",
+              "marks": "2.5",
+              "years": "2024",
+              "answerText": ""
+            },
+            {
+              "id": 1094,
+              "questionText": "Write an essay on coastal vegetation of Bangladesh.  [4]  (2019-20)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            },
+            {
+              "id": 1095,
+              "questionText": "Question Frequency by Chapter",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            },
+            {
+              "id": 1096,
+              "questionText": "Topic-wise Repetition Analysis (Most Repeated = Must Prepare)",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            },
+            {
+              "id": 1097,
+              "questionText": "Year-wise Pattern Summary",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            },
+            {
+              "id": 1098,
+              "questionText": "Strategic Suggestions for Exam Preparation",
+              "marks": null,
+              "years": null,
+              "answerText": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

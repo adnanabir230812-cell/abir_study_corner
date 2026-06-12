@@ -1,0 +1,1100 @@
+# 1.2 Toxin Lecture Slides Reference
+
+## Slide 1
+
+The Effect Of Toxins
+
+in Plant Tissue
+
+---
+
+## Slide 2
+
+Toxin
+
+Toxins are
+
+injurious/toxic substances secreted by micro-organism host complex
+
+that acts on
+
+living host protoplast
+
+to affect disease symptoms.
+
+**Death of cells :
+
+De
+
+Bary
+
+in
+
+1886
+
+**
+
+Oxalic acid
+
+secreted by
+
+Sclerotinia
+
+spp
+
+.
+
+Killing of cells
+
+.
+
+Any substance produced by a
+
+pathogen,
+
+that is
+
+injurious to the host
+
+and
+
+plays a crucial role in pathogenesis
+
+is called toxin
+
+.
+
+Toxins involved in
+
+plant parasite interactions
+
+are also called
+
+aggression.
+
+**Chemical Weapon of Pathogen**
+
+These are
+
+simple
+
+molecules with
+
+low molecular weight
+
+, they are
+
+extremely mobile
+
+and
+
+easily reach the sub cellular level of the host
+
+.
+
+Q
+
+---
+
+## Slide 3
+
+Q
+
+---
+
+## Slide 4
+
+Classification
+
+Phytotoxins
+
+Toxins
+
+Vivo toxins
+
+(Diamond & Waggoner, 1953)
+
+Specificity to Host
+
+Pathotoxins
+
+(Wheeler and Luke, 1963)
+
+Exo
+
+-Toxins
+
+Role of Pathogenesis
+
+Endo-Toxins
+
+Host selective
+
+/ specific toxins
+
+Non- host selective/
+
+non-specific toxins
+
+Causal role
+
+in the disease
+
+Tab-toxin;
+
+HMT toxin
+
+Partial role
+
+in disease
+
+Fusaric
+
+acid
+
+Pyricularin
+
+Role is suspected in disease
+
+Alternaric
+
+aid;
+
+cochliobolin
+
+.
+
+Victorin
+
+T-toxin,
+
+HC-toxin,
+
+AAL-toxin
+
+Tab toxin;
+
+phseolotoxin
+
+,
+
+Tentoxin
+
+Cercosporin
+
+---
+
+## Slide 5
+
+Vivotoxin
+
+A
+
+vivotoxin
+
+is defined as a
+
+substance produced in the infected host
+
+by the
+
+pathogen and/or its host,
+
+which functions in the
+
+production of disease
+
+but is
+
+not itself the initial inciting agent of disease.
+
+Characteristics of
+
+vivotoxin
+
+:
+
+Reproducible separation
+
+of the toxin from the sick plant
+
+Purification
+
+or
+
+chemical characterization
+
+Induction of at least
+
+a portion
+
+of the
+
+disease symptoms by placing the toxin
+
+in a healthy plant.
+
+Typical examples are
+
+fusaric acid
+
+and
+
+pyricularin
+
+.
+
+Types of  toxin in
+
+Pathogenesis
+
+Q
+
+---
+
+## Slide 6
+
+Pathotoxin
+
+:
+
+A chemical of
+
+biological origin.
+
+Host specific toxins
+
+that produces
+
+almost
+
+all the disease symptoms
+
+in
+
+absence
+
+of causal organism.
+
+Eg
+
+.
+
+T toxin,
+
+Victorin
+
+,
+
+Myrticin
+
+, HC toxin etc.
+
+Phytoalexins
+
+in plants:
+
+Low molecular weight antimicrobial compounds
+
+that are
+
+produced by plants
+
+as a response
+
+to biotic and abiotic
+
+stresses.
+
+Take part in an
+
+intricate
+
+defense system
+
+which enables plants to
+
+control invading microorganisms.
+
+Types of  toxin in
+
+Pathogenesis
+
+Q
+
+---
+
+## Slide 7
+
+Victorine is a host specific toxin
+
+Q
+
+---
+
+## Slide 8
+
+Phytotoxins
+
+:
+
+Phytotoxins are
+
+poisonous substances
+
+Toxins synthesized by
+
+plants or plant pathogens
+
+through
+
+naturally occurring biochemical reactions.
+
+Plants use them as
+
+defensive agents against predators
+
+(pests, insects, stress, etc.) and
+
+diseases
+
+Q
+
+---
+
+## Slide 9
+
+Q
+
+---
+
+## Slide 10
+
+Effect of Toxins on Plant Tissue
+
+mechanisms of
+
+phyto
+
+-toxicity
+
+Q
+
+---
+
+## Slide 11
+
+Changes in Cell Wall Permeability
+
+Effect of Toxins on Plant Tissue
+
+---
+
+## Slide 12
+
+Changes in cell wall permeability:
+
+Toxins kill plant cells by altering the permeability of the plasma membrane
+
+thus permitting
+
+The electrolyte leakage is
+
+ubiquitous
+
+among different species, tissues, and cell types, and can be
+
+triggered by
+
+all major stress factors
+
+, including pathogen attack
+
+(Atkinson
+
+et al.
+
+, 1985, 1990, 1996;
+
+Ebel
+
+and
+
+Mithofer
+
+, 1998; Blatt
+
+et al.
+
+, 1999;
+
+Maffei
+
+et al.
+
+, 2007)
+
+Loss of water
+
+and
+
+The
+
+electrolyte leakage
+
+/ loss of  electrolytes and
+
+unrestricted
+
+entry of substances
+
+including the toxin.
+
+Major Loss from Leaking cell
+
+K
+
++
+
+Na
+
++
+
+, Ca
+
+2+
+
+, K
+
++
+
+, Cl
+
+-
+
+, PO₄³⁻, and Mg
+
+2+
+
+---
+
+## Slide 13
+
+Toxins probably either
+
+destroy
+
+them
+
+or
+
+interfere
+
+with the
+
+mechanisms
+
+involved in their synthesis.
+
+**Affect
+
+cellular transport system
+
+of
+
+H
+
++
+
+/K
+
++
+
+exchange
+
+in cell membrane.
+
+DEATH
+
+For example
+
+:
+
+Lycomarasmin
+
+,
+
+fusaric
+
+acid,
+
+picolinic
+
+acid,
+
+victorin
+
+und other toxins
+
+.
+
+Victorin
+
+can cause
+
+increased permeability
+
+at
+
+very
+
+low concentrations.
+
+---
+
+## Slide 14
+
+2. Disruption Of Normal Metabolic Processes
+
+Effect of Toxins on Plant Tissue
+
+---
+
+## Slide 15
+
+Regulates Stomata Opening & Closing Regulates Stomata Opening & Closing
+
+K
+
+Disruption of normal metabolic processes
+
+Role of Potassium Ion (K
+
++
+
+)
+
+catalyzes chemical reactions by regulating >
+
+60 enzymes
+
+acts as a catalyst by activating enzymes
+
+involved in regulating the rate of
+
+photosynthesis
+
+and the
+
+production of ATP.
+
+regulate electrical charge,
+
+which is important to maximize ATP production during photosynthesis.
+
++
+
+---
+
+## Slide 16
+
+Disruption of normal metabolic processes
+
+---
+
+## Slide 17
+
+3. Malfunctioning of Enzyme System
+
+Effect of Toxins on Plant Tissue
+
+---
+
+## Slide 18
+
+Tabtoxin, Phaseolotoxin and Tentoxin
+
+Inhibit normal host enzymes
+
+, thereby
+
+leading to increases in toxic substrates
+
+or to
+
+depletion of needed compounds
+
+Tabtoxin                                                    Phaseolotoxin                                                   Tentoxin
+
+---
+
+## Slide 19
+
+Tabtoxin:
+
+Dipeptide compound of amino acid threonine
+
+and
+
+tabotoxinine
+
+Tabotoxinine
+
+Active
+
+form
+
+Toxic
+
+to
+
+cell
+
+It
+
+inactivate
+
+the
+
+enzyme
+
+glutamine synthetase
+
+---
+
+## Slide 20
+
+S
+
+ome
+
+non-toxic chemicals
+
+can become toxic due to their conversion into active toxins inside the plant
+
+. This process typically involves enzymatic reactions that occur within the host plant.
+
+Tabtoxin
+
+is a classic example of this mechanism.
+
+Tabtoxin and Its Toxicity Mechanism
+
+Produced by Pathogen
+
+:
+
+The bacterium
+
+Pseudomonas
+
+syringae
+
+pv
+
+.
+
+tabaci
+
+produces
+
+tabtoxin
+
+, a non-toxic precursor molecule.
+
+Tabtoxin itself is not harmful to plants in its original form.
+
+Structure of Tabtoxin
+
+:
+
+Tabtoxin consists of
+
+tabtoxinine
+
+-β-lactam
+
+linked to a
+
+dipeptide
+
+structure.
+
+This structure allows it to remain non-toxic initially.
+
+Q
+
+---
+
+## Slide 21
+
+Activation in the Host
+
+:
+
+Once tabtoxin enters the plant cells, plant enzymes break it down, releasing the active component called
+
+tabtoxinine
+
+-β-lactam
+
+.
+
+This breakdown process occurs naturally within plant metabolism.
+
+Toxic Effect
+
+:
+
+Tabtoxinine
+
+-β-lactam
+
+inhibits the enzyme
+
+glutamine synthetase
+
+.
+
+This inhibition prevents the conversion of
+
+ammonia (NH₃)
+
+to
+
+glutamine
+
+, causing a toxic build-up of ammonia in plant tissues.
+
+Q
+
+---
+
+## Slide 22
+
+After
+
+Inactivation of Glutamine Syntheses:
+
+Depleted
+
+glutamine levels
+
+Accumulation
+
+of
+
+toxic
+
+concentrations of
+
+ammonia
+
+Uncouples
+
+photosynthesis and photorespiration
+
+Destroy
+
+the
+
+thylakoid membrane
+
+of the chloroplast
+
+Chlorosis and necrosis
+
+---
+
+## Slide 23
+
+Phaseolotoxin:
+
+The toxin that affects cells by
+
+binding to the active site
+
+and
+
+inactivating
+
+the enzyme
+
+ornithine carbamoyl transferase.
+
+Accumulate
+
+ornithine
+
+Depleted
+
+levels of
+
+citrulline and arginine
+
+---
+
+## Slide 24
+
+Tentoxin:
+
+Inhibits
+
+the activity
+
+of
+
+polyphenol oxidases
+
+,
+
+enzymes involved in several resistance mechanisms of plant
+
+.
+
+Other examples:
+
+Pyricularin
+
+inhibits
+
+polyphenol oxidase
+
+system
+
+and
+
+Victorin
+
+acts by
+
+uncoupling
+
+of oxidative phosphorylation
+
+.
+
+Fusaric
+
+acid and
+
+picolinic
+
+acid
+
+can form
+
+chelating
+
+complexes
+
+with
+
+heavy metal ions
+
+and could
+
+inhibit enzyme systems
+
+which require these metals for their activity.
+
+---
+
+## Slide 25
+
+4. Interfere with the growth regulatory system
+
+Effect of Toxins on Plant Tissue
+
+---
+
+## Slide 26
+
+Interference of Toxins
+
+Cause an
+
+imbalance
+
+in the
+
+hormonal system
+
+and bring about
+
+abnormal growth responses
+
+Overgrowths
+
+,
+
+rosetting
+
+, excessive root branching, stem malformation, leaf epinasty, defoliation,
+
+and
+
+suppression of bud growth.
+
+---
+
+## Slide 27
+
+*(Empty slide or contains only images)*
+
+---
+
+## Slide 28
+
+Plant growth regulator GA:
+
+Identified as a
+
+fungal toxin
+
+First identified in
+
+Japan
+
+in
+
+1926
+
+, as a
+
+metabolic by product
+
+of the plant
+
+pathogen
+
+Gibberella
+
+fujikuroi
+
+,
+
+which affect rice.
+
+---
+
+## Slide 29
+
+5. Inhibit Root Growth
+
+Fusarium
+
+moniliforme
+
+produces a
+
+thermostable toxin
+
+even in
+
+soil around the roots
+
+which causes
+
+browning of roots
+
+and
+
+restrict
+
+their
+
+development
+
+.
+
+Besides,
+
+Stomatal Dysfunction
+
+has also been reported for certain
+
+pathotoxins
+
+Physical blocking effect
+
+of
+
+large molecules
+
+is also a
+
+mechanism of
+
+phytotoxicity
+
+by toxins.
+
+Figure: Wilt Disease of
+
+Soyabean
+
+.
+
+Effect of Toxins on Plant Tissue
+
+---
+
+## Slide 30
+
+Causes of toxin in host plant
+
+Toxins are
+
+microbial metabolites
+
+involved in
+
+development of plant diseases.
+
+Toxins are the
+
+weapon of microbes
+
+, that helps in
+
+injuring and killing the host cell.
+
+They cause
+
+severe damage to the plant
+
+and
+
+produce
+
+different
+
+symptoms
+
+.
+
+It
+
+inhibits
+
+enzymatic reactions
+
+of the host.
+
+It is effective at
+
+low concentration
+
+and
+
+directly act
+
+upon the
+
+host
+
+protoplast.
+
+---
+

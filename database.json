@@ -1747,15 +1747,708 @@
           },
           "Topics": [
             {
-              "id": 4,
+              "id": 201,
               "sectionId": 3,
-              "name": "Course Orientation",
+              "name": "Crop Ecology: Definitions & Sub-divisions",
               "Questions": [
                 {
-                  "id": 4,
-                  "topicId": 4,
-                  "questionText": "When will study questions be uploaded?",
-                  "answerText": "Questions & Answers for **Crop Ecology** taught by **Debesh Sir** will appear here once you provide slides and exam pictures in Phase 2."
+                  "id": 2001,
+                  "topicId": 201,
+                  "questionText": "1. What is Crop Ecology? Narrate the scope and application of Crop Ecology in Agriculture. [1+3=4]  (2025)",
+                  "answerText": "### Definition\n**Crop Ecology** is the scientific study of the interactions, relationships, and reciprocal effects between crop plants and their surrounding environment (including physical, chemical, and biotic factors).\n\n### Scope and Application in Agriculture\n* **Resource Optimization:** It guides farmers in utilizing environmental resources such as Solar Radiation (PAR), moisture, and temperature efficiently to maximize photosynthesis and biomass accumulation.\n* **Cropping System Design:** Informs decisions on cropping patterns, crop associations (e.g., intercropping, relay cropping), and plant spacing to optimize land equivalent ratios (LER).\n* **Stress Management:** Helps identify and mitigate climatic stresses like heat stress, chilling injuries, frost damage, and droughts by suggesting cultural/foliar practices.\n* **Environmental Protection:** Assists in managing agrochemical inputs (fertilizers, pesticides) to prevent water, soil, and air pollution.\n* **Microclimate Manipulation:** Guides the design of windbreaks, shelterbelts, and greenhouses to alter temperature, humidity, and wind velocity around crops.\n* **Climate Change Adaptation:** Aids in selecting climate-resilient and salt-tolerant crop varieties (e.g., halophytes in coastal zones) to maintain food security.\n* **Weed and Pest Management:** Helps understand crop-weed and crop-pest biotic associations to design biological and integrated pest management systems."
+                },
+                {
+                  "id": 2005,
+                  "topicId": 201,
+                  "questionText": "5. Define crop ecology. Why is the study of ecology important? [3]  (2017-18)",
+                  "answerText": "### Importance of Studying Ecology\nThe importance of studying ecology (as detailed in Section 2.2 of the lecture notes) includes:\n* **Understanding environment-organism relationship:** Analyzes how living things interact with each other and their physical environment.\n* **Conservation of biodiversity:** Helps protect endangered species and maintain balanced ecosystems.\n* **Sustainable use of natural resources:** Guides the management of water, soil, and forests to prevent depletion.\n* **Improving agricultural production:** Forms the scientific foundation for optimizing crop growth, soil health, and pest management.\n* **Environmental protection (help control pollution):** Explains how human activities impact biogeochemical cycles and how to remediate pollution.\n* **Climate change awareness:** Identifies the drivers and impacts of global warming, advising on mitigation and adaptation.\n* **Disaster management:** Assists in predicting, preparing for, and managing ecological hazards like droughts, floods, and soil erosion.\n* **Promote human health and survival:** Ensures clean air, water, and food security, which are essential for human existence."
+                },
+                {
+                  "id": 2006,
+                  "topicId": 201,
+                  "questionText": "6. What is Crop Ecology? Name the sub-divisions of Ecology. [1+1.5=2.5]  (2016-17)",
+                  "answerText": "### Sub-divisions of Ecology\nEcology is broadly divided into:\n1. **Autecology:** The study of an individual organism or a single plant/animal species in relation to its environment.\n2. **Synecology:** The study of groups of organisms or ecological communities composed of multiple species in relation to their environment."
+                },
+                {
+                  "id": 2007,
+                  "topicId": 201,
+                  "questionText": "7. Enumerate different fields of ecology. [2]  (2016-17)",
+                  "answerText": "The major fields (sub-divisions) of ecology include:\n* **Population Ecology:** Focuses on the growth, density, regulation, and demographic structure of single-species populations.\n* **Community Ecology:** Studies the interactions between different populations living in the same habitat under similar environmental conditions.\n* **Habitat Ecology:** Examines life processes within specific physical habitats (e.g., forest, marine, freshwater, desert ecology).\n* **Palaeoecology:** Investigates the relationships between organisms and their geological environments in past ages.\n* **Ecophysiology (Physiological Ecology):** Analyzes the physiological adaptations of plants and animals under different environmental and climatic stresses.\n* **Cytoecology:** Studies cytological details (cellular structure and behavior) in relation to varying soil and environmental conditions.\n* **Conservation Ecology:** Focuses on the management and protection of natural resources and biodiversity for human welfare.\n* **Production Ecology:** Investigates energy production, accumulation, and flow through different trophic levels.\n* **Gene Ecology:** Studies the relationship between environmental factors and genetic variations within populations."
+                },
+                {
+                  "id": 2008,
+                  "topicId": 201,
+                  "questionText": "8. Define crop and ecology. What is understood by crop ecology? [2+1=3]  (2019)",
+                  "answerText": "### Definitions\n* **Crop:** A plant or crop population cultivated deliberately by humans for food, fodder, fiber, shelter, or economic value.\n* **Ecology:** The scientific study of the structure, function, and interactions of nature, focusing on the relationships between living organisms (Oikos) and their environment.\n* **Crop Ecology:** Refers to the specialized branch of agricultural science that studies the reciprocal interactions, adaptations, and resource-use relationships between crop plants and their growing environment."
+                },
+                {
+                  "id": 2011,
+                  "topicId": 201,
+                  "questionText": "11. What is PAR? Distinguish between synecology and autecology. [3]  (2017-18)",
+                  "answerText": "| Feature | Autecology | Synecology |\n| :--- | :--- | :--- |\n| **Definition** | The study of a single individual or a single species in relation to its environment. | The study of communities or groups of multiple species interacting in an environment. |\n| **Focus** | Individual growth, life history, and specific physiological adaptations. | Community structure, species diversity, food webs, and succession. |\n| **Complexity** | Simple, focuses on one organism-environment pathway. | Highly complex, network of multiple species interactions. |\n| **Unit of Study** | Individual organism or population. | Ecological community or ecosystem. |"
+                },
+                {
+                  "id": 2012,
+                  "topicId": 201,
+                  "questionText": "12. Define crop ecology. 'Ecosystem is a self-regulatory process'. Explain. [3]  (2020-21)",
+                  "answerText": "### Definition of Crop Ecology\n**Crop Ecology** is the scientific study of the interactions and relationships between crop plants and their surrounding environment.\n\n### Explanation of Ecosystem Self-Regulation\nAn ecosystem is an open, dynamic system that maintains structural and functional equilibrium (homeostasis) through self-regulatory feedback loops:\n* **Feedback Mechanisms:** When an environmental component or population size deviates from its norm, feedback loops act to bring it back to balance. For example, if a pest population increases, the number of its natural predators rises, which eventually reduces the pest population, restoring balance.\n* **Resource Limitation:** The growth of biotic components is restricted by abiotic limits (like water, nutrients, and space), preventing any single species from growing infinitely and collapsing the system.\n* **Decomposition and Nutrient Cycling:** Decomposers continuously break down organic wastes, converting them back into inorganic forms, which prevents toxicity and ensures a steady nutrient supply for producers."
+                },
+                {
+                  "id": 2024,
+                  "topicId": 201,
+                  "questionText": "24. Explain the following terms: i) Light compensation point ii) Photo energetic effect iii) Photo cybernetic effect iv) Photoblastism [2]  (2019)",
+                  "answerText": "* **i) Light Compensation Point:**\n  * The specific light intensity at which the rate of photosynthesis exactly equals the rate of respiration. At this point, net gaseous exchange (carbon dioxide intake vs. release) is zero, and net dry matter accumulation stops.\n* **ii) Photoenergetic Effect:**\n  * The direct role of light acting as an energy source to drive physical and chemical reactions in plants, primarily the light-dependent reactions of photosynthesis.\n* **iii) Photocybernetic Effect:**\n  * The regulatory role of light acting as a signal or environmental cue to control growth, development, and differentiation processes (e.g., photoperiodism, phototropism, pigment synthesis) without being used as an energy source.\n* **iv) Photoblastism:**\n  * The biological response of seeds to light during germination. Light-sensitive seeds that require exposure to light to germinate are called positively photoblastic (e.g., lettuce), while seeds inhibited by light are negatively photoblastic."
+                },
+                {
+                  "id": 2025,
+                  "topicId": 201,
+                  "questionText": "25. What are the effects of light on plants? Explain short day plants and long day plants with appropriate sketch. [2+3=5]  (2019)",
+                  "answerText": "### Answer\n  \n**Question:** What are the effects of light on plants? Explain short day plants and long day plants with appropriate sketch.\n\nThis question is related to the syllabus of Crop Ecology under Debesh Sir's section. Please refer to the lecture notes for detailed explanations."
+                }
+              ]
+            },
+            {
+              "id": 202,
+              "sectionId": 3,
+              "name": "Principles of Organism-Environment Relationship",
+              "Questions": [
+                {
+                  "id": 2002,
+                  "topicId": 202,
+                  "questionText": "2. Define Crop Ecology. Point out ten principles of relationship between organism and environment. [1+3=4]  (2024)",
+                  "answerText": "### Ten Principles of Organism-Environment Relationship\n1. **Environmental Influence:** Everything that surrounds an organism and directly or indirectly influences its life processes constitutes its environment.\n2. **No Existence in Vacuum:** An organism cannot exist in a vacuum; it is constantly interacting with and dependent on its biotic and abiotic surroundings.\n3. **Cessation of Life:** Death is the cessation of life, representing the point where an organism ceases to extract energy and returns its nutrients back to the environment.\n4. **Ultimate Energy Source:** The Sun is the ultimate and only primary source of energy for all life processes on Earth.\n5. **Liebig's Law of the Minimum:** The rate of physiological processes and distribution of organisms are limited by the environmental factor that is present in the minimum quantity relative to the organism's requirements.\n6. **Shelford's Law of Tolerance:** An organism has minimum, optimum, and maximum limits of tolerance for different environmental factors; exceeding these limits halts growth.\n7. **Carrying Capacity:** Every habitat possesses a finite potential to support a certain maximum number of individuals of a species sustainably.\n8. **Energy Conservation:** Energy is neither created nor destroyed, but only transformed from one form to another (First Law of Thermodynamics).\n9. **Biosphere Boundary:** Life on Earth is restricted to a very thin mantle or layer around the planet known as the biosphere.\n10. **System Integration:** An ecosystem is integrated by biotic components (producers, consumers, decomposers) and abiotic components (matter and energy) interacting dynamically."
+                },
+                {
+                  "id": 2003,
+                  "topicId": 202,
+                  "questionText": "3. Ecological study is important in Agriculture — justify.  (2023)",
+                  "answerText": "Ecological study is critical in agriculture because it forms the scientific basis for sustainable crop production:\n* **Resource Optimization:** It explains how to optimize inputs like solar radiation, temperature, and soil moisture to match crop requirements.\n* **Climate Resilience:** Helps farmers adapt to climatic hazards by implementing mitigation strategies for heat stress, frost injury, and droughts.\n* **Sustainable Soil Management:** Guides the maintenance of soil fertility through crop rotation, organic matter enrichment, and nitrogen-fixing associations.\n* **Eco-Friendly Pest Management:** Explains biotic interactions (predation, parasitism) to design biological control methods, reducing chemical pesticide use.\n* **Biodiversity Conservation:** Preserves wild genetic relatives of crops which are essential for breeding disease-resistant and climate-smart varieties.\n* **Yield Improvement:** Informs crop-specific sowing dates, crop spacing, and fertilization based on environmental factors."
+                },
+                {
+                  "id": 2004,
+                  "topicId": 202,
+                  "questionText": "4. Ecological knowledge is a prerequisite for sustainable crop production. Write ten arguments in favour of the statement. [5]  (2019-20)",
+                  "answerText": "Ecological knowledge is a prerequisite for sustainable crop production due to the following reasons:\n1. **Saves Inputs:** Optimizes the use of solar energy (PAR), water, and soil nutrients, preventing input waste.\n2. **Mitigates Climatic Stress:** Provides techniques (like seed priming or foliar sprays) to protect crops from extreme heat or chilling.\n3. **Reduces Soil Degradation:** Guides crop rotation and cover cropping to prevent soil erosion and maintain organic matter.\n4. **Controls Chemical Pollution:** Minimizes the run-off of synthetic pesticides and fertilizers by promoting bio-controls and organic farming.\n5. **Promotes Agro-biodiversity:** Encourages intercropping and crop diversification, which breaks pest cycles and stabilizes yields.\n6. **Enhances Biological Nitrogen Fixation:** Promotes the rhizosphere symbiosis of legume-Rhizobium, reducing reliance on synthetic urea.\n7. **Informs Crop Breeding:** Helps breeders identify wild crop relatives carrying genetic traits for salt, heat, or drought tolerance.\n8. **Guides Microclimate Management:** Enables farmers to design effective windbreaks and shelterbelts to protect crops from physical wind damage.\n9. **Supports Resource Conservation:** Teaches principles of Integrated Water Resource Management (IWRM) like Alternate Wetting and Drying (AWD) in rice.\n10. **Ensures Long-Term Viability:** Integrates farming practices with natural biogeochemical cycles, ensuring the environment remains productive for future generations."
+                },
+                {
+                  "id": 2009,
+                  "topicId": 202,
+                  "questionText": "9. Explain individual, population, community, ecosystem, biome and biosphere with appropriate sketch layout. [3]  (2019)",
+                  "answerText": "### Key Ecological Levels\n* **Individual:** A single living organism (e.g., a single rice plant).\n* **Population:** A group of individuals of the same species living in a particular area and capable of interbreeding (e.g., all rice plants in a field).\n* **Community:** An assemblage of populations of different species interacting in a common habitat (e.g., rice plants, weeds, insects, and soil microbes in a field).\n* **Ecosystem:** A self-sustaining functional unit consisting of a biotic community interacting dynamically with its abiotic environment (soil, water, light).\n* **Biome:** A large regional ecological community characterized by a dominant vegetation type and climate (e.g., tropical rainforest, savannah, mangrove forest).\n* **Biosphere:** The global ecological system integrating all living beings and their relationships; the thin zone on Earth where life exists.\n\n### Schematic Layout\n```\n[ Individual ] ➔ [ Population ] ➔ [ Community ] ➔ [ Ecosystem ] ➔ [ Biome ] ➔ [ Biosphere ]\n   (1 plant)       (Same species)   (Multi-species)   (Biotic+Abiotic)  (Regional)     (Global Zone)\n```"
+                },
+                {
+                  "id": 2010,
+                  "topicId": 202,
+                  "questionText": "10. Schematically explain community, biome, biosphere and population. [4]  (2023)",
+                  "answerText": "### Explanation of Levels\n* **Population:** A group of individuals of the same species living in a specific habitat and capable of reproducing.\n* **Community:** An assemblage of populations of different species interacting with each other in a common geographical area.\n* **Biome:** A large regional or sub-continental community characterized by dominant vegetation, soil, and climate patterns (e.g., the Sundarbans mangrove biome).\n* **Biosphere:** The global ecological system encompassing all regions of the Earth (atmosphere, lithosphere, hydrosphere) where life exists.\n\n### Schematic Representation\n```\n[ Population ] ➔ [ Community ] ➔ [ Biome ] ➔ [ Biosphere ]\n (Same Species)   (Multi-species)  (Regional)    (Global Life Zone)\n```"
+                }
+              ]
+            },
+            {
+              "id": 203,
+              "sectionId": 3,
+              "name": "Light as an Ecological Factor (Intensity vs. Duration)",
+              "Questions": [
+                {
+                  "id": 2013,
+                  "topicId": 203,
+                  "questionText": "13. Differentiate between the roles of light intensity and duration in crop development. [3]  (2025)",
+                  "answerText": "| Feature | Light Intensity | Light Duration (Photoperiod) |\n| :--- | :--- | :--- |\n| **Definition** | The concentration or strength of solar energy hitting the crop surface. | The length of time a crop is exposed to sunlight in a 24-hour cycle. |\n| **Primary Physiological Role** | Determines the rate of photosynthesis, stomatal movement, and dry matter accumulation. | Acts as a regulatory cue for the transition from vegetative to reproductive growth (flowering). |\n| **Crop Growth Effect** | Controls food production, grain filling, tiller count, and vegetative biomass. | Controls the timing of flowering, crop maturity, and seed formation. |\n| **Photoperiodism** | Not involved in photoperiodic signaling. | Directly involved (classified into Short-Day, Long-Day, and Day-Neutral plants). |\n| **Seasonal Impact** | Highly critical during the dry, clear-sky winter (Boro season) in Bangladesh. | Determines which seasons a crop can grow and flower (e.g., winter vs. summer). |"
+                },
+                {
+                  "id": 2014,
+                  "topicId": 203,
+                  "questionText": "14. 'Light has great significant role on optimum growth, development and yield formation of rice during Boro season in Bangladesh.' — Justify the statement. [3]  (2024)",
+                  "answerText": "### Explanation\nBoro rice is cultivated during the dry winter-to-spring season in Bangladesh, which is characterized by clear skies and abundant solar radiation:\n* **Higher Photosynthesis:** High light intensity stimulates stomatal opening (via potassium ion $K^+$ accumulation in guard cells). This maximizes carbon dioxide intake and photosynthetic rates, leading to higher dry matter accumulation.\n* **Enzyme Activation:** Solar radiation enhances enzyme activities and induces protein synthesis, promoting active tillering.\n* **Grain Translocation:** Abundant sunlight during reproductive stages accelerates the translocation of stored assimilates from stems to grains, resulting in high grain filling.\n* **Yield Performance of BR3:** Cultivars like BR3 perform exceptionally well during the Boro season because they can utilize the high solar radiation and cooler night temperatures (which reduce respiratory loss), leading to maximum grain yield."
+                },
+                {
+                  "id": 2015,
+                  "topicId": 203,
+                  "questionText": "15. 'Optimum light intensity directly associated with higher rice yield in Boro season that significantly contributes for food security in Bangladesh' — justify the statement. [3]  (2023)",
+                  "answerText": "### Explanation\nBoro rice is cultivated during the dry winter-to-spring season in Bangladesh, which is characterized by clear skies and abundant solar radiation:\n* **Higher Photosynthesis:** High light intensity stimulates stomatal opening (via potassium ion $K^+$ accumulation in guard cells). This maximizes carbon dioxide intake and photosynthetic rates, leading to higher dry matter accumulation.\n* **Enzyme Activation:** Solar radiation enhances enzyme activities and induces protein synthesis, promoting active tillering.\n* **Grain Translocation:** Abundant sunlight during reproductive stages accelerates the translocation of stored assimilates from stems to grains, resulting in high grain filling.\n* **Yield Performance of BR3:** Cultivars like BR3 perform exceptionally well during the Boro season because they can utilize the high solar radiation and cooler night temperatures (which reduce respiratory loss), leading to maximum grain yield."
+                },
+                {
+                  "id": 2016,
+                  "topicId": 203,
+                  "questionText": "16. 'Low light intensity during panicle initiation to flowering is critical and flowering to grain formation is more critical for rice'. Justify the statement logically. [3]  (2020-21)",
+                  "answerText": "Low light intensity (caused by cloud cover or shading) restricts rice yield, but its timing determines the severity of the damage:\n* **Panicle Initiation to Flowering (Critical Phase):**\n  * Shading during this stage reduces the number of spikelets per panicle.\n  * It limits photosynthesis, causing poor spikelet development and leading to spikelet sterility.\n* **Flowering to Grain Formation (More Critical Phase):**\n  * During grain filling, yield depends almost entirely on current photosynthesis.\n  * Low light intensity at this stage directly decreases the accumulation of soluble carbohydrates, leading to poor grain filling, a high percentage of empty grains (chaffiness), and lower grain weight.\n  * Consequently, low light during grain formation causes a more direct and severe reduction in final yield compared to earlier stages."
+                },
+                {
+                  "id": 2017,
+                  "topicId": 203,
+                  "questionText": "17. Light intensity is the critical factor for higher yield of rice during Boro season. Explain. [3]  (2016-17)",
+                  "answerText": "### Explanation\nBoro rice is cultivated during the dry winter-to-spring season in Bangladesh, which is characterized by clear skies and abundant solar radiation:\n* **Higher Photosynthesis:** High light intensity stimulates stomatal opening (via potassium ion $K^+$ accumulation in guard cells). This maximizes carbon dioxide intake and photosynthetic rates, leading to higher dry matter accumulation.\n* **Enzyme Activation:** Solar radiation enhances enzyme activities and induces protein synthesis, promoting active tillering.\n* **Grain Translocation:** Abundant sunlight during reproductive stages accelerates the translocation of stored assimilates from stems to grains, resulting in high grain filling.\n* **Yield Performance of BR3:** Cultivars like BR3 perform exceptionally well during the Boro season because they can utilize the high solar radiation and cooler night temperatures (which reduce respiratory loss), leading to maximum grain yield."
+                },
+                {
+                  "id": 2018,
+                  "topicId": 203,
+                  "questionText": "18. 'Photoperiod influences flowering of plants'— Do you agree or disagree? Justify your opinion. [2.5]  (2016-17)",
+                  "answerText": "### Agreement\nI agree with the statement. **Photoperiodism** is the physiological response of plants to the relative length of day and night, which controls the initiation of flowering.\n\n### Justification\n* **Phytochrome System:** Plants perceive photoperiod through the pigment phytochrome, which exists in two forms: Red-absorbing $P_r$ (inactive) and Far-Red-absorbing $P_{fr}$ (active).\n* **Short-Day Plants (SDP):** These plants require a day length shorter than a critical duration (e.g., Aman rice, soybean). Long, uninterrupted nights allow $P_{fr}$ to decay to $P_r$, which triggers the synthesis of the flowering hormone **Florigen**. A brief flash of light during the dark period inhibits flowering.\n* **Long-Day Plants (LDP):** These plants require day lengths exceeding a critical duration (e.g., wheat, spinach). Continuous light keeps phytochrome in the active $P_{fr}$ form, promoting Florigen synthesis and flowering."
+                },
+                {
+                  "id": 2019,
+                  "topicId": 203,
+                  "questionText": "19. Yield of BR3 is the highest during boro season. Briefly describe the reasons. [4]  (2017-18)",
+                  "answerText": "### Explanation\nBoro rice is cultivated during the dry winter-to-spring season in Bangladesh, which is characterized by clear skies and abundant solar radiation:\n* **Higher Photosynthesis:** High light intensity stimulates stomatal opening (via potassium ion $K^+$ accumulation in guard cells). This maximizes carbon dioxide intake and photosynthetic rates, leading to higher dry matter accumulation.\n* **Enzyme Activation:** Solar radiation enhances enzyme activities and induces protein synthesis, promoting active tillering.\n* **Grain Translocation:** Abundant sunlight during reproductive stages accelerates the translocation of stored assimilates from stems to grains, resulting in high grain filling.\n* **Yield Performance of BR3:** Cultivars like BR3 perform exceptionally well during the Boro season because they can utilize the high solar radiation and cooler night temperatures (which reduce respiratory loss), leading to maximum grain yield."
+                },
+                {
+                  "id": 2020,
+                  "topicId": 203,
+                  "questionText": "20. Write about 'photoenergetic effect', 'photocybernetic effect' and 'light compensation point'. [3]  (2019-20)",
+                  "answerText": "* **i) Light Compensation Point:**\n  * The specific light intensity at which the rate of photosynthesis exactly equals the rate of respiration. At this point, net gaseous exchange (carbon dioxide intake vs. release) is zero, and net dry matter accumulation stops.\n* **ii) Photoenergetic Effect:**\n  * The direct role of light acting as an energy source to drive physical and chemical reactions in plants, primarily the light-dependent reactions of photosynthesis.\n* **iii) Photocybernetic Effect:**\n  * The regulatory role of light acting as a signal or environmental cue to control growth, development, and differentiation processes (e.g., photoperiodism, phototropism, pigment synthesis) without being used as an energy source.\n* **iv) Photoblastism:**\n  * The biological response of seeds to light during germination. Light-sensitive seeds that require exposure to light to germinate are called positively photoblastic (e.g., lettuce), while seeds inhibited by light are negatively photoblastic."
+                },
+                {
+                  "id": 2021,
+                  "topicId": 203,
+                  "questionText": "21. How critical photoperiod and critical dark period influence crop production? [3]  (2019-20)",
+                  "answerText": "Critical photoperiod (day length) and critical dark period (night length) determine the vegetative-to-reproductive transition in crops:\n* **Short-Day Crops (SDPs):**\n  * Require a dark period *longer* than a critical dark threshold.\n  * If the night is interrupted by a brief flash of light, the crop fails to flower and remains vegetative. \n  * Understanding this helps select the correct sowing date so the crop receives long enough nights to flower before winter ends.\n* **Long-Day Crops (LDPs):**\n  * Require a photoperiod *longer* than a critical day length threshold.\n  * Short dark periods promote flowering. Sowing must be timed with lengthening spring days to ensure timely reproduction.\n* **Agricultural Adaptation:** Matching crop photoperiodic requirements with local seasonal day lengths ensures synchronized flowering, uniform maturity, and high yields."
+                },
+                {
+                  "id": 2022,
+                  "topicId": 203,
+                  "questionText": "22. Diagrammatically show the mechanism of flowering of short-day plants and long-day plants. [4]  (2019-20)",
+                  "answerText": "### Mechanism of Flowering\n* **Short-Day Plants (SDP):** Require a day length shorter than a critical threshold. A long, uninterrupted night converts active $P_{fr}$ back to inactive $P_r$, which promotes Florigen synthesis.\n* **Long-Day Plants (LDP):** Require a day length longer than a critical threshold. High levels of active $P_{fr}$ (maintained by long days) promote Florigen synthesis.\n\n### Schematic Diagram\n```\nShort-Day Plant (SDP) Mechanism:\nRed Light (660nm)  ===>  Pfr (Flowering Inhibitor)\nFar-Red (730nm) / Dark ===>  Pr  ===>  Florigen  ===>  Flowering (SDP)\n\nLong-Day Plant (LDP) Mechanism:\nRed Light (660nm)  ===>  Pfr (Flowering Promoter)  ===>  Florigen  ===>  Flowering (LDP)\n```"
+                },
+                {
+                  "id": 2023,
+                  "topicId": 203,
+                  "questionText": "23. Classify crop plants based on their photoperiodic requirement. [3]  (2023)",
+                  "answerText": "Crops are classified into three main groups based on their photoperiodic requirements:\n1. **Short-Day Plants (SDPs):**\n   * Plants that flower only when day length is shorter than a critical day length (e.g., Aman rice, sweet potato, chrysanthemum, soybean).\n2. **Long-Day Plants (LDPs):**\n   * Plants that flower only when day length is longer than a critical day length (e.g., wheat, barley, sugar beet, spinach, radish).\n3. **Day-Neutral Plants (DNPs):**\n   * Plants that flower independently of day length, responding instead to maturity or temperature (e.g., maize, tomato, cotton, sunflower, cucumber)."
+                },
+                {
+                  "id": 2042,
+                  "topicId": 203,
+                  "questionText": "42. Distinguish between epiphytes and parasites. [2]  (2020-21)",
+                  "answerText": "| Feature | Epiphytes | Parasites |\n| :--- | :--- | :--- |\n| **Nutritional Dependence** | Completely independent of the host plant for nutrition. | Fully dependent on the host plant for water and organic nutrients. |\n| **Specialized Roots** | Possess **aerial roots** containing specialized **velamen tissue** to absorb moisture from the atmosphere. | Possess **haustorial roots** that penetrate host vascular tissues to extract nutrients. |\n| **Impact on Host** | Do not harm the host; use host branches for support only. | Harm the host, causing nutrient depletion, stunting, or disease. |\n| **Example** | Orchid plants growing on tree branches. | Dodder (*Cuscuta*) growing on crop plants. |"
+                }
+              ]
+            },
+            {
+              "id": 204,
+              "sectionId": 3,
+              "name": "Temperature: Effects, Classification & Stress Mitigation",
+              "Questions": [
+                {
+                  "id": 2026,
+                  "topicId": 204,
+                  "questionText": "26. Suppose you are a Scientific Officer of a cold area in Bangladesh. Put your suggestions to the farmers community for crop production under this condition. [3]  (2025)",
+                  "answerText": "To manage crop production in cold areas prone to chilling and frost stress, I would suggest the following practices:\n* **Seed Hardening:** Expose seeds to alternating periods of soaking and drying prior to sowing to build physiological tolerance to cold.\n* **Foliar Sprays for Frost Mitigation:**\n  * Spray **2% DAP + 1% MOP** to improve cell turgidity and membrane resilience.\n  * Spray **0.1% Ammonium solution** or **2% Calcium Nitrate $Ca(NO_3)_2$** to boost vegetative vigor and protect against cell damage.\n  * Apply **Salicylic Acid** to trigger systemic acquired resistance against cold stress.\n* **Cultural Practices:**\n  * Apply light irrigation during frosty nights, as water releases latent heat upon freezing, keeping the microclimate warmer.\n  * Apply organic mulching (straw, crop residues) to conserve soil warmth.\n  * Cultivate cold-tolerant varieties suited for temperate conditions."
+                },
+                {
+                  "id": 2027,
+                  "topicId": 204,
+                  "questionText": "27. 'Atmospheric temperature is increasing progressively over period of time globally.' Put your suggestions to the farmers' community for crop production under this situation. [3]  (2024)",
+                  "answerText": "To combat the challenges of progressive global warming, I suggest the following agricultural adaptation and mitigation strategies:\n* **Adjust Sowing Dates:** Shift sowing windows earlier to allow crops to complete their heat-sensitive flowering stage before the peak summer temperatures arrive.\n* **Heat Stress Mitigation Sprays:**\n  * Spray **0.5% $CaCl_2$** to protect cell membranes from heat-induced damage.\n  * Apply **100 ppm Salicylic Acid** to promote the mobilization of stem reserves to grains during heat stress.\n  * Spray **0.5 ppm Brassinolite** to maintain high photosynthetic activity under elevated temperatures.\n  * Spray **10 ppm Naphthalene Acetic Acid (NAA)** to control premature dropping of flowers and fruits.\n* **Foliar Nutrition:** Apply **2% DAP + 1% MOP** to avoid leaf scorching and maintain leaf hydration.\n* **Water Conservation:** Implement Alternate Wetting and Drying (AWD) and apply hydrogels to conserve soil moisture."
+                },
+                {
+                  "id": 2028,
+                  "topicId": 204,
+                  "questionText": "28. What is temperature? Summarize the beneficial effects of wind on crop production. [1+2=3]  (2024)",
+                  "answerText": "### Definition\n**Temperature** is the degree of hotness or coldness of the atmosphere, measured on a defined scale (e.g., Celsius, Fahrenheit). It is an expression of kinetic energy.\n\n### Beneficial Effects of Wind\n* **Gas Exchange and Mixing:** Wind circulates the air within the crop canopy, preventing localized depletion of carbon dioxide ($CO_2$), which enhances the rate of photosynthesis.\n* **Pollination:** Facilitates the pollination of wind-pollinated (anemophilous) crops such as maize, wheat, and gases.\n* **Cooling Effect:** Air movement removes sensible heat and increases transpiration, cooling the leaf surface and protecting plants from heat stress.\n* **Drying Foliage:** Dries wet leaves after rain or dew, which reduces the humidity around the canopy and suppresses fungal spore germination."
+                },
+                {
+                  "id": 2029,
+                  "topicId": 204,
+                  "questionText": "29. Write down the anatomical alterations in crop plants encountered by heat stress with protective measures. [3]  (2023)",
+                  "answerText": "### Anatomical Alterations Under Heat Stress\n* Disruption and disassembly of the **cytoskeleton**.\n* Inhibition of protein and DNA synthesis in cells.\n* Fragmentation of the **Golgi complex**.\n* Swelling and structural damage of **mitochondria**.\n* Increase in the volume of the **nucleolus**.\n* Disappearance of ribosomes and endoplasmic reticulum (ER).\n* Reduction in enzymatic activities responsible for oxidative phosphorylation.\n\n### Protective Measures\n* **Seed Priming:** Treat seeds with a **0.5% $CaCl_2$ solution** before sowing to stabilize membranes and reduce lipid peroxidation.\n* **Foliar Protection:** Spray **2% DAP + 1% MOP** on crop foliage to prevent leaf scorching.\n* **Hormonal Application:** Spray **10 ppm Naphthalene Acetic Acid (NAA)** to prevent flower and fruit abortion, and spray **100 ppm Salicylic Acid** to mitigate stress."
+                },
+                {
+                  "id": 2030,
+                  "topicId": 204,
+                  "questionText": "30. Ecologically classify plants based on temperature and cite examples from every class. [4]  (2019-20)",
+                  "answerText": "According to Paunkias, plants are ecologically classified into four groups based on their temperature requirements:\n1. **Megatherms:**\n   * Plants adapted to continuously high temperatures and tropical habitats (e.g., date palm, coconut, banana).\n2. **Mesotherms:**\n   * Plants adapted to moderate temperatures, alternating warm and cold seasons (e.g., wheat, barley, mustard, potato).\n3. **Microtherms:**\n   * Plants adapted to continuously low temperatures and cold temperate climates (e.g., apple, peach, plum).\n4. **Hekistotherms:**\n   * Plants adapted to extreme cold and alpine regions where temperatures remain very low throughout the year (e.g., arctic mosses, lichens, alpine shrubs)."
+                },
+                {
+                  "id": 2031,
+                  "topicId": 204,
+                  "questionText": "31. Write the usefulness of vernalization in crop production. [2]  (2019-20)",
+                  "answerText": "**Vernalization** is the promotion of flowering in plants through exposure to a prolonged period of low temperature (cold treatment).\n\n### Usefulness in Crop Production\n* **Shortens Growth Cycle:** Speeds up the vegetative phase, leading to early flowering and maturity.\n* **Enables Spring Sowing:** Allows winter crop varieties (which normally require a cold winter to flower) to be sown in spring after artificial cold treatment of seeds.\n* **Synchronizes Flowering:** Ensures uniform flowering and crop maturity across the field, making harvesting easier.\n* **Protects Against Frost:** By regulating flowering times, it ensures crops do not initiate frost-sensitive reproductive stages during the peak of winter."
+                },
+                {
+                  "id": 2032,
+                  "topicId": 204,
+                  "questionText": "32. What is understood by thermoperiodism? Write the importance of temperature on plants. [1+3=4]  (2019-20)",
+                  "answerText": "### Thermoperiodism\n**Thermoperiodism** is the physiological response of plants to alternating day and night temperatures. Many crops grow and yield better when night temperatures are lower than day temperatures.\n\n### Importance of Temperature on Plants\n* **Controls Photosynthesis & Respiration:** Temperature regulates the activity of enzymes involved in dry matter production and energy release.\n* **Governs Seed Germination:** Seeds require a minimum threshold temperature (cardinal temperature) to initiate metabolic activities and break dormancy.\n* **Regulates Flowering & Fruit Setting:** Specific temperatures are required for pollen viability and fertilization. Extreme heat causes flower drop.\n* **Determines Crop Duration:** High temperatures speed up accumulation of growing degree days (GDD), shortening the crop cycle."
+                },
+                {
+                  "id": 2033,
+                  "topicId": 204,
+                  "questionText": "33. What is cardinal temperature? Contrast between light compensation point and light saturation point. [3]  (2017-18)",
+                  "answerText": "* **i) Light Compensation Point:**\n  * The specific light intensity at which the rate of photosynthesis exactly equals the rate of respiration. At this point, net gaseous exchange (carbon dioxide intake vs. release) is zero, and net dry matter accumulation stops.\n* **ii) Photoenergetic Effect:**\n  * The direct role of light acting as an energy source to drive physical and chemical reactions in plants, primarily the light-dependent reactions of photosynthesis.\n* **iii) Photocybernetic Effect:**\n  * The regulatory role of light acting as a signal or environmental cue to control growth, development, and differentiation processes (e.g., photoperiodism, phototropism, pigment synthesis) without being used as an energy source.\n* **iv) Photoblastism:**\n  * The biological response of seeds to light during germination. Light-sensitive seeds that require exposure to light to germinate are called positively photoblastic (e.g., lettuce), while seeds inhibited by light are negatively photoblastic."
+                },
+                {
+                  "id": 2034,
+                  "topicId": 204,
+                  "questionText": "34. Write about 'cardinal temperature' and ecological classes of plants based on temperature requirement. [1+3=4]  (2019)",
+                  "answerText": "### Cardinal Temperatures\n**Cardinal Temperatures** are the three critical temperature points that define the limits of growth and physiological processes of a plant:\n1. *Minimum Temperature:* The lowest temperature at which growth/physiological activity can occur.\n2. *Optimum Temperature:* The temperature at which the rate of growth/activity is highest.\n3. *Maximum Temperature:* The highest temperature beyond which activity stops completely.\n\n### Contrast: Light Compensation Point vs. Light Saturation Point\n| Feature | Light Compensation Point | Light Saturation Point |\n| :--- | :--- | :--- |\n| **Definition** | The light intensity at which the rate of photosynthesis equals respiration. | The light intensity beyond which further increases in light do not increase photosynthesis. |\n| **Net Carbon Exchange** | Zero net exchange of carbon dioxide ($CO_2$). | Maximum net carbon assimilation occurs. |\n| **Plant Growth** | Growth stops (dry matter accumulation is zero). | Plant growth is maximized. |"
+                },
+                {
+                  "id": 2035,
+                  "topicId": 204,
+                  "questionText": "35. Suggest the protective measures to the farmers to produce crop in high temperature prone area. [3]  (2016-17)",
+                  "answerText": "### Answer\n  \n**Question:** Suggest the protective measures to the farmers to produce crop in high temperature prone area.\n\nThis question is related to the syllabus of Crop Ecology under Debesh Sir's section. Please refer to the lecture notes for detailed explanations."
+                },
+                {
+                  "id": 2036,
+                  "topicId": 204,
+                  "questionText": "36. Describe different types of atmospheric layers on the basis of temperature. [4]  (2019)",
+                  "answerText": "### Answer\n  \n**Question:** Describe different types of atmospheric layers on the basis of temperature.\n\nThis question is related to the syllabus of Crop Ecology under Debesh Sir's section. Please refer to the lecture notes for detailed explanations."
+                }
+              ]
+            },
+            {
+              "id": 205,
+              "sectionId": 3,
+              "name": "Wind & Humidity Effects",
+              "Questions": [
+                {
+                  "id": 2037,
+                  "topicId": 205,
+                  "questionText": "37. Suggest the farmers for protecting their crops from strong wind. [2]  (2020-21)",
+                  "answerText": "To protect crops from the physical and physiological damages of strong winds, I suggest the following measures:\n* **Establish Windbreaks:** Plant narrow rows of fast-growing trees or shrubs (e.g., ipil-ipil, sheoak) perpendicular to the dominant wind direction around small fields.\n* **Establish Shelterbelts:** On a larger scale, develop wider, multi-row barriers of tall trees to reduce wind velocity across the region.\n* **Mechanical Staking:** Support tall or weak-stemmed crops (like banana, sugarcane, or maize) with bamboo poles to prevent lodging.\n* **Adjust Planting Dates:** Align crop sowing so that the tall, heavy stages of the crops do not coincide with the seasonal storm and cyclone periods.\n* **Select Tolerant Varieties:** Grow dwarf crop varieties that have stronger stems and higher resistance to lodging."
+                },
+                {
+                  "id": 2038,
+                  "topicId": 205,
+                  "questionText": "38. Suggest some measures to protect your crops from strong winds. [3]  (2017-18)",
+                  "answerText": "To protect crops from the physical and physiological damages of strong winds, I suggest the following measures:\n* **Establish Windbreaks:** Plant narrow rows of fast-growing trees or shrubs (e.g., ipil-ipil, sheoak) perpendicular to the dominant wind direction around small fields.\n* **Establish Shelterbelts:** On a larger scale, develop wider, multi-row barriers of tall trees to reduce wind velocity across the region.\n* **Mechanical Staking:** Support tall or weak-stemmed crops (like banana, sugarcane, or maize) with bamboo poles to prevent lodging.\n* **Adjust Planting Dates:** Align crop sowing so that the tall, heavy stages of the crops do not coincide with the seasonal storm and cyclone periods.\n* **Select Tolerant Varieties:** Grow dwarf crop varieties that have stronger stems and higher resistance to lodging."
+                },
+                {
+                  "id": 2039,
+                  "topicId": 205,
+                  "questionText": "39. What is microclimate? Differentiate wind break from shelter belt. [2.5]  (2016-17)",
+                  "answerText": "### Microclimate\n**Microclimate** is the local atmospheric zone where the climate differs from the surrounding area (e.g., the temperature and humidity conditions inside a greenhouse, or directly under a dense crop canopy).\n\n### Differentiate: Windbreak vs. Shelterbelt\n| Feature | Windbreak | Shelterbelt |\n| :--- | :--- | :--- |\n| **Structure** | A narrow, single or double row of trees or shrubs. | A wide, multi-row belt consisting of trees, shrubs, and hedges of varying heights. |\n| **Area of Protection** | Protects small, localized fields or homesteads. | Protects a large geographic region, fields, and ecosystems. |\n| **Primary Goal** | Primarily designed to reduce wind speed locally and prevent local soil erosion. | Designed to block strong winds, trap snow/sand, and provide long-term regional microclimate benefits. |"
+                },
+                {
+                  "id": 2040,
+                  "topicId": 205,
+                  "questionText": "40. Write down the physiological impact of wind on crop. [2]  (2016-17)",
+                  "answerText": "Wind has several physiological impacts on crops:\n* **Desiccation:** Air movement sweeps away the boundary layer of moist air surrounding leaves, increasing the vapor pressure deficit and accelerating transpiration, which causes water stress.\n* **Stomatal Closure:** Under very high wind velocities, plants close their stomata to prevent dehydration. This stops $CO_2$ assimilation, reducing photosynthesis and dry matter production.\n* **Altered Growth (Thigmomorphogenesis):** Mechanical stress from constant winds stimulates the synthesis of ethylene, which inhibits cell elongation, resulting in dwarfed plants with thicker stems.\n* **Reduced Photosynthesis:** Violent shaking of leaves damages chloroplast structures and reduces chlorophyll efficiency."
+                },
+                {
+                  "id": 2041,
+                  "topicId": 205,
+                  "questionText": "41. What are the effects of strong wind on crops? [3]  (2019)",
+                  "answerText": "To protect crops from the physical and physiological damages of strong winds, I suggest the following measures:\n* **Establish Windbreaks:** Plant narrow rows of fast-growing trees or shrubs (e.g., ipil-ipil, sheoak) perpendicular to the dominant wind direction around small fields.\n* **Establish Shelterbelts:** On a larger scale, develop wider, multi-row barriers of tall trees to reduce wind velocity across the region.\n* **Mechanical Staking:** Support tall or weak-stemmed crops (like banana, sugarcane, or maize) with bamboo poles to prevent lodging.\n* **Adjust Planting Dates:** Align crop sowing so that the tall, heavy stages of the crops do not coincide with the seasonal storm and cyclone periods.\n* **Select Tolerant Varieties:** Grow dwarf crop varieties that have stronger stems and higher resistance to lodging."
+                },
+                {
+                  "id": 2043,
+                  "topicId": 205,
+                  "questionText": "43. 'Atmospheric humidity affects the vegetation mainly by influencing transpiration rate.' — Analyze. [4]  (2024)",
+                  "answerText": "### Analysis of the Statement\nAtmospheric humidity (expressed as Relative Humidity - RH) is a dominant environmental factor that controls the rate of transpiration by regulating the water vapor pressure gradient between the leaf interior and the atmosphere:\n\n* **High Humidity (Low Transpiration):**\n  * When the air is highly humid, the water vapor pressure difference between the leaf's internal air spaces and the surrounding air is very narrow.\n  * This slows down the rate of transpiration.\n  * Consequently, the translocation of water and essential mineral nutrients (like calcium and boron) from roots to leaves is reduced.\n* **Low Humidity (High Transpiration):**\n  * Dry air creates a steep vapor pressure gradient, causing water to evaporate rapidly from stomata.\n  * This accelerates transpiration. If the soil has sufficient moisture, this cools the leaves and boosts nutrient uptake.\n  * However, if the soil is dry, excessive transpiration causes cell dehydration, stomatal closure, and wilting.\n* **Interaction with Wind:** Constant winds sweep away the boundary layer of moist air on leaf surfaces, keeping local humidity low and further increasing transpiration."
+                },
+                {
+                  "id": 2044,
+                  "topicId": 205,
+                  "questionText": "44. 'Atmospheric humidity mainly affects crop plants by influencing the rate of transpiration' — comment. [4]  (2023)",
+                  "answerText": "### Analysis of the Statement\nAtmospheric humidity (expressed as Relative Humidity - RH) is a dominant environmental factor that controls the rate of transpiration by regulating the water vapor pressure gradient between the leaf interior and the atmosphere:\n\n* **High Humidity (Low Transpiration):**\n  * When the air is highly humid, the water vapor pressure difference between the leaf's internal air spaces and the surrounding air is very narrow.\n  * This slows down the rate of transpiration.\n  * Consequently, the translocation of water and essential mineral nutrients (like calcium and boron) from roots to leaves is reduced.\n* **Low Humidity (High Transpiration):**\n  * Dry air creates a steep vapor pressure gradient, causing water to evaporate rapidly from stomata.\n  * This accelerates transpiration. If the soil has sufficient moisture, this cools the leaves and boosts nutrient uptake.\n  * However, if the soil is dry, excessive transpiration causes cell dehydration, stomatal closure, and wilting.\n* **Interaction with Wind:** Constant winds sweep away the boundary layer of moist air on leaf surfaces, keeping local humidity low and further increasing transpiration."
+                },
+                {
+                  "id": 2045,
+                  "topicId": 205,
+                  "questionText": "45. 'Atmospheric humidity chiefly affects the vegetation by influencing the rate of transpiration' — explain. [4]  (2019)",
+                  "answerText": "### Analysis of the Statement\nAtmospheric humidity (expressed as Relative Humidity - RH) is a dominant environmental factor that controls the rate of transpiration by regulating the water vapor pressure gradient between the leaf interior and the atmosphere:\n\n* **High Humidity (Low Transpiration):**\n  * When the air is highly humid, the water vapor pressure difference between the leaf's internal air spaces and the surrounding air is very narrow.\n  * This slows down the rate of transpiration.\n  * Consequently, the translocation of water and essential mineral nutrients (like calcium and boron) from roots to leaves is reduced.\n* **Low Humidity (High Transpiration):**\n  * Dry air creates a steep vapor pressure gradient, causing water to evaporate rapidly from stomata.\n  * This accelerates transpiration. If the soil has sufficient moisture, this cools the leaves and boosts nutrient uptake.\n  * However, if the soil is dry, excessive transpiration causes cell dehydration, stomatal closure, and wilting.\n* **Interaction with Wind:** Constant winds sweep away the boundary layer of moist air on leaf surfaces, keeping local humidity low and further increasing transpiration."
+                },
+                {
+                  "id": 2051,
+                  "topicId": 205,
+                  "questionText": "51. What does the term microclimate imply? [2]  (2017-18)",
+                  "answerText": "### Microclimate\n**Microclimate** is the local atmospheric zone where the climate differs from the surrounding area (e.g., the temperature and humidity conditions inside a greenhouse, or directly under a dense crop canopy).\n\n### Differentiate: Windbreak vs. Shelterbelt\n| Feature | Windbreak | Shelterbelt |\n| :--- | :--- | :--- |\n| **Structure** | A narrow, single or double row of trees or shrubs. | A wide, multi-row belt consisting of trees, shrubs, and hedges of varying heights. |\n| **Area of Protection** | Protects small, localized fields or homesteads. | Protects a large geographic region, fields, and ecosystems. |\n| **Primary Goal** | Primarily designed to reduce wind speed locally and prevent local soil erosion. | Designed to block strong winds, trap snow/sand, and provide long-term regional microclimate benefits. |"
+                }
+              ]
+            },
+            {
+              "id": 206,
+              "sectionId": 3,
+              "name": "General Ecological Environmental Concepts",
+              "Questions": [
+                {
+                  "id": 2046,
+                  "topicId": 206,
+                  "questionText": "46. Illustrate different forms of soil moisture that affect vegetation. [2.5]  (2016-17)",
+                  "answerText": "Soil water is classified into three main forms based on the physical forces holding it:\n* **1. Capillary Water (Chresard):**\n  * Water held by surface tension forces in the micropores of the soil against the pull of gravity.\n  * It is the only form of soil moisture that is readily **available** to plant roots for absorption.\n* **2. Hygroscopic Water (Echard):**\n  * Water held very tightly as a thin molecular film around soil particles by adhesive forces.\n  * This water is held at high tension (above 31 bars) and is completely **unavailable** to plants.\n* **3. Gravitational Water:**\n  * Free water that moves downward through soil macropores due to gravity after rain or heavy irrigation.\n  * It drains out of the root zone quickly, meaning it is mostly **unavailable** and can cause anaerobic (waterlogged) conditions if drainage is poor."
+                },
+                {
+                  "id": 2047,
+                  "topicId": 206,
+                  "questionText": "47. Diagrammatically represent the factors affecting crop production. [3]  (2019-20)",
+                  "answerText": "### Factors Affecting Crop Production\nCrop growth and final yield are shaped by the interaction of four major groups of ecological factors:\n* **Climatic:** Light, temperature, Relative Humidity (RH), rainfall, and wind.\n* **Edaphic:** Soil pH, soil moisture, soil air, soil organisms, and organic matter.\n* **Physiographic:** Altitude, slope, and land exposure (relief).\n* **Biotic:** Beneficial and harmful relationships with bacteria, fungi, insects, nematodes, and animals.\n\n### Diagram\n```\n                     [ CLIMATIC FACTORS ]\n                  (Light, Temp, Wind, Rainfall)\n                                🞃\n[ PHYSIOGRAPHIC FACTORS ] ➔ █ CROP YIELD █ 🞀 [ BIOTIC FACTORS ]\n     (Altitude, Slope)        █  GROWTH  █    (Microbes, Pests, Symbionts)\n                                🞂\n                      [ EDAPHIC FACTORS ]\n                 (Soil pH, Air, Water, Microbes)\n```"
+                },
+                {
+                  "id": 2048,
+                  "topicId": 206,
+                  "questionText": "48. Explain the following equation — Y=G+E+(G×E). [2]  (2019)",
+                  "answerText": "The equation represents the genetic and environmental components of crop yield/phenotype:\n\n$$Y = G + E + (G \\\\times E)$$\n\n* **$Y$ (Phenotype/Yield):** The expressed characteristic or yield of the crop plant.\n* **$G$ (Genotype):** The genetic potential of the crop variety.\n* **$E$ (Environment):** The sum of all ecological factors (light, temperature, soil fertility, water) during growth.\n* **$G \\\\times E$ (Genotype-Environment Interaction):** The interaction term which shows how a specific genotype performs under different environmental conditions.\n\n### Interpretation\nA crop variety with high genetic potential ($G$) will not produce maximum yield unless grown in a favorable environment ($E$). Similarly, a perfect environment cannot make up for poor genetics. The interaction term ($G \\\\times E$) shows that different crop varieties must be matched with their ideal environments to achieve the best yields."
+                },
+                {
+                  "id": 2049,
+                  "topicId": 206,
+                  "questionText": "49. List down the factors to be considered when evaluating site for suitability to agricultural enterprise establishment. Cite the examples of every factor. [3]  (2019)",
+                  "answerText": "When evaluating a site for establishing an agricultural enterprise, four major ecological factor groups must be assessed:\n* **1. Climatic Factors:**\n  * Determines crop suitability and seasonal growth.\n  * *Examples:* Solar radiation (PAR), temperature ranges (cardinal limits), annual rainfall pattern, Relative Humidity (RH), and average wind speed.\n* **2. Edaphic (Soil) Factors:**\n  * Defines soil nutrient supply and physical properties.\n  * *Examples:* Soil pH (ideal 6.5–7.5), soil texture/structure, organic matter content, soil air capacity, and water-holding capacity.\n* **3. Physiographic Factors:**\n  * Influences water drainage and local microclimate.\n  * *Examples:* Altitude (height above sea level), slope gradient (steepness), and topography (flat lowlands vs. hills).\n* **4. Biotic Factors:**\n  * Affects pollination, decomposition, and crop protection.\n  * *Examples:* Presence of pollinators (bees), soil decomposers (fungi, earthworms), and local weed/pest populations."
+                },
+                {
+                  "id": 2050,
+                  "topicId": 206,
+                  "questionText": "50. Explain the 'twin-laws' to be considered before manipulating the growing environment of a crop. [4]  (2019-20)",
+                  "answerText": "The \"twin-laws\" that govern how organisms respond to environmental inputs must be evaluated before altering a crop's growing environment:\n\n* **1. Liebig's Law of the Minimum:**\n  * *Concept:* Crop yield is limited by the environmental factor that is present in the lowest quantity relative to the crop's requirements, even if all other factors are abundant.\n  * *Application:* If a crop is limited by nitrogen deficiency, adding more water or phosphorus will not increase yield. You must identify and add the *limiting factor* first.\n* **2. Shelford's Law of Tolerance:**\n  * *Concept:* An organism's survival and growth are restricted by minimum and maximum tolerance limits for any environmental factor. Growth is optimal within a specific range.\n  * *Application:* Manipulating an environment (e.g., adding heat or fertilizer) must keep the levels within the crop's optimum tolerance zone. Excess amounts can become toxic or cause stress."
+                }
+              ]
+            },
+            {
+              "id": 207,
+              "sectionId": 3,
+              "name": "Atmosphere: Vertical Structure & Layers",
+              "Questions": [
+                {
+                  "id": 2052,
+                  "topicId": 207,
+                  "questionText": "1. Show the vertical structure of atmosphere with causes of temperature variation over different layer of atmosphere. [3]  (2025)",
+                  "answerText": "### Layers and Temperature Variations\nThe atmosphere is vertically divided into four main layers based on temperature trends:\n* **1. Troposphere (0–15 km):**\n  * *Temperature Trend:* Decreases with altitude (lapsing at $-6.5^\\circ C$ per km, down to $-55^\\circ C$).\n  * *Cause:* Heated from below by the Earth's surface reflecting solar energy. As altitude increases, air density and pressure drop, reducing heat absorption.\n* **2. Stratosphere (15–50 km):**\n  * *Temperature Trend:* Increases with altitude (from $-55^\\circ C$ up to $-8^\\circ C$).\n  * *Cause:* Contains the **Ozone Layer** ($O_3$). Ozone molecules absorb harmful incoming Solar Ultraviolet (UV-B) radiation, releasing heat.\n* **3. Mesosphere (50–85 km):**\n  * *Temperature Trend:* Decreases with altitude (reaching the coldest point at $-90^\\circ C$).\n  * *Cause:* Lacks ozone or other greenhouse gases to absorb solar radiation, and is too far from the warming Earth surface.\n* **4. Thermosphere ($>85$ km):**\n  * *Temperature Trend:* Increases rapidly with altitude.\n  * *Cause:* Direct absorption of short-wave solar X-rays and UV radiation by sparse gas molecules, causing photo-ionization.\n\n### Schematic Labeled Diagram\n```\nAlt (km)  |  Atmospheric Layer       | Temp Trend | Key Features\n-------------------------------------------------------------------------\n > 600    |  EXOSPHERE               | Stable     | Outer space boundary\n 85-600   |  THERMOSPHERE            | Increases  | Ionization, Auroras\n 50-85    |  MESOSPHERE              | Decreases  | Coldest zone (-90°C)\n --------- Mesopause ----------------------------------------------------\n 15-50    |  STRATOSPHERE            | Increases  | Ozone Layer (O3 Shield)\n --------- Tropopause ---------------------------------------------------\n 0-15     |  TROPOSPHERE             | Decreases  | Clouds, Rain, Weather\n```"
+                },
+                {
+                  "id": 2054,
+                  "topicId": 207,
+                  "questionText": "3. Show the vertical structure of atmosphere with neat labeled diagram. [3]  (2024)",
+                  "answerText": "### Layers and Temperature Variations\nThe atmosphere is vertically divided into four main layers based on temperature trends:\n* **1. Troposphere (0–15 km):**\n  * *Temperature Trend:* Decreases with altitude (lapsing at $-6.5^\\circ C$ per km, down to $-55^\\circ C$).\n  * *Cause:* Heated from below by the Earth's surface reflecting solar energy. As altitude increases, air density and pressure drop, reducing heat absorption.\n* **2. Stratosphere (15–50 km):**\n  * *Temperature Trend:* Increases with altitude (from $-55^\\circ C$ up to $-8^\\circ C$).\n  * *Cause:* Contains the **Ozone Layer** ($O_3$). Ozone molecules absorb harmful incoming Solar Ultraviolet (UV-B) radiation, releasing heat.\n* **3. Mesosphere (50–85 km):**\n  * *Temperature Trend:* Decreases with altitude (reaching the coldest point at $-90^\\circ C$).\n  * *Cause:* Lacks ozone or other greenhouse gases to absorb solar radiation, and is too far from the warming Earth surface.\n* **4. Thermosphere ($>85$ km):**\n  * *Temperature Trend:* Increases rapidly with altitude.\n  * *Cause:* Direct absorption of short-wave solar X-rays and UV radiation by sparse gas molecules, causing photo-ionization.\n\n### Schematic Labeled Diagram\n```\nAlt (km)  |  Atmospheric Layer       | Temp Trend | Key Features\n-------------------------------------------------------------------------\n > 600    |  EXOSPHERE               | Stable     | Outer space boundary\n 85-600   |  THERMOSPHERE            | Increases  | Ionization, Auroras\n 50-85    |  MESOSPHERE              | Decreases  | Coldest zone (-90°C)\n --------- Mesopause ----------------------------------------------------\n 15-50    |  STRATOSPHERE            | Increases  | Ozone Layer (O3 Shield)\n --------- Tropopause ---------------------------------------------------\n 0-15     |  TROPOSPHERE             | Decreases  | Clouds, Rain, Weather\n```"
+                },
+                {
+                  "id": 2055,
+                  "topicId": 207,
+                  "questionText": "4. Show the vertical structure of atmosphere diagrammatically. [3]  (2020-21)",
+                  "answerText": "### Layers and Temperature Variations\nThe atmosphere is vertically divided into four main layers based on temperature trends:\n* **1. Troposphere (0–15 km):**\n  * *Temperature Trend:* Decreases with altitude (lapsing at $-6.5^\\circ C$ per km, down to $-55^\\circ C$).\n  * *Cause:* Heated from below by the Earth's surface reflecting solar energy. As altitude increases, air density and pressure drop, reducing heat absorption.\n* **2. Stratosphere (15–50 km):**\n  * *Temperature Trend:* Increases with altitude (from $-55^\\circ C$ up to $-8^\\circ C$).\n  * *Cause:* Contains the **Ozone Layer** ($O_3$). Ozone molecules absorb harmful incoming Solar Ultraviolet (UV-B) radiation, releasing heat.\n* **3. Mesosphere (50–85 km):**\n  * *Temperature Trend:* Decreases with altitude (reaching the coldest point at $-90^\\circ C$).\n  * *Cause:* Lacks ozone or other greenhouse gases to absorb solar radiation, and is too far from the warming Earth surface.\n* **4. Thermosphere ($>85$ km):**\n  * *Temperature Trend:* Increases rapidly with altitude.\n  * *Cause:* Direct absorption of short-wave solar X-rays and UV radiation by sparse gas molecules, causing photo-ionization.\n\n### Schematic Labeled Diagram\n```\nAlt (km)  |  Atmospheric Layer       | Temp Trend | Key Features\n-------------------------------------------------------------------------\n > 600    |  EXOSPHERE               | Stable     | Outer space boundary\n 85-600   |  THERMOSPHERE            | Increases  | Ionization, Auroras\n 50-85    |  MESOSPHERE              | Decreases  | Coldest zone (-90°C)\n --------- Mesopause ----------------------------------------------------\n 15-50    |  STRATOSPHERE            | Increases  | Ozone Layer (O3 Shield)\n --------- Tropopause ---------------------------------------------------\n 0-15     |  TROPOSPHERE             | Decreases  | Clouds, Rain, Weather\n```"
+                },
+                {
+                  "id": 2056,
+                  "topicId": 207,
+                  "questionText": "5. Describe the vertical structure of the atmosphere with a labeled diagram. [4]  (2017-18)",
+                  "answerText": "### Layers and Temperature Variations\nThe atmosphere is vertically divided into four main layers based on temperature trends:\n* **1. Troposphere (0–15 km):**\n  * *Temperature Trend:* Decreases with altitude (lapsing at $-6.5^\\circ C$ per km, down to $-55^\\circ C$).\n  * *Cause:* Heated from below by the Earth's surface reflecting solar energy. As altitude increases, air density and pressure drop, reducing heat absorption.\n* **2. Stratosphere (15–50 km):**\n  * *Temperature Trend:* Increases with altitude (from $-55^\\circ C$ up to $-8^\\circ C$).\n  * *Cause:* Contains the **Ozone Layer** ($O_3$). Ozone molecules absorb harmful incoming Solar Ultraviolet (UV-B) radiation, releasing heat.\n* **3. Mesosphere (50–85 km):**\n  * *Temperature Trend:* Decreases with altitude (reaching the coldest point at $-90^\\circ C$).\n  * *Cause:* Lacks ozone or other greenhouse gases to absorb solar radiation, and is too far from the warming Earth surface.\n* **4. Thermosphere ($>85$ km):**\n  * *Temperature Trend:* Increases rapidly with altitude.\n  * *Cause:* Direct absorption of short-wave solar X-rays and UV radiation by sparse gas molecules, causing photo-ionization.\n\n### Schematic Labeled Diagram\n```\nAlt (km)  |  Atmospheric Layer       | Temp Trend | Key Features\n-------------------------------------------------------------------------\n > 600    |  EXOSPHERE               | Stable     | Outer space boundary\n 85-600   |  THERMOSPHERE            | Increases  | Ionization, Auroras\n 50-85    |  MESOSPHERE              | Decreases  | Coldest zone (-90°C)\n --------- Mesopause ----------------------------------------------------\n 15-50    |  STRATOSPHERE            | Increases  | Ozone Layer (O3 Shield)\n --------- Tropopause ---------------------------------------------------\n 0-15     |  TROPOSPHERE             | Decreases  | Clouds, Rain, Weather\n```"
+                }
+              ]
+            },
+            {
+              "id": 208,
+              "sectionId": 3,
+              "name": "Climate Change & Climate Smart Agriculture",
+              "Questions": [
+                {
+                  "id": 2057,
+                  "topicId": 208,
+                  "questionText": "6. 'Global climate is changing day by day'. Support your opinion with evidence. [2.5]  (2020-21)",
+                  "answerText": "### Answer\n  \n**Question:** 'Global climate is changing day by day'. Support your opinion with evidence.\n\nThis question is related to the syllabus of Crop Ecology under Debesh Sir's section. Please refer to the lecture notes for detailed explanations."
+                },
+                {
+                  "id": 2058,
+                  "topicId": 208,
+                  "questionText": "7. Distinguish between climate change and climate variation. [2]  (2024)",
+                  "answerText": "| Feature | Climate Change | Climate Variation |\n| :--- | :--- | :--- |\n| **Time Scale** | Long-term trend spanning **30 to 40 years** or more. | Short-term seasonal or annual fluctuations. |\n| **Permanency** | Represents a permanent, continuous shift in average values. | Temporary deviations from the average climate. |\n| **Causes** | Mainly driven by anthropogenic greenhouse gas emissions. | Driven by natural atmospheric oscillations (e.g., El Niño, monsoons). |\n| **Example** | Gradual global temperature rise over the past century. | A exceptionally dry winter or heavy monsoon year. |"
+                },
+                {
+                  "id": 2059,
+                  "topicId": 208,
+                  "questionText": "8. What is climate change? State the impacts of climate change on coastal agriculture of Bangladesh. [1+3=4]  (2025)",
+                  "answerText": "### Climate Change\n**Climate Change** is a long-term, continuous trend or shift in climatic variables (such as temperature, precipitation, and wind patterns) over a region, typically observed over a period of 30 to 40 years.\n\n### Impacts on Coastal Agriculture of Bangladesh\n* **Salinity Intrusion:** Sea level rise forces saltwater into agricultural soils and freshwater estuaries, destroying crops and preventing normal cultivation.\n* **Loss of Arable Land:** Coastal erosion and tidal flooding submerge low-lying lands. A 1-meter sea level rise is estimated to submerge about 16% of the country's total land area.\n* **Freshwater Scarcity:** Groundwater tables and surface canals become saline, limiting the availability of water for irrigating dry-season crops (like Boro rice).\n* **Cyclonic Damage:** High-frequency tropical cyclones cause physical lodging of crops, storm surge flooding, and deposit saline mud over crop fields.\n* **Yield Reductions:** Severe seasonal droughts and high heat stress reduce spikelet fertility, leading to lower yields in major cereals."
+                },
+                {
+                  "id": 2060,
+                  "topicId": 208,
+                  "questionText": "9. What is climate smart agriculture (CSA)? Recommend some potential CSA practices to the farmers' community in the coastal area of Bangladesh. [1+2=3]  (2025)",
+                  "answerText": "### Climate Smart Agriculture (CSA)\n**Climate Smart Agriculture** is an integrated approach to managing landscapes (croplands, livestock, forests, and fisheries) that addresses the interlinked challenges of food security and climate change. It has three pillars:\n1. Sustainably increasing agricultural productivity and income.\n2. Adapting and building resilience to climate change (adaptation).\n3. Reducing greenhouse gas emissions where possible (mitigation).\n\n### Recommended CSA Practices for Coastal Bangladesh\n* **Cultivate Salt-Tolerant Varieties:** Grow salt-resistant rice cultivars (like BRRI dhan67, BRRI dhan97) to survive salinity stress.\n* **Alternate Wetting and Drying (AWD):** Implement AWD irrigation in rice fields to conserve fresh water and reduce methane emissions.\n* **Floating Bed Agriculture (Sorjan Method):** Grow vegetables on floating organic beds (constructed from water hyacinths) in flooded areas.\n* **Hydrogel Application:** Apply superabsorbent hydrogels to agricultural soil to enhance water-holding capacity during dry periods.\n* **Rainwater Harvesting:** Store monsoon rainwater in farm ponds for crop irrigation during the dry winter season."
+                },
+                {
+                  "id": 2061,
+                  "topicId": 208,
+                  "questionText": "10. What is climate smart agriculture (CSA)? Recommend some potential CSA practices to the farmer's community in the coastal area of Bangladesh. [1+2=3]  (2024)",
+                  "answerText": "### Climate Smart Agriculture (CSA)\n**Climate Smart Agriculture** is an integrated approach to managing landscapes (croplands, livestock, forests, and fisheries) that addresses the interlinked challenges of food security and climate change. It has three pillars:\n1. Sustainably increasing agricultural productivity and income.\n2. Adapting and building resilience to climate change (adaptation).\n3. Reducing greenhouse gas emissions where possible (mitigation).\n\n### Recommended CSA Practices for Coastal Bangladesh\n* **Cultivate Salt-Tolerant Varieties:** Grow salt-resistant rice cultivars (like BRRI dhan67, BRRI dhan97) to survive salinity stress.\n* **Alternate Wetting and Drying (AWD):** Implement AWD irrigation in rice fields to conserve fresh water and reduce methane emissions.\n* **Floating Bed Agriculture (Sorjan Method):** Grow vegetables on floating organic beds (constructed from water hyacinths) in flooded areas.\n* **Hydrogel Application:** Apply superabsorbent hydrogels to agricultural soil to enhance water-holding capacity during dry periods.\n* **Rainwater Harvesting:** Store monsoon rainwater in farm ponds for crop irrigation during the dry winter season."
+                },
+                {
+                  "id": 2065,
+                  "topicId": 208,
+                  "questionText": "14. Enumerate the physical evidences towards global climate change. [2.5]  (2023)",
+                  "answerText": "Global climate change is supported by several observable physical evidences:\n* **Rising Global Temperatures:** Continuous increases in average global land and ocean surface temperatures over the past decades.\n* **Sea Level Rise:** Global sea level is rising at a rate of approximately **3 mm per year** due to thermal expansion of water and melting glaciers.\n* **Melting of Ice Caps and Glaciers:** Progressive loss of ice mass in Greenland, Antarctica, and the Arctic sea ice coverage.\n* **Ocean Acidification:** Oceans are absorbing excess atmospheric carbon dioxide ($CO_2$), raising water acidity and harming marine biomes.\n* **Unpredictable Rainfall Patterns:** Shifting monsoon timings, leading to alternating periods of severe droughts and flash floods.\n* **Increased Frequency of Extreme Weather:** More frequent and severe cyclones, heatwaves, and storms globally."
+                },
+                {
+                  "id": 2074,
+                  "topicId": 208,
+                  "questionText": "23. Enumerate the significance of soil air and soil water for crop production. [2+2=4]  (2024)",
+                  "answerText": "### Significance of Soil Water\n* **Nutrient Solvent:** Dissolves mineral nutrients in the soil, forming the soil solution necessary for root absorption.\n* **Turgidity Maintenance:** Keeps plant cells turgid, which is essential for structural stability, stem elongation, and stomatal opening.\n* **Photosynthesis Substrate:** Serves as a raw material in photosynthesis.\n* **Temperature Regulation:** Cools leaf surfaces through transpiration.\n\n### Significance of Soil Air\n* **Root Respiration:** Supplies oxygen ($O_2$) required for active root respiration, which provides energy (ATP) for nutrient absorption.\n* **Microbial Activity:** Supports aerobic soil microbes that decompose organic matter and nitrify ammonium.\n* **Prevents Toxicity:** Good aeration prevents the accumulation of toxic reduced gases (like hydrogen sulfide and methane) that occur in waterlogged soils."
+                }
+              ]
+            },
+            {
+              "id": 209,
+              "sectionId": 3,
+              "name": "Global Warming & Greenhouse Effect",
+              "Questions": [
+                {
+                  "id": 2063,
+                  "topicId": 209,
+                  "questionText": "12. What is global warming? Predict the impact of greenhouse effect on agroecosystem with remedial measures. [1+4=5]  (2024)",
+                  "answerText": "### Global Warming\n**Global Warming** is the gradual increase in the average temperature of the Earth's atmosphere and oceans, primarily driven by human activities that release greenhouse gases.\n\n### Impact of Greenhouse Effect on Agroecosystems\n* **Disruption of Crop Yields:** Rising temperatures speed up crop development, shortening the grain-filling period and reducing final yields.\n* **Pest and Disease Infestation:** Warm winter temperatures allow insect pests and fungal pathogens to survive, causing severe crop damage.\n* **Irrigation Water Stress:** Increased evaporation rates deplete soil moisture, increasing crop water requirements.\n* **Shift in Crop Zones:** Changes in local climates force crop cultivation zones to shift towards higher altitudes or latitudes.\n* **Extreme Weather Events:** Increased frequency of droughts, floods, and cyclones damages crops.\n\n### Remedial Measures\n* **Afforestation and Reforestation:** Plant trees to sequester atmospheric carbon dioxide ($CO_2$).\n* **Reduce Greenhouse Gas Emissions:** Transition from fossil fuels to renewable energy (solar, wind).\n* **Control Nitrogen Fertilizer Use:** Optimize fertilizer rates to reduce nitrous oxide ($N_2O$) emissions.\n* **Promote Sustainable Farming:** Practice conservation tillage and improve manure management."
+                },
+                {
+                  "id": 2064,
+                  "topicId": 209,
+                  "questionText": "13. What are greenhouse effects? Schematically show the potential impacts of global warming on agro-ecosystem. [1+3.5=4.5]  (2023)",
+                  "answerText": "### Greenhouse Effect\nThe **Greenhouse Effect** is a natural process where greenhouse gases (like $CO_2$, $CH_4$, and water vapor) in the troposphere trap outgoing long-wave infrared radiation emitted by the Earth, keeping the lower atmosphere warm. \n\n### Schematic Impacts of Global Warming\n```\n              [ GLOBAL WARMING / GHG RISE ]\n                            🞃\n       ┌────────────────────┼────────────────────┐\n       🞃                    🞃                    🞃\n[ Higher Temperature ]  [ Sea Level Rise ]  [ Evaporation Rise ]\n       🞃                    🞃                    🞃\n• Shorter crop cycle    • Coastal flooding    • Severe drought\n• Spikelet sterility    • Salinity intrusion • Irrigation stress\n• Pest outbreaks        • Land loss           • Soil drying\n       └────────────────────┼────────────────────┘\n                            🞃\n                █ CROP YIELD COLLAPSE █\n```"
+                },
+                {
+                  "id": 2067,
+                  "topicId": 209,
+                  "questionText": "16. Briefly describe the impact of global warming on coastal agriculture of Bangladesh with remedial measures. [4.5]  (2020-21)",
+                  "answerText": "### Impacts on Coastal Agriculture in Bangladesh\n* **Coastal Land Inundation:** Rising sea levels threaten to submerge about **22,889 $km^2$** of coastal land (approx. 16% of Bangladesh's total land area), causing an annual crop loss exceeding **2 million tons** (mostly vegetables and maize).\n* **Salinity Intrusion:** Saltwater pollutes freshwater rivers and estuaries, making soil and water saline and rendering fields unfit for standard crops.\n* **Severe Freshwater Scarcity:** Groundwater tables become saline, leaving farmers without fresh water for dry-season crop irrigation.\n* **Destruction of Mangrove Ecosystem:** Increased salinity damages the Sundarbans forest, reducing its role as a natural storm buffer.\n\n### Remedial Measures\n* **Construct Coastal Embankments:** Build and reinforce dykes to prevent tidal saltwater flooding.\n* **Promote Climate Smart Agriculture:** Introduce salt-tolerant crop cultivars (e.g., BRRI dhan67).\n* **Implement Water-Saving Irrigation:** Use Alternate Wetting and Drying (AWD) and rainwater harvesting.\n* **Restore Forest Cover:** Conduct coastal afforestation (planting Keora and Baen) to stabilize soil and absorb storm surges."
+                },
+                {
+                  "id": 2070,
+                  "topicId": 209,
+                  "questionText": "19. What is greenhouse effect? How can global warming be checked for saving environment? [4]  (2019)",
+                  "answerText": "### Global Warming\n**Global Warming** is the gradual increase in the average temperature of the Earth's atmosphere and oceans, primarily driven by human activities that release greenhouse gases.\n\n### Impact of Greenhouse Effect on Agroecosystems\n* **Disruption of Crop Yields:** Rising temperatures speed up crop development, shortening the grain-filling period and reducing final yields.\n* **Pest and Disease Infestation:** Warm winter temperatures allow insect pests and fungal pathogens to survive, causing severe crop damage.\n* **Irrigation Water Stress:** Increased evaporation rates deplete soil moisture, increasing crop water requirements.\n* **Shift in Crop Zones:** Changes in local climates force crop cultivation zones to shift towards higher altitudes or latitudes.\n* **Extreme Weather Events:** Increased frequency of droughts, floods, and cyclones damages crops.\n\n### Remedial Measures\n* **Afforestation and Reforestation:** Plant trees to sequester atmospheric carbon dioxide ($CO_2$).\n* **Reduce Greenhouse Gas Emissions:** Transition from fossil fuels to renewable energy (solar, wind).\n* **Control Nitrogen Fertilizer Use:** Optimize fertilizer rates to reduce nitrous oxide ($N_2O$) emissions.\n* **Promote Sustainable Farming:** Practice conservation tillage and improve manure management."
+                },
+                {
+                  "id": 2072,
+                  "topicId": 209,
+                  "questionText": "21. What is green house effect? Briefly describe the potential impact of global warming on coastal agriculture of Bangladesh. [1+3=4]  (2016-17)",
+                  "answerText": "### Impacts on Coastal Agriculture in Bangladesh\n* **Coastal Land Inundation:** Rising sea levels threaten to submerge about **22,889 $km^2$** of coastal land (approx. 16% of Bangladesh's total land area), causing an annual crop loss exceeding **2 million tons** (mostly vegetables and maize).\n* **Salinity Intrusion:** Saltwater pollutes freshwater rivers and estuaries, making soil and water saline and rendering fields unfit for standard crops.\n* **Severe Freshwater Scarcity:** Groundwater tables become saline, leaving farmers without fresh water for dry-season crop irrigation.\n* **Destruction of Mangrove Ecosystem:** Increased salinity damages the Sundarbans forest, reducing its role as a natural storm buffer.\n\n### Remedial Measures\n* **Construct Coastal Embankments:** Build and reinforce dykes to prevent tidal saltwater flooding.\n* **Promote Climate Smart Agriculture:** Introduce salt-tolerant crop cultivars (e.g., BRRI dhan67).\n* **Implement Water-Saving Irrigation:** Use Alternate Wetting and Drying (AWD) and rainwater harvesting.\n* **Restore Forest Cover:** Conduct coastal afforestation (planting Keora and Baen) to stabilize soil and absorb storm surges."
+                }
+              ]
+            },
+            {
+              "id": 210,
+              "sectionId": 3,
+              "name": "Ozone Layer Depletion & Acid Rain",
+              "Questions": [
+                {
+                  "id": 2062,
+                  "topicId": 210,
+                  "questionText": "11. How does acid rain form? 'Soil fertility and productivity are significantly influenced by acid rain' — justify the statement. [1+2=3]  (2025)",
+                  "answerText": "### Formation of Acid Rain\nAcid rain forms when sulfur dioxide ($SO_2$) and nitrogen oxides ($NO_x$) emitted from burning fossil fuels and industries react with atmospheric moisture and oxygen:\n\n* **Nitrogen Oxide Reactions:**\n  $$N_2 + O_2 \\\\rightarrow 2NO \\\\rightarrow 2NO_2 + H_2O \\\\rightarrow HNO_3\\\\text{ (Nitric Acid)}$$\n* **Sulfur Dioxide Reactions:**\n  $$S + O_2 \\\\rightarrow SO_2 \\\\rightarrow SO_3 + H_2O \\\\rightarrow H_2SO_4\\\\text{ (Sulfuric Acid)}$$\nThese acids dissolve in rain droplets, lowering the precipitation pH below 5.6.\n\n### Justification of Soil and Productivity Impacts\n* **Nutrient Leaching:** Acid rain leaches essential plant nutrients like Calcium ($Ca$) and Magnesium ($Mg$) out of the topsoil.\n* **Toxic Metal Release:** It solubilizes toxic aluminum ($Al^{3+}$) ions, which damage root tips and restrict water/nutrient uptake.\n* **Microbial Destruction:** Destroys beneficial soil microorganisms (bacteria, mycorrhizal fungi), halting organic matter decomposition and nitrogen fixation.\n* **Direct Crop Damage:** Corrodes the protective waxy cuticles of crop leaves, causing necrotic spots and reducing photosynthetic efficiency, leading to lower yields."
+                },
+                {
+                  "id": 2066,
+                  "topicId": 210,
+                  "questionText": "15. Ozone layer depletion is anthropogenic in nature — assess. [3]  (2023)",
+                  "answerText": "### Assessment\nThe statement is highly accurate. Stratospheric ozone layer depletion is primarily driven by human activities that release ozone-depleting substances (ODS), notably Chlorofluorocarbons (CFCs), Halons, and Methyl Bromide.\n\n### Chemical Mechanism of Depletion\nCFCs released from industrial processes, air conditioners, and luxury items migrate to the stratosphere, where they are broken down by solar UV radiation to release highly reactive Chlorine ($Cl$) radicals:\n\n1. **CFC Breakdown:** \n   $$CFC \\\\xrightarrow{UV} Cl\\\\cdot$$\n2. **Ozone Destruction:** \n   $$Cl\\\\cdot + O_3 \\\\rightarrow ClO\\\\cdot + O_2$$\n3. **Catalytic Cycle:** \n   $$ClO\\\\cdot + ClO\\\\cdot \\\\rightarrow Cl_2 + O_2$$\n* A single chlorine radical can destroy **10,000 to 1,000,000** ozone molecules in a catalytic chain reaction.\n\n### Mitigation Measures\n* **Phase out CFCs:** Substitute CFCs with eco-friendly alternatives (like Hydrofluorocarbons - HFCs).\n* **Enforce Environmental Laws:** Strictly follow international protocols (e.g., the Montreal Protocol).\n* **Raise Public Awareness:** Educate communities on reducing chemical emissions and conserving energy."
+                },
+                {
+                  "id": 2068,
+                  "topicId": 210,
+                  "questionText": "17. 'Random industrialization coupled with luxurious life style of modern society are responsible for ozone layer depletion'. Criticize your opinion and suggest protective measures. [3.5]  (2020-21)",
+                  "answerText": "### Assessment\nThe statement is highly accurate. Stratospheric ozone layer depletion is primarily driven by human activities that release ozone-depleting substances (ODS), notably Chlorofluorocarbons (CFCs), Halons, and Methyl Bromide.\n\n### Chemical Mechanism of Depletion\nCFCs released from industrial processes, air conditioners, and luxury items migrate to the stratosphere, where they are broken down by solar UV radiation to release highly reactive Chlorine ($Cl$) radicals:\n\n1. **CFC Breakdown:** \n   $$CFC \\\\xrightarrow{UV} Cl\\\\cdot$$\n2. **Ozone Destruction:** \n   $$Cl\\\\cdot + O_3 \\\\rightarrow ClO\\\\cdot + O_2$$\n3. **Catalytic Cycle:** \n   $$ClO\\\\cdot + ClO\\\\cdot \\\\rightarrow Cl_2 + O_2$$\n* A single chlorine radical can destroy **10,000 to 1,000,000** ozone molecules in a catalytic chain reaction.\n\n### Mitigation Measures\n* **Phase out CFCs:** Substitute CFCs with eco-friendly alternatives (like Hydrofluorocarbons - HFCs).\n* **Enforce Environmental Laws:** Strictly follow international protocols (e.g., the Montreal Protocol).\n* **Raise Public Awareness:** Educate communities on reducing chemical emissions and conserving energy."
+                },
+                {
+                  "id": 2069,
+                  "topicId": 210,
+                  "questionText": "18. 'Ozone layer is depleting continuously due to our luxurious life style' — present your opinion. [2]  (2016-17)",
+                  "answerText": "### Assessment\nThe statement is highly accurate. Stratospheric ozone layer depletion is primarily driven by human activities that release ozone-depleting substances (ODS), notably Chlorofluorocarbons (CFCs), Halons, and Methyl Bromide.\n\n### Chemical Mechanism of Depletion\nCFCs released from industrial processes, air conditioners, and luxury items migrate to the stratosphere, where they are broken down by solar UV radiation to release highly reactive Chlorine ($Cl$) radicals:\n\n1. **CFC Breakdown:** \n   $$CFC \\\\xrightarrow{UV} Cl\\\\cdot$$\n2. **Ozone Destruction:** \n   $$Cl\\\\cdot + O_3 \\\\rightarrow ClO\\\\cdot + O_2$$\n3. **Catalytic Cycle:** \n   $$ClO\\\\cdot + ClO\\\\cdot \\\\rightarrow Cl_2 + O_2$$\n* A single chlorine radical can destroy **10,000 to 1,000,000** ozone molecules in a catalytic chain reaction.\n\n### Mitigation Measures\n* **Phase out CFCs:** Substitute CFCs with eco-friendly alternatives (like Hydrofluorocarbons - HFCs).\n* **Enforce Environmental Laws:** Strictly follow international protocols (e.g., the Montreal Protocol).\n* **Raise Public Awareness:** Educate communities on reducing chemical emissions and conserving energy."
+                },
+                {
+                  "id": 2071,
+                  "topicId": 210,
+                  "questionText": "20. 'Ozone layer depletion is man made phenomena'. How? [4]  (2017-18)",
+                  "answerText": "### Assessment\nThe statement is highly accurate. Stratospheric ozone layer depletion is primarily driven by human activities that release ozone-depleting substances (ODS), notably Chlorofluorocarbons (CFCs), Halons, and Methyl Bromide.\n\n### Chemical Mechanism of Depletion\nCFCs released from industrial processes, air conditioners, and luxury items migrate to the stratosphere, where they are broken down by solar UV radiation to release highly reactive Chlorine ($Cl$) radicals:\n\n1. **CFC Breakdown:** \n   $$CFC \\\\xrightarrow{UV} Cl\\\\cdot$$\n2. **Ozone Destruction:** \n   $$Cl\\\\cdot + O_3 \\\\rightarrow ClO\\\\cdot + O_2$$\n3. **Catalytic Cycle:** \n   $$ClO\\\\cdot + ClO\\\\cdot \\\\rightarrow Cl_2 + O_2$$\n* A single chlorine radical can destroy **10,000 to 1,000,000** ozone molecules in a catalytic chain reaction.\n\n### Mitigation Measures\n* **Phase out CFCs:** Substitute CFCs with eco-friendly alternatives (like Hydrofluorocarbons - HFCs).\n* **Enforce Environmental Laws:** Strictly follow international protocols (e.g., the Montreal Protocol).\n* **Raise Public Awareness:** Educate communities on reducing chemical emissions and conserving energy."
+                }
+              ]
+            },
+            {
+              "id": 211,
+              "sectionId": 3,
+              "name": "Hydrologic Cycle & Gases",
+              "Questions": [
+                {
+                  "id": 2053,
+                  "topicId": 211,
+                  "questionText": "2. Judge the role of carbon dioxide in plant photosynthesis and crop growth. [3]  (2025)",
+                  "answerText": "Carbon dioxide ($CO_2$) is a critical raw material for photosynthesis and crop development:\n* **Substrate for Photosynthesis:** $CO_2$ is fixed by Rubisco in the Calvin cycle to produce sugars. Higher $CO_2$ concentrations accelerate photosynthesis, especially in $C_3$ crops (like rice, wheat).\n* **CO2 Fertilization Effect:** Elevated $CO_2$ levels increase the rate of biomass accumulation, leading to larger leaf areas, thicker stems, and higher grain yields.\n* **Water-Use Efficiency (WUE):** In high-$CO_2$ environments, plants partially close their stomata, reducing water loss through transpiration while maintaining high photosynthetic rates.\n* **Yield Formation:** Enhanced photosynthesis increases the translocation of soluble sugars to grains, improving seed size and yield."
+                },
+                {
+                  "id": 2073,
+                  "topicId": 211,
+                  "questionText": "22. Draw and explain the hydrologic cycle. [3]  (2019)",
+                  "answerText": "### Explanation of the Hydrologic Cycle\nThe hydrologic (water) cycle is the continuous movement of water between the Earth's surface and the atmosphere:\n* **Evaporation & Transpiration:** Solar heat evaporates water from oceans/lakes. Plants release water vapor through transpiration (combined as evapotranspiration).\n* **Condensation:** Water vapor rises, cools, and condenses to form clouds.\n* **Precipitation:** Condensed water drops fall back to Earth as rain, snow, or sleet.\n* **Runoff & Infiltration:** Water flows over the land surface (runoff) into rivers, or infiltrates the soil to replenish groundwater reservoirs.\n\n### Schematic Diagram\n```\n                 [ CLOUD FORMATION / CONDENSATION ]\n                                🞁 (Cooling)\n  [ EVAPOTRANSPIRATION ] ───────┴─────── [ OCEAN EVAPORATION ]\n   (Plants & Lakes)                        (Solar Heating)\n                                🞃 (Precipitation)\n                     [ RAIN / SNOW FALL ]\n                                🞃\n       ┌────────────────────────┴────────────────────────┐\n       🞃                                                 🞃\n[ Surface Runoff ] (Rivers/Oceans)             [ Soil Infiltration ] (Groundwater)\n```"
+                }
+              ]
+            },
+            {
+              "id": 212,
+              "sectionId": 3,
+              "name": "Soil Air, Water & pH",
+              "Questions": [
+                {
+                  "id": 2075,
+                  "topicId": 212,
+                  "questionText": "1. Enumerate the significance of soil pH and soil organism for crop production. [4]  (2025)",
+                  "answerText": "### Significance of Soil pH\n* **Nutrient Availability:** Soil pH regulates nutrient solubility. The optimum range is **6.5 to 7.5**, where macronutrients (N, P, K, Ca, Mg) are most available. Extreme pH levels cause nutrient locking or toxicities (e.g., aluminum toxicity at pH $<5.5$).\n* **Microbial Activity:** Neutral pH promotes the growth of beneficial soil bacteria and nitrifiers.\n* **Root Cell Integrity:** Highly acidic or alkaline soils damage root cell membranes.\n\n### Significance of Soil Organisms\n* **Organic Matter Decomposition:** Soil microbes (bacteria, fungi) break down organic residues, releasing essential nutrients.\n* **Biological Nitrogen Fixation:** Rhizobium bacteria fix atmospheric nitrogen in legume root nodules, improving soil nitrogen pools.\n* **Soil Structure Improvement:** Earthworms and fungal hyphae aggregate soil particles, improving soil aeration and water-holding capacity."
+                },
+                {
+                  "id": 2076,
+                  "topicId": 212,
+                  "questionText": "2. Explain the specific role of soil water and soil air for crop production. [3]  (2020-21)",
+                  "answerText": "### Significance of Soil Water\n* **Nutrient Solvent:** Dissolves mineral nutrients in the soil, forming the soil solution necessary for root absorption.\n* **Turgidity Maintenance:** Keeps plant cells turgid, which is essential for structural stability, stem elongation, and stomatal opening.\n* **Photosynthesis Substrate:** Serves as a raw material in photosynthesis.\n* **Temperature Regulation:** Cools leaf surfaces through transpiration.\n\n### Significance of Soil Air\n* **Root Respiration:** Supplies oxygen ($O_2$) required for active root respiration, which provides energy (ATP) for nutrient absorption.\n* **Microbial Activity:** Supports aerobic soil microbes that decompose organic matter and nitrify ammonium.\n* **Prevents Toxicity:** Good aeration prevents the accumulation of toxic reduced gases (like hydrogen sulfide and methane) that occur in waterlogged soils."
+                },
+                {
+                  "id": 2083,
+                  "topicId": 212,
+                  "questionText": "9. Distinguish between biological N₂ fixation and N₂ assimilation. [2]  (2016-17)",
+                  "answerText": "### Answer\n  \n**Question:** Distinguish between biological N₂ fixation and N₂ assimilation.\n\nThis question is related to the syllabus of Crop Ecology under Debesh Sir's section. Please refer to the lecture notes for detailed explanations."
+                },
+                {
+                  "id": 2084,
+                  "topicId": 212,
+                  "questionText": "10. N₂ fixation is beneficial process especially in legume cultivation — explain. [2]  (2016-17)",
+                  "answerText": "Rhizosphere nitrogen fixation is highly beneficial in legume cultivation:\n* **Self-Sufficiency:** Legumes can meet their nitrogen requirements independently, eliminating the need for synthetic nitrogen fertilizers (like urea).\n* **Improves Soil Fertility:** Crop residues left after harvest enrich the soil nitrogen pool, benefiting subsequent crops in rotation.\n* **Enhances Seed Quality:** A steady nitrogen supply leads to higher protein accumulation, improving legume seed quality and nutritional value.\n* **Cost-Effective:** Lowers fertilizer costs, improving farming profitability."
+                },
+                {
+                  "id": 2085,
+                  "topicId": 212,
+                  "questionText": "11. State the role of soil organism in maintaining soil fertility. [3]  (2017-18)",
+                  "answerText": "Soil organisms (bacteria, fungi, actinomycetes, earthworms) maintain soil fertility through several roles:\n* **Nutrient Cycling:** Decomposers break down complex organic residues, releasing plant-available inorganic nutrients ($NH_4^+$, $HPO_4^{2-}$, $SO_4^{2-}$).\n* **Rhizosphere Symbiosis:** *Rhizobium* bacteria fix atmospheric nitrogen in legume nodules, while mycorrhizal fungi enhance phosphorus and water absorption.\n* **Nitrification:** Nitrosomonas and Nitrobacter bacteria convert toxic ammonia into plant-absorbable nitrate ($NO_3^-$).\n* **Soil Aggregation:** Earthworms ingest soil and organic matter, excreting casts that bind soil particles, improving soil structure, aeration, and water-holding capacity."
+                },
+                {
+                  "id": 2086,
+                  "topicId": 212,
+                  "questionText": "12. State the role of soil organism and soil air for sound soil health. [2.5]  (2016-17)",
+                  "answerText": "Soil organisms (bacteria, fungi, actinomycetes, earthworms) maintain soil fertility through several roles:\n* **Nutrient Cycling:** Decomposers break down complex organic residues, releasing plant-available inorganic nutrients ($NH_4^+$, $HPO_4^{2-}$, $SO_4^{2-}$).\n* **Rhizosphere Symbiosis:** *Rhizobium* bacteria fix atmospheric nitrogen in legume nodules, while mycorrhizal fungi enhance phosphorus and water absorption.\n* **Nitrification:** Nitrosomonas and Nitrobacter bacteria convert toxic ammonia into plant-absorbable nitrate ($NO_3^-$).\n* **Soil Aggregation:** Earthworms ingest soil and organic matter, excreting casts that bind soil particles, improving soil structure, aeration, and water-holding capacity."
+                },
+                {
+                  "id": 2087,
+                  "topicId": 212,
+                  "questionText": "13. How does acid rain impact on soil fertility and productivity? Explain. [3]  (2023)",
+                  "answerText": "### Formation of Acid Rain\nAcid rain forms when sulfur dioxide ($SO_2$) and nitrogen oxides ($NO_x$) emitted from burning fossil fuels and industries react with atmospheric moisture and oxygen:\n\n* **Nitrogen Oxide Reactions:**\n  $$N_2 + O_2 \\\\rightarrow 2NO \\\\rightarrow 2NO_2 + H_2O \\\\rightarrow HNO_3\\\\text{ (Nitric Acid)}$$\n* **Sulfur Dioxide Reactions:**\n  $$S + O_2 \\\\rightarrow SO_2 \\\\rightarrow SO_3 + H_2O \\\\rightarrow H_2SO_4\\\\text{ (Sulfuric Acid)}$$\nThese acids dissolve in rain droplets, lowering the precipitation pH below 5.6.\n\n### Justification of Soil and Productivity Impacts\n* **Nutrient Leaching:** Acid rain leaches essential plant nutrients like Calcium ($Ca$) and Magnesium ($Mg$) out of the topsoil.\n* **Toxic Metal Release:** It solubilizes toxic aluminum ($Al^{3+}$) ions, which damage root tips and restrict water/nutrient uptake.\n* **Microbial Destruction:** Destroys beneficial soil microorganisms (bacteria, mycorrhizal fungi), halting organic matter decomposition and nitrogen fixation.\n* **Direct Crop Damage:** Corrodes the protective waxy cuticles of crop leaves, causing necrotic spots and reducing photosynthetic efficiency, leading to lower yields."
+                }
+              ]
+            },
+            {
+              "id": 213,
+              "sectionId": 3,
+              "name": "Biogeochemical Cycles: Nitrogen & Phosphorus",
+              "Questions": [
+                {
+                  "id": 2077,
+                  "topicId": 213,
+                  "questionText": "3. What is biogeochemical cycle? Show the phosphorus cycle diagrammatically with significances. [1+3=4]  (2025)",
+                  "answerText": "### Biogeochemical Cycle\nThe continuous movement of essential chemical elements between living organisms and non-living environmental reservoirs.\n\n### Significance of the Phosphorus Cycle\n* Phosphorus is a critical component of **ATP** (energy transfer), nucleic acids (DNA, RNA), and cell membranes (phospholipids).\n* Unlike nitrogen, it has no atmospheric reservoir; it is a sedimentary cycle.\n\n### Schematic Diagram\n```\n                  [ GEOLOGICAL UPLIFT / ROCKS ]\n                                🞃 (Weathering)\n                   [ SOIL PHOSPHATE POOL ] 🞀───┐\n                    (HPO4^2- / Available)      │\n             ┌──────────────────┴──────────────┼───┐\n             🞃                                 │   │\n     [ PLANT UPTAKE ]                          │   │\n             🞃                                 │   │\n     [ ANIMAL CONSUMPTION ]                    │   │\n             🞃                                 │   │\n     [ DEAD ORGANIC MATTER / WASTES ] ─────────┘   │\n             🞃                                     🞃\n       [ LEACHING ] ➔ [ RUNOFF ] ➔ [ MARINE SEDIMENTS ]\n```"
+                },
+                {
+                  "id": 2078,
+                  "topicId": 213,
+                  "questionText": "4. Define biogeochemical cycle. Simplify the nitrogen fixation mechanisms in rhizosphere. [1+3=4]  (2024)",
+                  "answerText": "### Definition of Biogeochemical Cycle\nA **Biogeochemical Cycle** is the continuous pathway by which essential elements circulate through biotic and abiotic environmental reservoirs.\n\n### Nitrogen Fixation Mechanism in Rhizosphere\n* **Signaling:** Legume root cells secrete flavonoids into the rhizosphere. These attract *Rhizobium* bacteria, which bind to root hairs.\n* **Infection & Nodule Formation:** The root hair curls, allowing bacteria to enter via an infection thread. The plant forms a root nodule to house the bacteria.\n* **Nitrogenase Catalysis:** Inside the nodule, the enzyme **nitrogenase** converts atmospheric dinitrogen ($N_2$) gas into ammonia ($NH_3$):\n  $$N_2 + 8H^+ + 8e^- + 16\\\\text{ATP} \\\\rightarrow 2NH_3 + H_2 + 16\\\\text{ADP} + 16P_i$$\n* **Anaerobic Protection:** The enzyme is highly sensitive to oxygen. The plant produces **leghemoglobin** to bind oxygen, maintaining the low-oxygen conditions required for nitrogenase activity.\n* **Nutrient Exchange:** The host plant provides carbohydrates (energy) to the bacteria, and receives ammonia for protein synthesis."
+                },
+                {
+                  "id": 2079,
+                  "topicId": 213,
+                  "questionText": "5. What is biogeochemical cycle? 'Biogeochemical cycle has great role in mineral nutrition absorption of crops'. Explain. [4]  (2020-21)",
+                  "answerText": "### Biogeochemical Cycle\nA **Biogeochemical Cycle** is the continuous movement and transformation of essential chemical elements (such as carbon, nitrogen, phosphorus) between the biotic (living) and abiotic (non-living atmosphere, lithosphere, and hydrosphere) components of the environment.\n\n### Role in Mineral Nutrition Absorption\n* **Nutrient Recycling:** These cycles ensure that essential plant nutrients locked in organic wastes and mineral rocks are continuously converted into plant-available inorganic forms (e.g., $NO_3^-$, $NH_4^+$, $HPO_4^{2-}$). Without cycling, nutrients would remain locked, causing soil exhaustion.\n* **Solubility and Transport:** Biogeochemical processes regulate soil pH and microbial activities that solubilize minerals, enabling crop roots to absorb them in the soil solution.\n* **Gaseous Reservoirs:** Cycles like the nitrogen cycle replenish the atmospheric and rhizosphere nutrient pools, ensuring a steady supply of nutrients for crops."
+                },
+                {
+                  "id": 2080,
+                  "topicId": 213,
+                  "questionText": "6. Illustrate the nitrogen fixation mechanism in rhizosphere. [3]  (2020-21)",
+                  "answerText": "### Answer\n  \n**Question:** Illustrate the nitrogen fixation mechanism in rhizosphere.\n\nThis question is related to the syllabus of Crop Ecology under Debesh Sir's section. Please refer to the lecture notes for detailed explanations."
+                },
+                {
+                  "id": 2081,
+                  "topicId": 213,
+                  "questionText": "7. Illustrate the biological nitrogen fixation mechanism in soil. [2]  (2023)",
+                  "answerText": "### Answer\n  \n**Question:** Illustrate the biological nitrogen fixation mechanism in soil.\n\nThis question is related to the syllabus of Crop Ecology under Debesh Sir's section. Please refer to the lecture notes for detailed explanations."
+                },
+                {
+                  "id": 2082,
+                  "topicId": 213,
+                  "questionText": "8. Outline the N-cycle of the atmosphere. [4]  (2017-18)",
+                  "answerText": "The atmospheric nitrogen cycle consists of five major steps:\n1. **Nitrogen Fixation:** Atmospheric $N_2$ (78% of air) is fixed into ammonia ($NH_3$) through biological (Rhizobium, Azotobacter) or physical (lightning/industrial) processes.\n2. **Nitrification:** Soil bacteria convert ammonia into nitrites ($NO_2^-$) via *Nitrosomonas*, and then into nitrates ($NO_3^-$) via *Nitrobacter*.\n3. **Assimilation:** Plants absorb nitrates or ammonium, incorporating them into proteins and nucleic acids.\n4. **Ammonification:** Decomposers break down dead organic matter and animal wastes, releasing ammonia back into the soil.\n5. **Denitrification:** Anaerobic bacteria (Pseudomonas, Clostridium) convert soil nitrates back into gaseous dinitrogen ($N_2$), returning it to the atmosphere."
+                }
+              ]
+            },
+            {
+              "id": 214,
+              "sectionId": 3,
+              "name": "Biotic Interactions & Associations",
+              "Questions": [
+                {
+                  "id": 2088,
+                  "topicId": 214,
+                  "questionText": "1. Enumerate symbolic notations of different biotic associations in agroecosystem with example. [3]  (2025)",
+                  "answerText": "The symbolic notations and examples of biotic interactions in agroecosystems are:\n\n| Interaction Type | Species A | Species B | Ecological Description & Examples |\n| :--- | :---: | :---: | :--- |\n| **Mutualism / Symbiosis** | $+$ | $+$ | Both species benefit from the association. (e.g., *Legume-Rhizobium* nodules, Mycorrhiza). |\n| **Commensalism** | $+$ | $0$ | Species A benefits, while Species B remains unaffected. (e.g., Epiphytic orchids growing on mango tree branches). |\n| **Parasitism** | $+$ | $-$ | Species A benefits at the expense of host Species B. (e.g., *Cuscuta* extracting nutrients from crops via haustoria). |\n| **Amensalism** | $-$ | $0$ | Species A is inhibited/harmed, while Species B remains unaffected. (e.g., Penicillium mold releasing penicillin that kills bacteria). |\n| **Competition** | $-$ | $-$ | Both species are harmed due to limited resources. (e.g., Crop plants and weeds competing for sunlight and nitrogen). |\n| **Neutralism** | $0$ | $0$ | Neither species affects the other. (e.g., Rice plants and spiders in a field). |"
+                },
+                {
+                  "id": 2092,
+                  "topicId": 214,
+                  "questionText": "5. Define biotic association. Enumerate different types of biotic interaction in agro ecosystem with symbolic notation and example. [3.5]  (2020-21)",
+                  "answerText": "The symbolic notations and examples of biotic interactions in agroecosystems are:\n\n| Interaction Type | Species A | Species B | Ecological Description & Examples |\n| :--- | :---: | :---: | :--- |\n| **Mutualism / Symbiosis** | $+$ | $+$ | Both species benefit from the association. (e.g., *Legume-Rhizobium* nodules, Mycorrhiza). |\n| **Commensalism** | $+$ | $0$ | Species A benefits, while Species B remains unaffected. (e.g., Epiphytic orchids growing on mango tree branches). |\n| **Parasitism** | $+$ | $-$ | Species A benefits at the expense of host Species B. (e.g., *Cuscuta* extracting nutrients from crops via haustoria). |\n| **Amensalism** | $-$ | $0$ | Species A is inhibited/harmed, while Species B remains unaffected. (e.g., Penicillium mold releasing penicillin that kills bacteria). |\n| **Competition** | $-$ | $-$ | Both species are harmed due to limited resources. (e.g., Crop plants and weeds competing for sunlight and nitrogen). |\n| **Neutralism** | $0$ | $0$ | Neither species affects the other. (e.g., Rice plants and spiders in a field). |"
+                },
+                {
+                  "id": 2093,
+                  "topicId": 214,
+                  "questionText": "6. What is biodiversity? Suggest some options to conserve biodiversity in the context of Bangladesh. [3]  (2020-21)",
+                  "answerText": "### Biodiversity\n**Biodiversity** is the variety and variability among living organisms (plants, animals, and microorganisms) from all terrestrial, marine, and aquatic ecosystems, including ecological complexes. It exists at genetic, species, and ecosystem levels.\n\n### Conservation Options in Bangladesh\n* **Expand Protected Areas:** Strictly manage and protect national parks, wildlife sanctuaries (e.g., Sundarbans), and ecologically critical areas (ECAs).\n* **Reforestation and Afforestation:** Restore degraded forestlands with native species (e.g., Hill and Sal forests).\n* **Establish Ex-Situ Banks:** Develop botanical gardens, seed banks, and tissue culture centers to preserve crop wild relatives and endangered species.\n* **Strictly Enforce Environmental Laws:** Prevent illegal poaching, hunting, and deforestation.\n* **Public Awareness:** Educate communities on the value of biodiversity and encourage community-based conservation."
+                },
+                {
+                  "id": 2094,
+                  "topicId": 214,
+                  "questionText": "7. Compare between parasitism and mutualism. [2]  (2017-18)",
+                  "answerText": "| Feature | Mutualism | Parasitism |\n| :--- | :--- | :--- |\n| **Interaction Nature** | Positive/Symbiotic ($+/+$). | Negative/Exploitative ($+/-$). |\n| **Benefits** | Both participating species benefit. | Only the parasite benefits; the host is harmed. |\n| **Host Survival** | Essential for both species; improves host survival. | Parasite harms the host, often causing disease or death. |\n| **Example** | Rhizobium bacteria in legume root nodules. | Dodder (*Cuscuta*) extracting nutrients from crop plants. |"
+                },
+                {
+                  "id": 2096,
+                  "topicId": 214,
+                  "questionText": "9. Differentiate parasites from epiphytes in nutritional point of view. [2]  (2016-17)",
+                  "answerText": "| Feature | Epiphytes | Parasites |\n| :--- | :--- | :--- |\n| **Nutritional Dependence** | Completely independent of the host plant for nutrition. | Fully dependent on the host plant for water and organic nutrients. |\n| **Specialized Roots** | Possess **aerial roots** containing specialized **velamen tissue** to absorb moisture from the atmosphere. | Possess **haustorial roots** that penetrate host vascular tissues to extract nutrients. |\n| **Impact on Host** | Do not harm the host; use host branches for support only. | Harm the host, causing nutrient depletion, stunting, or disease. |\n| **Example** | Orchid plants growing on tree branches. | Dodder (*Cuscuta*) growing on crop plants. |"
+                }
+              ]
+            },
+            {
+              "id": 215,
+              "sectionId": 3,
+              "name": "Mycorrhizal Association",
+              "Questions": [
+                {
+                  "id": 2089,
+                  "topicId": 215,
+                  "questionText": "2. Write down the potential benefit of mycorrhizal fungi for crop production. [3]  (2025)",
+                  "answerText": "Mycorrhizal fungi provide several benefits for crop production:\n* **Enhanced Nutrient Absorption:** Fungal hyphae act as extensions of root hairs, absorbing poorly mobile nutrients—especially **phosphorus ($P$)**, zinc, and copper—and supplying them to the crop.\n* **Increased Water Absorption:** Hyphae penetrate small soil pores, improving water uptake and drought tolerance.\n* **Disease Protection:** Creates a physical barrier around root cells, protecting the host plant from soil-borne pathogens (like Fusarium, Phytophthora).\n* **Improved Soil Structure:** Fungal hyphae bind soil particles into aggregates, improving soil aeration and water infiltration.\n* **Reduces Fertilizer Cost:** Maximizes nutrient recovery from soil, reducing reliance on chemical phosphate fertilizers."
+                },
+                {
+                  "id": 2090,
+                  "topicId": 215,
+                  "questionText": "3. 'Mycorrhiza is a symbiotic association.' — How? [2]  (2024)",
+                  "answerText": "Mycorrhiza is a mutualistic symbiotic association ($+/+$) between soil fungi and the roots of higher plants:\n* **Fungal Contribution:** Fungal hyphae spread widely in the soil, increasing the root surface area. They absorb water, minerals, and phosphorus from soil pores and transfer them to the plant root cells.\n* **Plant Host Contribution:** The host plant provides organic carbon (sugars/photosynthates) and shelter to the fungus, which cannot produce its own food.\n* **Mutual Benefit:** Since both organisms benefit and depend on each other for survival and growth, it is classified as a symbiotic association."
+                },
+                {
+                  "id": 2091,
+                  "topicId": 215,
+                  "questionText": "4. How does the mycorrhizal association influence root growth? Explain. [3]  (2023)",
+                  "answerText": "The mycorrhizal association influences and promotes healthy root growth through several mechanisms:\n* **Stimulates Root Branching:** Fungal colonization triggers plant growth regulators, promoting lateral root branching and elongation.\n* **Increases Root Surface Area:** Fungal hyphae extend far beyond the root depletion zone, functionalizing a much larger volume of soil.\n* **Root Protection:** Fungi secrete chemical compounds and form a physical sheath (mantle) that protects young root tips from soil-borne pathogens.\n* **Enhances Cell Division:** Improved phosphorus and water uptake stimulates cell division and elongation in root meristems, leading to a vigorous root system."
+                },
+                {
+                  "id": 2095,
+                  "topicId": 215,
+                  "questionText": "8. Mycorrhiza is also known as symbiotic association — why? [2]  (2016-17)",
+                  "answerText": "Mycorrhiza is a mutualistic symbiotic association ($+/+$) between soil fungi and the roots of higher plants:\n* **Fungal Contribution:** Fungal hyphae spread widely in the soil, increasing the root surface area. They absorb water, minerals, and phosphorus from soil pores and transfer them to the plant root cells.\n* **Plant Host Contribution:** The host plant provides organic carbon (sugars/photosynthates) and shelter to the fungus, which cannot produce its own food.\n* **Mutual Benefit:** Since both organisms benefit and depend on each other for survival and growth, it is classified as a symbiotic association."
+                }
+              ]
+            },
+            {
+              "id": 216,
+              "sectionId": 3,
+              "name": "Biodiversity & Conservation",
+              "Questions": [
+                {
+                  "id": 2097,
+                  "topicId": 216,
+                  "questionText": "1. Enlist the methods of bio-diversity conservation along with advantages and disadvantages. [2]  (2023)",
+                  "answerText": "### Answer\n  \n**Question:** Enlist the methods of bio-diversity conservation along with advantages and disadvantages.\n\nThis question is related to the syllabus of Crop Ecology under Debesh Sir's section. Please refer to the lecture notes for detailed explanations."
+                },
+                {
+                  "id": 2098,
+                  "topicId": 216,
+                  "questionText": "2. Explain biodiversity. Prescribe some options to conserve biodiversity in the context of Bangladesh. [5]  (2017-18)",
+                  "answerText": "### Biodiversity\n**Biodiversity** is the variety and variability among living organisms (plants, animals, and microorganisms) from all terrestrial, marine, and aquatic ecosystems, including ecological complexes. It exists at genetic, species, and ecosystem levels.\n\n### Conservation Options in Bangladesh\n* **Expand Protected Areas:** Strictly manage and protect national parks, wildlife sanctuaries (e.g., Sundarbans), and ecologically critical areas (ECAs).\n* **Reforestation and Afforestation:** Restore degraded forestlands with native species (e.g., Hill and Sal forests).\n* **Establish Ex-Situ Banks:** Develop botanical gardens, seed banks, and tissue culture centers to preserve crop wild relatives and endangered species.\n* **Strictly Enforce Environmental Laws:** Prevent illegal poaching, hunting, and deforestation.\n* **Public Awareness:** Educate communities on the value of biodiversity and encourage community-based conservation."
+                },
+                {
+                  "id": 2099,
+                  "topicId": 216,
+                  "questionText": "3. What is biodiversity? Give an outline of carbon cycle in ecosystem. [1+2.5=3.5]  (2016-17)",
+                  "answerText": "### Biodiversity\n**Biodiversity** is the variety and variability of life on Earth (genetic, species, and ecosystem levels).\n\n### Outline of the Carbon Cycle\nThe carbon cycle describes the movement of carbon through different reservoirs:\n* **Photosynthesis:** Plants (producers) absorb carbon dioxide ($CO_2$) from the atmosphere, converting it into organic carbon (carbohydrates) using sunlight.\n* **Respiration:** Plants and animals break down organic carbon to release energy, returning $CO_2$ back to the atmosphere.\n* **Decomposition:** Soil decomposers break down dead organisms and animal wastes, releasing stored carbon as $CO_2$.\n* **Combustion:** Burning fossil fuels and wood releases carbon dioxide back into the atmosphere.\n\n### Schematic Representation\n```\n          [ ATMOSPHERIC CARBON DIOXIDE (CO2) ]\n             🞁                             🞀───┐\n      (Respiration)                      (Combustion)\n             ├─────────────────┐               │\n             🞁                 🞃 (Photosynthesis) │\n         [ ANIMALS ] 🞀──── [ PLANTS ]          │\n             │                 │               │\n             🞂 ➔ [ DECOMPOSERS ] ──────────────┘\n```"
                 }
               ]
             }
@@ -2020,7 +2713,7 @@
                   "id": 1028,
                   "topicId": 110,
                   "questionText": "What is crop association? Illustrate different forms of crop association.  [4]  (2023)",
-                  "answerText": "Crop association is the simultaneous production of a number of crops at the same time in the same farming area to maximize the synergies and biological interactions among them.\n\nThe forms of crop association include:\n* Mixed Crops: A mixture of several crops grown at the same time without a specific spatial configuration but with specific densities (e.g., amaranth, cabbage).\n* Strip Crops: A mixture of several cropsArranged in alternating rows or strips (e.g., lines of zucchinis + strips of onions).\n* Intercalated Crops: Planting a short-cycle crop under cover or between the main crop (e.g., radish + onion + lettuce).\n* Intercropping (Relay): Sowing a second crop when the first has reached its reproductive stage but has not yet been harvested (e.g., alfalfa + turnip).\n* Satellite Crops: Sowing a few plants of one specific crop in or around the main crop as trap plants (e.g., eggplants around potatoes to attract Colorado beetles)."
+                  "answerText": "Crop association is the simultaneous production of a number of crops at the same time in the same farming area to maximize the synergies and biological interactions among them.\n\nThe different forms of intercropping are:\n* Parallel Cropping: Two crops are selected which have different growth habits and zero competition, allowing both of them to express their full yield potential.\n  * Example: Black gram with maize.\n* Companion Cropping: The yield of one crop is affected by the other.\n  * Example: Mustard with sugarcane.\n* Multistoreyed Cropping: Growing of plants of different heights in the same field at the same time.\n  * Example: Mustard, potato etc. with sugarcane.\n* Synergetic Cropping: When the yield of both crops grown together are found to be higher than their yield of pure crops on a unit area basis.\n  * Example: Sugarcane + potato, or Legume + non-legume etc."
                 },
                 {
                   "id": 1029,
@@ -2051,7 +2744,7 @@
                   "id": 1032,
                   "topicId": 111,
                   "questionText": "What is crop association? Illustrate different forms of intercropping with examples.  [4]  (2020-21, 2019-20, 2017-18)",
-                  "answerText": "Intercropping is the practice of growing two or more crops in proximity to utilize resources that would otherwise not be utilized in monoculture.\n\nThe four forms of intercropping are:\n* Mixed Intercropping: Growing crops together with no distinct row arrangement (e.g., maize and pigeon pea grown together).\n* Row Intercropping: Growing crops simultaneously where one or more crops are planted in specific rows (e.g., jute in one row and sesame/blackgram in alternate rows).\n* Strip Intercropping: Growing crops in alternating strips wide enough for independent cultivation but narrow enough to interact (e.g., alternating strips of rice and lentils).\n* Relay Intercropping: Planting a second crop into a standing first crop after it has reached its reproductive stage but before harvest (e.g., planting mustard in Aman rice fields before harvest)."
+                  "answerText": "Crop association is the simultaneous production of a number of crops at the same time in the same farming area to maximize the synergies and biological interactions among them.\n\nThe different forms of intercropping are:\n* Parallel Cropping: Two crops are selected which have different growth habits and zero competition, allowing both of them to express their full yield potential.\n  * Example: Black gram with maize.\n* Companion Cropping: The yield of one crop is affected by the other.\n  * Example: Mustard with sugarcane.\n* Multistoreyed Cropping: Growing of plants of different heights in the same field at the same time.\n  * Example: Mustard, potato etc. with sugarcane.\n* Synergetic Cropping: When the yield of both crops grown together are found to be higher than their yield of pure crops on a unit area basis.\n  * Example: Sugarcane + potato, or Legume + non-legume etc."
                 },
                 {
                   "id": 1033,
