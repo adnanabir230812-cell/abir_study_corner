@@ -292,9 +292,9 @@ Boro rice is cultivated during the dry winter-to-spring season in Bangladesh, wh
 I agree with the statement. **Photoperiodism** is the physiological response of plants to the relative length of day and night, which controls the initiation of flowering.
 
 ### Justification
-* **Phytochrome System:** Plants perceive photoperiod through the pigment phytochrome, which exists in two forms: Red-absorbing $P_r$ (inactive) and Far-Red-absorbing $P_{fr}$ (active).
-* **Short-Day Plants (SDP):** These plants require a day length shorter than a critical duration (e.g., Aman rice, soybean). Long, uninterrupted nights allow $P_{fr}$ to decay to $P_r$, which triggers the synthesis of the flowering hormone **Florigen**. A brief flash of light during the dark period inhibits flowering.
-* **Long-Day Plants (LDP):** These plants require day lengths exceeding a critical duration (e.g., wheat, spinach). Continuous light keeps phytochrome in the active $P_{fr}$ form, promoting Florigen synthesis and flowering.`,
+* **Phytochrome System:** Plants perceive photoperiod through the pigment phytochrome, which exists in two forms: Red-absorbing <span>$P_r$</span> (inactive) and Far-Red-absorbing <span>$P_{fr}$</span> (active).
+* **Short-Day Plants (SDP):** These plants require a day length shorter than a critical duration (e.g., Aman rice, soybean). Long, uninterrupted nights allow <span>$P_{fr}$</span> to decay to <span>$P_r$</span>, which triggers the synthesis of the flowering hormone **Florigen**. A brief flash of light during the dark period inhibits flowering.
+* **Long-Day Plants (LDP):** These plants require day lengths exceeding a critical duration (e.g., wheat, spinach). Continuous light keeps phytochrome in the active <span>$P_{fr}$</span> form, promoting Florigen synthesis and flowering.`,
 
   "critical photoperiod and critical dark": `Critical photoperiod (day length) and critical dark period (night length) determine the vegetative-to-reproductive transition in crops:
 * **Short-Day Crops (SDPs):**
@@ -307,8 +307,8 @@ I agree with the statement. **Photoperiodism** is the physiological response of 
 * **Agricultural Adaptation:** Matching crop photoperiodic requirements with local seasonal day lengths ensures synchronized flowering, uniform maturity, and high yields.`,
 
   "diagrammatically show the mechanism of flowering": `### Mechanism of Flowering
-* **Short-Day Plants (SDP):** Require a day length shorter than a critical threshold. A long, uninterrupted night converts active $P_{fr}$ back to inactive $P_r$, which promotes Florigen synthesis.
-* **Long-Day Plants (LDP):** Require a day length longer than a critical threshold. High levels of active $P_{fr}$ (maintained by long days) promote Florigen synthesis.
+* **Short-Day Plants (SDP):** Require a day length shorter than a critical threshold. A long, uninterrupted night converts active <span>$P_{fr}$</span> back to inactive <span>$P_r$</span>, which promotes Florigen synthesis.
+* **Long-Day Plants (LDP):** Require a day length longer than a critical threshold. High levels of active <span>$P_{fr}$</span> (maintained by long days) promote Florigen synthesis.
 
 ### Schematic Diagram
 \`\`\`
@@ -338,26 +338,34 @@ Red Light (660nm)  ===>  Pfr (Flowering Promoter)  ===>  Florigen  ===>  Floweri
   * The biological response of seeds to light during germination. Light-sensitive seeds that require exposure to light to germinate are called positively photoblastic (e.g., lettuce), while seeds inhibited by light are negatively photoblastic.`,
 
   // Topic 204: Temperature
-  "scientific officer of a cold area": `To manage crop production in cold areas prone to chilling and frost stress, I would suggest the following practices:
-* **Seed Hardening:** Expose seeds to alternating periods of soaking and drying prior to sowing to build physiological tolerance to cold.
-* **Foliar Sprays for Frost Mitigation:**
-  * Spray **2% DAP + 1% MOP** to improve cell turgidity and membrane resilience.
-  * Spray **0.1% Ammonium solution** or **2% Calcium Nitrate $Ca(NO_3)_2$** to boost vegetative vigor and protect against cell damage.
-  * Apply **Salicylic Acid** to trigger systemic acquired resistance against cold stress.
-* **Cultural Practices:**
-  * Apply light irrigation during frosty nights, as water releases latent heat upon freezing, keeping the microclimate warmer.
-  * Apply organic mulching (straw, crop residues) to conserve soil warmth.
-  * Cultivate cold-tolerant varieties suited for temperate conditions.`,
+  "scientific officer of a cold area": `To manage crop production in cold areas prone to chilling and frost stress, I would suggest the following comprehensive practices:
+* **Seed Hardening & Priming (Pre-sowing treatments):**
+  * **Seed Hardening:** Expose seeds to alternating cycles of soaking (hydration) and drying prior to sowing. This pre-conditioning stimulates metabolic activity, triggers the synthesis of protective cold-shock proteins, and prepares the embryo for cold soil environments, resulting in vigorous seedling establishment.
+* **Foliar Sprays for Physiological & Anatomical Mitigation:**
+  * **Foliar Spray of 2% DAP + 1% MOP:** DAP (Diammonium Phosphate) provides nitrogen and phosphorus to sustain cellular energy (ATP), while MOP (Muriate of Potash/Potassium) acts as an osmotic regulator. This maintains cell turgidity, reinforces cell membrane resilience, and lowers the freezing point of cell sap, protecting the plant from freezing injury.
+  * **Foliar Spray of 0.1% Ammonium Solution:** Restores nitrogen reserves degraded by cold stress, boosting vegetative vigor.
+  * **Foliar Spray of 2% Calcium Nitrate [<span>$Ca(NO_3)_2$</span>]:** Calcium stabilizes the plasma membrane, acts as a secondary messenger in cold-signaling pathways, prevents cellular leakage, and reduces chilling injury.
+  * **Foliar Spray of Salicylic Acid:** Acts as a plant signaling hormone that triggers the expression of cold-responsive (COR) genes and synthesizes antioxidant enzymes to combat oxidative stress caused by cold-induced reactive oxygen species (ROS).
+* **Agro-Management & Cultural Practices:**
+  * **Light Irrigation (Frost Prevention):** Apply light irrigation during frosty nights. Since water has a high specific heat capacity and releases latent heat of fusion when it freezes, it raises the microclimate temperature slightly above freezing, protecting sensitive plant tissues from frostbite.
+  * **Organic Mulching:** Apply a 5-10 cm layer of organic mulch (straw, crop residues) to insulate the soil, reducing heat loss by radiation and conserving soil warmth.
+  * **Microclimate Modification (Windbreaks):** Plant windbreaks of tall, dense trees on the windward side to shield crops from freezing winter winds, reducing cold-induced desiccation.
+  * **Selecting Cold-Resilient Varieties:** Recommending cold-tolerant crops belonging to Mesothermic (e.g., wheat, barley) or Microthermic/Hekistothermic categories that naturally tolerate chilling temperatures.`,
 
-  "atmospheric temperature is increasing progressively": `To combat the challenges of progressive global warming, I suggest the following agricultural adaptation and mitigation strategies:
-* **Adjust Sowing Dates:** Shift sowing windows earlier to allow crops to complete their heat-sensitive flowering stage before the peak summer temperatures arrive.
-* **Heat Stress Mitigation Sprays:**
-  * Spray **0.5% $CaCl_2$** to protect cell membranes from heat-induced damage.
-  * Apply **100 ppm Salicylic Acid** to promote the mobilization of stem reserves to grains during heat stress.
-  * Spray **0.5 ppm Brassinolite** to maintain high photosynthetic activity under elevated temperatures.
-  * Spray **10 ppm Naphthalene Acetic Acid (NAA)** to control premature dropping of flowers and fruits.
-* **Foliar Nutrition:** Apply **2% DAP + 1% MOP** to avoid leaf scorching and maintain leaf hydration.
-* **Water Conservation:** Implement Alternate Wetting and Drying (AWD) and apply hydrogels to conserve soil moisture.`,
+  "atmospheric temperature is increasing progressively": `To combat the challenges of progressive global warming and mitigate high-temperature stress, I suggest the following agricultural adaptation and mitigation strategies:
+* **Pre-sowing Seed Treatments:**
+  * **Seed Priming with 0.5% <span>$CaCl_2$</span> Solution:** Hydrates the seeds to stimulate embryonic metabolic activity. Priming with Calcium Chloride helps arrest membrane lipid peroxidation, protects the plasma membrane, and ensures uniform, vigorous seedling growth under high-temperature stress.
+  * **Seed Hardening:** Pre-conditioning seeds to build thermotolerance before sowing.
+* **Heat Stress Mitigation Sprays (Foliar Interventions):**
+  * **Foliar Spray of 2% DAP + 1% MOP:** DAP supplies essential nutrients, while MOP (Potassium Chloride) maintains leaf water potential, prevents leaf scorching, and keeps stomata functional under high evaporative demand.
+  * **Foliar Spray of 5% Kaolin:** Spraying this reflective clay mineral forms a white reflective barrier on leaves, reducing excessive light absorption and canopy temperature, thereby conserving water and maintaining membrane integrity.
+  * **Foliar Spray of 0.5 ppm Brassinolite:** Brassinosteroids (Brassinolite) are growth-promoting plant hormones. Foliar spray increases photosynthetic activity (specifically by protecting Photosystem II and stabilizing RuBisCO) under thermal stress.
+  * **Foliar Spray of 100 ppm Salicylic Acid:** Salicylic acid acts as a signaling hormone that mitigates oxidative stress, prevents chlorophyll degradation, and promotes the mobilization of stem reserves (soluble carbohydrates) to the developing grains during grain filling under heat stress.
+  * **Foliar Spray of 10 ppm Naphthalene Acetic Acid (NAA):** NAA is a synthetic auxin. High temperature triggers abscisic acid accumulation, leading to flower and fruit drop. Foliar spray of NAA counteracts this, controlling premature drop and securing yield.
+* **Agronomic & Water Management:**
+  * **Adjusting Sowing Dates:** Shifting sowing windows earlier to ensure the critical flowering and grain-filling stages (which are highly sensitive to heat) occur before the onset of peak summer temperatures.
+  * **Water Conservation (AWD & Hydrogels):** Implementing Alternate Wetting and Drying (AWD) in rice to conserve water resources, and applying hydrogels in the soil to hold moisture and release it gradually during drought periods.
+  * **Developing Heat-Resilient Varieties:** Cultivating crop cultivars that are breeding-selected for heat tolerance (e.g. high heat shock protein expression).`,
 
   "what is temperature": `### Definition
 **Temperature** is the degree of hotness or coldness of the atmosphere, measured on a defined scale (e.g., Celsius, Fahrenheit). It is an expression of kinetic energy.
