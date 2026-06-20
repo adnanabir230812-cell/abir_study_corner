@@ -49,16 +49,25 @@ Exploratory research is undertaken to explore an area where little is known, or 
         id: 5003,
         topicId: 321,
         questionText: 'Compare and contrast: (i) Fundamental and applied research, (ii) Adaptive and strategic research. (2025, 2023, 2020-21)',
-        answerText: `Pure or fundamental research involves developing and testing theories and hypotheses that are intellectually challenging but may or may not have practical application at the present time or in the future. Applied research is done to solve specific, practical questions, assist in policy formulation, or understand an active phenomenon, and is almost always done on the basis of basic research.
+        answerText: `Comparison of Fundamental and Applied Research:
 
-Strategic research is designed to address a major, widespread problem but requires developing new scientific understanding or tools, bridging basic and applied research. Adaptive research is aimed at adjusting and testing existing technologies or recommendations under local environmental, soil, and socio-economic conditions to fit farmers' needs.
+| Feature | Fundamental (Basic) Research | Applied Research |
+| :--- | :--- | :--- |
+| Core Goal | To develop and test theories and hypotheses that expand scientific knowledge. | To solve specific, practical questions or assist in policy formulation. |
+| Foundation | Driven by intellectual curiosity and challenging scientific questions. | Built on the principles discovered through basic/fundamental research. |
+| Application | May or may not have immediate practical application in the present or future. | Has direct and immediate practical application to solve real-world problems. |
+| Time Horizon | Long-term. | Medium-term. |
+| Scope | Universal applicability. | Problem-specific applicability. |
 
-| Feature | Fundamental Research | Applied Research | Adaptive Research |
-| :--- | :--- | :--- | :--- |
-| Core Goal | Develop and test theories | Solve specific practical questions | Adjust technologies to local conditions |
-| Foundation | Intellectual curiosity | Built on basic research | Built on existing technologies |
-| Time Horizon | Long-term | Medium-term | Short-term |
-| Scope | Universal | Problem-specific | Highly localized |`
+Comparison of Strategic and Adaptive Research:
+
+| Feature | Strategic Research | Adaptive Research |
+| :--- | :--- | :--- |
+| Core Goal | Designed to address a major, widespread problem requiring new scientific understanding. | Aimed at adjusting and testing existing technologies under local conditions. |
+| Focus | Bridging basic and applied research to develop new scientific tools. | Tailoring existing recommendations to fit local environmental and farmers' needs. |
+| Scope | Widespread or regional scope. | Highly localized and site-specific scope. |
+| Time Horizon | Medium to long-term. | Short-term. |
+| Target | Focuses on developing regional frameworks and tools. | Focuses on adjusting recommendations under local soil and climate conditions. |`
       }
     ]
   },
