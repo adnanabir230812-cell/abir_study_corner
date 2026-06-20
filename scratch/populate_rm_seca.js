@@ -21,53 +21,60 @@ const rmSectionATopics = [
         id: 5001,
         topicId: 321,
         questionText: 'What is research? Enlist the characteristics of a good research. (2025, 2024, 2023, 2019-20, 2019, 2017-18)',
-        answerText: `Research is a process of collecting, analyzing and interpreting information to answer questions. But to qualify as research, the process must have certain characteristics.
+        answerText: `Research is a structured inquiry that utilizes acceptable scientific methodology to solve problems and create new knowledge that is generally applicable. It is a scientific method consisting of systematic observation, classification, and interpretation of data.
 
-It must, as far as possible, be:
+Research is a process of collecting, analyzing and interpreting information to answer questions. But to qualify as research, the process must have certain characteristics. It must, as far as possible, be:
 1. Controlled: In exploring causality in relation to two variables (factors), you set up your study in a way that minimizes the effects of other factors affecting the relationship.
 2. Rigorous: You must be scrupulous in ensuring that the procedures followed to find answers to questions are relevant, appropriate, and justified.
-3. Systematic: The procedure adopted to undertake an investigation follows a certain logical sequence or systematic steps.
-4. Valid and verifiable: Whatever is concluded on the basis of the findings must be correct and capable of being verified by others to ensure validity and reliability.
-5. Empirical: Any conclusions drawn are based upon hard evidence collected from real-life experiences or observations.
-6. Critical: The process adopted and the procedures used must be able to withstand critical scrutiny.`
+3. Systematic: This implies that the procedure adopted to undertake an investigation follows a certain logical sequence. The different steps cannot be taken in a haphazard way. Some procedures must follow others.
+4. Valid and verifiable: This concept implies that whatever you conclude on the basis of your findings is correct and can be verified by you and others.
+5. Empirical: This means that any conclusion drawn are based upon hard evidence collected from real life experiences or observations.
+6. Critical: Critical scrutiny of the procedures used and the methods employed is crucial to a research enquiry. The process of investigation must be foolproof and free from drawbacks. The process adopted and the procedures used must be able to withstand critical scrutiny.`
       },
       {
         id: 5002,
         topicId: 321,
         questionText: 'Classify and discuss different types of research on the basis of objectives. (2024, 2023, 2019-20, 2019, 2017-18)',
-        answerText: `From the viewpoint of objectives, research is classified into the following four types:
+        answerText: `From the viewpoint of objectives, a research can be classified as:
+* Descriptive
+* Co relational
+* Explanatory
 
-Descriptive research attempts to describe systematically a situation, problem, phenomenon, service or program, or provides information about the conditions of a community. It focuses on describing the current status of the subject rather than explaining the causes. An example is a survey describing the types of agricultural inputs used by smallholder farmers in a specific district.
+Descriptive research attempts to describe systematically a situation, problem, phenomenon, service or program, or provides information about, say, living condition of a community, or describes attitudes towards an issue.
 
-Correlational research attempts to discover or establish the existence of a relationship or interdependence between two or more aspects of a situation. It examines how variables co-vary without manipulating them. An example is assessing the relationship between the amount of rainfall received and the grain yield of a crop.
+Co relational research attempts to discover or establish the existence of a relationship/ interdependence between two or more aspects of a situation.
 
-Explanatory research attempts to clarify why and how there is a relationship between two or more aspects of a situation or phenomenon. It focuses on explaining the underlying cause-and-effect mechanisms. An example is explaining why excessive nitrogen fertilizer leads to lodging in cereal crops.
+Explanatory research attempts to clarify why and how there is a relationship between two or more aspects of a situation or phenomenon.
 
-Exploratory research is undertaken to explore an area where little is known, or to investigate the possibilities of undertaking a particular research study. It is a flexible, preliminary study to formulate hypotheses. An example is conducting a pilot study to test the viability of growing a new exotic crop in a coastal region.`
+Exploratory research is undertaken to explore an area where little is known or to investigate the possibilities of undertaking a particular research study (feasibility study / pilot study).`
       },
       {
         id: 5003,
         topicId: 321,
         questionText: 'Compare and contrast: (i) Fundamental and applied research, (ii) Adaptive and strategic research. (2025, 2023, 2020-21)',
-        answerText: `Comparison of Fundamental and Applied Research:
+        answerText: `From the point of view of application, there are two broad categories of research:
+1. Pure/ Fundamental/ Strategic research
+2. Applied/ Adaptive research
 
-| Feature | Fundamental (Basic) Research | Applied Research |
-| :--- | :--- | :--- |
-| Core Goal | To develop and test theories and hypotheses that expand scientific knowledge. | To solve specific, practical questions or assist in policy formulation. |
-| Foundation | Driven by intellectual curiosity and challenging scientific questions. | Built on the principles discovered through basic/fundamental research. |
-| Application | May or may not have immediate practical application in the present or future. | Has direct and immediate practical application to solve real-world problems. |
-| Time Horizon | Long-term. | Medium-term. |
-| Scope | Universal applicability. | Problem-specific applicability. |
+Pure (Fundamental) research involves developing and testing theories and hypotheses that are intellectually challenging to the researcher but may or may not have practical application at the present time or in the future. The knowledge produced through pure research is sought in order to add to the existing body of research methods.
 
-Comparison of Strategic and Adaptive Research:
+Applied research is done to solve specific, practical questions; for policy formulation, administration and understanding of a phenomenon. It can be explanatory, but is usually descriptive. It is almost always done on the basis of basic research. Applied research can be carried out by academic or industrial institutions.
 
-| Feature | Strategic Research | Adaptive Research |
-| :--- | :--- | :--- |
-| Core Goal | Designed to address a major, widespread problem requiring new scientific understanding. | Aimed at adjusting and testing existing technologies under local conditions. |
-| Focus | Bridging basic and applied research to develop new scientific tools. | Tailoring existing recommendations to fit local environmental and farmers' needs. |
-| Scope | Widespread or regional scope. | Highly localized and site-specific scope. |
-| Time Horizon | Medium to long-term. | Short-term. |
-| Target | Focuses on developing regional frameworks and tools. | Focuses on adjusting recommendations under local soil and climate conditions. |`
+Comparison between Fundamental and Applied Research:
+* Fundamental (Pure) Research:
+  * Core Goal: Developing and testing theories and hypotheses that are intellectually challenging.
+  * Application: May or may not have practical application at the present time or in the future.
+  * Output: Adds to the existing body of research methods and scientific knowledge.
+* Applied Research:
+  * Core Goal: Done to solve specific, practical questions.
+  * Application: Used for policy formulation, administration and understanding of a phenomenon.
+  * Foundation: Almost always done on the basis of basic (fundamental) research.
+
+Comparison between Strategic and Adaptive Research:
+* Strategic Research:
+  * Designed to address a major, widespread problem requiring new scientific understanding or tools. It bridges basic and applied research.
+* Adaptive Research:
+  * Aimed at adjusting and testing existing technologies or recommendations under local environmental, soil, and socio-economic conditions to fit farmers' needs (short-term goals).`
       }
     ]
   },
@@ -80,46 +87,75 @@ Comparison of Strategic and Adaptive Research:
         id: 5004,
         topicId: 322,
         questionText: 'Describe the process of selection and prioritization of a researchable problem. (2025, 2024, 2023, 2020-21)',
-        answerText: `Selecting and prioritizing a researchable problem is the first and most crucial step in the research process.
+        answerText: `Before finalizing a topic, the researcher must evaluate it against these seven considerations:
+* Interest:
+  * A research endeavor is usually time consuming, and involves hard work and possibly unforeseen problems.
+  * One should select topic of great interest to sustain the required motivation.
+* Magnitude:
+  * It is extremely important to select a topic that you can manage within the time and resources available.
+  * Narrow the topic down to something manageable, specific and clear.
+* Measurement of concepts:
+  * Make sure that you are clear about the indicators and measurement of concepts in your study.
+* Level of expertise:
+  * Make sure that you have adequate level of expertise for the task you are proposing since you need to do the work yourself.
+* Relevance:
+  * Ensure that your study adds to the existing body of knowledge, bridges current knowledge gaps and is useful in policy formulation.
+  * This will help you to sustain interest in the study.
+* Availability of data:
+  * Before finalizing the topic, make sure that data are available.
+* Ethical issues:
+  * How ethical issues can affect the study population and how ethical problems can be overcome should be thoroughly examined at the problem formulating stage.
 
-Before finalizing a topic, the researcher must evaluate it against these seven criteria:
-* The research endeavor is time-consuming and involves hard work, so the topic must align with the researcher's interest to sustain motivation.
-* The researcher must select a topic that can be managed within the time, budget, and resources available.
-* The researcher must be clear about the indicators and measurement of the concepts used.
-* The investigator must possess an adequate level of expertise for the proposed tasks since they must do the work themselves.
-* The topic must be relevant to the profession or possess clear practical value.
-* The investigator must ensure that required data are available before finalizing the topic.
-* The study must not violate ethical principles or cause harm to participants or the environment.
-
-The formulation and prioritization process involves the following steps:
-1. Identify a broad field or subject area of interest to you, such as weed management.
-2. Dissect the broad area into sub-areas, such as chemical control, manual weeding, or mechanical weeders.
-3. Select the sub-area of most interest to you, such as mechanical weeders.
-4. Raise key research questions, such as what is the efficiency and cost-benefit ratio of using a power weeder compared to hand weeding in transplanted rice.
-5. Formulate clear main and sub-objectives for the study.
-6. Assess the objectives to verify if they are achievable.
-7. Double-check to ensure all resources and data sources are available before starting.`
+Steps in formulation of a research problem:
+Step 1: Identify a broad field or subject area of interest to you.
+Step 2: Dissect the broad area into sub areas.
+Step 3: Select what is of most interest to you.
+Step 4: Raise research questions.
+Step 5: Formulate objectives.
+Step 6: Assess your objectives.
+Step 7: Double check.`
       },
       {
         id: 5005,
         topicId: 322,
         questionText: 'Justify the importance of ethics in research problem selection. (2025)',
-        answerText: `Ethics are critical in the selection of a research problem to ensure scientific integrity and protect subjects:
-* The selected research problem must not cause physical, psychological, social, or economic harm to human or animal subjects.
-* The study must respect the autonomy of participants by obtaining voluntary, informed consent and safeguarding confidentiality.
-* Selecting a research problem must involve the intent to produce honest, original work, preventing data fabrication, falsification, and plagiarism.
-* The selection of the topic must be free from commercial or political pressure, ensuring objectivity without introducing vested interests.
-* The selected research problem should aim to benefit society and preserve the environment, avoiding practices that lead to pollution or resource depletion.`
+        answerText: `How ethical issues can affect the study population and how ethical problems can be overcome should be thoroughly examined at the problem formulating stage. Collecting data through any of the methods may involve some ethical issues in relation to the participants and the researcher.
+
+Ethical issues concerning research participants:
+* Collecting information: Your request for information may put pressure or create anxiety on a respondent. Provided any piece of research is likely to help society directly or indirectly, it is acceptable to ask questions, if you first obtain the relevance of the research. Otherwise, you are wasting your respondents' time, which is unethical.
+* Seeking consent: In every discipline it is considered unethical to collect information without the knowledge of the participant, and their expressed willingness and informed consent.
+* Providing incentives: Giving a present before data collection is unethical.
+* Seeking sensitive information: Certain types of information can be regarded as sensitive or confidential by some people and thus an invasion to privacy. Give them sufficient time to decide if they want to participate.
+* Maintaining confidentiality: Sharing information about a respondent with others for purposes other than research is unethical. You need to ensure that after the information has been collected, the source cannot be known. It is unethical to identify an individual's responses.
+
+Ethical issues relating to the researcher:
+* Avoiding bias.
+* Provision or deprivation of a treatment.
+* Using inappropriate research methodology.
+* Incorrect reporting.
+* Inappropriate use of the information.`
       },
       {
         id: 5006,
         topicId: 322,
         questionText: 'Explain how the duration of research is important for research management. (2020-21)',
-        answerText: `In research management, time is a key constraint:
-* The duration of the project determines the magnitude of the research problem, meaning the researcher must select a topic that can be realistically completed within the academic term or funding cycle.
-* Time and money are directly correlated, so the duration of the study dictates personnel costs, equipment rentals, and travel budgets, making proper timeline management essential to prevent cost overruns.
-* Using tools like Gantt charts allows researchers to structure and sequence their study logically, ensuring that each phase gets adequate attention.
-* Agricultural research is heavily dependent on natural cycles, meaning the duration must be managed carefully to avoid missing critical crop planting windows and delaying the study by an entire year.`
+        answerText: `Duration of research is important for research management in the following ways:
+* Planning and Goal Setting:
+  * Helps define realistic project scope and objectives.
+  * Enables phased planning and milestone setting.
+* Budget Allocation:
+  * Affects financial planning and phased funding.
+  * Optimizes resource spending to avoid over- or under-budgeting.
+* Team and Resource Utilization:
+  * Ensures efficient allocation of researchers and staff.
+  * Dictates the use of equipment, lab spaces, and facilities.
+* Monitoring and Evaluation:
+  * Facilitates regular progress reviews and milestone checks.
+  * Ensures the project stays on track with clear timelines.
+* Impact on Outcomes:
+  * Ensures appropriate results for time-sensitive or long-term studies.
+  * Balances exploratory (long-term) and adaptive (short-term) research goals.
+  * Effective duration management optimizes resources, ensures timely results, and aligns research with stakeholder expectations.`
       }
     ]
   },
@@ -132,28 +168,27 @@ The formulation and prioritization process involves the following steps:
         id: 5007,
         topicId: 323,
         questionText: 'Enlist the steps in research process and explain the \'review of literature\' part of a research process. (2025, 2024, 2023, 2020-21, 2019-20, 2019, 2017-18)',
-        answerText: `The research process consists of the following nine sequential steps:
-1. Formulating the research problem involves identifying a subject area, raising questions, and defining the problem.
-2. Extensive literature review is conducted to acquaint oneself with the existing body of knowledge.
-3. Developing the objectives states the main goal and specific sub-objectives.
-4. Preparing the research design involves choosing the methodology, treatments, and sampling design.
-5. Collecting the data gathers information via surveys, field trials, or lab experiments.
-6. Processing and analyzing data involves editing, coding, tabulating, and performing statistical tests.
-7. Hypothesis testing uses statistical tests to draw valid conclusions.
-8. Generalization and interpretation makes inferences about the target population.
-9. Preparation of the report or thesis is the final drafting of the document.
+        answerText: `Steps in Research Process:
+1. Formulating the Research Problem
+2. Extensive Literature Review
+3. Developing the objectives
+4. Preparing the Research design including sample design.
+5. Collecting the Data
+6. Processing and analysing data
+7. Generalization and Interpretation
+8. Preparation of the Report or Thesis
 
-Reviewing the literature is an essential preliminary task integrated throughout the entire research process. It serves the following functions:
-* It brings clarity and focus to your research problem by helping you understand the subject area better and conceptualize the problem clearly.
-* It improves your methodology by telling you if others have used procedures and methods similar to the ones you are proposing.
-* It broadens your knowledge base in your research area, encouraging you to read widely and helping you to become an expert in your study.
-* It contextualizes your findings by placing them in the context of what others have found, showing what contribution you have made to the body of knowledge.
+Functions of Literature Review:
+* Bring clarity and focus to your research problem: Helps to understand the select area better and clearly/precisely define it.
+* Improve your methodology: Tells if others faced similar problems, and suggests methods which worked well.
+* Broaden your knowledge base in your research area: Helps you to become an expert in your study.
+* Contextualize your findings: Place your findings in the context of what others have found.
 
-The procedure for reviewing the literature involves the following steps:
-1. Search library catalogs and online academic databases using relevant keywords to find existing literature.
-2. Review the selected literature by reading it critically, organizing findings, and compiling bibliographical details.
-3. Develop a theoretical framework by structuring the review around established theories in the subject area.
-4. Develop a conceptual framework by mapping the specific variables and relationships that will be tested in the study.`
+Procedure for reviewing literature:
+1. Search for existing literature in your area of study.
+2. Review the selected literature.
+3. Develop a theoretical framework.
+4. Develop a conceptual framework.`
       }
     ]
   },
@@ -166,48 +201,52 @@ The procedure for reviewing the literature involves the following steps:
         id: 5008,
         topicId: 324,
         questionText: 'What is a questionnaire? Briefly explain different types of questionnaires. (2025, 2024, 2023, 2020-21, 2019-20, 2019, 2017-18)',
-        answerText: `A questionnaire is a written list of questions, the answers to which are recorded by respondents. Questionnaires are classified into three types based on the structure of the questions:
+        answerText: `Structured surveys/ interviews employ the use of a questionnaire. A questionnaire consists of a set of questions presented to a respondent for answers. The respondents read the questions, interpret what is expected and then write down the answers themselves. It is called an Interview Schedule when the researcher asks the questions (and if necessary explain them) and record the respondents reply on the interview schedule.
 
-Closed-ended or structured questionnaires include all possible answers, and respondents are asked to choose among them. They are easy to fill out, save time for respondents, and allow quick coding, tabulation, and statistical analysis. However, they restrict the depth of responses and do not allow respondents to explain their reasoning.
-
-Open-ended or unstructured questionnaires allow respondents to answer in their own words in blank spaces provided. They capture detailed qualitative information, personal opinions, and attitudes in depth. However, they are difficult to analyze, code, and quantify, and they require a literate population.
-
-Combination or mixed questionnaires contain a mix of closed-ended and open-ended questions. They capitalize on the strengths of both types by capturing quantitative trends while collecting qualitative reasoning through open-ended follow-up questions.`
+There are three basic types of questionnaire:
+* Closed-ended Questionnaire: Closed ended questions include all possible answers/prewritten response categories, and respondents are asked to choose among them. Examples include multiple choice questions, scale questions. Type of questions used to generate statistics in quantitative research.
+* Open-ended questionnaire: Open-ended questions allow respondents to answer in their own words. Questionnaire does not contain boxes to tick but instead leaves a blank section for the response to write in an answer. Open-ended questionnaires might be used to find out what people think about a service. As there are no standard answers to these questions, data analysis is more complex. Fewer questionnaires need to be distributed.
+* Combination of both: This way it is possible to find out how many people use a service and what they think of the service in the same form. Begins with a series of closed-ended questions, with boxes to tick or scales to rank, and then finish with a section of open-ended questions or more detailed response.`
       },
       {
         id: 5009,
         topicId: 324,
         questionText: 'Illustrate the procedure of preparation of a questionnaire. (2025, 2024, 2023, 2020-21, 2019-20, 2019, 2017-18)',
-        answerText: `Preparing a valid and reliable questionnaire requires a systematic procedure:
-1. First, decide which questionnaire type to use, such as closed-ended, open-ended, or combination.
-2. Second, formulate clear and simple questions using everyday language.
-3. Third, ensure that you avoid double-barreled questions that ask two things in one question.
-4. Fourth, ensure that you avoid negative, leading, or biased questions.
-5. Fifth, keep the questionnaire as short as possible and place open-ended questions at the beginning or end.
-6. Sixth, design a clean layout that respondents will enjoy answering.
-7. Seventh, pre-test the questionnaire via a pilot study to check for ambiguities and time requirements.
-
-When drafting questions, the researcher should follow these core guidelines:
-* Use clear and simple language, avoiding technical jargon and ambiguous terms.
-* Avoid double-barreled questions that ask two things in one sentence.
-* Avoid leading questions that guide the respondent to a specific answer.
-* Avoid double negatives to keep questions positive and direct.
-* Keep questions short to minimize respondent fatigue and confusion.`
+        answerText: `The procedure of preparation of a questionnaire involves the following steps:
+1. Deciding which questionnaire to use:
+   * Closed or open ended.
+   * Self or interviewer administered.
+2. Wording and structure of questions:
+   * Questions should be kept short and simple.
+   * Avoid double barreled i.e. two questions in one – ask two Qs rather than one.
+   * Avoid negative questions – which have no idea about it as it is confusing for respondent to agree or disagree.
+   * Question should not contain Prestige-Bias – may cause embarrassment or force the respondent to give false answer in order to look good (e.g. educational qualification or income).
+   * Use indirect questions for sensitive issues – in indirect questions respondents can relate their answer to other people.
+   * Using close-ended questions – try to make sure that all possible answers are covered. "Don't Know" category also needs to be added.
+   * Avoiding Leading Question – Don't lead the respondent to answer in a certain way.
+3. Length and ordering of the questions:
+   * Keep the questionnaire as short as possible.
+   * Ask easy Qs which respondents will enjoy answering.
+   * Make Qs as interesting as possible and easy to follow by varying type and length of questions.
+   * If combined questionnaire, keep open ended Qs for the end.`
       },
       {
         id: 5010,
         topicId: 324,
         questionText: 'Differentiate between primary and secondary data. (2019-20, 2019, 2017-18)',
-        answerText: `| Feature | Primary Data | Secondary Data |
-| :--- | :--- | :--- |
-| Definition | Type of data the researcher directly collects from the source for the specific purpose of the study. | Type of data that is already produced by previous researchers, organizations, or agencies. |
-| Origin | Original, fresh, and raw. | Second-hand, already processed and interpreted. |
-| Time & Cost | Highly expensive and time-consuming. | Cheap, easily accessible, and saves time. |
-| Tailored to Study | Perfectly matches the specific objectives and variables of the study. | May not fully align with the specific needs of the current research. |
-| Control | Researcher has full control over collection procedures and data quality. | No control over how the original data was gathered or checked. |
-| Examples | Field surveys, focus group discussions, direct measurements, interviews. | Census reports, scientific journals, weather records, government statistics. |
+        answerText: `Primary Data:
+* Definition: Primary data is the type of data the researcher directly collects from the source for the specific purpose of the study.
+* Originality: It is original and fresh/raw.
+* Time & Cost: Collecting and gathering of data is expensive and time-consuming.
+* Suitability: It is tailored to the specific objectives and variables of the study.
+* Precautions: Extra precautionary measures are needed to put it into consideration.
 
-Before using secondary data, a researcher must verify its reliability to ensure it comes from a credible organization, its suitability to verify that it covers the exact variables and regions required, and its adequacy to ensure it is complete and up-to-date.`
+Secondary Data:
+* Definition: Secondary data is data that is already produced by previous researchers, organizations, or agencies.
+* Originality: It is already processed and interpreted (second-hand).
+* Time & Cost: Collection and gathering of data is cheap and easily accessible.
+* Suitability: May not fully align with the specific needs of the current research.
+* Precautions: Extra precautionary measures must be put into consideration before using it (requires checking reliability, suitability, adequacy).`
       }
     ]
   },
@@ -220,45 +259,58 @@ Before using secondary data, a researcher must verify its reliability to ensure 
         id: 5011,
         topicId: 325,
         questionText: 'Distinguish between: (i) Population and sample, (ii) Sample and sampling. (2025, 2024, 2023, 2020-21, 2017-18)',
-        answerText: `The population is the entire group of individuals or items of interest in a study, whereas a sample is a representative subset of the population selected for investigation.
+        answerText: `Comparison between Population and Sample:
+* Population:
+  * Definition: The entire group of individuals or items of interest in a study is called population. It contains all members of a specified group (both animate and inanimate objects).
+  * Size Symbol: Denoted by N.
+  * Measures: Characteristics are called parameters.
+  * Symbols: Mean by \mu, standard deviation by \sigma.
+  * Collection: Complete census or complete enumeration.
+* Sample:
+  * Definition: The part of the population selected for investigation to get information about the entire population. It is a subset of the population.
+  * Size Symbol: Denoted by n.
+  * Measures: Characteristics are called statistics.
+  * Symbols: Mean by \bar{X} (or m), standard deviation by s.
+  * Collection: Sample survey.
 
-| Feature | Population | Sample |
-| :--- | :--- | :--- |
-| Definition | The entire group of individuals or items of interest. | A part of the population selected for investigation. |
-| Scope | Includes all members of a group. | Includes only selected members. |
-| Measures | Characteristics are called Parameters. | Characteristics are called Statistics. |
-| Symbols | Size is denoted by $N$, mean by $\\mu$, and standard deviation by $\\sigma$. | Size is denoted by $n$, mean by $\\bar{X}$, and standard deviation by $s$. |
-| Collection | Census or complete enumeration. | Sample Survey investigating a part. |
-| Feasibility | Often costly, time-consuming, or impossible. | Cost-effective, quick, and practical. |
-
-The sample is the physical group of units selected from the population, such as fifty specific fields harvested in a village. Sampling is the process or technique utilized in selecting that representative part of the population.`
+Comparison between Sample and Sampling:
+* Sample is a part of the population which is selected for investigation.
+* Sampling is the statistical technique or method by which one can draw the sample from the population.`
       },
       {
         id: 5012,
         topicId: 325,
         questionText: 'What does the term sampling imply? (2019-20, 2019)',
-        answerText: `The term sampling implies securing information about the universe by examining only a part of the same:
-* Sampling assumes that a well-selected sample will mirror the characteristics of the entire population, allowing researchers to generalize their findings.
-* It implies that complete enumeration is often impractical due to high costs, time, or limited manpower, and that sampling optimizes resource use.
-* In certain destructive tests where measuring a characteristic destroys the item, sampling is the only possible method of investigation.
-* It relies on probability theory and the concept of standard error to estimate how close the sample statistic is to the true population parameter.`
+        answerText: `The term sampling implies:
+* Securing information about the universe by examining only a part of the same.
+* Statistical Induction: Arriving at general conclusions about the population by observing individual cases in a sample.
+* Cost and Time Reduction: Investigating a sample is far less costly and less time consuming than complete enumeration.
+* Feasibility: In certain types of investigation (like destructive tests where items are destroyed during measurement), sampling is the only procedure that can be adopted.
+* Scope and Accuracy: Sample study has got much greater scope and is likely to have a greater element of accuracy than a complete enumeration.`
       },
       {
         id: 5013,
         topicId: 325,
         questionText: 'How can a sample size be determined? (2020-21, 2019-20, 2017-18)',
-        answerText: `Determining the appropriate sample size is a balance between precision, confidence, and resource constraints:
+        answerText: `There is no general rule to decide the sample size. It depends on individual situations. The concept of standard error provides the key in arriving at a good estimate of sample size:
+* For continuous variables, standard error of mean is calculated as:
+  SE = \sigma / \sqrt{n}
+* For binomial proportions, standard error is calculated as:
+  SE = \sqrt{p \cdot q / n}
 
-The concept of standard error provides the key in arriving at a good estimate of sample size. The standard error of the mean is calculated as $SE = \\sigma/\\sqrt{n}$ for continuous variables, and $SE = \\sqrt{pq/n}$ for proportions.
+If the population size is large, the first approximation of the sample size (usually the upper bound) is determined by the formula:
+n_0 = \frac{p \cdot q \cdot t_\alpha^2}{d^2}
 
-For a large population, the best approximation of the sample size is determined by the formula:
-\\[n_0 = \\frac{p \\cdot q}{d^2}\\]
-Where $p$ is the population proportion, $q = 1 - p$, and $d$ is the error of tolerance.
+Where:
+* p is the proportion of success in the population.
+* q = 1 - p.
+* t_\alpha is the abscissa of the normal curve that cuts off an area \alpha at the tail (representing the confidence level, e.g., 95% confidence).
+* d is the error of tolerance in estimating P (i.e., |p - P| \le d).
 
-The sample size determination relies on the following key factors:
-* Homogeneous populations require smaller samples, whereas heterogeneous populations require larger samples to ensure representation.
-* Smaller margins of error and higher precision requirements necessitate larger sample sizes.
-* Standard error of the mean is inversely proportional to the square root of the sample size, meaning that to double the precision, the sample size must be quadrupled.`
+Key factors in determining sample size:
+* Level of confidence (1 - \alpha): Higher confidence levels require larger sample sizes.
+* Error of tolerance (d): Lower errors of tolerance require larger sample sizes.
+* Homogeneity/Heterogeneity of the population: Heterogeneous populations require larger samples.`
       }
     ]
   },
@@ -271,33 +323,31 @@ The sample size determination relies on the following key factors:
         id: 5014,
         topicId: 326,
         questionText: 'Outline the classification of sampling with examples/clarification. (2025, 2024, 2023, 2019)',
-        answerText: `Probability sampling is a method where every member of the population has a known, non-zero chance of being selected, which ensures objectivity and allows for statistical generalization:
-* In simple random sampling, each unit has an equal and independent chance of selection, such as drawing numbers from a hat.
-* In stratified random sampling, the population is divided into non-overlapping strata and random samples are drawn from each stratum, ensuring all sub-groups are represented.
-* In systematic sampling, the population is arranged in an order and units are selected at a constant interval from a random starting point.
-* In multi-stage sampling, the selection is done in sequential stages to reduce field costs in geographically dispersed populations.
-* In sequential sampling, samples are drawn in a sequence and tested until a decision to accept or reject is made, which is widely used in quality control.
+        answerText: `There are primarily two ways of choosing a sample: probability sampling and purposive sampling.
 
-Non-probability or purposive sampling is a method where the selection of samples is based on choice, convenience, or judgment, rather than chance:
-* In convenience sampling, the researcher selects the most accessible population members, such as interviewing farmers visiting a local market.
-* In judgment or purposive sampling, the researcher uses their expertise to select typical or representative cases.
-* In quota sampling, the researcher interviews a prescribed number of people in specific demographic categories.`
+1. Probability Sampling (usually called random sampling): every member of the universe has a known, non-zero chance of being selected, which ensures objectivity. Types include:
+* Random Sampling: Every item of the universe has an equal chance of being chosen and only the chance determines the items to be included. Selection is done using random numbers.
+* Stratified Sampling: The population is first divided into sub-populations called strata to achieve a greater degree of homogeneity within each stratum. Random samples are then drawn from each stratum.
+* Systematic Sampling: The universe is initially arranged in some order (geographical, alphabetical, etc.) and sample units are selected at a constant sampling interval after a random starting point.
+* Multi-stage sampling: Involves the selection of the sample by stages. The population is divided into primary sampling units, and each primary unit is sub-divided into secondary sampling units. Primary units are selected at random, and from those, secondary units are selected again at random.
+* Sequential Sampling: A special type of sampling having wide application in quality control where the sample size is not determined in advance. Samples are drawn in a sequence and tested until a decision is made.
+
+2. Purposive Sampling (also called judgment sampling): the selection of samples is done by choice or judgment of the investigator and not by chance. The investigator exercises judgment to select typical or representative cases, which introduces the chance of personal bias.`
       },
       {
         id: 5015,
         topicId: 326,
         questionText: 'Distinguish among random, stratified, systematic, multistage, and cluster sampling / Compare multistage and cluster. (2020-21, 2019-20, 2017-18)',
-        answerText: `| Method | Definition | Key Advantage | Key Drawback | When to Use |
-| :--- | :--- | :--- | :--- | :--- |
-| Simple Random | Every unit has an equal chance of selection. | Unbiased and simple. | Requires a complete list of the population. | Homogeneous populations. |
-| Stratified | Population is divided into homogeneous strata; random samples drawn from each. | Highly precise; ensures representation of sub-groups. | Strata must be clearly defined. | Heterogeneous populations. |
-| Systematic | Select every $k$-th unit from an ordered list. | Easy to execute in the field. | Prone to bias if the list has periodic patterns. | Ordered populations (e.g., lists, houses). |
-| Multi-stage | Selection done in progressive stages. | Highly practical for large, nationwide surveys. | Compounding sampling errors at each stage. | Spatially dispersed populations. |
-| Cluster | Population divided into heterogeneous groups; whole clusters selected. | Lowers field cost and travel time. | High sampling error if clusters are too homogeneous. | Geographically grouped units (e.g., blocks). |
+        answerText: `Distinction among Sampling Methods:
+* Simple Random Sampling: Units are selected individually from a homogeneous population by using random numbers, where each unit has an equal and independent chance of selection.
+* Stratified Sampling: The population is divided into homogeneous groups called strata. Random samples are drawn from every stratum. The purpose is to achieve homogeneity within strata and heterogeneity between strata.
+* Cluster Sampling: The population is divided into groups called clusters. The clusters are treated as sampling units. A random sample of clusters is drawn, and all units in the selected clusters are studied. The purpose of clustering is opposite to stratified sampling: to achieve minimum homogeneity (maximum heterogeneity) within each cluster and maximum homogeneity (minimum heterogeneity) between clusters.
+* Systematic Sampling: The universe is arranged in some order (alphabetical, geographical, etc.) and sample units are selected at a constant sampling interval from a random starting point.
+* Multi-stage Sampling: The sample is selected in sequential stages. The population is divided into primary units, which are sub-divided into secondary units, and so on. Samples are drawn randomly at each stage.
 
-Stratified sampling divides the population so that there is homogeneity within each stratum and heterogeneity between strata, and samples are taken from every stratum. Cluster sampling divides the population so that there is heterogeneity within each cluster and homogeneity between clusters, selecting only a few clusters and studying all units in them.
-
-Cluster sampling is a single-stage design where the population is divided into clusters, a random sample of clusters is drawn, and all elements in the selected clusters are studied. Multi-stage sampling is a progressive design where clusters are selected first, and then secondary units are randomly sampled within those clusters rather than studying all elements.`
+Comparison between Multistage and Cluster Sampling:
+* Cluster sampling is a single-stage design where the population is divided into clusters, a sample of clusters is drawn, and all elements in the selected clusters are studied.
+* Multi-stage sampling (or sub-sampling) is a design where the population is divided into primary units, a sample of primary units is drawn, and then a sample of secondary units is drawn from within the selected primary units, rather than studying all elements.`
       }
     ]
   },
@@ -333,17 +383,37 @@ The implementation procedure involves the following steps:
         id: 5017,
         topicId: 328,
         questionText: 'Discuss the different types of errors (including sampling and experimental errors). (2023, 2020-21, 2019-20, 2019, 2017-18)',
-        answerText: `Sampling error is the difference between the estimated value from the sample and the true value of the characteristics from a complete count. It can be reduced by increasing the sample size or using efficient probability sampling designs like stratified sampling.
+        answerText: `The different types of errors in research and experimentation are:
 
-Non-sampling error represents errors that arise in a survey that do not arise from sampling itself. It is caused by faulty questionnaire wording, interviewer bias, non-response, or coding mistakes. It can be minimized through careful questionnaire pre-testing, researcher training, and double-checking entries.
+1. Sampling Error:
+* Definition: Sampling error is the difference between the estimated value and the true values of the characteristics, that is difference between sample results and the result of a complete count.
+* Cause: Introduced by the sampling itself, as sample survey results are only estimates and not true values.
 
-Experimental error is a measure of the variation among experimental plots treated alike, representing the variation not explained by the treatments. It is caused by soil heterogeneity, genetic differences in crop seeds, or minor variations in agronomic practices. It can be reduced by replication, randomization, and local control.
+2. Non-sampling Error:
+* Definition: The error not arising out of sampling.
+* Cause: Arises both in sample surveys and complete censuses due to human errors, faulty questionnaire design, data entry mistakes, etc.
 
-Systematic errors are consistent, repeatable errors due to flaws in design, equipment calibration, or procedures. An example is using a weighing scale that always reads ten grams too high. They can be corrected with regular calibration of lab instruments and refining experimental procedures.
+3. Experimental Error:
+* Definition: Variation among experimental units that are treated alike.
+* Cause: It is a measure of the variation not explained by the treatments.
 
-Random errors are unpredictable fluctuations in measurements due to uncontrollable environmental factors. An example is wind gusts affecting a sensitive analytical balance. They can be reduced by taking multiple measurements and averaging the results.
+4. Systematic Errors:
+* Definition: Consistent, repeatable errors due to flaws in design, equipment, or procedures.
+* Causes: Instrument calibration issues, faulty equipment, environmental factors, procedural bias.
+* Examples: Ruler with a worn-off starting point, improperly zeroed balance.
+* Correction: Use calibrated instruments, refine procedures, conduct control tests.
 
-Human errors are outright mistakes made by the experimenter, such as misreading a thermometer by recording thirty-five degrees as fifty-three degrees, or calculation errors. They can be minimized by careful execution, double-checking data records, and following strict protocols.`
+5. Random Errors:
+* Definition: Unpredictable variations due to uncontrollable factors.
+* Causes: Environmental fluctuations, human limitations, instrument sensitivity.
+* Examples: Slight differences in measuring plant height, timing variations with a stopwatch.
+* Correction: Take multiple measurements and average results.
+
+6. Human Errors:
+* Definition: Mistakes made by the experimenter.
+* Causes: Misreading instruments, incorrect procedures, calculation mistakes.
+* Examples: Recording 35°C as 53°C, parallax error while measuring volume.
+* Correction: Double-check data, follow standardized procedures, improve training.`
       }
     ]
   },
@@ -356,66 +426,81 @@ Human errors are outright mistakes made by the experimenter, such as misreading 
         id: 5018,
         topicId: 329,
         questionText: 'Explain the term \'Scientific report\'. What should be the characteristics of the \'Objective\' section of a scientific report? (2025, 2024, 2023, 2020-21, 2019-20, 2017-18)',
-        answerText: `Scientific reports can vary in length and format, ranging from a form to fill in and submit before leaving the lab, to a formal written report, all usually following a similar basic structure of Title, Introduction, Methods, Results, Discussion, Conclusion, and References.
+        answerText: `Scientific Report: A scientific report is a clear and organized document that explains how a scientific investigation or experiment was done, what the results were, and what conclusions were made. It helps share findings with others in a simple and unbiased way. Scientific reports can vary in length and format, ranging from a form to fill in and submit before leaving the lab, to a formal written report, all usually following a similar basic structure.
 
-The objectives describe the goals of the study. A well-written objectives section must have the following characteristics:
-* It must be clear, complete, and specific, stating exactly what the study aims to achieve.
-* It must be action-oriented, beginning with action verbs such as to evaluate, to determine, to ascertain, to compare, or to measure.
-* It must identify the main goals of the study.
-* It must identify the variables to be correlated and the expected direction of their relationship if applicable.`
+Characteristics of the Objective Section of a Scientific Report:
+* Clear and Specific: States the main purpose and specific goals of the study, avoiding ambiguity.
+* Concise: Briefly outlines what the study intends to achieve without unnecessary detail.
+* Measurable: Defines goals that can be evaluated or quantified, enabling tracking of progress and results.
+* Relevant: Directly relates to the problem or hypothesis being studied.
+* Realistic: Sets achievable and practical objectives based on available resources and time.
+* Logical Flow: Lists objectives in a logical sequence that guides the research process.
+* Action-Oriented: Uses verbs like "analyze," "determine," "identify," and "evaluate" to indicate actions.`
       },
       {
         id: 5019,
         topicId: 329,
         questionText: 'What is a scientific report? What should be the characteristics of the title of a scientific report? (2019)',
-        answerText: `A scientific report is a structured document detailing the background, design, execution, results, and discussion of a scientific inquiry.
+        answerText: `Scientific Report: A scientific report is a clear and organized document that explains how a scientific investigation or experiment was done, what the results were, and what conclusions were made. It helps share findings with others in a simple and unbiased way.
 
-The title is the first part of the report readers encounter. A good title must have the following characteristics:
-* It must be concise and as short as possible, omitting redundant phrases like "a study on" or "an investigation into".
-* It must be descriptive, clearly indicating the main subject, independent and dependent variables, and scope of the experiment.
-* It must be unambiguous, using precise words and avoiding abbreviations, chemical formulas, or technical jargon.
-* It must be informative, accurately reflecting the contents of the report and attracting the interest of target readers.
-* An example of a good title is "Effect of Nitrogen Fertilizer Rates on the Yield and Lodging Resistance of IR8 Rice".`
+Characteristics of the Title of a Scientific Report:
+* Concise and Descriptive: The title should be concise and descriptive.
+* Informative and Catchy: Try to think of an informative but catchy title.
+* Interest-Pricking: An effective title not only pricks the reader's interest, but also predisposes him/her favourably towards the proposal/report.
+* Element Inclusion on Title Page: Should include Title (including subtitle), author, institution, department, date of delivery, research mentor(s) and advisor, their institutions and email addresses.`
       },
       {
         id: 5020,
         topicId: 329,
         questionText: 'Briefly describe the essential sections of a thesis. (2025, 2024, 2020-21, 2019-20, 2019)',
-        answerText: `Preliminary pages of a thesis include the title page with the project title, author name, and date; the certificates and declaration page confirming original work; the acknowledgments page thanking supporters; the abstract summarizing the background, objectives, methods, and results; and the table of contents listing sections, tables, and figures.
-
-Main chapters consist of Chapter I: Introduction providing background, problem statement, and objectives; Chapter II: Review of Literature establishing the theoretical and conceptual framework; Chapter III: Materials and Methods detailing the experimental design, treatments, crop management, and data collection; Chapter IV: Results presenting data neutrally through tables and graphs; Chapter V: Discussion interpreting findings in light of prior literature; and Chapter VI: Summary and Conclusion drawing final conclusions and recommendations.
-
-Supplementary pages include the references or bibliography section listing all cited works in alphabetical order, and the appendices containing raw data sheets, large ANOVA tables, or sample questionnaires.`
+        answerText: `The essential sections of a thesis, in order, are:
+* Title Page: Includes the title (including subtitle), author, institution, department, date of delivery, research mentor(s) and advisor, and their institutions and email addresses.
+* Abstract: A brief summary (one or two paragraphs, approx. 400 words max) explaining why the paper is important, a summary of major results (preferably with numbers and error limits), and the major implications of the work. It has no citations and does not repeat the title.
+* Table of Contents: Lists all chapters, sections, and page numbers.
+* List of Figures and List of Tables: Lists page numbers and a short title for each figure and table, but not the whole caption.
+* Introduction: Provides background or context, states the goal of the paper (why it was written), acknowledges previous work with references, explains the scope of the work, and provides a verbal road map. It is focused on the thesis question(s) and is not a review paper.
+* Methodology (or Methods): Contains information to allow the reader to assess the believability of the results and replicate the experiment. Includes description of materials, procedure, theory, calculations, technique, equipment, calibration plots, limitations, assumptions, range of validity, and analytical/statistical methods.
+* Results: Actual statements of observations, including statistics, tables, and graphs, indicating range of variation and both positive and negative results, without interpretation. Uses S.I. units.
+* Discussion: A brief essay interpreting the results in terms of the background laid out in the introduction. Discusses spatial and temporal patterns, trends, generalizations, exceptions, likely causes/mechanisms, multiple hypotheses, agreement/disagreement with previous work, and the significance of the results.
+* Conclusions: The strongest and most important statements from the observations, summarizing new observations, interpretations, and insights, and including broader implications.
+* Recommendations: Includes remedial action to solve the problem, further research to fill in gaps, and directions for future investigations.
+* Acknowledgments: Thanks advisors, and anyone who helped technically, intellectually, or financially.
+* References: Cites all ideas, concepts, text, and data that are not the author's own, listed in alphabetical order.
+* Appendices: Includes all raw data, large tables or calculations (more than 1-2 pages), key articles, list of additional resource materials, or list of equipment/complicated procedures.`
       },
       {
         id: 5021,
         topicId: 329,
         questionText: 'Distinguish between a scientific paper and a review paper. (2020-21)',
-        answerText: `| Feature | Scientific Paper (Primary Research) | Review Paper (Secondary Research) |
-| :--- | :--- | :--- |
-| Definition | A paper reporting original, first-hand experimental data collected by the authors. | A paper synthesizing and summarizing existing research published by others. |
-| Structure | Follows the strict IMRAD format (Introduction, Methods, Results, and Discussion). | Organized around thematic headings; does not contain Methods or Results sections. |
-| Objective | To present new findings, test a specific hypothesis, and add new data to the field. | To survey the current state of knowledge, identify research gaps, and suggest future directions. |
-| Data Source | Primary data from lab, field, or survey work. | Secondary data from previously published papers. |
-| Reference Count | Moderate (typically 20-40 citations). | Extensive (often 50-100+ citations). |`
+        answerText: `Comparison between a Scientific Paper and a Review Paper:
+* Scientific Paper:
+  * Definition: A paper reporting original work and interpretation/analysis by the author, presenting new, first-hand experimental or field data to address a specific research question.
+  * Data Source: Primary data from laboratory, field, or survey work.
+  * Structure: Follows the strict IMRAD format (Introduction, Methods, Results, and Discussion).
+* Review Paper:
+  * Definition: A paper that does not report new original experimental work, but instead synthesizes, summarizes, and analyzes the existing body of published literature on a subject.
+  * Data Source: Secondary data from previously published papers.
+  * Structure: Organized around thematic headings.`
       },
       {
         id: 5022,
         topicId: 329,
         questionText: 'Mention the general principles of writing a scientific report or the \'introduction\' section of a thesis/scientific report. (2019-20, 2019, 2017-18)',
-        answerText: `The general principles of writing a scientific report include:
-* Use simple, direct, and unambiguous language to ensure clarity and precision.
-* Maintain a neutral, factual, and unbiased tone to preserve objectivity.
-* Keep sentences short and active, omitting unnecessary words for conciseness.
-* Ensure smooth transitions between sentences and paragraphs to maintain logical flow.
-* Always attribute information to its original source using standardized citations.
+        answerText: `General Principles of Technical Writing (Scientific Report):
+* Writing is an acquired skill that must be learnt by doing it. Practice is essential.
+* Transference of ideas and information: The aim in most scientific reports or technical writing must be to transfer ideas and information to other people (effective communication).
+* Message must be communicated effectively: It must be much more than just scientifically accurate and grammatically correct. It must be presented in a manner that commands attention, is quickly informative, and is easily digested by the readers.
+* Writer's attention must be firmly fixed on the reader (audience analysis: what do they know, what do they need to know, what are their attitudes, and physical contexts).
+* Follow a structured plan: Break down writing into separate stages (identifying aim, reader analysis, making a plan, discussing with others, drafting the text, forgetting the draft, revising and editing).
+* Editing in three areas: Organization of subject matter, Composition (paragraph, sentence, and word level errors), and Mechanics of format.
 
-The introduction section should follow a funnel structure moving from broad context to specific details:
-* It begins with a broad overview of the subject area to establish its context and real-world importance.
-* It briefly explains the underlying scientific theories, laws, equations, or theorems.
-* It clearly identifies the specific gap in knowledge or problem that the study aims to address.
-* It justifies why this study is necessary and who will benefit from its findings.
-* It concludes by clearly stating the research questions and specific objectives of the study.`
+General Principles of Writing the Introduction Section:
+* States the problem and the purpose of the study, providing the necessary background or context.
+* States the goal of the paper (why the study was undertaken or why it was written).
+* Provides proper acknowledgment of the previous work (literature review) on which you are building.
+* Explains the scope of the work (what will and will not be included).
+* Provides a verbal road map (table of contents guides the reader).
+* Focused on the thesis question(s) (not a summary of everything on the subject).`
       }
     ]
   },
@@ -428,21 +513,22 @@ The introduction section should follow a funnel structure moving from broad cont
         id: 5023,
         topicId: 330,
         questionText: 'Prepare a format of a research proposal for hunting fund from the Research and Innovation Centre of Khulna University. (2025, 2024, 2023)',
-        answerText: `A standard research proposal submitted for funding to the Research and Innovation Centre, Khulna University follows this structured format:
+        answerText: `A research proposal submitted for funding to the Research and Innovation Centre, Khulna University follows this structured format:
 
-1. Project Title: This must be concise, descriptive, and informative, such as "Assessment of the Impact of Urbanization on the Biodiversity of the Sundarbans Ecosystem".
-2. Investigator Details: This lists the names, designations, departments, emails, and contact numbers of the Principal Investigator and Co-Investigators.
-3. Abstract: A summary of two hundred to three hundred words outlining the background, objectives, methodology, and expected outcomes of the project.
-4. Background and Rationale: This contains the background context, problem statement, and the practical or theoretical significance of the study.
-5. Objectives: This states the overall main goal along with two to four clear, measurable specific targets beginning with action verbs.
-6. Research Questions: This outlines the key questions that the project seeks to answer.
-7. Methodology: This details the study design, variables, data collection tools, sampling locations, and statistical analysis plans.
-8. Timeline: A tabulated activity schedule by month showing the expected progress of literature review, fieldwork, data processing, and report writing.
-9. Budget and Justification: An itemized expense table in Bangladeshi Taka detailing personnel, equipment, travel, software, and miscellaneous costs.
-10. Expected Outcomes: This describes the key deliverables such as final reports, digital maps, or policy briefs.
-11. Ethical Considerations: This outlines the ethical approvals, informed consent, and mitigation of environmental impact.
-12. References: A list of cited literature using standard academic styles like APA.
-13. Declaration: Signatures of the investigators certifying the validity of the proposal and proper use of funds.`
+1. Project Title: Clear and descriptive, indicating the main subject (e.g., "Assessment of apiculture techniques for increasing yield of mustard production").
+2. Investigator Details: Names, designations, departments, emails, and contact numbers of Principal Investigator(s) and Co-Investigator(s).
+3. Abstract: A summary (one or two paragraphs, 200-300 words max) outlining the background, objectives, methodology, and expected outcomes.
+4. Background and Rationale: Problem statement, background context, and justification for the proposed study.
+5. Objectives: List of main objectives and sub-objectives, stated clearly, measurably, and action-oriented.
+6. Research Questions: Key questions that the project seeks to answer.
+7. Literature Review: Survey of existing literature to establish context and justify study.
+8. Methodology: Detailed study design, data collection procedures, variables, sampling methods, and analytical techniques.
+9. Plan (Time Frame and Schedule of Activities): Tabulated schedule by month using a Gantt chart.
+10. Budget and Justification: Itemized budget plan covering categories like personnel, travel, rentals, materials, special equipment, etc., with justification.
+11. Expected Outcomes: List of key deliverables (reports, maps, etc.).
+12. Ethical Considerations: Permissions, informed consent, minimizing environmental impact.
+13. References: Standardized citation list.
+14. Declaration: affirmation statement of accuracy and signatures of PIs and Co-Is.`
       }
     ]
   },
@@ -455,14 +541,12 @@ The introduction section should follow a funnel structure moving from broad cont
         id: 5024,
         topicId: 331,
         questionText: 'How can you make inference from your research results? (2017-18)',
-        answerText: `Making scientific inference involves drawing logical, general conclusions from raw experimental or survey data. It is done through the following steps:
-
-1. Run statistical analyses (e.g., ANOVA, t-tests) to test the null hypothesis.
-2. Compare calculated values with tabulated critical values at a specific significance level (usually 5% or 1%) to reject the null hypothesis if calculated values are greater.
-3. Extrapolate findings from the representative sample to the wider target population using standard errors and confidence intervals to define precision.
-4. Relate the results back to the theoretical and conceptual frameworks to explain the biological, physiological, or socio-economic mechanisms.
-5. Compare the findings with existing literature to discuss whether they confirm, contradict, or extend prior studies, combining quantitative data with qualitative observations.
-6. Identify the boundary conditions of the inference, such as specific soil types or climatic zones, and state any limitations or potential sources of error in the experiment.`
+        answerText: `Drawing inferences from research results is achieved by:
+* Physical separation into different sections or paragraphs (separating observations/results from interpretations/discussion).
+* Quarantine observations from interpretations: Make it crystal clear which statements are observations and which are interpretations.
+* Don't overlay interpretation on top of data in figures.
+* Careful use of phrases such as "We infer that..." or "I infer...".
+* Don't worry if "results" seem short. It is easier for readers to absorb, avoids frequent shifts of mental mode, and ensures work endures despite shifting paradigms.`
       }
     ]
   }
