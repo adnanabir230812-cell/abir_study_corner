@@ -367,12 +367,18 @@ Red Light (660nm)  ===>  Pfr (Flowering Promoter)  ===>  Florigen  ===>  Floweri
   * **Water Conservation (AWD & Hydrogels):** Implementing Alternate Wetting and Drying (AWD) in rice to conserve water resources, and applying hydrogels in the soil to hold moisture and release it gradually during drought periods.
   * **Developing Heat-Resilient Varieties:** Cultivating crop cultivars that are breeding-selected for heat tolerance (e.g. high heat shock protein expression).`,
 
-  "what is temperature": `### Definition
+  "what is temperature": `### Definition of Temperature
 **Temperature** is the degree of hotness or coldness of the atmosphere, measured on a defined scale (e.g., Celsius, Fahrenheit). It is an expression of kinetic energy.
 
-### Beneficial Effects of Wind
+### Beneficial Effects of Wind on Crop Production
 * **Gas Exchange and Mixing:** Wind circulates the air within the crop canopy, preventing localized depletion of carbon dioxide ($CO_2$), which enhances the rate of photosynthesis.
-* **Pollination:** Facilitates the pollination of wind-pollinated (anemophilous) crops such as maize, wheat, and gases.
+* **Pollination:** Facilitates the pollination of wind-pollinated (anemophilous) crops such as maize, wheat, and grasses.
+* **Cooling Effect:** Air movement removes sensible heat and increases transpiration, cooling the leaf surface and protecting plants from heat stress.
+* **Drying Foliage:** Dries wet leaves after rain or dew, which reduces the humidity around the canopy and suppresses fungal spore germination.`,
+
+  "beneficial effects of wind": `### Beneficial Effects of Wind on Crop Production
+* **Gas Exchange and Mixing:** Wind circulates the air within the crop canopy, preventing localized depletion of carbon dioxide ($CO_2$), which enhances the rate of photosynthesis.
+* **Pollination:** Facilitates the pollination of wind-pollinated (anemophilous) crops such as maize, wheat, and grasses.
 * **Cooling Effect:** Air movement removes sensible heat and increases transpiration, cooling the leaf surface and protecting plants from heat stress.
 * **Drying Foliage:** Dries wet leaves after rain or dew, which reduces the humidity around the canopy and suppresses fungal spore germination.`,
 
@@ -429,6 +435,41 @@ Red Light (660nm)  ===>  Pfr (Flowering Promoter)  ===>  Florigen  ===>  Floweri
 | **Definition** | The light intensity at which the rate of photosynthesis equals respiration. | The light intensity beyond which further increases in light do not increase photosynthesis. |
 | **Net Carbon Exchange** | Zero net exchange of carbon dioxide ($CO_2$). | Maximum net carbon assimilation occurs. |
 | **Plant Growth** | Growth stops (dry matter accumulation is zero). | Plant growth is maximized. |`,
+
+  "cardinal temperature and ecological classes": `### Cardinal Temperatures
+**Cardinal Temperatures** are the three critical temperature points that define the limits of growth and physiological processes of a plant:
+1. *Minimum Temperature:* The lowest temperature at which growth/physiological activity can occur.
+2. *Optimum Temperature:* The temperature at which the rate of growth/activity is highest.
+3. *Maximum Temperature:* The highest temperature beyond which activity stops completely.
+
+### Ecological Classification of Plants based on Temperature Requirements
+According to Paunkias, plants are ecologically classified into four groups based on their temperature requirements:
+1. **Megatherms:** Plants adapted to continuously high temperatures and tropical habitats (e.g., date palm, coconut, banana).
+2. **Mesotherms:** Plants adapted to moderate temperatures, alternating warm and cold seasons (e.g., wheat, barley, mustard, potato).
+3. **Microtherms:** Plants adapted to continuously low temperatures and cold temperate climates (e.g., apple, peach, plum).
+4. **Hekistotherms:** Plants adapted to extreme cold and alpine regions where temperatures remain very low throughout the year (e.g., arctic mosses, lichens, alpine shrubs).`,
+
+  "effects of light and photoperiodic classification": `### Effects of Light on Plants
+* **Photosynthesis:** Light is the primary energy source for dry matter accumulation.
+* **Stomatal Action:** Light stimulates guard cells (via potassium ion accumulation) to open stomata, facilitating gas exchange.
+* **Transpiration:** Solar radiation increases leaf temperature and drives transpiration.
+* **Plastid Development:** Light is essential for chlorophyll and chloroplast development.
+* **Hormone Regulation:** Light regulates the synthesis of growth regulators and phytohormones.
+* **Flowering (Photoperiodism):** Day length acts as a signal for flowering initiation.
+
+### Short-Day and Long-Day Plants
+* **Short-Day Plants (SDPs):** Flower only when day length is shorter than a critical duration (e.g., Aman rice, soybean). They require uninterrupted dark periods.
+* **Long-Day Plants (LDPs):** Flower only when day length exceeds a critical duration (e.g., wheat, spinach). They require long photoperiods.
+
+### Schematic Diagram of Flowering Mechanism
+\`\`\`
+Short-Day Plant (SDP) Mechanism:
+Red Light (660nm)  ===>  Pfr (Flowering Inhibitor)
+Far-Red (730nm) / Dark ===>  Pr  ===>  Florigen  ===>  Flowering (SDP)
+
+Long-Day Plant (LDP) Mechanism:
+Red Light (660nm)  ===>  Pfr (Flowering Promoter)  ===>  Florigen  ===>  Flowering (LDP)
+\`\`\``,
 
   // Topic 205: Wind & Humidity
   "protecting their crops from strong wind": `To protect crops from the physical and physiological damages of strong winds, I suggest the following measures:
@@ -905,7 +946,7 @@ The carbon cycle describes the movement of carbon through different reservoirs:
 
 // Route a question to the best match key in solvedAnswers
 function getSolvedAnswer(q) {
-  const text = q.text.toLowerCase();
+  const text = q.text.toLowerCase().replace(/₂/g, '2').replace(/n fixation/g, 'nitrogen fixation').replace(/n2 fixation/g, 'nitrogen fixation').replace(/bio-diversity/g, 'biodiversity');
   
   if (text.includes("scope and application") || text.includes("application of crop ecology")) {
     return solvedAnswers["crop ecology scope"];
@@ -946,6 +987,9 @@ function getSolvedAnswer(q) {
   if (text.includes("intensity and duration") || text.includes("light intensity and duration")) {
     return solvedAnswers["intensity and duration"];
   }
+  if (text.includes("effects of light on plants") || (text.includes("short day plants") && text.includes("long day plants") && text.includes("sketch"))) {
+    return solvedAnswers["effects of light and photoperiodic classification"];
+  }
   if (text.includes("boro season") || text.includes("br3") || text.includes("light intensity") || text.includes("photoperiodic requirement")) {
     // Check specific sub-questions:
     if (text.includes("panicle initiation")) {
@@ -977,6 +1021,9 @@ function getSolvedAnswer(q) {
   if (text.includes("temperature is increasing progressively")) {
     return solvedAnswers["atmospheric temperature is increasing progressively"];
   }
+  if (text.includes("protective measures") && text.includes("high temperature")) {
+    return solvedAnswers["atmospheric temperature is increasing progressively"];
+  }
   if (text.includes("what is temperature")) {
     return solvedAnswers["what is temperature"];
   }
@@ -993,6 +1040,9 @@ function getSolvedAnswer(q) {
     return solvedAnswers["thermoperiodism"];
   }
   if (text.includes("cardinal temperature")) {
+    if (text.includes("ecological classes") || text.includes("ecological") || text.includes("classes")) {
+      return solvedAnswers["cardinal temperature and ecological classes"];
+    }
     return solvedAnswers["cardinal temperature"];
   }
   if (text.includes("strong wind") || text.includes("strong winds")) {
@@ -1006,6 +1056,9 @@ function getSolvedAnswer(q) {
   }
   if (text.includes("effects of strong wind on crops")) {
     return solvedAnswers["effects of strong wind on crops"];
+  }
+  if (text.includes("beneficial effects of wind")) {
+    return solvedAnswers["beneficial effects of wind"];
   }
   if (text.includes("humidity")) {
     return solvedAnswers["transpiration rate"];
@@ -1025,12 +1078,12 @@ function getSolvedAnswer(q) {
   if (text.includes("twin-laws")) {
     return solvedAnswers["twin-laws"];
   }
-  if (text.includes("vertical structure") || text.includes("layers of the atmosphere")) {
+  if (text.includes("vertical structure") || text.includes("layers of the atmosphere") || text.includes("atmospheric layers")) {
     return solvedAnswers["vertical structure of atmosphere"];
   }
-  if (text.includes("climate change") || text.includes("climate variation")) {
+  if (text.includes("climate change") || text.includes("climate variation") || text.includes("climate is changing")) {
     if (text.includes("variation")) return solvedAnswers["climate change and climate variation"];
-    if (text.includes("evidence")) return solvedAnswers["changing day by day"];
+    if (text.includes("evidence") || text.includes("changing day by day")) return solvedAnswers["changing day by day"];
     return solvedAnswers["coastal agriculture of bangladesh"];
   }
   if (text.includes("climate smart") || text.includes("csa")) {
@@ -1066,6 +1119,9 @@ function getSolvedAnswer(q) {
     if (text.includes("phosphorus")) return solvedAnswers["phosphorus cycle"];
     if (text.includes("nitrogen fixation") || text.includes("n2")) return solvedAnswers["nitrogen fixation mechanisms in rhizosphere"];
     return solvedAnswers["biogeochemical cycle has great role"];
+  }
+  if (text.includes("nitrogen fixation")) {
+    return solvedAnswers["nitrogen fixation mechanisms in rhizosphere"];
   }
   if (text.includes("n-cycle")) {
     return solvedAnswers["n-cycle"];
