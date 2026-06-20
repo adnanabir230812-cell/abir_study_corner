@@ -56,25 +56,23 @@ Exploratory research is undertaken to explore an area where little is known or t
 1. Pure/ Fundamental/ Strategic research
 2. Applied/ Adaptive research
 
-Pure (Fundamental) research involves developing and testing theories and hypotheses that are intellectually challenging to the researcher but may or may not have practical application at the present time or in the future. The knowledge produced through pure research is sought in order to add to the existing body of research methods.
+Comparison of Fundamental and Applied Research:
 
-Applied research is done to solve specific, practical questions; for policy formulation, administration and understanding of a phenomenon. It can be explanatory, but is usually descriptive. It is almost always done on the basis of basic research. Applied research can be carried out by academic or industrial institutions.
+| Feature | Pure / Fundamental Research | Applied Research |
+| :--- | :--- | :--- |
+| Definition | Involves developing and testing theories and hypotheses that are intellectually challenging to the researcher. | Done to solve specific, practical questions; for policy formulation, administration and understanding of a phenomenon. |
+| Application | May or may not have practical application at the present time or in the future. | Has direct practical application to solve specific, practical questions. |
+| Objective / Output | Sought in order to add to the existing body of research methods. | Can be explanatory, but is usually descriptive. |
+| Foundation | Driven by intellectual challenge. | Almost always done on the basis of basic (fundamental) research. |
+| Execution | Carried out by academic or industrial institutions. | Carried out by academic or industrial institutions, often funded by industrial partners. |
 
-Comparison between Fundamental and Applied Research:
-* Fundamental (Pure) Research:
-  * Core Goal: Developing and testing theories and hypotheses that are intellectually challenging.
-  * Application: May or may not have practical application at the present time or in the future.
-  * Output: Adds to the existing body of research methods and scientific knowledge.
-* Applied Research:
-  * Core Goal: Done to solve specific, practical questions.
-  * Application: Used for policy formulation, administration and understanding of a phenomenon.
-  * Foundation: Almost always done on the basis of basic (fundamental) research.
+Comparison of Strategic and Adaptive Research:
 
-Comparison between Strategic and Adaptive Research:
-* Strategic Research:
-  * Designed to address a major, widespread problem requiring new scientific understanding or tools. It bridges basic and applied research.
-* Adaptive Research:
-  * Aimed at adjusting and testing existing technologies or recommendations under local environmental, soil, and socio-economic conditions to fit farmers' needs (short-term goals).`
+| Feature | Pure / Strategic Research | Applied / Adaptive Research |
+| :--- | :--- | :--- |
+| Core Goal | Designed to address a major, widespread problem requiring new scientific understanding or tools. Bridges basic and applied research. | Aimed at adjusting and testing existing technologies or recommendations under local conditions. |
+| Time Horizon | Long-term / Exploratory goals. | Short-term / Adaptive goals to fit farmers' needs. |
+| Focus | Focuses on developing regional frameworks and tools. | Focuses on adjusting recommendations under local environmental, soil, and socio-economic conditions.`
       }
     ]
   },
@@ -234,19 +232,15 @@ There are three basic types of questionnaire:
         id: 5010,
         topicId: 324,
         questionText: 'Differentiate between primary and secondary data. (2019-20, 2019, 2017-18)',
-        answerText: `Primary Data:
-* Definition: Primary data is the type of data the researcher directly collects from the source for the specific purpose of the study.
-* Originality: It is original and fresh/raw.
-* Time & Cost: Collecting and gathering of data is expensive and time-consuming.
-* Suitability: It is tailored to the specific objectives and variables of the study.
-* Precautions: Extra precautionary measures are needed to put it into consideration.
+        answerText: `Comparison of Primary and Secondary Data:
 
-Secondary Data:
-* Definition: Secondary data is data that is already produced by previous researchers, organizations, or agencies.
-* Originality: It is already processed and interpreted (second-hand).
-* Time & Cost: Collection and gathering of data is cheap and easily accessible.
-* Suitability: May not fully align with the specific needs of the current research.
-* Precautions: Extra precautionary measures must be put into consideration before using it (requires checking reliability, suitability, adequacy).`
+| Feature | Primary Data | Secondary Data |
+| :--- | :--- | :--- |
+| Definition | Type of data the researcher directly collects from the source for the specific purpose of the study. | Type of data that is already produced by previous researchers, organizations, or agencies. |
+| Originality | Original, fresh, and raw. | Not original, already processed and interpreted (second-hand). |
+| Time & Cost | Collecting and gathering of data is expensive and time-consuming. | Collection and gathering of data is cheap and easily accessible. |
+| Scope & Detail | Gives detailed information. | Relates to the past, requires checking reliability, suitability, and adequacy. |
+| Collection Method | Requires active participation to collect and gather data. | Requires searching and compiling existing records. |`
       }
     ]
   },
@@ -259,23 +253,24 @@ Secondary Data:
         id: 5011,
         topicId: 325,
         questionText: 'Distinguish between: (i) Population and sample, (ii) Sample and sampling. (2025, 2024, 2023, 2020-21, 2017-18)',
-        answerText: `Comparison between Population and Sample:
-* Population:
-  * Definition: The entire group of individuals or items of interest in a study is called population. It contains all members of a specified group (both animate and inanimate objects).
-  * Size Symbol: Denoted by N.
-  * Measures: Characteristics are called parameters.
-  * Symbols: Mean by \mu, standard deviation by \sigma.
-  * Collection: Complete census or complete enumeration.
-* Sample:
-  * Definition: The part of the population selected for investigation to get information about the entire population. It is a subset of the population.
-  * Size Symbol: Denoted by n.
-  * Measures: Characteristics are called statistics.
-  * Symbols: Mean by \bar{X} (or m), standard deviation by s.
-  * Collection: Sample survey.
+        answerText: `Comparison of Population and Sample:
 
-Comparison between Sample and Sampling:
-* Sample is a part of the population which is selected for investigation.
-* Sampling is the statistical technique or method by which one can draw the sample from the population.`
+| Feature | Population | Sample |
+| :--- | :--- | :--- |
+| Definition | The entire group of individuals or items of interest in a study (both animate and inanimate). | A part of the population selected for investigation. |
+| Scope | Contains all members of a specified group. | It is a subset that represents the entire population. |
+| Characteristics | To know the unknown of population, it is called parameter. | To know the statistics of sample, it is called statistics. |
+| Accuracy | Census or complete census is done. | Survey done on sample is less precise but feasible. |
+| Errors | Has no sampling error. | Sampling error may exist. |
+| Symbols | Size = N, Mean = \\mu, SD = \\sigma. | Size = n, Mean = \\bar{X} (or m), SD = s. |
+| Data Collection | Collected by complete enumeration (census). | Collected by sampling. |
+
+Comparison of Sample and Sampling:
+
+| Concept | Definition | Role |
+| :--- | :--- | :--- |
+| Sample | A part of the population which is selected for investigation. | Represents the target population. |
+| Sampling | The statistical technique or method by which one can draw the sample from the population. | The process utilized in selecting a representative part. |`
       },
       {
         id: 5012,
@@ -338,16 +333,23 @@ Key factors in determining sample size:
         id: 5015,
         topicId: 326,
         questionText: 'Distinguish among random, stratified, systematic, multistage, and cluster sampling / Compare multistage and cluster. (2020-21, 2019-20, 2017-18)',
-        answerText: `Distinction among Sampling Methods:
-* Simple Random Sampling: Units are selected individually from a homogeneous population by using random numbers, where each unit has an equal and independent chance of selection.
-* Stratified Sampling: The population is divided into homogeneous groups called strata. Random samples are drawn from every stratum. The purpose is to achieve homogeneity within strata and heterogeneity between strata.
-* Cluster Sampling: The population is divided into groups called clusters. The clusters are treated as sampling units. A random sample of clusters is drawn, and all units in the selected clusters are studied. The purpose of clustering is opposite to stratified sampling: to achieve minimum homogeneity (maximum heterogeneity) within each cluster and maximum homogeneity (minimum heterogeneity) between clusters.
-* Systematic Sampling: The universe is arranged in some order (alphabetical, geographical, etc.) and sample units are selected at a constant sampling interval from a random starting point.
-* Multi-stage Sampling: The sample is selected in sequential stages. The population is divided into primary units, which are sub-divided into secondary units, and so on. Samples are drawn randomly at each stage.
+        answerText: `Comparison of Sampling Methods:
 
-Comparison between Multistage and Cluster Sampling:
-* Cluster sampling is a single-stage design where the population is divided into clusters, a sample of clusters is drawn, and all elements in the selected clusters are studied.
-* Multi-stage sampling (or sub-sampling) is a design where the population is divided into primary units, a sample of primary units is drawn, and then a sample of secondary units is drawn from within the selected primary units, rather than studying all elements.`
+| Sampling Type | Selection Method | Key Homogeneity / Heterogeneity | Advantages / Purpose |
+| :--- | :--- | :--- | :--- |
+| Random Sampling | Selected by use of random numbers where every item has an equal and independent chance of selection. | Assumes population consists of a single homogeneous group. | Simple and unbiased. |
+| Stratified Sampling | Population is divided into groups (strata) and random samples are drawn from each. | Maximum homogeneity within each stratum, maximum heterogeneity between strata. | Achieves greater degree of precision for a fixed sample size. |
+| Systematic Sampling | Universe is arranged in some order, and units are selected at a constant sampling interval. | Arrangement of population within stratum is effectively random. | Easier to draw and execute without mistake. |
+| Multi-stage Sampling | Selection is done by stages (primary units selected, then secondary units selected from them). | Spreads selection across hierarchy levels (e.g. districts, then villages). | Reduces field cost for geographically dispersed populations. |
+| Cluster Sampling | Population is divided into groups (clusters) and clusters are treated as sampling units. | Minimum homogeneity (maximum heterogeneity) within clusters, maximum homogeneity between clusters. | Reduces cost by grouping units, opposite to stratified sampling. |
+
+Comparison of Multistage and Cluster Sampling:
+
+| Feature | Cluster Sampling | Multi-stage Sampling |
+| :--- | :--- | :--- |
+| Stage Design | Single-stage design (all elements in selected clusters are studied). | Multi-stage design (sub-sampling is done from selected primary units). |
+| Selection Level | Whole clusters are selected at random. | Selected units are sub-divided into smaller sampling units (primary, secondary, tertiary). |
+| Scope | Every item in the selected clusters is investigated. | Only a random sample of secondary/tertiary units is investigated from selected primary units. |`
       }
     ]
   },
@@ -472,15 +474,14 @@ Characteristics of the Title of a Scientific Report:
         id: 5021,
         topicId: 329,
         questionText: 'Distinguish between a scientific paper and a review paper. (2020-21)',
-        answerText: `Comparison between a Scientific Paper and a Review Paper:
-* Scientific Paper:
-  * Definition: A paper reporting original work and interpretation/analysis by the author, presenting new, first-hand experimental or field data to address a specific research question.
-  * Data Source: Primary data from laboratory, field, or survey work.
-  * Structure: Follows the strict IMRAD format (Introduction, Methods, Results, and Discussion).
-* Review Paper:
-  * Definition: A paper that does not report new original experimental work, but instead synthesizes, summarizes, and analyzes the existing body of published literature on a subject.
-  * Data Source: Secondary data from previously published papers.
-  * Structure: Organized around thematic headings.`
+        answerText: `Comparison of Scientific Paper and Review Paper:
+
+| Feature | Scientific Paper | Review Paper |
+| :--- | :--- | :--- |
+| Definition | Reports original work and interpretation/analysis by the author, presenting new first-hand experimental findings. | Synthesizes, summarizes, and analyzes the existing body of published literature on a subject. |
+| Data Source | Primary data (original observations, field trial yields, measurements). | Secondary data (synthesized from previously published primary papers). |
+| Structure | Follows standard sections (Title, Abstract, Introduction, Methodology, Results, Discussion, Conclusions, References). | Organized around thematic headings; does not contain experimental Methods or Results. |
+| Research Type | Primary research. | Secondary research/literature survey. |`
       },
       {
         id: 5022,
