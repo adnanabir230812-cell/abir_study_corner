@@ -21,17 +21,15 @@ const rmSectionATopics = [
         id: 5001,
         topicId: 321,
         questionText: 'What is research? Enlist the characteristics of a good research. (2025, 2024, 2023, 2019-20, 2019, 2017-18)',
-        answerText: `Research is a structured inquiry that utilizes acceptable scientific methodology to solve problems and create new knowledge that is generally applicable. It is a habit of questioning what you do, representing a systematic examination where answers must meet certain requirements to be called research.
+        answerText: `Research is a process of collecting, analyzing and interpreting information to answer questions. But to qualify as research, the process must have certain characteristics.
 
-The primary objectives of research are to solve specific problems, generate new knowledge, validate existing knowledge, and improve operational agricultural practices by providing empirical evidence to aid in decision-making and policy formulation.
-
-To qualify as research, a process must possess the following six characteristics:
-1. In exploring causality in relation to two factors, the researcher sets up the study in a way that minimizes the effects of other external factors to establish control.
-2. The investigator must be scrupulous in ensuring that the procedures followed to find answers to questions are relevant, appropriate, and justified.
-3. The procedure adopted to undertake the investigation must follow a certain logical sequence or systematic steps.
-4. Whatever is concluded on the basis of the findings must be correct and capable of being verified by others to ensure validity and reliability.
-5. All conclusions drawn must be empirical, meaning they are based upon hard evidence collected from real-life experiences or observations.
-6. The process adopted and the procedures used must be able to withstand critical scrutiny.`
+It must, as far as possible, be:
+1. Controlled: In exploring causality in relation to two variables (factors), you set up your study in a way that minimizes the effects of other factors affecting the relationship.
+2. Rigorous: You must be scrupulous in ensuring that the procedures followed to find answers to questions are relevant, appropriate, and justified.
+3. Systematic: The procedure adopted to undertake an investigation follows a certain logical sequence or systematic steps.
+4. Valid and verifiable: Whatever is concluded on the basis of the findings must be correct and capable of being verified by others to ensure validity and reliability.
+5. Empirical: Any conclusions drawn are based upon hard evidence collected from real-life experiences or observations.
+6. Critical: The process adopted and the procedures used must be able to withstand critical scrutiny.`
       },
       {
         id: 5002,
