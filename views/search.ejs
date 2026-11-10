@@ -1,28 +1,29 @@
 <%- include('partials/header') %>
 
-<div class="mb-6 text-xs text-slate-500 dark:text-slate-400">
-  <a href="/?term=<%= locals.activeTerm || '4-1' %>" class="hover:text-slate-900 dark:hover:text-white transition-colors">
-    &larr; Back to Dashboard
+<div class="mb-6">
+  <a href="/?term=<%= locals.activeTerm || '4-1' %>" class="inline-flex items-center gap-1.5 text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors">
+    <span>&larr;</span>
+    <span>Back to Dashboard</span>
   </a>
 </div>
 
-<div class="mb-8">
-  <h1 class="text-2xl font-semibold text-slate-900 dark:text-white tracking-tight">Search Results</h1>
-  <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Showing matches for "<%= query %>"</p>
+<div class="mb-10">
+  <h1 class="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight font-display">Search Results</h1>
+  <p class="text-slate-500 dark:text-slate-400 mt-1">Showing matches for "<%= query %>"</p>
 </div>
 
 <div class="space-y-8">
   <% if (results.courses && results.courses.length > 0) { %>
     <div>
-      <h2 class="text-xs font-mono-code text-slate-400 uppercase tracking-wider mb-3">Courses (<%= results.courses.length %>)</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <h2 class="text-xs font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-4">Courses (<%= results.courses.length %>)</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <% results.courses.forEach(c => { %>
-          <a href="/courses/<%= c.id %>" class="block bg-white dark:bg-[#111217] border border-slate-200 dark:border-slate-800 rounded-lg p-4 hover:border-slate-400 transition-colors">
-            <div class="flex items-center justify-between text-xs font-mono-code text-slate-400 mb-1">
-              <span><%= c.code %></span>
-              <span>Term <%= c.term || '3-2' %></span>
+          <a href="/courses/<%= c.id %>" class="block bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-5 hover:border-indigo-500 hover:shadow-md transition-all">
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="text-xs font-mono-code font-bold px-2.5 py-0.5 rounded-lg bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400"><%= c.code %></span>
+              <span class="text-[11px] font-mono-code font-bold px-2.5 py-0.5 rounded-lg bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Term <%= c.term || '3-2' %></span>
             </div>
-            <h3 class="font-semibold text-slate-900 dark:text-white text-sm"><%= c.name %></h3>
+            <h3 class="font-bold text-slate-800 dark:text-white text-base"><%= c.name %></h3>
           </a>
         <% }) %>
       </div>
@@ -31,15 +32,15 @@
 
   <% if (results.topics && results.topics.length > 0) { %>
     <div>
-      <h2 class="text-xs font-mono-code text-slate-400 uppercase tracking-wider mb-3">Topics (<%= results.topics.length %>)</h2>
-      <div class="space-y-2.5">
+      <h2 class="text-xs font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-4">Topics (<%= results.topics.length %>)</h2>
+      <div class="grid grid-cols-1 gap-4">
         <% results.topics.forEach(t => { %>
-          <a href="/courses/<%= t.Section.courseId %>/qa?sec=<%= t.Section.id %>#topic-<%= t.id %>" class="block bg-white dark:bg-[#111217] border border-slate-200 dark:border-slate-800 rounded-lg p-4 hover:border-slate-400 transition-colors">
-            <div class="flex items-center justify-between gap-2">
-              <h3 class="font-medium text-slate-900 dark:text-white text-sm"><%= t.name %></h3>
-              <span class="text-xs font-mono-code text-slate-400">Term <%= t.Section.Course.term || '3-2' %></span>
+          <a href="/courses/<%= t.Section.courseId %>/qa?sec=<%= t.Section.id %>#topic-<%= t.id %>" class="block bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-5 hover:border-indigo-500 hover:shadow-md transition-all">
+            <div class="flex items-center justify-between gap-2 mb-1">
+              <h3 class="font-bold text-slate-800 dark:text-white text-base"><%= t.name %></h3>
+              <span class="text-[11px] font-mono-code font-bold px-2.5 py-0.5 rounded-lg bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400">Term <%= t.Section.Course.term || '3-2' %></span>
             </div>
-            <p class="text-xs text-slate-500 mt-1"><%= t.Section.Course.name %> (<%= t.Section.Course.code %>) &bull; <%= t.Section.name %></p>
+            <p class="text-xs text-slate-400 dark:text-slate-500"><%= t.Section.Course.name %> &bull; <%= t.Section.name %></p>
           </a>
         <% }) %>
       </div>
@@ -48,15 +49,15 @@
 
   <% if (results.questions && results.questions.length > 0) { %>
     <div>
-      <h2 class="text-xs font-mono-code text-slate-400 uppercase tracking-wider mb-3">Questions (<%= results.questions.length %>)</h2>
-      <div class="space-y-2.5">
+      <h2 class="text-xs font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-4">Questions (<%= results.questions.length %>)</h2>
+      <div class="grid grid-cols-1 gap-4">
         <% results.questions.forEach(q => { %>
-          <a href="/courses/<%= q.Topic.Section.courseId %>/qa?sec=<%= q.Topic.Section.id %>&question=<%= q.id %>#item-<%= q.id %>" class="block bg-white dark:bg-[#111217] border border-slate-200 dark:border-slate-800 rounded-lg p-4 hover:border-slate-400 transition-colors">
-            <div class="flex items-start justify-between gap-3">
-              <h3 class="font-medium text-slate-900 dark:text-slate-100 text-sm"><%= q.questionText %></h3>
-              <span class="flex-shrink-0 text-xs font-mono-code text-slate-400">Term <%= q.Topic.Section.Course.term || '3-2' %></span>
+          <a href="/courses/<%= q.Topic.Section.courseId %>/qa?sec=<%= q.Topic.Section.id %>&question=<%= q.id %>#item-<%= q.id %>" class="block bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-5 hover:border-indigo-500 hover:shadow-md transition-all">
+            <div class="flex items-start justify-between gap-3 mb-2">
+              <h3 class="font-bold text-slate-800 dark:text-white text-base"><%= q.questionText %></h3>
+              <span class="flex-shrink-0 text-[10px] font-mono-code font-bold px-2 py-0.5 rounded-md bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400">Term <%= q.Topic.Section.Course.term || '3-2' %></span>
             </div>
-            <p class="text-xs text-slate-500 mt-1"><%= q.Topic.Section.Course.name %> &bull; <%= q.Topic.Section.name %> &bull; <%= q.Topic.name %></p>
+            <p class="text-xs text-slate-400 dark:text-slate-500"><%= q.Topic.Section.Course.name %> &bull; <%= q.Topic.Section.name %> &bull; Topic: <%= q.Topic.name %></p>
           </a>
         <% }) %>
       </div>
@@ -64,8 +65,9 @@
   <% } %>
 
   <% if ((!results.courses || results.courses.length === 0) && (!results.topics || results.topics.length === 0) && (!results.questions || results.questions.length === 0)) { %>
-    <div class="bg-white dark:bg-[#111217] border border-slate-200 dark:border-slate-800 rounded-lg p-10 text-center text-xs text-slate-500">
-      No matches found for "<%= query %>".
+    <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-12 text-center">
+      <h3 class="text-lg font-bold text-slate-800 dark:text-white">No matches found</h3>
+      <p class="text-sm text-slate-400 dark:text-slate-500 mt-1">Try searching with other keywords or course names.</p>
     </div>
   <% } %>
 </div>

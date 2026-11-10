@@ -1,99 +1,98 @@
 <%- include('partials/header') %>
 
-<!-- Breadcrumb -->
-<div class="mb-6 flex items-center justify-between flex-wrap gap-3 text-xs">
-  <div class="flex items-center gap-2 text-slate-500 dark:text-slate-400">
-    <a href="/?term=<%= course.term || '3-2' %>" class="hover:text-slate-900 dark:hover:text-white transition-colors">
-      Term <%= course.term || '3-2' %>
-    </a>
-    <span>/</span>
-    <a href="/courses/<%= course.id %>" class="hover:text-slate-900 dark:hover:text-white transition-colors">
-      <%= course.name %> (<%= course.code %>)
-    </a>
-    <span>/</span>
-    <span class="text-slate-900 dark:text-white font-medium"><%= section.name %></span>
-  </div>
-  <span class="font-mono-code text-slate-400 dark:text-slate-500">
-    <%= section.solvedCount %>/<%= section.totalCount %> solved
+<!-- Back Link -->
+<div class="mb-6 flex items-center justify-between flex-wrap gap-3">
+  <a href="/courses/<%= course.id %>" class="inline-flex items-center gap-1.5 text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors">
+    <span>&larr;</span>
+    <span>Back to <%= course.name %> (<%= course.code %>)</span>
+  </a>
+  <span class="text-xs font-mono-code font-bold px-3 py-1 rounded-full bg-indigo-50 dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-slate-700">
+    Term <%= course.term || '3-2' %> &bull; <%= section.name %>
   </span>
 </div>
 
-<!-- Header & Controls -->
-<div class="bg-white dark:bg-[#111217] border border-slate-200 dark:border-slate-800 rounded-lg p-6 mb-8">
+<!-- Header with Real-Time Progress -->
+<div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-6 sm:p-8 shadow-sm mb-8">
   <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
     <div>
-      <div class="text-xs font-mono-code text-slate-400 dark:text-slate-500">
-        <%= course.code %> &bull; Term <%= course.term || '3-2' %> &bull; <%= section.teacherName || 'Instructor' %>
+      <div class="flex items-center gap-2 flex-wrap">
+        <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-slate-900/60 px-3 py-1 rounded-full uppercase tracking-wider border border-indigo-100 dark:border-slate-700">Study Vault</span>
+        <span class="text-xs font-mono-code font-bold text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-700 px-3 py-1 rounded-full">Term <%= course.term || '3-2' %></span>
       </div>
-      <h1 class="text-2xl font-semibold text-slate-900 dark:text-white mt-1 tracking-tight">
-        <%= course.name %> &mdash; <%= section.name %>
-      </h1>
+      <h1 class="text-3xl font-extrabold text-slate-900 dark:text-white mt-3 tracking-tight font-display">Questions &amp; Answers</h1>
+      <p class="text-slate-500 dark:text-slate-400 mt-1"><%= course.name %> (<%= course.code %>) &bull; <%= section.name %> (<%= section.teacherName %>)</p>
     </div>
     
-    <div class="min-w-[220px]">
-      <div class="flex justify-between items-center text-xs font-mono-code text-slate-500 dark:text-slate-400 mb-1.5">
-        <span>Progress</span>
-        <span class="progress-text"><%= section.solvedCount %>/<%= section.totalCount %> (<%= section.percentage %>%)</span>
+    <div class="bg-slate-50 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-700 rounded-2xl p-4 shadow-xs min-w-[260px]">
+      <div class="flex justify-between items-center text-xs font-bold text-slate-400 dark:text-slate-500 mb-1.5">
+        <span>SOLVED STATUS</span>
+        <span class="progress-text font-mono-code text-indigo-600 dark:text-indigo-400"><%= section.solvedCount %>/<%= section.totalCount %> Solved (<%= section.percentage %>%)</span>
       </div>
-      <div class="w-full bg-slate-100 dark:bg-slate-800 h-1 rounded-full overflow-hidden">
-        <div class="bg-slate-900 dark:bg-white h-full transition-all duration-300 progress-bar-fill" style="width: <%= section.percentage %>%"></div>
+      <div class="w-full bg-slate-200 dark:bg-slate-700 h-2 rounded-full overflow-hidden">
+        <div class="bg-gradient-to-r from-indigo-600 to-violet-500 dark:from-indigo-400 dark:to-violet-400 h-full rounded-full transition-all duration-300 progress-bar-fill" style="width: <%= section.percentage %>%"></div>
       </div>
     </div>
   </div>
 
-  <!-- Filter & Accordion Controls -->
-  <div class="mt-5 pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-    <div class="flex-1 max-w-sm">
-      <input type="text" id="qa-local-filter" placeholder="Filter questions..." 
-        class="w-full px-3 py-1.5 text-xs rounded border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 focus:outline-none focus:border-slate-400">
+  <!-- Quick Filter & Accordion Controls -->
+  <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-700 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+    <div class="flex-1 max-w-md">
+      <input type="text" id="qa-local-filter" placeholder="Filter questions in this section..." 
+        class="w-full px-4 py-2 text-xs sm:text-sm rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500">
     </div>
 
     <div class="flex items-center gap-2">
-      <button type="button" onclick="toggleAllAccordions(true)" class="px-3 py-1.5 rounded text-xs font-medium border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:border-slate-400 transition-colors cursor-pointer">
+      <button type="button" onclick="toggleAllAccordions(true)" class="px-3.5 py-2 rounded-xl text-xs font-bold bg-indigo-50 hover:bg-indigo-100 dark:bg-slate-700 dark:hover:bg-slate-600 text-indigo-600 dark:text-indigo-300 border border-indigo-100 dark:border-slate-600 transition-colors cursor-pointer">
         Expand All
       </button>
-      <button type="button" onclick="toggleAllAccordions(false)" class="px-3 py-1.5 rounded text-xs font-medium border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:border-slate-400 transition-colors cursor-pointer">
+      <button type="button" onclick="toggleAllAccordions(false)" class="px-3.5 py-2 rounded-xl text-xs font-bold bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-slate-600 dark:text-slate-300 transition-colors cursor-pointer">
         Collapse All
       </button>
     </div>
   </div>
 </div>
 
-<!-- Topics & Questions Accordion -->
+<!-- Topics & Collapsible Questions Accordion -->
 <div class="space-y-8">
   <% if (topics && topics.length > 0) { %>
     <% topics.forEach((topic, tIdx) => { %>
       <div id="topic-<%= topic.id %>" class="scroll-mt-20">
-        <h2 class="text-sm font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-3 flex items-center gap-2">
-          <span class="font-mono-code"><%= String(tIdx + 1).padStart(2, '0') %>.</span>
+        <h2 class="text-lg font-extrabold text-slate-900 dark:text-white mb-4 flex items-center gap-2.5 font-display">
+          <span class="flex items-center justify-center h-7 w-7 text-xs font-mono-code font-black text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-slate-800 border border-indigo-100 dark:border-slate-700 rounded-lg">
+            <%= tIdx + 1 %>
+          </span>
           <span><%= topic.name %></span>
         </h2>
 
         <% if (topic.Questions && topic.Questions.length > 0) { %>
-          <div class="divide-y divide-slate-200 dark:divide-slate-800 border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111217] rounded-lg overflow-hidden">
+          <div class="space-y-3">
             <% topic.Questions.forEach((question) => { %>
-              <div class="accordion-item" id="item-<%= question.id %>" data-question-text="<%= question.questionText.toLowerCase() %>">
+              <div class="accordion-item border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-xs hover:shadow-md transition-shadow" id="item-<%= question.id %>" data-question-text="<%= question.questionText.toLowerCase() %>">
                 
-                <div class="accordion-header flex items-center justify-between p-4 cursor-pointer select-none gap-4 hover:bg-slate-50/70 dark:hover:bg-slate-900/50 transition-colors">
-                  <div class="flex items-start gap-3.5 flex-1">
+                <div class="accordion-header flex items-center justify-between p-4 sm:p-5 cursor-pointer select-none gap-4">
+                  <div class="flex items-start gap-4 flex-1">
                     <input type="checkbox" 
-                      class="solved-checkbox mt-1 h-4 w-4 rounded border-slate-300 dark:border-slate-700 accent-slate-900 dark:accent-white cursor-pointer" 
+                      class="solved-checkbox mt-1 h-5 w-5 rounded border-slate-300 dark:border-slate-600 text-indigo-600 focus:ring-indigo-500 cursor-pointer" 
                       data-question-id="<%= question.id %>"
                       data-section-id="<%= section.id %>"
                       onclick="event.stopPropagation()"
                       <%= (question.Progress && question.Progress.solved) ? 'checked' : '' %>>
                     
-                    <span class="font-medium text-slate-900 dark:text-slate-100 text-sm sm:text-base leading-relaxed">
+                    <span class="font-semibold text-slate-800 dark:text-slate-100 text-base leading-relaxed">
                       <%= question.questionText %>
                     </span>
                   </div>
 
-                  <span class="accordion-icon text-xs font-mono-code text-slate-400 transition-transform duration-200 flex-shrink-0">▾</span>
+                  <span class="accordion-icon text-xs font-mono-code font-bold text-indigo-500 dark:text-indigo-400 transform transition-transform duration-200 flex-shrink-0">▾</span>
                 </div>
 
-                <div class="accordion-content max-h-0 overflow-hidden bg-slate-50/40 dark:bg-[#0d0e12] transition-all duration-200">
-                  <div class="p-5 border-t border-slate-100 dark:border-slate-800/80">
-                    <div class="markdown-content text-slate-700 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+                <div class="accordion-content max-h-0 overflow-hidden bg-slate-50/50 dark:bg-slate-900/30 border-t border-transparent transition-all duration-300">
+                  <div class="p-5 sm:p-6 border-t border-slate-100 dark:border-slate-700/60">
+                    <div class="inline-block text-[10px] font-black uppercase tracking-wider text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/40 px-2.5 py-1 rounded-md mb-4 border border-indigo-100 dark:border-indigo-900/40">
+                      Verified Answer Guide
+                    </div>
+
+                    <div class="markdown-content text-slate-600 dark:text-slate-300 text-base leading-relaxed">
                       <%- question.parsedAnswer %>
                     </div>
                   </div>
@@ -103,15 +102,16 @@
             <% }) %>
           </div>
         <% } else { %>
-          <div class="p-4 border border-slate-200 dark:border-slate-800 rounded-lg text-xs text-slate-400">
+          <div class="p-4 bg-slate-100 dark:bg-slate-800 rounded-xl text-center text-sm text-slate-400 dark:text-slate-500">
             No questions defined under this topic.
           </div>
         <% } %>
       </div>
     <% }) %>
   <% } else { %>
-    <div class="bg-white dark:bg-[#111217] rounded-lg p-10 text-center border border-slate-200 dark:border-slate-800">
-      <h3 class="text-sm font-semibold text-slate-800 dark:text-white">No topics available</h3>
+    <div class="bg-white dark:bg-slate-800 rounded-2xl p-12 text-center border border-slate-200 dark:border-slate-700">
+      <h3 class="text-lg font-bold text-slate-800 dark:text-white">No topics available</h3>
+      <p class="text-sm text-slate-400 dark:text-slate-500">Create topics and questions to study.</p>
     </div>
   <% } %>
 </div>

@@ -1,51 +1,54 @@
 <%- include('partials/header') %>
 
-<div class="mb-6 text-xs text-slate-500 dark:text-slate-400">
-  <a href="/courses/<%= course.id %>" class="hover:text-slate-900 dark:hover:text-white transition-colors">
-    &larr; Back to <%= course.name %> (<%= course.code %>)
+<div class="mb-6">
+  <a href="/courses/<%= course.id %>" class="inline-flex items-center gap-1.5 text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors">
+    <span>&larr;</span>
+    <span>Back to Course Overview</span>
   </a>
 </div>
 
-<div class="mb-8">
-  <div class="text-xs font-mono-code text-slate-400 dark:text-slate-500">
-    <%= course.code %> &bull; Term <%= course.term || '3-2' %> &bull; <%= section.name %>
-  </div>
-  <h1 class="text-2xl font-semibold text-slate-900 dark:text-white mt-1 tracking-tight">Topic-Wise Questions</h1>
+<div class="mb-10">
+  <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-slate-800 px-3 py-1 rounded-full uppercase tracking-wider">Revision Mode</span>
+  <h1 class="text-3xl font-extrabold text-slate-900 dark:text-white mt-3 tracking-tight font-display">Topic-Wise Questions</h1>
+  <p class="text-slate-500 dark:text-slate-400 mt-1"><%= course.name %> (<%= course.code %>) &bull; <%= section.name %> (<%= section.teacherName %>)</p>
 </div>
 
-<div class="space-y-6">
+<div class="space-y-10">
   <% if (topics && topics.length > 0) { %>
     <% topics.forEach((topic, idx) => { %>
-      <div class="bg-white dark:bg-[#111217] border border-slate-200 dark:border-slate-800 rounded-lg p-6">
-        <h2 class="text-base font-semibold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
-          <span class="font-mono-code text-xs text-slate-400"><%= String(idx + 1).padStart(2, '0') %>.</span>
+      <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-6 md:p-8 shadow-sm">
+        <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3 font-display">
+          <span class="flex items-center justify-center h-8 w-8 text-sm font-mono-code font-extrabold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-slate-900 rounded-xl">
+            <%= idx + 1 %>
+          </span>
           <span><%= topic.name %></span>
         </h2>
 
         <% if (topic.Questions && topic.Questions.length > 0) { %>
-          <div class="divide-y divide-slate-100 dark:divide-slate-800">
+          <div class="divide-y divide-slate-100 dark:divide-slate-700">
             <% topic.Questions.forEach((question, qIdx) => { %>
-              <div class="py-3 first:pt-0 last:pb-0 flex items-start justify-between gap-4 text-sm">
+              <div class="py-4 first:pt-0 last:pb-0 flex items-start justify-between gap-4 group">
                 <div class="flex items-start gap-3">
-                  <span class="font-mono-code text-xs text-slate-400 mt-0.5"><%= idx + 1 %>.<%= qIdx + 1 %></span>
-                  <p class="text-slate-700 dark:text-slate-200">
+                  <span class="text-sm font-mono-code font-bold text-slate-400 dark:text-slate-500 mt-0.5"><%= idx + 1 %>.<%= qIdx + 1 %></span>
+                  <p class="text-slate-700 dark:text-slate-200 font-medium text-base group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                     <%= question.questionText %>
                   </p>
                 </div>
-                <a href="/courses/<%= course.id %>/qa?sec=<%= section.id %>#item-<%= question.id %>" class="flex-shrink-0 text-xs font-mono-code text-slate-500 hover:text-slate-900 dark:hover:text-white">
-                  Answer &rarr;
+                
+                <a href="/courses/<%= course.id %>/qa?sec=<%= section.id %>#item-<%= question.id %>" class="flex-shrink-0 text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors">
+                  Check Answer &rarr;
                 </a>
               </div>
             <% }) %>
           </div>
         <% } else { %>
-          <p class="text-xs text-slate-400">No questions loaded for this topic.</p>
+          <p class="text-sm text-slate-400 dark:text-slate-500">No questions loaded for this topic.</p>
         <% } %>
       </div>
     <% }) %>
   <% } else { %>
-    <div class="bg-white dark:bg-[#111217] rounded-lg p-10 text-center border border-slate-200 dark:border-slate-800 text-xs text-slate-400">
-      No topics defined in this section.
+    <div class="bg-white dark:bg-slate-800 rounded-2xl p-12 text-center border border-slate-200 dark:border-slate-700">
+      <h3 class="text-base font-bold text-slate-800 dark:text-white mb-1">No topics defined in this section</h3>
     </div>
   <% } %>
 </div>

@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= title %> — Abir's Study Corner</title>
+  <title><%= title %> | Abir's Study Corner</title>
+  <!-- Expressive Academic Typography: Plus Jakarta Sans, Inter, Hind Siliguri & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
   <script>
     if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -17,22 +18,32 @@
   </script>
   <style>
     body {
-      font-family: 'Inter', 'Hind Siliguri', -apple-system, BlinkMacSystemFont, sans-serif;
-      -webkit-font-smoothing: antialiased;
+      font-family: 'Inter', 'Hind Siliguri', system-ui, -apple-system, sans-serif;
+    }
+    .font-display {
+      font-family: 'Plus Jakarta Sans', 'Hind Siliguri', sans-serif;
     }
     .font-mono-code {
       font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
     }
-    ::-webkit-scrollbar {
-      width: 6px;
-      height: 6px;
+    .logo-text {
+      display: inline-block;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+      font-size: 1.35rem;
+      line-height: 1;
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #ec4899 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
-    ::-webkit-scrollbar-track {
-      background: transparent;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: rgba(148, 163, 184, 0.3);
-      border-radius: 3px;
+    .dark .logo-text {
+      background: linear-gradient(135deg, #818cf8 0%, #a78bfa 50%, #f472b6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
   </style>
   <script>
@@ -49,52 +60,48 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script" async></script>
 </head>
-<body class="bg-[#fafafa] dark:bg-[#0a0a0c] text-slate-900 dark:text-slate-100 min-h-screen flex flex-col transition-colors duration-150">
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 min-h-screen flex flex-col font-sans transition-colors duration-200">
 
   <%
     const currentTermId = locals.activeTerm || '4-1';
-    const currentTermObj = locals.activeTermObj || { id: '4-1', name: 'Term 4-1', bnTitle: '৪র্থ বর্ষ ১ম টার্ম', status: 'current' };
+    const currentTermObj = locals.activeTermObj || { id: '4-1', name: 'Term 4-1', bnTitle: '৪র্থ বর্ষ • ১ম টার্ম', status: 'current' };
     const allTermsList = locals.termsOverview || [];
   %>
 
-  <!-- Minimalist Top Navigation -->
-  <header class="bg-white/95 dark:bg-[#0f1014]/95 backdrop-blur-sm border-b border-slate-200 dark:border-slate-800/90 sticky top-0 z-40">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="flex items-center justify-between h-14 gap-4">
+  <!-- Navbar -->
+  <nav class="bg-white/90 dark:bg-slate-800/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-700 sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 gap-4">
         
-        <!-- Brand & Active Term Indicator -->
-        <div class="flex items-center gap-4 min-w-0">
-          <a href="/?term=<%= currentTermId %>" class="flex items-center gap-2.5 text-slate-900 dark:text-white font-semibold tracking-tight text-sm sm:text-base hover:opacity-80 transition-opacity truncate">
-            <span>Abir's Study Corner</span>
+        <!-- Logo & Active Term Pill -->
+        <div class="flex items-center gap-3">
+          <a href="/?term=<%= currentTermId %>" class="inline-flex items-center gap-2.5 group">
+            <span class="logo-text">Abir's Study Corner</span>
           </a>
 
-          <span class="text-slate-300 dark:text-slate-700 select-none">/</span>
-
-          <button type="button" onclick="openTermModal()" class="inline-flex items-center gap-2 px-2.5 py-1 rounded-md text-xs font-medium border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:border-slate-400 dark:hover:border-slate-600 transition-colors cursor-pointer">
-            <span class="font-mono-code font-semibold text-slate-900 dark:text-white"><%= currentTermId === 'all' ? 'ALL' : currentTermId %></span>
-            <span class="text-slate-400 dark:text-slate-500 hidden sm:inline">
-              <%= currentTermId === '4-1' ? 'Current' : currentTermId === '3-2' ? 'Archive' : 'Term' %>
-            </span>
-            <span class="text-[10px] text-slate-400">▾</span>
+          <button type="button" onclick="openTermModal()" class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold border transition-all cursor-pointer <%= currentTermId === '4-1' ? 'bg-amber-500/10 text-amber-700 dark:text-amber-300 border-amber-500/30 hover:bg-amber-500/20' : 'bg-indigo-50 dark:bg-slate-700 text-indigo-600 dark:text-indigo-300 border-indigo-100 dark:border-slate-600 hover:bg-indigo-100' %>">
+            <span class="w-1.5 h-1.5 rounded-full <%= currentTermId === '4-1' ? 'bg-amber-500' : 'bg-indigo-500' %>"></span>
+            <span class="font-mono-code font-bold"><%= currentTermId === 'all' ? 'ALL TERMS' : `TERM ${currentTermId}` %></span>
+            <span class="text-[10px] opacity-70">▾</span>
           </button>
         </div>
 
-        <!-- Minimal Search Input -->
-        <div class="flex-1 max-w-sm hidden md:block relative">
+        <!-- Global Search Bar -->
+        <div class="flex-1 max-w-md mx-4 hidden md:block relative">
           <form action="/search" method="GET">
-            <input type="text" name="q" id="global-search-input" autocomplete="off" placeholder="Search courses, topics, or questions..." 
-              class="block w-full px-3 py-1.5 border border-slate-200 dark:border-slate-800 rounded-md bg-slate-50 dark:bg-slate-900/90 focus:outline-none focus:border-slate-400 dark:focus:border-slate-600 text-xs text-slate-800 dark:text-slate-200 placeholder-slate-400 dark:placeholder-slate-500 transition-colors">
+            <input type="text" name="q" id="global-search-input" autocomplete="off" placeholder="Search courses, topics, keywords..." 
+              class="block w-full px-4 py-2 border border-slate-200 dark:border-slate-700 rounded-xl bg-slate-50 dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 focus:border-transparent text-sm transition-all placeholder-slate-400 dark:placeholder-slate-500">
           </form>
-          <div id="search-results-dropdown" class="absolute left-0 right-0 mt-1.5 w-full bg-white dark:bg-[#121318] rounded-md shadow-lg border border-slate-200 dark:border-slate-800 max-h-80 overflow-y-auto hidden z-50"></div>
+          <div id="search-results-dropdown" class="absolute left-0 right-0 mt-2 w-full bg-white dark:bg-slate-800 rounded-xl shadow-xl border border-slate-200 dark:border-slate-700 max-h-96 overflow-y-auto hidden z-50"></div>
         </div>
 
         <!-- Right Controls -->
-        <div class="flex items-center gap-2">
-          <button type="button" onclick="openTermModal()" class="px-2.5 py-1.5 rounded-md text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-900 transition-colors cursor-pointer">
+        <div class="flex items-center gap-2.5">
+          <button type="button" onclick="openTermModal()" class="px-3.5 py-2 rounded-xl text-xs font-extrabold bg-indigo-50 hover:bg-indigo-100 dark:bg-slate-700 dark:hover:bg-slate-600 text-indigo-600 dark:text-indigo-300 border border-indigo-100 dark:border-slate-600 transition-all cursor-pointer">
             Switch Term
           </button>
 
-          <button id="theme-toggle" class="px-2.5 py-1.5 rounded-md text-xs font-medium border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:border-slate-300 dark:hover:border-slate-700 transition-colors cursor-pointer" aria-label="Toggle theme">
+          <button id="theme-toggle" class="px-3 py-2 text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-300 bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 dark:hover:bg-slate-600 rounded-xl transition-all cursor-pointer" aria-label="Toggle dark mode">
             <span class="hidden dark:inline">Light</span>
             <span class="inline dark:hidden">Dark</span>
           </button>
@@ -102,100 +109,151 @@
 
       </div>
     </div>
-  </header>
+  </nav>
 
-  <!-- Minimalist Academic Term Selector Modal (1-1 to 4-2) -->
-  <div id="term-selector-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-[2px] transition-opacity duration-200 <%= locals.showTermPrompt ? '' : 'hidden opacity-0' %>" role="dialog" aria-modal="true" aria-labelledby="term-portal-title">
+  <!-- ACADEMIC TERM SELECTION PORTAL MODAL (1-1 to 4-2) -->
+  <div id="term-selector-modal" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-slate-950/75 backdrop-blur-md transition-all duration-300 <%= locals.showTermPrompt ? '' : 'hidden opacity-0' %>" role="dialog" aria-modal="true" aria-labelledby="term-portal-title">
     <div class="fixed inset-0" onclick="closeTermModal()"></div>
 
-    <div id="term-selector-panel" class="relative w-full max-w-2xl bg-white dark:bg-[#111217] border border-slate-200 dark:border-slate-800 rounded-lg shadow-xl overflow-hidden z-10 max-h-[90vh] flex flex-col transition-all duration-200 <%= locals.showTermPrompt ? 'scale-100 opacity-100' : 'scale-95 opacity-0' %>">
+    <div id="term-selector-panel" class="relative w-full max-w-4xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-2xl overflow-hidden z-10 max-h-[92vh] flex flex-col transition-all duration-300 <%= locals.showTermPrompt ? 'scale-100 opacity-100' : 'scale-95 opacity-0' %>">
       
-      <!-- Modal Header -->
-      <div class="px-6 py-5 border-b border-slate-200 dark:border-slate-800 flex items-start justify-between gap-4">
-        <div>
-          <p class="text-[11px] font-mono-code uppercase tracking-wider text-slate-400 dark:text-slate-500">
-            B.Sc. Agriculture • Academic Semesters
-          </p>
-          <h2 id="term-portal-title" class="text-lg sm:text-xl font-semibold text-slate-900 dark:text-white mt-1">
-            Select Academic Term (1-1 to 4-2)
-          </h2>
-          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
-            কোন টার্মের পড়াশোনা করতে চাও সিলেক্ট করো। আগের টার্ম ছিল <span class="font-mono-code font-medium text-slate-700 dark:text-slate-300">3-2</span> এবং চলমান টার্ম <span class="font-mono-code font-medium text-slate-900 dark:text-white">4-1</span>।
-          </p>
-        </div>
+      <!-- Rich Gradient Header -->
+      <div class="relative bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 px-6 py-6 sm:px-8 sm:py-7 text-white border-b border-indigo-500/20 overflow-hidden">
+        <div class="absolute -right-10 -top-10 w-44 h-44 bg-indigo-500 rounded-full blur-3xl opacity-15 pointer-events-none"></div>
+        <div class="absolute -left-10 -bottom-10 w-44 h-44 bg-pink-500 rounded-full blur-3xl opacity-10 pointer-events-none"></div>
 
-        <button type="button" onclick="closeTermModal()" class="text-xs font-medium text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 px-2 py-1 rounded border border-transparent hover:border-slate-200 dark:hover:border-slate-800 cursor-pointer">
-          ESC
-        </button>
+        <div class="relative z-10 flex items-start justify-between gap-4">
+          <div>
+            <span class="inline-block px-3 py-1 rounded-full text-[10px] font-extrabold bg-indigo-500/20 text-indigo-300 border border-indigo-400/30 uppercase tracking-widest mb-2.5">
+              B.Sc. Agriculture &bull; Term 1-1 to 4-2
+            </span>
+            <h2 id="term-portal-title" class="text-2xl sm:text-3xl font-extrabold tracking-tight font-display">
+              Select Your Academic Term
+            </h2>
+            <p class="text-xs sm:text-sm text-indigo-100/80 mt-1.5 max-w-2xl leading-relaxed">
+              ১ম বর্ষ ১ম টার্ম (<strong class="text-white">1-1</strong>) থেকে ৪র্থ বর্ষ ২য় টার্ম (<strong class="text-white">4-2</strong>) — যেকোনো সেমিস্টার সিলেক্ট করো। আগের টার্ম ছিল <strong class="text-indigo-300">3-2</strong> এবং এইবারের চলমান টার্ম <strong class="text-amber-300">4-1</strong>।
+            </p>
+          </div>
+
+          <button type="button" onclick="closeTermModal()" class="px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-xs font-bold text-slate-200 hover:text-white transition-all cursor-pointer flex-shrink-0">
+            Close
+          </button>
+        </div>
       </div>
 
-      <!-- Modal Body -->
-      <div class="p-6 overflow-y-auto space-y-6 flex-1">
+      <!-- Modal Content -->
+      <div class="p-5 sm:p-7 overflow-y-auto space-y-6 flex-1 bg-slate-50/70 dark:bg-slate-900">
         
-        <!-- Primary Quick Selection: 4-1 (Current) & 3-2 (Previous Archive) -->
+        <!-- Primary Spotlight Row: 4-1 Current & 3-2 Archive -->
         <%
           const term41 = allTermsList.find(t => t.id === '4-1') || { id: '4-1', coursesCount: 0, questionsCount: 0 };
           const term32 = allTermsList.find(t => t.id === '3-2') || { id: '3-2', coursesCount: 5, questionsCount: 454 };
         %>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <a href="/?term=4-1" class="block p-4 rounded-md border transition-colors <%= currentTermId === '4-1' ? 'border-slate-900 dark:border-white bg-slate-50 dark:bg-slate-900/80' : 'border-slate-200 dark:border-slate-800 hover:border-slate-400 dark:hover:border-slate-600' %>">
-            <div class="flex items-center justify-between">
-              <span class="font-mono-code text-base font-semibold text-slate-900 dark:text-white">Term 4-1</span>
-              <span class="text-[10px] font-mono-code uppercase px-2 py-0.5 rounded bg-slate-900 text-white dark:bg-white dark:text-slate-900 font-medium">
-                Current Term
-              </span>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- 4-1 Current Term Card -->
+          <a href="/?term=4-1" class="group relative overflow-hidden rounded-2xl p-5 bg-gradient-to-br from-amber-500/10 via-orange-500/5 to-white dark:from-amber-500/15 dark:via-slate-800 dark:to-slate-800 border-2 <%= currentTermId === '4-1' ? 'border-amber-500 shadow-lg shadow-amber-500/10' : 'border-amber-400/50 hover:border-amber-500' %> transition-all duration-200 hover:-translate-y-0.5 flex flex-col justify-between">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <span class="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-black bg-amber-500 text-slate-950 uppercase tracking-wider">
+                  Current Active Term &bull; এইবারের টার্ম
+                </span>
+                <h3 class="text-xl font-extrabold text-slate-900 dark:text-white mt-2.5 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors font-display">
+                  Term 4-1 (৪র্থ বর্ষ ১ম টার্ম)
+                </h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5 font-medium">
+                  Year 4 &bull; Semester 1 &bull; 4100 Course Series
+                </p>
+              </div>
+              <div class="px-3 py-2 rounded-xl bg-amber-500/15 border border-amber-500/30 text-amber-600 dark:text-amber-400 font-mono-code font-extrabold text-base flex-shrink-0">
+                4-1
+              </div>
             </div>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1.5">
-              ৪র্থ বর্ষ ১ম টার্ম (চলমান) &bull; 4100 Series
-            </p>
-            <div class="mt-3 pt-2.5 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs text-slate-600 dark:text-slate-400">
-              <span><%= term41.coursesCount > 0 ? `${term41.coursesCount} Courses` : 'Active Semester' %></span>
-              <span>Enter &rarr;</span>
+            <div class="mt-4 pt-3 border-t border-amber-500/20 flex items-center justify-between text-xs font-bold">
+              <span class="text-slate-600 dark:text-slate-300">
+                <%= term41.coursesCount > 0 ? `${term41.coursesCount} Courses • ${term41.questionsCount} Q&As` : 'Active Workspace Ready' %>
+              </span>
+              <span class="text-amber-600 dark:text-amber-400 group-hover:translate-x-1 transition-transform">
+                Enter Term 4-1 &rarr;
+              </span>
             </div>
           </a>
 
-          <a href="/?term=3-2" class="block p-4 rounded-md border transition-colors <%= currentTermId === '3-2' ? 'border-slate-900 dark:border-white bg-slate-50 dark:bg-slate-900/80' : 'border-slate-200 dark:border-slate-800 hover:border-slate-400 dark:hover:border-slate-600' %>">
-            <div class="flex items-center justify-between">
-              <span class="font-mono-code text-base font-semibold text-slate-900 dark:text-white">Term 3-2</span>
-              <span class="text-[10px] font-mono-code uppercase px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-medium">
-                Previous Term
-              </span>
+          <!-- 3-2 Previous Term Card -->
+          <a href="/?term=3-2" class="group relative overflow-hidden rounded-2xl p-5 bg-gradient-to-br from-indigo-500/10 via-purple-500/5 to-white dark:from-indigo-500/15 dark:via-slate-800 dark:to-slate-800 border-2 <%= currentTermId === '3-2' ? 'border-indigo-500 shadow-lg shadow-indigo-500/10' : 'border-indigo-400/50 hover:border-indigo-500' %> transition-all duration-200 hover:-translate-y-0.5 flex flex-col justify-between">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <span class="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-black bg-indigo-600 text-white uppercase tracking-wider">
+                  Previous Term &bull; আগের টার্ম
+                </span>
+                <h3 class="text-xl font-extrabold text-slate-900 dark:text-white mt-2.5 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors font-display">
+                  Term 3-2 (৩য় বর্ষ ২য় টার্ম)
+                </h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5 font-medium">
+                  Plant Pathology, Crop Ecology, RM, Olericulture, Extension
+                </p>
+              </div>
+              <div class="px-3 py-2 rounded-xl bg-indigo-500/15 border border-indigo-500/30 text-indigo-600 dark:text-indigo-400 font-mono-code font-extrabold text-base flex-shrink-0">
+                3-2
+              </div>
             </div>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1.5">
-              ৩য় বর্ষ ২য় টার্ম (আগের টার্ম) &bull; 3200 Series
-            </p>
-            <div class="mt-3 pt-2.5 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs text-slate-600 dark:text-slate-400">
-              <span><%= term32.coursesCount %> Courses &bull; <%= term32.questionsCount %> Q&As</span>
-              <span>Open Archive &rarr;</span>
+            <div class="mt-4 pt-3 border-t border-indigo-500/20 flex items-center justify-between text-xs font-bold">
+              <span class="text-indigo-600 dark:text-indigo-300">
+                <%= term32.coursesCount %> Courses &bull; <%= term32.questionsCount %> Verified Q&As
+              </span>
+              <span class="text-indigo-600 dark:text-indigo-400 group-hover:translate-x-1 transition-transform">
+                Open 3-2 Vault &rarr;
+              </span>
             </div>
           </a>
         </div>
 
-        <!-- All 8 Semesters Grid (1-1 to 4-2) -->
+        <!-- Complete 8-Semester Grid (1-1 to 4-2) -->
         <div>
-          <div class="text-[11px] font-mono-code uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2.5">
-            All Semesters (1-1 to 4-2)
+          <div class="flex items-center justify-between mb-3">
+            <h4 class="text-xs font-black uppercase tracking-widest text-slate-400 dark:text-slate-500">
+              All Semesters (1-1 to 4-2)
+            </h4>
+            <span class="text-[11px] font-semibold text-slate-400 dark:text-slate-500">Select any semester</span>
           </div>
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
             <% allTermsList.forEach(t => { 
                  const isSelected = currentTermId === t.id;
+                 const isCurrent41 = t.id === '4-1';
+                 const isPrev32 = t.id === '3-2';
             %>
-              <a href="/?term=<%= t.id %>" class="p-3 rounded-md border transition-colors flex flex-col justify-between <%= isSelected ? 'border-slate-900 dark:border-white bg-slate-50 dark:bg-slate-900' : 'border-slate-200 dark:border-slate-800/90 hover:border-slate-400 dark:hover:border-slate-600' %>">
+              <a href="/?term=<%= t.id %>" class="group relative rounded-2xl p-4 border transition-all duration-200 hover:-translate-y-0.5 flex flex-col justify-between <%= isSelected ? 'bg-indigo-50/90 dark:bg-indigo-950/60 border-indigo-500 ring-2 ring-indigo-500/20' : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 hover:border-indigo-400 dark:hover:border-indigo-500 hover:shadow-md' %>">
                 <div>
-                  <div class="flex items-center justify-between">
-                    <span class="font-mono-code text-sm font-semibold text-slate-900 dark:text-white"><%= t.id %></span>
-                    <% if (t.id === '4-1') { %>
-                      <span class="text-[10px] font-mono-code text-slate-500 dark:text-slate-400">Now</span>
-                    <% } else if (t.coursesCount > 0) { %>
-                      <span class="text-[10px] font-mono-code text-slate-500 dark:text-slate-400"><%= t.coursesCount %>c</span>
+                  <div class="flex items-center justify-between gap-2 mb-2">
+                    <span class="text-lg font-black font-mono-code tracking-tight <%= isCurrent41 ? 'text-amber-600 dark:text-amber-400' : isPrev32 ? 'text-indigo-600 dark:text-indigo-400' : 'text-slate-900 dark:text-white' %>">
+                      <%= t.id %>
+                    </span>
+                    <% if (isCurrent41) { %>
+                      <span class="text-[9px] font-black px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-700 dark:text-amber-300 border border-amber-500/30 uppercase">Current</span>
+                    <% } else if (isPrev32) { %>
+                      <span class="text-[9px] font-black px-2 py-0.5 rounded-full bg-indigo-500/15 text-indigo-700 dark:text-indigo-300 border border-indigo-500/30 uppercase">Archive</span>
+                    <% } else { %>
+                      <span class="text-[9px] font-bold px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-500 dark:text-slate-400">Year <%= t.year %></span>
                     <% } %>
                   </div>
-                  <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-1">
-                    Year <%= t.year %>, Term <%= t.semester %>
+
+                  <div class="text-xs font-bold text-slate-700 dark:text-slate-200 leading-snug">
+                    <%= t.fullTitle %>
+                  </div>
+                  <div class="text-[11px] font-mono-code text-slate-400 dark:text-slate-500 mt-0.5">
+                    <%= t.codeSeries %>
                   </div>
                 </div>
-                <div class="mt-2 pt-1.5 border-t border-slate-100 dark:border-slate-800/60 text-[10px] font-mono-code text-slate-400 dark:text-slate-500">
-                  <%= t.coursesCount > 0 ? `${t.questionsCount} Q&As` : t.codeSeries %>
+
+                <div class="mt-3 pt-2.5 border-t border-slate-100 dark:border-slate-700/60 flex items-center justify-between text-[11px] font-bold">
+                  <% if (t.coursesCount > 0) { %>
+                    <span class="text-emerald-600 dark:text-emerald-400"><%= t.coursesCount %> Courses (<%= t.questionsCount %> Qs)</span>
+                  <% } else if (isCurrent41) { %>
+                    <span class="text-amber-600 dark:text-amber-400">Active Term</span>
+                  <% } else { %>
+                    <span class="text-slate-400 dark:text-slate-500">0 Courses</span>
+                  <% } %>
+                  <span class="text-slate-400 group-hover:text-indigo-500 transition-colors">&rarr;</span>
                 </div>
               </a>
             <% }) %>
@@ -205,12 +263,12 @@
       </div>
 
       <!-- Modal Footer -->
-      <div class="px-6 py-3.5 bg-slate-50 dark:bg-[#0d0e12] border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs">
-        <a href="/?term=all" class="font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
-          View all semesters combined &rarr;
+      <div class="px-6 py-4 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <a href="/?term=all" class="text-xs font-extrabold text-indigo-600 dark:text-indigo-400 hover:underline">
+          View All Semesters Combined (1-1 to 4-2) &rarr;
         </a>
-        <button type="button" onclick="closeTermModal()" class="px-3 py-1.5 rounded border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:border-slate-400 transition-colors cursor-pointer">
-          Close
+        <button type="button" onclick="closeTermModal()" class="px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 transition-all cursor-pointer">
+          Continue on <%= currentTermId === 'all' ? 'All Terms' : `Term ${currentTermId}` %>
         </button>
       </div>
 
@@ -239,8 +297,8 @@
       panel.classList.add('scale-95', 'opacity-0');
       setTimeout(() => {
         modal.classList.add('hidden');
-      }, 200);
+      }, 250);
     }
   </script>
 
-  <main class="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 py-8">
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">

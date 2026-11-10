@@ -1,42 +1,40 @@
 <%- include('partials/header') %>
 
-<!-- Breadcrumb -->
-<div class="mb-6 flex items-center justify-between flex-wrap gap-3 text-xs">
-  <div class="flex items-center gap-2 text-slate-500 dark:text-slate-400">
-    <a href="/?term=<%= course.term || '3-2' %>" class="hover:text-slate-900 dark:hover:text-white transition-colors">
-      Term <%= course.term || '3-2' %>
-    </a>
-    <span>/</span>
-    <a href="/courses/<%= course.id %>" class="hover:text-slate-900 dark:hover:text-white transition-colors">
-      <%= course.name %> (<%= course.code %>)
-    </a>
-    <span>/</span>
-    <span class="text-slate-900 dark:text-white font-medium">Notes</span>
-  </div>
-  <span class="font-mono-code text-slate-400 dark:text-slate-500">
-    <%= section.name %>
+<!-- Back Link -->
+<div class="mb-6 flex items-center justify-between flex-wrap gap-3">
+  <a href="/courses/<%= course.id %>" class="inline-flex items-center gap-1.5 text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors">
+    <span>&larr;</span>
+    <span>Back to <%= course.name %> (<%= course.code %>)</span>
+  </a>
+  <span class="text-xs font-mono-code font-bold px-3 py-1 rounded-full bg-indigo-50 dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-slate-700">
+    Term <%= course.term || '3-2' %> &bull; <%= section.name %>
   </span>
 </div>
 
 <!-- Header -->
-<div class="mb-6">
-  <div class="text-xs font-mono-code text-slate-400 dark:text-slate-500">
-    <%= course.code %> &bull; Term <%= course.term || '3-2' %> &bull; <%= section.teacherName || 'Instructor' %>
+<div class="mb-8">
+  <div class="flex items-center gap-2">
+    <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-slate-800 px-3 py-1 rounded-full uppercase tracking-wider border border-indigo-100 dark:border-slate-700">Study Vault</span>
+    <span class="text-xs font-mono-code font-bold text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">Term <%= course.term || '3-2' %></span>
   </div>
-  <h1 class="text-2xl sm:text-3xl font-semibold text-slate-900 dark:text-white mt-1 tracking-tight">
-    <%= course.name %> &mdash; Course Notes
-  </h1>
+  <h1 class="text-3xl font-extrabold text-slate-900 dark:text-white mt-3 tracking-tight font-display">Course Content</h1>
+  <p class="text-slate-500 dark:text-slate-400 mt-1"><%= course.name %> (<%= course.code %>) &bull; <%= section.name %> (<%= section.teacherName %>)</p>
 </div>
 
-<!-- Notes Container -->
-<div class="bg-white dark:bg-[#111217] border border-slate-200 dark:border-slate-800 rounded-lg p-6 md:p-10">
+<!-- Notes Board -->
+<div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-6 md:p-10 shadow-sm">
+  <div class="inline-block text-[10px] font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/40 px-2.5 py-1 rounded-md mb-6 border border-emerald-100 dark:border-emerald-900/40">
+    Original Course Content
+  </div>
+
   <% if (note) { %>
-    <div class="markdown-content text-slate-700 dark:text-slate-300 text-base leading-relaxed">
+    <div class="markdown-content text-slate-700 dark:text-slate-200 text-base leading-relaxed">
       <%- note.parsedContent %>
     </div>
   <% } else { %>
-    <div class="py-10 text-center text-xs text-slate-400 dark:text-slate-500">
-      No notes uploaded for this section yet.
+    <div class="text-center py-12 text-slate-400 dark:text-slate-500">
+      <h3 class="text-base font-bold text-slate-800 dark:text-white mb-1">No notes uploaded for this section</h3>
+      <p class="text-sm">Notes for this section will appear here once added.</p>
     </div>
   <% } %>
 </div>
