@@ -1727,7 +1727,8 @@
             }
           ]
         }
-      ]
+      ],
+      "term": "3-2"
     },
     {
       "id": 2,
@@ -3302,7 +3303,8 @@
             }
           ]
         }
-      ]
+      ],
+      "term": "3-2"
     },
     {
       "id": 3,
@@ -3799,7 +3801,8 @@
             }
           ]
         }
-      ]
+      ],
+      "term": "3-2"
     },
     {
       "id": 4,
@@ -3860,7 +3863,8 @@
             }
           ]
         }
-      ]
+      ],
+      "term": "3-2"
     },
     {
       "id": 7,
@@ -4190,34 +4194,40 @@
             }
           ]
         }
-      ]
+      ],
+      "term": "3-2"
     }
   ],
   "exams": [
     {
       "id": 1,
       "subjectName": "Plant Pathology (3201)",
-      "examDate": "2026-06-09T04:00:00.000Z"
+      "examDate": "2026-06-09T04:00:00.000Z",
+      "term": "3-2"
     },
     {
       "id": 2,
       "subjectName": "Crop Ecology (3203)",
-      "examDate": "2026-06-14T04:00:00.000Z"
+      "examDate": "2026-06-14T04:00:00.000Z",
+      "term": "3-2"
     },
     {
       "id": 3,
       "subjectName": "Research Methodology (3255)",
-      "examDate": "2026-06-21T04:00:00.000Z"
+      "examDate": "2026-06-21T04:00:00.000Z",
+      "term": "3-2"
     },
     {
       "id": 4,
       "subjectName": "Olericulture (3207)",
-      "examDate": "2026-06-28T04:00:00.000Z"
+      "examDate": "2026-06-28T04:00:00.000Z",
+      "term": "3-2"
     },
     {
       "id": 5,
       "subjectName": "Extension (3205)",
-      "examDate": "2026-07-02T04:00:00.000Z"
+      "examDate": "2026-07-02T04:00:00.000Z",
+      "term": "3-2"
     }
   ]
 }

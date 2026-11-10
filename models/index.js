@@ -7,12 +7,121 @@ const sequelize = {
   sync: async () => Promise.resolve(),
 };
 
+// Academic Terms Configuration (1-1 to 4-2)
+const TERMS_CONFIG = [
+  {
+    id: '1-1',
+    year: 1,
+    semester: 1,
+    name: 'Term 1-1',
+    fullTitle: 'Year 1 • Term 1',
+    bnTitle: '১ম বর্ষ • ১ম টার্ম',
+    codeSeries: '1100 Series',
+    status: 'semester',
+    badgeText: '1st Year',
+    theme: 'sky'
+  },
+  {
+    id: '1-2',
+    year: 1,
+    semester: 2,
+    name: 'Term 1-2',
+    fullTitle: 'Year 1 • Term 2',
+    bnTitle: '১ম বর্ষ • ২য় টার্ম',
+    codeSeries: '1200 Series',
+    status: 'semester',
+    badgeText: '1st Year',
+    theme: 'cyan'
+  },
+  {
+    id: '2-1',
+    year: 2,
+    semester: 1,
+    name: 'Term 2-1',
+    fullTitle: 'Year 2 • Term 1',
+    bnTitle: '২য় বর্ষ • ১ম টার্ম',
+    codeSeries: '2100 Series',
+    status: 'semester',
+    badgeText: '2nd Year',
+    theme: 'teal'
+  },
+  {
+    id: '2-2',
+    year: 2,
+    semester: 2,
+    name: 'Term 2-2',
+    fullTitle: 'Year 2 • Term 2',
+    bnTitle: '২য় বর্ষ • ২য় টার্ম',
+    codeSeries: '2200 Series',
+    status: 'semester',
+    badgeText: '2nd Year',
+    theme: 'emerald'
+  },
+  {
+    id: '3-1',
+    year: 3,
+    semester: 1,
+    name: 'Term 3-1',
+    fullTitle: 'Year 3 • Term 1',
+    bnTitle: '৩য় বর্ষ • ১ম টার্ম',
+    codeSeries: '3100 Series',
+    status: 'semester',
+    badgeText: '3rd Year',
+    theme: 'violet'
+  },
+  {
+    id: '3-2',
+    year: 3,
+    semester: 2,
+    name: 'Term 3-2',
+    fullTitle: 'Year 3 • Term 2',
+    bnTitle: '৩য় বর্ষ • ২য় টার্ম (আগের টার্ম)',
+    codeSeries: '3200 Series',
+    status: 'previous',
+    badgeText: 'Previous Term • Archive',
+    theme: 'indigo'
+  },
+  {
+    id: '4-1',
+    year: 4,
+    semester: 1,
+    name: 'Term 4-1',
+    fullTitle: 'Year 4 • Term 1',
+    bnTitle: '৪র্থ বর্ষ • ১ম টার্ম (চলমান টার্ম)',
+    codeSeries: '4100 Series',
+    status: 'current',
+    badgeText: 'Current Active Term',
+    theme: 'amber'
+  },
+  {
+    id: '4-2',
+    year: 4,
+    semester: 2,
+    name: 'Term 4-2',
+    fullTitle: 'Year 4 • Term 2',
+    bnTitle: '৪র্থ বর্ষ • ২য় টার্ম',
+    codeSeries: '4200 Series',
+    status: 'upcoming',
+    badgeText: 'Final Term',
+    theme: 'rose'
+  }
+];
+
+const DEFAULT_CURRENT_TERM = '4-1';
+
 // Load static database content into memory
 let database = { courses: [], exams: [] };
 try {
   const dbPath = path.join(process.cwd(), 'database.json');
   if (fs.existsSync(dbPath)) {
     database = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
+    // Normalize term field on all courses and exams (defaulting legacy entries to '3-2')
+    database.courses.forEach(c => {
+      if (!c.term) c.term = '3-2';
+    });
+    database.exams.forEach(e => {
+      if (!e.term) e.term = '3-2';
+    });
     console.log(`Loaded ${database.courses.length} courses and ${database.exams.length} exams from database.json`);
   } else {
     console.warn('database.json not found at:', dbPath);
@@ -41,12 +150,20 @@ function addHelpers(obj) {
 // Course mock queries
 class Course {
   static async findAll(options = {}) {
-    return database.courses.map(c => addHelpers(c));
+    const { term } = options.where || {};
+    let list = database.courses;
+    if (term) {
+      list = list.filter(c => (c.term || '3-2') === term);
+    }
+    return list.map(c => addHelpers(c));
   }
 
   static async findByPk(id, options = {}) {
     const course = database.courses.find(c => c.id == id);
-    return course ? addHelpers(course) : null;
+    if (!course) return null;
+    const copy = addHelpers(course);
+    if (!copy.term) copy.term = '3-2';
+    return copy;
   }
 }
 
@@ -146,7 +263,12 @@ class Pdf {
 // Exam mock queries
 class Exam {
   static async findAll(options = {}) {
-    return database.exams.map(e => addHelpers(e));
+    const { term } = options.where || {};
+    let list = database.exams;
+    if (term) {
+      list = list.filter(e => (e.term || '3-2') === term);
+    }
+    return list.map(e => addHelpers(e));
   }
 }
 
@@ -162,6 +284,8 @@ class Progress {
 
 module.exports = {
   sequelize,
+  TERMS_CONFIG,
+  DEFAULT_CURRENT_TERM,
   Course,
   Section,
   Topic,

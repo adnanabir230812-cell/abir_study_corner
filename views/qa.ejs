@@ -1,30 +1,61 @@
 <%- include('partials/header') %>
 
-<!-- Back Link -->
-<div class="mb-6">
-  <a href="/courses/<%= course.id %>" class="inline-flex items-center gap-1.5 text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors">
-    <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-    </svg>
-    Back to Course Overview
-  </a>
+<!-- Back Link & Term Breadcrumb -->
+<div class="mb-6 flex items-center justify-between flex-wrap gap-3">
+  <div class="flex items-center gap-2 text-sm">
+    <a href="/?term=<%= course.term || '3-2' %>" class="font-semibold text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+      Term <%= course.term || '3-2' %>
+    </a>
+    <span class="text-slate-300 dark:text-slate-600">/</span>
+    <a href="/courses/<%= course.id %>" class="inline-flex items-center gap-1.5 font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors">
+      <%= course.name %> (<%= course.code %>)
+    </a>
+  </div>
+  <span class="text-xs font-extrabold px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20">
+    🎓 Term <%= course.term || '3-2' %> &bull; <%= section.name %>
+  </span>
 </div>
 
 <!-- Header with Real-Time Progress -->
-<div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 pb-8 border-b border-slate-200 dark:border-slate-700">
-  <div>
-    <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-slate-800 px-3 py-1 rounded-full uppercase tracking-wider">Study Vault</span>
-    <h1 class="text-3xl font-extrabold text-slate-900 dark:text-white mt-3 tracking-tight">Questions &amp; Answers</h1>
-    <p class="text-slate-500 dark:text-slate-400 mt-1"><%= course.name %> (<%= course.code %>) &bull; <%= section.name %> (<%= section.teacherName %>)</p>
-  </div>
-  
-  <div class="bg-white dark:bg-slate-850 border border-slate-200 dark:border-slate-700 rounded-2xl p-4 shadow-sm min-w-[280px]">
-    <div class="flex justify-between items-center text-xs font-bold text-slate-400 dark:text-slate-500 mb-1.5">
-      <span>SOLVED STATUS</span>
-      <span class="progress-text"><%= section.solvedCount %>/<%= section.totalCount %> Solved (<%= section.percentage %>%)</span>
+<div class="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-3xl p-6 sm:p-8 shadow-xs mb-8">
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+    <div>
+      <div class="flex items-center gap-2 flex-wrap">
+        <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-500/10 px-3 py-1 rounded-full uppercase tracking-wider border border-indigo-500/20">Study Vault</span>
+        <span class="text-xs font-bold text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">Term <%= course.term || '3-2' %></span>
+      </div>
+      <h1 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white mt-3 tracking-tight font-display">Questions &amp; Answers</h1>
+      <p class="text-slate-500 dark:text-slate-400 text-sm mt-1"><%= course.name %> (<%= course.code %>) &bull; <%= section.name %> (<%= section.teacherName || 'Instructor' %>)</p>
     </div>
-    <div class="w-full bg-slate-100 dark:bg-slate-700 h-2 rounded-full overflow-hidden">
-      <div class="bg-indigo-600 dark:bg-indigo-400 h-full rounded-full transition-all duration-300 progress-bar-fill" style="width: <%= section.percentage %>%"></div>
+    
+    <div class="bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700 rounded-2xl p-4 min-w-[260px]">
+      <div class="flex justify-between items-center text-xs font-bold text-slate-500 dark:text-slate-400 mb-1.5">
+        <span>SOLVED STATUS</span>
+        <span class="progress-text text-indigo-600 dark:text-indigo-400"><%= section.solvedCount %>/<%= section.totalCount %> Solved (<%= section.percentage %>%)</span>
+      </div>
+      <div class="w-full bg-slate-200 dark:bg-slate-700 h-2.5 rounded-full overflow-hidden">
+        <div class="bg-gradient-to-r from-indigo-600 to-violet-500 dark:from-indigo-400 dark:to-violet-400 h-full rounded-full transition-all duration-300 progress-bar-fill" style="width: <%= section.percentage %>%"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Study Controls: Filter & Expand/Collapse -->
+  <div class="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+    <div class="relative flex-1 max-w-md">
+      <input type="text" id="qa-local-filter" placeholder="Filter questions in this section..." 
+        class="w-full pl-9 pr-4 py-2 text-xs sm:text-sm rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/90 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+      <svg class="w-4 h-4 text-slate-400 absolute left-3 top-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      </svg>
+    </div>
+
+    <div class="flex items-center gap-2 flex-wrap">
+      <button type="button" onclick="toggleAllAccordions(true)" class="px-3 py-1.5 rounded-xl text-xs font-bold bg-indigo-50 hover:bg-indigo-100 dark:bg-slate-800 dark:hover:bg-slate-700 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-slate-700 transition-colors cursor-pointer">
+        Expand All
+      </button>
+      <button type="button" onclick="toggleAllAccordions(false)" class="px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 transition-colors cursor-pointer">
+        Collapse All
+      </button>
     </div>
   </div>
 </div>
@@ -33,18 +64,18 @@
 <div class="space-y-8">
   <% if (topics && topics.length > 0) { %>
     <% topics.forEach((topic, tIdx) => { %>
-      <div id="topic-<%= topic.id %>" class="scroll-mt-20">
+      <div id="topic-<%= topic.id %>" class="scroll-mt-20 topic-group">
         <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2.5">
-          <span class="flex items-center justify-center h-7 w-7 text-xs font-black text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-slate-800 rounded-lg">
+          <span class="flex items-center justify-center h-7 w-7 text-xs font-black text-indigo-600 dark:text-indigo-400 bg-indigo-500/10 border border-indigo-500/20 rounded-lg">
             <%= tIdx + 1 %>
           </span>
-          <%= topic.name %>
+          <span><%= topic.name %></span>
         </h2>
 
         <% if (topic.Questions && topic.Questions.length > 0) { %>
           <div class="space-y-3">
             <% topic.Questions.forEach((question) => { %>
-              <div class="accordion-item border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" id="item-<%= question.id %>">
+              <div class="accordion-item border border-slate-200/80 dark:border-slate-800 bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all" id="item-<%= question.id %>" data-question-text="<%= question.questionText.toLowerCase() %>">
                 
                 <!-- Accordion Header -->
                 <div class="accordion-header flex items-center justify-between p-4 sm:p-5 cursor-pointer select-none gap-4">
@@ -69,10 +100,10 @@
                 </div>
 
                 <!-- Accordion Content -->
-                <div class="accordion-content max-h-0 overflow-hidden bg-slate-50/50 dark:bg-slate-900/30 border-t border-transparent transition-all duration-300">
-                  <div class="p-5 sm:p-6 border-t border-slate-100 dark:border-slate-700/60">
+                <div class="accordion-content max-h-0 overflow-hidden bg-slate-50/50 dark:bg-slate-950/40 border-t border-transparent transition-all duration-300">
+                  <div class="p-5 sm:p-6 border-t border-slate-100 dark:border-slate-800">
                     <!-- Verified Answer Guide Label -->
-                    <div class="inline-flex items-center gap-1.5 text-xs font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/30 px-2.5 py-1 rounded-md mb-4 border border-indigo-100/30">
+                    <div class="inline-flex items-center gap-1.5 text-xs font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-500/10 px-2.5 py-1 rounded-md mb-4 border border-indigo-500/20">
                       <span>📖</span>
                       <span>Verified Answer Guide</span>
                     </div>
@@ -95,12 +126,43 @@
       </div>
     <% }) %>
   <% } else { %>
-    <div class="bg-white dark:bg-slate-800 rounded-2xl p-12 text-center border border-slate-200 dark:border-slate-700">
+    <div class="bg-white dark:bg-slate-900 rounded-2xl p-12 text-center border border-slate-200 dark:border-slate-800">
       <h3 class="text-lg font-bold text-slate-800 dark:text-white">No topics available</h3>
       <p class="text-sm text-slate-400 dark:text-slate-500">Create topics and questions to study.</p>
     </div>
   <% } %>
 </div>
+
+<script>
+  // Local in-page question filter & Expand/Collapse All helpers
+  const localFilterInput = document.getElementById('qa-local-filter');
+  if (localFilterInput) {
+    localFilterInput.addEventListener('input', (e) => {
+      const q = e.target.value.trim().toLowerCase();
+      document.querySelectorAll('.accordion-item').forEach(item => {
+        const text = item.getAttribute('data-question-text') || '';
+        item.style.display = (!q || text.includes(q)) ? '' : 'none';
+      });
+    });
+  }
+
+  function toggleAllAccordions(expand) {
+    document.querySelectorAll('.accordion-item').forEach(item => {
+      const content = item.querySelector('.accordion-content');
+      const icon = item.querySelector('.accordion-icon');
+      if (!content) return;
+      if (expand) {
+        content.classList.add('open');
+        content.style.maxHeight = content.scrollHeight + 500 + 'px';
+        if (icon) icon.classList.add('rotate-180');
+      } else {
+        content.classList.remove('open');
+        content.style.maxHeight = null;
+        if (icon) icon.classList.remove('rotate-180');
+      }
+    });
+  }
+</script>
 
 <!-- Include client script specific to study page -->
 <script src="/js/qa.js"></script>

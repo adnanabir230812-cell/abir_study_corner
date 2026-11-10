@@ -1,4 +1,4 @@
-const { Course, Section, Topic, Question, Progress, Note, Pdf, Exam } = require('../models');
+const { Course, Section, Topic, Question, Progress, Note, Pdf, Exam, TERMS_CONFIG, DEFAULT_CURRENT_TERM } = require('../models');
 const { marked } = require('marked');
 
 // Helper to parse solved question IDs from cookie
@@ -27,6 +27,42 @@ const injectProgress = (courses, solvedIds) => {
         });
       });
     });
+  });
+};
+
+// Build overview stats for all 8 academic terms (1-1 through 4-2)
+const buildTermsOverview = (allCourses, solvedIds) => {
+  return TERMS_CONFIG.map(termCfg => {
+    const termCourses = allCourses.filter(c => (c.term || '3-2') === termCfg.id);
+    let coursesCount = termCourses.length;
+    let topicsCount = 0;
+    let questionsCount = 0;
+    let solvedCount = 0;
+
+    termCourses.forEach(c => {
+      c.Sections.forEach(s => {
+        s.Topics.forEach(t => {
+          topicsCount++;
+          t.Questions.forEach(q => {
+            questionsCount++;
+            if (solvedIds.includes(q.id)) {
+              solvedCount++;
+            }
+          });
+        });
+      });
+    });
+
+    const percentage = questionsCount > 0 ? Math.round((solvedCount / questionsCount) * 100) : 0;
+
+    return {
+      ...termCfg,
+      coursesCount,
+      topicsCount,
+      questionsCount,
+      solvedCount,
+      percentage
+    };
   });
 };
 
@@ -59,14 +95,46 @@ marked.setOptions({
 
 exports.getDashboard = async (req, res) => {
   try {
-    const courses = await Course.findAll();
-
-    // Fetch all scheduled exams ordered by date
-    const exams = await Exam.findAll();
-
-    // Inject solved question states dynamically from cookies
+    const allCourses = await Course.findAll();
     const solvedIds = getSolvedFromCookie(req);
-    injectProgress(courses, solvedIds);
+    injectProgress(allCourses, solvedIds);
+
+    const termsOverview = buildTermsOverview(allCourses, solvedIds);
+    const validTermIds = TERMS_CONFIG.map(t => t.id);
+
+    // Determine if user explicitly requested a term via ?term= query parameter
+    const requestedTerm = req.query.term;
+    const hasExplicitTerm = requestedTerm && (validTermIds.includes(requestedTerm) || requestedTerm === 'all');
+    const activeTerm = hasExplicitTerm ? requestedTerm : DEFAULT_CURRENT_TERM;
+
+    // Show the interactive Term Selection Portal immediately when entering `/` without `?term=`
+    // or when explicitly triggered via `?select=1`
+    const showTermPrompt = !hasExplicitTerm || req.query.select === '1';
+
+    const activeTermObj = activeTerm === 'all'
+      ? {
+          id: 'all',
+          year: '1–4',
+          semester: 'All',
+          name: 'All Semesters (1-1 to 4-2)',
+          fullTitle: 'All 8 Academic Terms',
+          bnTitle: 'সকল সেমিস্টার (১-১ থেকে ৪-২)',
+          codeSeries: '1100–4200 Series',
+          status: 'all',
+          badgeText: 'Complete Archive',
+          theme: 'indigo'
+        }
+      : (termsOverview.find(t => t.id === activeTerm) || termsOverview.find(t => t.id === DEFAULT_CURRENT_TERM));
+
+    // Filter courses and exams for the selected term
+    const courses = activeTerm === 'all'
+      ? allCourses
+      : allCourses.filter(c => (c.term || '3-2') === activeTerm);
+
+    const allExams = await Exam.findAll();
+    const exams = activeTerm === 'all'
+      ? allExams
+      : allExams.filter(e => (e.term || '3-2') === activeTerm);
 
     let totalCourses = courses.length;
     let totalTopics = 0;
@@ -101,6 +169,7 @@ exports.getDashboard = async (req, res) => {
         id: course.id,
         name: course.name,
         code: course.code,
+        term: course.term || '3-2',
         sections: course.Sections,
         topicsCount: courseTopicsCount,
         questionsCount: courseQuestionsCount,
@@ -119,10 +188,14 @@ exports.getDashboard = async (req, res) => {
     const dailyQuote = islamicQuotes[todayIndex];
 
     res.render('index', {
-      title: 'Dashboard',
+      title: `${activeTermObj.name} Dashboard`,
       courses: courseData,
       exams: exams,
       quote: dailyQuote,
+      termsOverview,
+      activeTerm,
+      activeTermObj,
+      showTermPrompt,
       stats: {
         totalCourses,
         totalTopics,
@@ -322,6 +395,10 @@ const getFallbackAnalysis = (sectionName, teacherName) => {
 
 exports.getCourse = async (req, res) => {
   try {
+    const allCourses = await Course.findAll();
+    const solvedIds = getSolvedFromCookie(req);
+    const termsOverview = buildTermsOverview(allCourses, solvedIds);
+
     const course = await Course.findByPk(req.params.id);
 
     if (!course) {
@@ -329,7 +406,6 @@ exports.getCourse = async (req, res) => {
     }
 
     // Inject solved question states dynamically from cookies
-    const solvedIds = getSolvedFromCookie(req);
     injectProgress([course], solvedIds);
 
     // Process section statistics
@@ -363,11 +439,19 @@ exports.getCourse = async (req, res) => {
       };
     });
 
+    const courseTerm = course.term || '3-2';
+    const activeTermObj = termsOverview.find(t => t.id === courseTerm) || termsOverview.find(t => t.id === DEFAULT_CURRENT_TERM);
+
     res.render('course', {
       title: course.name,
+      termsOverview,
+      activeTerm: courseTerm,
+      activeTermObj,
       course: {
         id: course.id,
         name: course.name,
+        code: course.code,
+        term: courseTerm,
         Sections: sections
       }
     });
@@ -380,6 +464,10 @@ exports.getCourse = async (req, res) => {
 exports.getTopics = async (req, res) => {
   try {
     const { sectionId } = req.query;
+    const allCourses = await Course.findAll();
+    const solvedIds = getSolvedFromCookie(req);
+    const termsOverview = buildTermsOverview(allCourses, solvedIds);
+
     const course = await Course.findByPk(req.params.id);
     const section = await Section.findByPk(sectionId);
 
@@ -392,8 +480,14 @@ exports.getTopics = async (req, res) => {
       include: [Question]
     });
 
+    const courseTerm = course.term || '3-2';
+    const activeTermObj = termsOverview.find(t => t.id === courseTerm) || termsOverview.find(t => t.id === DEFAULT_CURRENT_TERM);
+
     res.render('topics', {
       title: `${course.name} - Topics`,
+      termsOverview,
+      activeTerm: courseTerm,
+      activeTermObj,
       course,
       section,
       topics
@@ -407,6 +501,10 @@ exports.getTopics = async (req, res) => {
 exports.getQA = async (req, res) => {
   try {
     const { sec } = req.query;
+    const allCourses = await Course.findAll();
+    const solvedIds = getSolvedFromCookie(req);
+    const termsOverview = buildTermsOverview(allCourses, solvedIds);
+
     const course = await Course.findByPk(req.params.id);
     const section = await Section.findByPk(sec);
 
@@ -415,7 +513,6 @@ exports.getQA = async (req, res) => {
     }
 
     // Inject solved question states dynamically from cookies
-    const solvedIds = getSolvedFromCookie(req);
     section.Topics.forEach(t => {
       t.Questions.forEach(q => {
         if (solvedIds.includes(q.id)) {
@@ -456,9 +553,14 @@ exports.getQA = async (req, res) => {
     });
 
     const percentage = totalCount > 0 ? Math.round((solvedCount / totalCount) * 100) : 0;
+    const courseTerm = course.term || '3-2';
+    const activeTermObj = termsOverview.find(t => t.id === courseTerm) || termsOverview.find(t => t.id === DEFAULT_CURRENT_TERM);
 
     res.render('qa', {
       title: `${course.name} - Q&A`,
+      termsOverview,
+      activeTerm: courseTerm,
+      activeTermObj,
       course,
       section: {
         id: section.id,
@@ -479,6 +581,10 @@ exports.getQA = async (req, res) => {
 exports.getNotes = async (req, res) => {
   try {
     const { sectionId } = req.query;
+    const allCourses = await Course.findAll();
+    const solvedIds = getSolvedFromCookie(req);
+    const termsOverview = buildTermsOverview(allCourses, solvedIds);
+
     const course = await Course.findByPk(req.params.id);
     const section = await Section.findByPk(sectionId);
 
@@ -493,8 +599,14 @@ exports.getNotes = async (req, res) => {
       parsedContent = marked.parse(note.content);
     }
 
+    const courseTerm = course.term || '3-2';
+    const activeTermObj = termsOverview.find(t => t.id === courseTerm) || termsOverview.find(t => t.id === DEFAULT_CURRENT_TERM);
+
     res.render('notes', {
       title: `${course.name} - Course Content`,
+      termsOverview,
+      activeTerm: courseTerm,
+      activeTermObj,
       course,
       section,
       note: note ? { ...note.toJSON(), parsedContent } : null
@@ -509,12 +621,26 @@ exports.getSearch = async (req, res) => {
   try {
     const rawQuery = req.query.q || '';
     const query = rawQuery.trim().toLowerCase();
+    const allCourses = await Course.findAll();
+    const solvedIds = getSolvedFromCookie(req);
+    const termsOverview = buildTermsOverview(allCourses, solvedIds);
+    const activeTermObj = termsOverview.find(t => t.id === DEFAULT_CURRENT_TERM);
+
     if (!query) {
-      return res.render('search', { title: 'Search', query: rawQuery, results: { courses: [], topics: [], questions: [] } });
+      return res.render('search', {
+        title: 'Search',
+        query: rawQuery,
+        termsOverview,
+        activeTerm: DEFAULT_CURRENT_TERM,
+        activeTermObj,
+        results: { courses: [], topics: [], questions: [] }
+      });
     }
 
-    const allCourses = await Course.findAll();
-    const courses = allCourses.filter(c => c.name.toLowerCase().includes(query));
+    const courses = allCourses.filter(c =>
+      c.name.toLowerCase().includes(query) ||
+      (c.code && c.code.toLowerCase().includes(query))
+    );
 
     const topics = [];
     const questions = [];
@@ -542,6 +668,9 @@ exports.getSearch = async (req, res) => {
     res.render('search', {
       title: 'Search Results',
       query: rawQuery,
+      termsOverview,
+      activeTerm: DEFAULT_CURRENT_TERM,
+      activeTermObj,
       results: { courses, topics, questions }
     });
   } catch (err) {
@@ -559,7 +688,10 @@ exports.apiSearch = async (req, res) => {
     }
 
     const allCourses = await Course.findAll();
-    const courses = allCourses.filter(c => c.name.toLowerCase().includes(query)).slice(0, 5);
+    const courses = allCourses.filter(c =>
+      c.name.toLowerCase().includes(query) ||
+      (c.code && c.code.toLowerCase().includes(query))
+    ).slice(0, 5);
 
     const topics = [];
     const questions = [];

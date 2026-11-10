@@ -1,26 +1,32 @@
 <%- include('partials/header') %>
 
 <!-- Back Link -->
-<div class="mb-6">
+<div class="mb-6 flex items-center justify-between flex-wrap gap-3">
   <a href="/courses/<%= course.id %>" class="inline-flex items-center gap-1.5 text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors">
     <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
     </svg>
-    Back to Course Overview
+    Back to <%= course.name %> (<%= course.code %>)
   </a>
+  <span class="text-xs font-extrabold px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20">
+    🎓 Term <%= course.term || '3-2' %> &bull; <%= section.name %>
+  </span>
 </div>
 
 <!-- Header -->
 <div class="mb-8">
-  <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-slate-800 px-3 py-1 rounded-full uppercase tracking-wider">Study Vault</span>
-  <h1 class="text-3xl font-extrabold text-slate-900 dark:text-white mt-3 tracking-tight">Course Content</h1>
+  <div class="flex items-center gap-2">
+    <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-500/10 px-3 py-1 rounded-full uppercase tracking-wider border border-indigo-500/20">Study Vault</span>
+    <span class="text-xs font-bold text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">Term <%= course.term || '3-2' %></span>
+  </div>
+  <h1 class="text-3xl font-extrabold text-slate-900 dark:text-white mt-3 tracking-tight font-display">Course Content</h1>
   <p class="text-slate-500 dark:text-slate-400 mt-1"><%= course.name %> (<%= course.code %>) &bull; <%= section.name %> (<%= section.teacherName %>)</p>
 </div>
 
 <!-- Notes Board -->
-<div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-6 md:p-10 shadow-sm">
+<div class="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-3xl p-6 md:p-10 shadow-xs">
   <!-- Original source label -->
-  <div class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/30 px-2.5 py-1 rounded-md mb-6 border border-emerald-100/30">
+  <div class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-md mb-6 border border-emerald-500/20">
     <span>📖</span>
     <span>Source: Original Course Content</span>
   </div>
@@ -34,7 +40,7 @@
     <div class="text-center py-12 text-slate-400 dark:text-slate-500">
       <div class="text-4xl mb-4">📓</div>
       <h3 class="text-base font-bold text-slate-800 dark:text-white mb-1">No notes uploaded for this section</h3>
-      <p class="text-sm">Please import notes during Phase 2.</p>
+      <p class="text-sm">Notes for this section can be imported into the course vault.</p>
     </div>
   <% } %>
 </div>

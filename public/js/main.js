@@ -53,8 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
             data.courses.forEach(c => {
               const item = document.createElement('a');
               item.href = `/courses/${c.id}`;
-              item.className = 'block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-indigo-50 dark:hover:bg-slate-700 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors';
-              item.textContent = c.name;
+              item.className = 'flex items-center justify-between px-4 py-2.5 text-sm text-slate-700 dark:text-slate-200 hover:bg-indigo-50 dark:hover:bg-slate-700 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors';
+              item.innerHTML = `<span class="font-semibold">${c.name} (${c.code})</span> <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-600 dark:text-indigo-400">Term ${c.term || '3-2'}</span>`;
               searchResults.appendChild(item);
             });
           }
@@ -68,9 +68,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             data.topics.forEach(t => {
               const item = document.createElement('a');
-              item.href = `/courses/${t.Section.courseId}/qa#topic-${t.id}`;
+              item.href = `/courses/${t.Section.courseId}/qa?sec=${t.Section.id}#topic-${t.id}`;
               item.className = 'block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-indigo-50 dark:hover:bg-slate-700 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors';
-              item.innerHTML = `<span class="font-medium">${t.name}</span> <span class="text-xs text-slate-400 dark:text-slate-500">(${t.Section.Course.name})</span>`;
+              item.innerHTML = `<span class="font-medium">${t.name}</span> <span class="text-xs text-slate-400 dark:text-slate-500">(${t.Section.Course.name} • Term ${t.Section.Course.term || '3-2'})</span>`;
               searchResults.appendChild(item);
             });
           }
@@ -84,9 +84,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             data.questions.forEach(q => {
               const item = document.createElement('a');
-              item.href = `/courses/${q.Topic.Section.courseId}/qa?question=${q.id}#question-${q.id}`;
+              item.href = `/courses/${q.Topic.Section.courseId}/qa?sec=${q.Topic.Section.id}&question=${q.id}#item-${q.id}`;
               item.className = 'block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-indigo-50 dark:hover:bg-slate-700 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors truncate';
-              item.innerHTML = `<span class="font-medium">${q.questionText}</span> <br/> <span class="text-xs text-slate-400 dark:text-slate-500">${q.Topic.name} - ${q.Topic.Section.Course.name}</span>`;
+              item.innerHTML = `<span class="font-medium">${q.questionText}</span> <br/> <span class="text-xs text-slate-400 dark:text-slate-500">${q.Topic.name} — ${q.Topic.Section.Course.name} (Term ${q.Topic.Section.Course.term || '3-2'})</span>`;
               searchResults.appendChild(item);
             });
           }
@@ -158,4 +158,3 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
-

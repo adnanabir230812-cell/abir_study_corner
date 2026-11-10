@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= title %> | Abir's Study Corner</title>
-  <!-- Google Fonts Inter -->
+  <title><%= title %> | Abir's Study Corner (1-1 to 4-2)</title>
+  <!-- Google Fonts: Plus Jakarta Sans, Inter & Hind Siliguri for crisp Bengali + English typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
   <!-- Tailwind CSS -->
   <link rel="stylesheet" href="/css/style.css">
   <!-- Anti-flash Dark Mode Loader -->
@@ -18,66 +18,52 @@
       document.documentElement.classList.remove('dark');
     }
   </script>
-  <!-- Premium Legible Logo Styling -->
+  <!-- Custom Styles for Multi-Semester Academic Portal -->
   <style>
+    body {
+      font-family: 'Inter', 'Hind Siliguri', system-ui, -apple-system, sans-serif;
+    }
+    .font-display {
+      font-family: 'Plus Jakarta Sans', 'Hind Siliguri', sans-serif;
+    }
     .logo-container {
       display: inline-flex;
       align-items: center;
-      gap: 0.6rem;
+      gap: 0.65rem;
       text-decoration: none;
     }
-    
-    .logo-wrapper {
-      position: relative;
-      transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    }
-    
     .logo-text {
       display: inline-block;
-      font-weight: 850;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
       letter-spacing: -0.03em;
-      text-transform: uppercase;
-      font-size: 1.4rem;
-      line-height: 1;
+      font-size: 1.25rem;
+      line-height: 1.1;
       background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #ec4899 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      filter: drop-shadow(0 2px 4px rgba(99, 102, 241, 0.1));
-      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
-    
     .dark .logo-text {
-      background: linear-gradient(135deg, #818cf8 0%, #a78bfa 50%, #f472b6 100%);
+      background: linear-gradient(135deg, #818cf8 0%, #c084fc 50%, #f472b6 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      filter: drop-shadow(0 2px 4px rgba(129, 140, 248, 0.15));
     }
-    
-    .badge-pill {
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      padding: 0.2rem 0.5rem;
+    /* Custom Subtle Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(148, 163, 184, 0.35);
       border-radius: 9999px;
-      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
-    
-    /* Interactive Hover effects */
-    .logo-container:hover .logo-wrapper {
-      transform: translateY(-2px);
-    }
-    
-    .logo-container:hover .logo-text {
-      filter: drop-shadow(0 4px 12px rgba(99, 102, 241, 0.35));
-    }
-    
-    .logo-container:hover .badge-pill {
-      background-color: #6366f1;
-      color: #ffffff;
-      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(99, 102, 241, 0.55);
     }
   </style>
   <!-- MathJax for rendering LaTeX math formulas -->
@@ -95,49 +81,79 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script" async></script>
 </head>
-<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 min-h-screen flex flex-col font-sans transition-colors duration-200">
-  <!-- Navbar -->
-  <nav class="bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 sticky top-0 z-40">
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 min-h-screen flex flex-col font-sans transition-colors duration-200 selection:bg-indigo-500 selection:text-white">
+
+  <%
+    const currentTermId = locals.activeTerm || '4-1';
+    const currentTermObj = locals.activeTermObj || { id: '4-1', name: 'Term 4-1', bnTitle: '৪র্থ বর্ষ • ১ম টার্ম', status: 'current' };
+    const allTermsList = locals.termsOverview || [];
+  %>
+
+  <!-- Top Ambient Glow -->
+  <div class="fixed inset-x-0 top-0 h-64 bg-gradient-to-b from-indigo-500/5 via-purple-500/5 to-transparent pointer-events-none -z-10"></div>
+
+  <!-- Sticky Glassmorphic Navbar -->
+  <nav class="bg-white/85 dark:bg-slate-900/85 backdrop-blur-xl border-b border-slate-200/80 dark:border-slate-800 sticky top-0 z-40 transition-colors">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
+      <div class="flex items-center justify-between h-16 gap-3">
         
-        <!-- Logo -->
-        <div class="flex items-center">
-          <a href="/" class="logo-container group">
-            <div class="logo-wrapper">
-              <span class="logo-text">Abir's Study Corner</span>
+        <!-- Left: Brand Logo & Active Term Quick Badge -->
+        <div class="flex items-center gap-3 min-w-0">
+          <a href="/?term=<%= currentTermId %>" class="logo-container group flex-shrink-0">
+            <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-600 via-violet-600 to-fuchsia-600 flex items-center justify-center text-white font-black text-base shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-transform">
+              A
             </div>
-            <span class="badge-pill text-indigo-600 bg-indigo-50 dark:bg-slate-700 dark:text-indigo-300 border border-indigo-100 dark:border-slate-600">STUDY</span>
+            <div class="flex flex-col">
+              <span class="logo-text">Abir's Study Corner</span>
+              <span class="text-[10px] font-bold tracking-wider uppercase text-slate-400 dark:text-slate-500">Academic Hub • 1-1 to 4-2</span>
+            </div>
           </a>
+
+          <!-- Interactive Term Selector Trigger Button in Navbar -->
+          <button type="button" onclick="openTermModal()" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-extrabold border transition-all cursor-pointer shadow-xs hover:shadow-md <%= currentTermId === '4-1' ? 'bg-amber-500/10 text-amber-700 dark:text-amber-300 border-amber-500/30 hover:bg-amber-500/20' : currentTermId === '3-2' ? 'bg-indigo-500/10 text-indigo-700 dark:text-indigo-300 border-indigo-500/30 hover:bg-indigo-500/20' : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 border-slate-200 dark:border-slate-700 hover:border-indigo-400' %>" title="Change Academic Term (1-1 to 4-2)">
+            <span class="w-2 h-2 rounded-full <%= currentTermId === '4-1' ? 'bg-amber-500 animate-ping' : 'bg-indigo-500' %>"></span>
+            <span><%= currentTermId === 'all' ? 'All Terms' : `Term ${currentTermId}` %></span>
+            <% if (currentTermId === '4-1') { %>
+              <span class="hidden md:inline-block text-[9px] px-1.5 py-0.5 rounded bg-amber-500 text-white uppercase font-black">Current</span>
+            <% } else if (currentTermId === '3-2') { %>
+              <span class="hidden md:inline-block text-[9px] px-1.5 py-0.5 rounded bg-indigo-600 text-white uppercase font-black">Archive</span>
+            <% } %>
+            <svg class="w-3.5 h-3.5 opacity-75" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
         </div>
 
-
-        <!-- Search Bar -->
-        <div class="flex-1 max-w-md mx-8 hidden sm:block relative">
-          <div class="relative">
-            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <svg class="h-5 w-5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <!-- Center: Global Search Bar -->
+        <div class="flex-1 max-w-md mx-4 hidden md:block relative">
+          <form action="/search" method="GET" class="relative">
+            <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
+              <svg class="h-4 w-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
             </div>
-            <input type="text" id="global-search-input" placeholder="Search courses, topics, keywords..." 
-              class="block w-full pl-10 pr-4 py-2 border border-slate-200 dark:border-slate-700 rounded-xl bg-slate-50 dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 focus:border-transparent text-sm transition-all placeholder-slate-400 dark:placeholder-slate-500">
-          </div>
-          
+            <input type="text" name="q" id="global-search-input" autocomplete="off" placeholder="Search courses, topics, Q&A across 1-1 to 4-2..." 
+              class="block w-full pl-10 pr-4 py-2 border border-slate-200 dark:border-slate-700/80 rounded-xl bg-slate-50/80 dark:bg-slate-800/80 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 focus:border-transparent text-sm transition-all placeholder-slate-400 dark:placeholder-slate-500">
+          </form>
           <!-- Dropdown Results Container -->
-          <div id="search-results-dropdown" class="absolute left-0 right-0 mt-2 w-full bg-white dark:bg-slate-800 rounded-xl shadow-xl border border-slate-200 dark:border-slate-700 max-h-96 overflow-y-auto hidden z-50"></div>
+          <div id="search-results-dropdown" class="absolute left-0 right-0 mt-2 w-full bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 max-h-96 overflow-y-auto hidden z-50"></div>
         </div>
 
         <!-- Right Controls -->
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-2 sm:gap-3">
+          <button type="button" onclick="openTermModal()" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold bg-indigo-50 hover:bg-indigo-100 dark:bg-slate-800 dark:hover:bg-slate-700 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-slate-700 transition-all cursor-pointer">
+            <span>🎓</span>
+            <span>Switch Term</span>
+          </button>
+
           <!-- Theme Toggle -->
-          <button id="theme-toggle" class="p-2 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-xl transition-all" aria-label="Toggle dark mode">
+          <button id="theme-toggle" class="p-2.5 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl border border-transparent hover:border-slate-200 dark:hover:border-slate-700 transition-all cursor-pointer" aria-label="Toggle dark mode">
             <!-- Sun icon for dark mode -->
-            <svg class="h-5 w-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg class="h-5 w-5 hidden dark:block text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m2.828 0l-.707-.707m12.728-12.728l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
             </svg>
             <!-- Moon icon for light mode -->
-            <svg class="h-5 w-5 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg class="h-5 w-5 block dark:hidden text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
             </svg>
           </button>
@@ -147,4 +163,201 @@
     </div>
   </nav>
 
-  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+  <!-- GLOBAL ACADEMIC TERM SELECTION PORTAL MODAL (1-1 to 4-2) -->
+  <!-- Opens automatically on root entry (`showTermPrompt`) or whenever "Switch Term" is clicked -->
+  <div id="term-selector-modal" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-slate-950/75 backdrop-blur-md transition-all duration-300 <%= locals.showTermPrompt ? '' : 'hidden opacity-0' %>" role="dialog" aria-modal="true" aria-labelledby="term-portal-title">
+    <div class="fixed inset-0" onclick="closeTermModal()"></div>
+
+    <div id="term-selector-panel" class="relative w-full max-w-4xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-2xl overflow-hidden z-10 max-h-[92vh] flex flex-col transition-all duration-300 <%= locals.showTermPrompt ? 'scale-100 opacity-100' : 'scale-95 opacity-0' %>">
+      
+      <!-- Top Decorative Gradient Header -->
+      <div class="relative bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 px-6 py-6 sm:px-8 sm:py-7 text-white border-b border-indigo-500/20">
+        <div class="absolute -right-12 -top-12 w-48 h-48 bg-indigo-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -left-12 -bottom-12 w-48 h-48 bg-amber-500/15 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative z-10 flex items-start justify-between gap-4">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[11px] font-extrabold bg-indigo-500/20 text-indigo-300 border border-indigo-400/30 uppercase tracking-widest mb-2.5">
+              <span>🎓</span>
+              <span>B.Sc. Agriculture • Academic Term Portal</span>
+            </div>
+            <h2 id="term-portal-title" class="text-2xl sm:text-3xl font-black tracking-tight font-display">
+              কোন টার্মে ঢুকতে চাও? <span class="text-indigo-300 font-bold text-lg sm:text-xl block sm:inline sm:ml-1">(Select Your Term: 1-1 to 4-2)</span>
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-300 mt-1.5 max-w-2xl leading-relaxed">
+              ১ম বর্ষ ১ম টার্ম (<strong class="text-white">1-1</strong>) থেকে ৪র্থ বর্ষ ২য় টার্ম (<strong class="text-white">4-2</strong>) — যেকোনো সেমিস্টার বেছে নাও। আগের টার্ম ছিল <strong class="text-indigo-300">3-2</strong> এবং এইবারের চলমান টার্ম হলো <strong class="text-amber-300">4-1</strong>।
+            </p>
+          </div>
+
+          <button type="button" onclick="closeTermModal()" class="p-2 rounded-xl bg-white/10 hover:bg-white/20 text-slate-200 hover:text-white transition-all cursor-pointer flex-shrink-0" title="Close">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Modal Scrollable Content -->
+      <div class="p-5 sm:p-7 overflow-y-auto space-y-6 flex-1 bg-slate-50/60 dark:bg-slate-900">
+        
+        <!-- Quick Spotlight Cards: Current Term (4-1) & Previous Term (3-2) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <%
+            const term41 = allTermsList.find(t => t.id === '4-1') || { id: '4-1', coursesCount: 0, questionsCount: 0 };
+            const term32 = allTermsList.find(t => t.id === '3-2') || { id: '3-2', coursesCount: 5, questionsCount: 454 };
+          %>
+          <!-- Spotlight: 4-1 Current Term -->
+          <a href="/?term=4-1" class="group relative overflow-hidden rounded-2xl p-5 bg-gradient-to-br from-amber-500/10 via-orange-500/5 to-transparent dark:from-amber-500/15 dark:via-slate-800/90 dark:to-slate-800 border-2 <%= currentTermId === '4-1' ? 'border-amber-500 shadow-lg shadow-amber-500/10' : 'border-amber-400/50 hover:border-amber-500' %> transition-all duration-200 hover:-translate-y-0.5 flex flex-col justify-between">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-black bg-amber-500 text-slate-950 uppercase tracking-wider">
+                  🔥 এইবারের টার্ম • Current Term
+                </span>
+                <h3 class="text-xl font-black text-slate-900 dark:text-white mt-2.5 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+                  Term 4-1 (৪র্থ বর্ষ ১ম টার্ম)
+                </h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                  Year 4 • Semester 1 &bull; 4100 Course Series
+                </p>
+              </div>
+              <div class="w-12 h-12 rounded-2xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-600 dark:text-amber-400 font-black text-base flex-shrink-0">
+                4-1
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-amber-500/20 flex items-center justify-between text-xs font-bold">
+              <span class="text-slate-600 dark:text-slate-300">
+                <%= term41.coursesCount > 0 ? `${term41.coursesCount} Courses • ${term41.questionsCount} Q&As` : 'Active Workspace • Ready for 4-1 Courses' %>
+              </span>
+              <span class="text-amber-600 dark:text-amber-400 group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                Enter 4-1 &rarr;
+              </span>
+            </div>
+          </a>
+
+          <!-- Spotlight: 3-2 Previous Term Archive -->
+          <a href="/?term=3-2" class="group relative overflow-hidden rounded-2xl p-5 bg-gradient-to-br from-indigo-500/10 via-purple-500/5 to-transparent dark:from-indigo-500/15 dark:via-slate-800/90 dark:to-slate-800 border-2 <%= currentTermId === '3-2' ? 'border-indigo-500 shadow-lg shadow-indigo-500/10' : 'border-indigo-400/50 hover:border-indigo-500' %> transition-all duration-200 hover:-translate-y-0.5 flex flex-col justify-between">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-black bg-indigo-600 text-white uppercase tracking-wider">
+                  ✅ আগের টার্ম • Previous Archive
+                </span>
+                <h3 class="text-xl font-black text-slate-900 dark:text-white mt-2.5 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                  Term 3-2 (৩য় বর্ষ ২য় টার্ম)
+                </h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                  Plant Pathology, Crop Ecology, RM, Olericulture, Extension
+                </p>
+              </div>
+              <div class="w-12 h-12 rounded-2xl bg-indigo-500/15 border border-indigo-500/30 flex items-center justify-center text-indigo-600 dark:text-indigo-400 font-black text-base flex-shrink-0">
+                3-2
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-indigo-500/20 flex items-center justify-between text-xs font-bold">
+              <span class="text-indigo-600 dark:text-indigo-300">
+                📚 <%= term32.coursesCount %> Courses &bull; <%= term32.questionsCount %> Solved Q&As
+              </span>
+              <span class="text-indigo-600 dark:text-indigo-400 group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                Open 3-2 Vault &rarr;
+              </span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Complete 8-Semester Grid (1-1 to 4-2) -->
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <h4 class="text-xs font-black uppercase tracking-widest text-slate-400 dark:text-slate-500">
+              All 8 Academic Semesters (1-1 to 4-2)
+            </h4>
+            <span class="text-[11px] font-semibold text-slate-400 dark:text-slate-500">Click any semester to switch</span>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <% allTermsList.forEach(t => { 
+                 const isSelected = currentTermId === t.id;
+                 const isCurrent41 = t.id === '4-1';
+                 const isPrev32 = t.id === '3-2';
+            %>
+              <a href="/?term=<%= t.id %>" class="group relative rounded-2xl p-4 border transition-all duration-200 hover:-translate-y-0.5 flex flex-col justify-between <%= isSelected ? 'bg-indigo-50/90 dark:bg-indigo-950/60 border-indigo-500 ring-2 ring-indigo-500/20' : 'bg-white dark:bg-slate-800/90 border-slate-200 dark:border-slate-700/80 hover:border-indigo-400 dark:hover:border-indigo-500 hover:shadow-md' %>">
+                <div>
+                  <div class="flex items-center justify-between gap-2 mb-2">
+                    <span class="text-lg font-black tracking-tight <%= isCurrent41 ? 'text-amber-600 dark:text-amber-400' : isPrev32 ? 'text-indigo-600 dark:text-indigo-400' : 'text-slate-900 dark:text-white' %>">
+                      <%= t.id %>
+                    </span>
+                    <% if (isCurrent41) { %>
+                      <span class="text-[9px] font-black px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-700 dark:text-amber-300 border border-amber-500/30 uppercase">Now</span>
+                    <% } else if (isPrev32) { %>
+                      <span class="text-[9px] font-black px-2 py-0.5 rounded-full bg-indigo-500/15 text-indigo-700 dark:text-indigo-300 border border-indigo-500/30 uppercase">3-2 Vault</span>
+                    <% } else { %>
+                      <span class="text-[9px] font-bold px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-500 dark:text-slate-400">Yr <%= t.year %></span>
+                    <% } %>
+                  </div>
+
+                  <div class="text-xs font-bold text-slate-700 dark:text-slate-200 leading-snug">
+                    <%= t.fullTitle %>
+                  </div>
+                  <div class="text-[11px] text-slate-400 dark:text-slate-500 mt-0.5">
+                    <%= t.codeSeries %>
+                  </div>
+                </div>
+
+                <div class="mt-3 pt-2.5 border-t border-slate-100 dark:border-slate-700/60 flex items-center justify-between text-[11px] font-bold">
+                  <% if (t.coursesCount > 0) { %>
+                    <span class="text-emerald-600 dark:text-emerald-400"><%= t.coursesCount %> Courses (<%= t.questionsCount %> Qs)</span>
+                  <% } else if (isCurrent41) { %>
+                    <span class="text-amber-600 dark:text-amber-400">Current Semester</span>
+                  <% } else { %>
+                    <span class="text-slate-400 dark:text-slate-500">0 Courses</span>
+                  <% } %>
+                  <span class="text-slate-400 group-hover:text-indigo-500 transition-colors">&rarr;</span>
+                </div>
+              </a>
+            <% }) %>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="px-6 py-4 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <a href="/?term=all" class="text-xs font-extrabold text-indigo-600 dark:text-indigo-400 hover:underline flex items-center gap-1.5">
+          <span>🌐</span>
+          <span>View All Semesters Combined (1-1 to 4-2)</span>
+        </a>
+        <div class="flex items-center gap-2.5 w-full sm:w-auto justify-end">
+          <button type="button" onclick="closeTermModal()" class="px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 transition-all cursor-pointer">
+            Stay on <%= currentTermId === 'all' ? 'All Terms' : `Term ${currentTermId}` %>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function openTermModal() {
+      const modal = document.getElementById('term-selector-modal');
+      const panel = document.getElementById('term-selector-panel');
+      if (!modal || !panel) return;
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        modal.classList.remove('opacity-0');
+        panel.classList.remove('scale-95', 'opacity-0');
+        panel.classList.add('scale-100', 'opacity-100');
+      }, 10);
+    }
+
+    function closeTermModal() {
+      const modal = document.getElementById('term-selector-modal');
+      const panel = document.getElementById('term-selector-panel');
+      if (!modal || !panel) return;
+      modal.classList.add('opacity-0');
+      panel.classList.remove('scale-100', 'opacity-100');
+      panel.classList.add('scale-95', 'opacity-0');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+      }, 250);
+    }
+  </script>
+
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">

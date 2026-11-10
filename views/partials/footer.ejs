@@ -1,10 +1,29 @@
   </main>
 
-  <footer class="bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700 py-6 mt-12 transition-colors duration-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <p class="text-xs text-slate-500 dark:text-slate-400">
-        Abir's study corner &copy; <%= new Date().getFullYear() %> | Personal Study Corner. 100% Original Course Content.
-      </p>
+  <footer class="bg-white dark:bg-slate-900 border-t border-slate-200/80 dark:border-slate-800 py-8 mt-16 transition-colors duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <div class="w-7 h-7 rounded-lg bg-gradient-to-br from-indigo-600 to-violet-600 flex items-center justify-center text-white font-black text-xs">
+            A
+          </div>
+          <p class="text-xs font-semibold text-slate-500 dark:text-slate-400">
+            Abir's Study Corner &copy; <%= new Date().getFullYear() %> &bull; Multi-Semester Academic Platform (<span class="text-indigo-600 dark:text-indigo-400 font-bold">Term 1-1 to 4-2</span>)
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2 text-xs">
+          <a href="/?term=4-1" class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-700 dark:text-amber-300 font-bold border border-amber-500/20 hover:bg-amber-500/20 transition-colors">
+            🔥 Term 4-1 (Current)
+          </a>
+          <a href="/?term=3-2" class="px-2.5 py-1 rounded-lg bg-indigo-500/10 text-indigo-700 dark:text-indigo-300 font-bold border border-indigo-500/20 hover:bg-indigo-500/20 transition-colors">
+            📚 Term 3-2 (Archive)
+          </a>
+          <button type="button" onclick="openTermModal()" class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-bold hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors cursor-pointer">
+            🎓 Switch Term (1-1 – 4-2)
+          </button>
+        </div>
+      </div>
     </div>
   </footer>
 
