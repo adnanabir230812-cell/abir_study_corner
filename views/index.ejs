@@ -2,485 +2,244 @@
 
 <%
   const currentTermId = locals.activeTerm || '4-1';
-  const currentTermObj = locals.activeTermObj || { id: '4-1', name: 'Term 4-1', fullTitle: 'Year 4 • Term 1', bnTitle: '৪র্থ বর্ষ • ১ম টার্ম (চলমান টার্ম)', codeSeries: '4100 Series', status: 'current' };
+  const currentTermObj = locals.activeTermObj || { id: '4-1', name: 'Term 4-1', fullTitle: 'Year 4 • Term 1', bnTitle: '৪র্থ বর্ষ ১ম টার্ম', codeSeries: '4100 Series', status: 'current' };
   const allTermsList = locals.termsOverview || [];
   const term32Summary = allTermsList.find(t => t.id === '3-2') || { coursesCount: 5, questionsCount: 454, topicsCount: 18 };
 %>
 
-<!-- 1. MULTI-SEMESTER QUICK SWITCHER RIBBON (1-1 to 4-2) -->
-<div class="mb-8 bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-2xl p-3 sm:p-4 shadow-xs">
-  <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
-    <div class="flex items-center justify-between sm:justify-start gap-2.5">
-      <span class="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-wider text-slate-500 dark:text-slate-400 px-2">
-        <span>🎓</span>
-        <span>Academic Terms:</span>
-      </span>
-      <button type="button" onclick="openTermModal()" class="lg:hidden inline-flex items-center gap-1 text-xs font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-slate-800 px-2.5 py-1 rounded-lg">
-        Full Portal &rarr;
-      </button>
-    </div>
-
-    <!-- 8 Term Pills (1-1 through 4-2 + All) -->
-    <div class="flex items-center gap-1.5 overflow-x-auto pb-1 lg:pb-0 no-scrollbar">
-      <% allTermsList.forEach(t => { 
-           const isActive = currentTermId === t.id;
-           const isCurrent41 = t.id === '4-1';
-           const isPrev32 = t.id === '3-2';
-      %>
-        <a href="/?term=<%= t.id %>" class="flex-shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-extrabold transition-all duration-200 <%= isActive ? (isCurrent41 ? 'bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 shadow-md shadow-amber-500/20 scale-[1.02]' : 'bg-gradient-to-r from-indigo-600 to-violet-600 text-white shadow-md shadow-indigo-500/20 scale-[1.02]') : 'bg-slate-100/80 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300 hover:bg-slate-200/80 dark:hover:bg-slate-700' %>">
-          <span><%= t.id %></span>
-          <% if (isCurrent41) { %>
-            <span class="text-[9px] px-1.5 py-0.2 rounded-full uppercase font-black <%= isActive ? 'bg-slate-950/20 text-slate-950' : 'bg-amber-500/20 text-amber-700 dark:text-amber-300' %>">Now</span>
-          <% } else if (t.coursesCount > 0) { %>
-            <span class="text-[9px] px-1.5 py-0.2 rounded-full font-black <%= isActive ? 'bg-white/20 text-white' : 'bg-indigo-500/15 text-indigo-600 dark:text-indigo-400' %>"><%= t.coursesCount %></span>
-          <% } %>
-        </a>
-      <% }) %>
-
-      <a href="/?term=all" class="flex-shrink-0 inline-flex items-center gap-1 px-3 py-1.5 rounded-xl text-xs font-extrabold transition-all duration-200 <%= currentTermId === 'all' ? 'bg-gradient-to-r from-indigo-600 to-violet-600 text-white shadow-md' : 'bg-slate-100/80 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300 hover:bg-slate-200/80 dark:hover:bg-slate-700' %>">
-        <span>All Terms</span>
-      </a>
-    </div>
+<!-- Minimal Term Switcher Bar (1-1 to 4-2) -->
+<div class="mb-8 pb-4 border-b border-slate-200 dark:border-slate-800/90 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+  <div class="text-xs font-mono-code uppercase tracking-wider text-slate-400 dark:text-slate-500">
+    Semesters
   </div>
-</div>
 
-<!-- Mobile Search Block -->
-<div class="block md:hidden mb-6 relative">
-  <form action="/search" method="GET" class="relative">
-    <input type="text" name="q" id="mobile-search-input" autocomplete="off" placeholder="Search courses, topics, questions..." 
-      class="block w-full pl-4 pr-10 py-3 border border-slate-200 dark:border-slate-800 rounded-2xl bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm transition-all shadow-xs">
-  </form>
-  <div id="mobile-search-results-dropdown" class="absolute left-0 right-0 mt-2 w-full bg-white dark:bg-slate-800 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700 max-h-96 overflow-y-auto hidden z-50"></div>
-</div>
-
-<!-- 2. TOP HERO ZONE: Active Semester Banner, Exam Countdown & Motivation -->
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 mb-10 items-start">
-  
-  <!-- Left Side (2/3 width): Semester Command Banner + Live Countdown + Daily Islamic Quote -->
-  <div class="lg:col-span-2 flex flex-col justify-start gap-6">
-    
-    <!-- Active Semester Hero Banner -->
-    <div class="relative overflow-hidden rounded-3xl p-6 sm:p-8 text-white shadow-xl border <%= currentTermId === '4-1' ? 'bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 border-amber-500/30' : 'bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 border-indigo-500/30' %>">
-      <div class="absolute -right-12 -top-12 w-56 h-56 <%= currentTermId === '4-1' ? 'bg-amber-500/15' : 'bg-indigo-500/20' %> rounded-full blur-3xl pointer-events-none"></div>
-      <div class="absolute -left-12 -bottom-12 w-56 h-56 bg-fuchsia-500/10 rounded-full blur-3xl pointer-events-none"></div>
-
-      <div class="relative z-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
-        <div>
-          <div class="flex flex-wrap items-center gap-2">
-            <% if (currentTermId === '4-1') { %>
-              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-black bg-amber-500 text-slate-950 uppercase tracking-wider shadow-sm">
-                🔥 এইবারের চলমান টার্ম • Current Term
-              </span>
-            <% } else if (currentTermId === '3-2') { %>
-              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-black bg-indigo-500/30 text-indigo-200 border border-indigo-400/30 uppercase tracking-wider">
-                📚 আগের টার্ম • Completed Archive
-              </span>
-            <% } else { %>
-              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-black bg-white/10 text-indigo-200 border border-white/15 uppercase tracking-wider">
-                🎓 <%= currentTermObj.badgeText || 'Academic Semester' %>
-              </span>
-            <% } %>
-            <span class="text-xs font-bold text-slate-300 bg-white/10 px-2.5 py-1 rounded-full border border-white/10">
-              <%= currentTermObj.codeSeries %>
-            </span>
-          </div>
-
-          <h1 class="text-2xl sm:text-4xl font-black tracking-tight mt-3 font-display">
-            <%= currentTermObj.name %> <span class="text-indigo-300 font-bold text-lg sm:text-2xl block sm:inline sm:ml-2">(<%= currentTermObj.bnTitle %>)</span>
-          </h1>
-          <p class="text-xs sm:text-sm text-slate-300 mt-2 max-w-xl leading-relaxed">
-            <% if (currentTermId === '4-1') { %>
-              ৪র্থ বর্ষ ১ম সেমিস্টার (<strong>Term 4-1</strong>)-এর ড্যাশবোর্ডে স্বাগতম! আগের <strong>3-2</strong> টার্মের সব কোর্স ও ৪৫৪টি প্রশ্নোত্তর আর্কাইভে সংরক্ষিত আছে।
-            <% } else if (currentTermId === '3-2') { %>
-              আগের টার্ম (<strong>Term 3-2</strong>)-এর সম্পূর্ণ আর্কাইভ—এখানে ৫টি কোর্সের সব লেকচার নোট, টপিক ও ৪৫৪টি ভেরিফায়েড প্রশ্নোত্তর রয়েছে।
-            <% } else if (currentTermId === 'all') { %>
-              ১-১ থেকে ৪-২ পর্যন্ত সকল সেমিস্টারের সম্মিলিত কোর্স এবং প্রশ্নোত্তর ভল্ট।
-            <% } else { %>
-              <strong><%= currentTermObj.fullTitle %></strong> (<%= currentTermObj.bnTitle %>)-এর ডেডিকেটেড স্টাডি স্পেস। যেকোনো সময় উপরের সুইচার থেকে টার্ম পরিবর্তন করতে পারো।
-            <% } %>
-          </p>
-        </div>
-
-        <!-- Quick Term Action Buttons -->
-        <div class="flex sm:flex-col gap-2.5 flex-shrink-0">
-          <button type="button" onclick="openTermModal()" class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs font-extrabold bg-white text-slate-900 hover:bg-indigo-50 transition-all shadow-md cursor-pointer">
-            <span>🔄</span>
-            <span>Change Term</span>
-          </button>
-          <% if (currentTermId !== '3-2') { %>
-            <a href="/?term=3-2" class="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-bold bg-indigo-500/25 hover:bg-indigo-500/40 text-indigo-200 border border-indigo-400/30 transition-all">
-              <span>📚</span>
-              <span>3-2 Archive (<%= term32Summary.coursesCount %>)</span>
-            </a>
-          <% } else { %>
-            <a href="/?term=4-1" class="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-bold bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-400/30 transition-all">
-              <span>🔥</span>
-              <span>Go to 4-1 (Current)</span>
-            </a>
-          <% } %>
-        </div>
-      </div>
-
-      <!-- Mini Stats Strip inside Hero Banner -->
-      <div class="relative z-10 grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6 pt-6 border-t border-white/10">
-        <div class="bg-white/5 backdrop-blur-xs rounded-2xl p-3.5 border border-white/10">
-          <div class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Term Courses</div>
-          <div class="text-2xl font-black text-white mt-0.5"><%= stats.totalCourses %></div>
-        </div>
-        <div class="bg-white/5 backdrop-blur-xs rounded-2xl p-3.5 border border-white/10">
-          <div class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Total Topics</div>
-          <div class="text-2xl font-black text-white mt-0.5"><%= stats.totalTopics %></div>
-        </div>
-        <div class="bg-white/5 backdrop-blur-xs rounded-2xl p-3.5 border border-white/10">
-          <div class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Questions Vault</div>
-          <div class="text-2xl font-black text-white mt-0.5"><%= stats.totalQuestions %></div>
-        </div>
-        <div class="bg-white/5 backdrop-blur-xs rounded-2xl p-3.5 border border-white/10">
-          <div class="flex items-center justify-between text-[10px] font-bold uppercase tracking-wider text-indigo-300">
-            <span>Solved Progress</span>
-            <span><%= stats.overallPercentage %>%</span>
-          </div>
-          <div class="text-xl font-black text-amber-400 mt-0.5"><%= stats.solvedQuestions %> / <%= stats.totalQuestions %></div>
-          <div class="w-full bg-white/10 h-1.5 rounded-full overflow-hidden mt-1.5">
-            <div class="bg-gradient-to-r from-indigo-400 to-amber-400 h-full rounded-full transition-all duration-300" style="width: <%= stats.overallPercentage %>%"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Live Countdown Banner (if upcoming exams exist for this term) -->
-    <% if (exams && exams.length > 0) { 
-        const now = new Date();
-        const upcomingExams = exams.filter(e => new Date(e.examDate) > now);
-        const nextExam = upcomingExams.length > 0 ? upcomingExams[0] : null;
-        
-        let warningMessage = "";
-        let warningClass = "";
-        
-        const toBn = (num) => {
-          const bnNums = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
-          return num.toString().replace(/\d/g, d => bnNums[d]);
-        };
-        
-        if (nextExam) {
-          const examDate = new Date(nextExam.examDate);
-          const diffTime = examDate - now;
-          const diffHours = Math.floor((diffTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-          const diffMinutes = Math.floor((diffTime % (1000 * 60 * 60)) / (1000 * 60));
-          
-          const isToday = examDate.getDate() === now.getDate() && 
-                          examDate.getMonth() === now.getMonth() && 
-                          examDate.getFullYear() === now.getFullYear();
-                          
-          const tomorrow = new Date(now);
-          tomorrow.setDate(now.getDate() + 1);
-          const isTomorrow = examDate.getDate() === tomorrow.getDate() && 
-                             examDate.getMonth() === tomorrow.getMonth() && 
-                             examDate.getFullYear() === tomorrow.getFullYear();
-          
-          if (isToday) {
-            warningMessage = "🚨 পরীক্ষা আজই! সব পড়া বন্ধ করে দ্রুত ফাইনাল রিভিশন দাও! আল্লাহ সহায় হোন।";
-            warningClass = "bg-rose-500/10 border-rose-500/20 text-rose-300 animate-pulse font-black";
-          } else if (isTomorrow) {
-            warningMessage = `⚠️ মাত্র ১ দিন (বা ${toBn(diffHours)} ঘণ্টা ${toBn(diffMinutes)} মিনিট) বাকি! মোবাইল দূরে রাখো, ফেসবুক বন্ধ করো এবং এখনই পড়তে বসো!`;
-            warningClass = "bg-rose-500/20 border-rose-500/30 text-rose-200 font-extrabold animate-pulse";
-          } else {
-            const examDateDay = new Date(examDate.getFullYear(), examDate.getMonth(), examDate.getDate());
-            const todayDay = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-            const calendarDiffDays = Math.round((examDateDay - todayDay) / (1000 * 60 * 60 * 24));
-            
-            if (calendarDiffDays <= 3) {
-              warningMessage = `⏳ আর মাত্র ${toBn(calendarDiffDays)} দিন বাকি! অবহেলা একদম বন্ধ করো! সব সিলেবাস শেষ করেছ তো?`;
-              warningClass = "bg-amber-500/10 border-amber-500/20 text-amber-200 font-bold";
-            } else if (calendarDiffDays <= 7) {
-              warningMessage = `⏰ আর মাত্র ${toBn(calendarDiffDays)} দিন বাকি! পড়া ফেলে রেখো না, এখনই রিভিশন শেষ করো!`;
-              warningClass = "bg-yellow-500/10 border-yellow-500/20 text-yellow-150 font-semibold";
-            } else if (calendarDiffDays <= 14) {
-              warningMessage = `📚 পরীক্ষার আর মাত্র ${toBn(calendarDiffDays)} দিন বাকি! অলসতা দূর করো, সময় নষ্ট কোরো না!`;
-              warningClass = "bg-indigo-500/10 border-indigo-500/20 text-indigo-200 font-medium";
-            } else {
-              warningMessage = `🎯 পরীক্ষার আর ${toBn(calendarDiffDays)} দিন বাকি। রুটিন মাফিক নিয়মিত পড়াশোনা করো!`;
-              warningClass = "bg-emerald-500/10 border-emerald-500/20 text-emerald-300 font-medium";
-            }
-          }
-        }
+  <div class="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0">
+    <% allTermsList.forEach(t => { 
+         const isActive = currentTermId === t.id;
     %>
-      <% if (nextExam) { %>
-        <div class="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 rounded-3xl p-6 md:p-8 text-white shadow-xl relative overflow-hidden border border-indigo-500/20 flex flex-col gap-6 w-full">
-          <div class="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-            <div>
-              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[10px] font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 uppercase tracking-widest animate-pulse">
-                🚨 Next Exam Countdown
-              </span>
-              <h2 class="text-2xl md:text-3xl font-extrabold text-white mt-3 tracking-tight"><%= nextExam.subjectName %></h2>
-              <p class="text-indigo-200/80 text-xs mt-1">
-                Scheduled: <strong><%= new Date(nextExam.examDate).toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) %></strong>
-              </p>
-            </div>
-            
-            <!-- Live Countdown Grid -->
-            <div class="flex items-center gap-2.5 sm:gap-3.5 select-none" id="exam-countdown" data-date="<%= nextExam.examDate %>">
-              <div class="flex flex-col items-center bg-white/10 backdrop-blur-md rounded-xl p-2.5 w-14 sm:w-16 border border-white/15">
-                <span class="text-xl sm:text-2xl font-black tracking-tight" id="cd-days">00</span>
-                <span class="text-[9px] font-bold text-indigo-200 uppercase mt-0.5">Days</span>
-              </div>
-              <div class="flex flex-col items-center bg-white/10 backdrop-blur-md rounded-xl p-2.5 w-14 sm:w-16 border border-white/15">
-                <span class="text-xl sm:text-2xl font-black tracking-tight" id="cd-hours">00</span>
-                <span class="text-[9px] font-bold text-indigo-200 uppercase mt-0.5">Hours</span>
-              </div>
-              <div class="flex flex-col items-center bg-white/10 backdrop-blur-md rounded-xl p-2.5 w-14 sm:w-16 border border-white/15">
-                <span class="text-xl sm:text-2xl font-black tracking-tight" id="cd-minutes">00</span>
-                <span class="text-[9px] font-bold text-indigo-200 uppercase mt-0.5">Mins</span>
-              </div>
-              <div class="flex flex-col items-center bg-indigo-600/50 backdrop-blur-md rounded-xl p-2.5 w-14 sm:w-16 border border-indigo-500/20">
-                <span class="text-xl sm:text-2xl font-black tracking-tight text-indigo-300" id="cd-seconds">00</span>
-                <span class="text-[9px] font-bold text-indigo-200 uppercase mt-0.5">Secs</span>
-              </div>
-            </div>
-          </div>
+      <a href="/?term=<%= t.id %>" class="px-3 py-1 rounded text-xs font-mono-code font-medium transition-colors border <%= isActive ? 'bg-slate-900 text-white border-slate-900 dark:bg-white dark:text-slate-900 dark:border-white' : 'bg-white dark:bg-[#111217] text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-800 hover:border-slate-400 dark:hover:border-slate-600' %>">
+        <%= t.id %><% if (t.id === '4-1') { %> (Now)<% } else if (t.coursesCount > 0) { %> (<%= t.coursesCount %>)<% } %>
+      </a>
+    <% }) %>
+    <a href="/?term=all" class="px-3 py-1 rounded text-xs font-mono-code font-medium transition-colors border <%= currentTermId === 'all' ? 'bg-slate-900 text-white border-slate-900 dark:bg-white dark:text-slate-900 dark:border-white' : 'bg-white dark:bg-[#111217] text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-800 hover:border-slate-400 dark:hover:border-slate-600' %>">
+      All
+    </a>
+  </div>
+</div>
 
-          <div class="relative z-10 p-4 rounded-2xl border text-sm flex items-center gap-3 <%= warningClass %>">
-            <span class="text-xl">⚠️</span>
-            <p class="leading-relaxed"><%= warningMessage %></p>
-          </div>
-        </div>
-      <% } %>
-    <% } %>
+<!-- Mobile Search Input -->
+<div class="block md:hidden mb-6 relative">
+  <form action="/search" method="GET">
+    <input type="text" name="q" id="mobile-search-input" autocomplete="off" placeholder="Search courses, topics, or questions..." 
+      class="block w-full px-3.5 py-2 border border-slate-200 dark:border-slate-800 rounded-md bg-white dark:bg-[#111217] focus:outline-none focus:border-slate-400 text-xs">
+  </form>
+  <div id="mobile-search-results-dropdown" class="absolute left-0 right-0 mt-1 w-full bg-white dark:bg-[#121318] rounded-md shadow-lg border border-slate-200 dark:border-slate-800 max-h-80 overflow-y-auto hidden z-50"></div>
+</div>
 
-    <!-- Islamic Motivation Quote Card (in Bengali) -->
-    <% if (locals.quote) { %>
-      <div class="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-3xl p-5 sm:p-6 shadow-xs flex items-start gap-4 transition-all hover:shadow-md relative overflow-hidden w-full">
-        <div class="absolute right-0 top-0 w-32 h-32 bg-emerald-500/5 rounded-full blur-2xl pointer-events-none"></div>
-        <div class="p-3.5 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-2xl flex-shrink-0 border border-emerald-500/20">
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m2.828 0l-.707-.707m12.728-12.728l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
-          </svg>
-        </div>
-        <div>
-          <span class="text-[10px] font-extrabold text-emerald-700 dark:text-emerald-300 bg-emerald-500/10 px-2.5 py-0.5 rounded-full uppercase tracking-widest border border-emerald-500/20">Daily Islamic Reminder</span>
-          <p class="text-slate-800 dark:text-slate-100 font-semibold text-base sm:text-lg mt-2.5 italic leading-relaxed">"<%= quote.text %>"</p>
-          <p class="text-slate-400 dark:text-slate-500 text-xs font-bold mt-2">— <%= quote.source %></p>
-        </div>
+<!-- Semester Header & Summary Metrics -->
+<div class="mb-10 bg-white dark:bg-[#111217] border border-slate-200 dark:border-slate-800 rounded-lg p-6">
+  <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6 pb-6 border-b border-slate-100 dark:border-slate-800/80">
+    <div>
+      <div class="flex items-center gap-2 text-xs font-mono-code text-slate-500 dark:text-slate-400">
+        <span><%= currentTermObj.codeSeries %></span>
+        <span>&bull;</span>
+        <span><%= currentTermId === '4-1' ? 'Current Active Term' : currentTermId === '3-2' ? 'Previous Term Archive' : currentTermObj.fullTitle %></span>
       </div>
-    <% } %>
+      <h1 class="text-2xl sm:text-3xl font-semibold text-slate-900 dark:text-white mt-1.5 tracking-tight">
+        <%= currentTermObj.name %> &mdash; <span class="font-normal text-slate-600 dark:text-slate-300"><%= currentTermObj.bnTitle %></span>
+      </h1>
+      <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-2 max-w-2xl leading-relaxed">
+        <% if (currentTermId === '4-1') { %>
+          ৪র্থ বর্ষ ১ম সেমিস্টার (4-1) চলমান টার্ম। আগের 3-2 টার্মের ৫টি কোর্স ও ৪৫৪টি প্রশ্নোত্তর আর্কাইভে সংরক্ষিত রয়েছে।
+        <% } else if (currentTermId === '3-2') { %>
+          ৩য় বর্ষ ২য় সেমিস্টার (3-2) আর্কাইভ &mdash; ৫টি কোর্সের লেকচার নোট, টপিক ও ৪৫৪টি প্রশ্নোত্তর।
+        <% } else { %>
+          <%= currentTermObj.fullTitle %> (<%= currentTermObj.bnTitle %>) কোর্স ও নোটস আর্কাইভ।
+        <% } %>
+      </p>
+    </div>
 
+    <div class="flex items-center gap-2 flex-shrink-0">
+      <button type="button" onclick="openTermModal()" class="px-3.5 py-2 rounded-md text-xs font-medium border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-200 hover:border-slate-400 dark:hover:border-slate-600 transition-colors cursor-pointer">
+        Change Term
+      </button>
+      <% if (currentTermId !== '3-2') { %>
+        <a href="/?term=3-2" class="px-3.5 py-2 rounded-md text-xs font-medium bg-slate-900 text-white dark:bg-white dark:text-slate-900 hover:opacity-90 transition-opacity">
+          Term 3-2 Archive (<%= term32Summary.coursesCount %>)
+        </a>
+      <% } else { %>
+        <a href="/?term=4-1" class="px-3.5 py-2 rounded-md text-xs font-medium bg-slate-900 text-white dark:bg-white dark:text-slate-900 hover:opacity-90 transition-opacity">
+          Term 4-1 (Current)
+        </a>
+      <% } %>
+    </div>
   </div>
 
-  <!-- Right Side (1/3 width): Semester Exam Routine & Quick Term Navigator -->
-  <div class="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-3xl p-6 shadow-xs flex flex-col justify-start">
-    <div class="flex items-center justify-between pb-4 border-b border-slate-100 dark:border-slate-800 mb-5">
-      <h2 class="text-base font-extrabold text-slate-900 dark:text-white flex items-center gap-2">
-        <span class="flex items-center justify-center w-7 h-7 bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 rounded-lg text-sm">📅</span> 
-        <span>Exam Routine (<%= currentTermId === 'all' ? 'All' : currentTermId %>)</span>
+  <!-- Minimalist 4-Column Metrics -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-6">
+    <div>
+      <div class="text-[11px] font-mono-code uppercase text-slate-400 dark:text-slate-500">Courses</div>
+      <div class="text-2xl font-semibold font-mono-code text-slate-900 dark:text-white mt-1"><%= stats.totalCourses %></div>
+    </div>
+    <div>
+      <div class="text-[11px] font-mono-code uppercase text-slate-400 dark:text-slate-500">Topics</div>
+      <div class="text-2xl font-semibold font-mono-code text-slate-900 dark:text-white mt-1"><%= stats.totalTopics %></div>
+    </div>
+    <div>
+      <div class="text-[11px] font-mono-code uppercase text-slate-400 dark:text-slate-500">Questions</div>
+      <div class="text-2xl font-semibold font-mono-code text-slate-900 dark:text-white mt-1"><%= stats.totalQuestions %></div>
+    </div>
+    <div>
+      <div class="flex items-center justify-between text-[11px] font-mono-code uppercase text-slate-400 dark:text-slate-500">
+        <span>Progress</span>
+        <span><%= stats.overallPercentage %>%</span>
+      </div>
+      <div class="text-2xl font-semibold font-mono-code text-slate-900 dark:text-white mt-1">
+        <%= stats.solvedQuestions %><span class="text-sm font-normal text-slate-400">/<%= stats.totalQuestions %></span>
+      </div>
+      <div class="w-full bg-slate-100 dark:bg-slate-800 h-1 rounded-full overflow-hidden mt-2">
+        <div class="bg-slate-900 dark:bg-white h-full transition-all duration-300" style="width: <%= stats.overallPercentage %>%"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Quote & Exam Schedule Row (Clean Editorial Style) -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
+  <!-- Daily Quote -->
+  <div class="lg:col-span-2 bg-white dark:bg-[#111217] border border-slate-200 dark:border-slate-800 rounded-lg p-6 flex flex-col justify-between">
+    <% if (locals.quote) { %>
+      <div>
+        <div class="text-[11px] font-mono-code uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-3">
+          Daily Reminder
+        </div>
+        <blockquote class="text-base sm:text-lg font-medium text-slate-800 dark:text-slate-200 leading-relaxed border-l-2 border-slate-900 dark:border-slate-400 pl-4">
+          "<%= quote.text %>"
+        </blockquote>
+      </div>
+      <div class="text-xs text-slate-500 dark:text-slate-400 mt-4 font-medium">
+        &mdash; <%= quote.source %>
+      </div>
+    <% } %>
+  </div>
+
+  <!-- Exam Schedule List -->
+  <div class="bg-white dark:bg-[#111217] border border-slate-200 dark:border-slate-800 rounded-lg p-6">
+    <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100 dark:border-slate-800">
+      <h2 class="text-xs font-mono-code uppercase tracking-wider text-slate-500 dark:text-slate-400">
+        Exam Schedule (<%= currentTermId === 'all' ? 'All' : currentTermId %>)
       </h2>
-      <span class="text-[10px] font-bold text-indigo-600 dark:text-indigo-400 px-2.5 py-0.5 bg-indigo-500/10 rounded-full border border-indigo-500/20">
-        <%= currentTermId === '4-1' ? 'Current Term' : 'Planner' %>
-      </span>
+      <span class="text-[11px] font-mono-code text-slate-400"><%= exams ? exams.length : 0 %> items</span>
     </div>
 
     <% if (!exams || exams.length === 0) { %>
-      <div class="py-8 px-4 text-center rounded-2xl bg-slate-50/70 dark:bg-slate-800/40 border border-dashed border-slate-200 dark:border-slate-700/70">
-        <div class="text-3xl mb-2">🗓️</div>
-        <h3 class="text-sm font-extrabold text-slate-800 dark:text-slate-200">
-          No Exams Scheduled for Term <%= currentTermId %> Yet
-        </h3>
-        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-relaxed">
-          <% if (currentTermId === '4-1') { %>
-            ৪-১ টার্মের পরীক্ষার রুটিন প্রকাশিত হলে এখানে লাইভ কাউন্টডাউন যুক্ত হবে।
-          <% } else { %>
-            এই সেমিস্টারের কোনো পরীক্ষার তারিখ এখনো যুক্ত করা হয়নি।
-          <% } %>
-        </p>
-        <% if (currentTermId !== '3-2') { %>
-          <a href="/?term=3-2" class="mt-4 inline-flex items-center gap-1.5 text-xs font-extrabold text-indigo-600 dark:text-indigo-400 hover:underline">
-            <span>📚 View Term 3-2 Archive &rarr;</span>
-          </a>
-        <% } %>
+      <div class="py-6 text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+        No exams scheduled for Term <span class="font-mono-code font-medium"><%= currentTermId %></span> yet.
       </div>
     <% } else { %>
-      <div class="relative space-y-3.5 w-full">
+      <div class="divide-y divide-slate-100 dark:divide-slate-800/70">
         <% 
           const now = new Date();
           exams.forEach((exam) => {
             const examDate = new Date(exam.examDate);
             const examDateDay = new Date(examDate.getFullYear(), examDate.getMonth(), examDate.getDate());
             const todayDay = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-            const diffTime = examDateDay - todayDay;
-            const diffDays = Math.round(diffTime / (1000 * 60 * 60 * 24));
-            
-            const monthShort = examDate.toLocaleDateString(undefined, { month: 'short' });
-            const dayNum = examDate.getDate();
-            
-            let statusText = '';
-            let statusClass = '';
-            let cardBorderClass = 'border-slate-100 dark:border-slate-800 hover:border-slate-200 dark:hover:border-slate-700';
-            let calendarBgClass = 'bg-slate-50 dark:bg-slate-800 border-slate-100 dark:border-slate-700';
-            let calendarHeaderClass = 'bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300';
-            
-            if (diffDays < 0) {
-              statusText = 'Completed';
-              statusClass = 'bg-slate-100 text-slate-400 dark:bg-slate-800 dark:text-slate-500';
-              cardBorderClass = 'border-slate-100 dark:border-slate-800/60 opacity-65';
-            } else if (diffDays === 0) {
-              statusText = 'TODAY';
-              statusClass = 'bg-rose-500/10 text-rose-600 dark:bg-rose-500/20 dark:text-rose-400 border border-rose-500/20 animate-pulse font-extrabold';
-              calendarHeaderClass = 'bg-rose-600 text-white';
-            } else {
-              statusText = `${diffDays} Days`;
-              statusClass = 'bg-indigo-50 text-indigo-600 dark:bg-indigo-950/60 dark:text-indigo-400 border border-indigo-100/30';
-              calendarHeaderClass = 'bg-indigo-600 dark:bg-indigo-500 text-white';
-            }
+            const diffDays = Math.round((examDateDay - todayDay) / (1000 * 60 * 60 * 24));
         %>
-          <div class="flex items-center justify-between gap-3.5 p-3 border rounded-2xl transition-all duration-200 group <%= cardBorderClass %> w-full">
-            <div class="flex-shrink-0 flex flex-col items-center justify-center w-11 h-11 rounded-xl overflow-hidden shadow-2xs border <%= calendarBgClass %>">
-              <span class="text-[8px] font-black uppercase tracking-wider w-full text-center py-0.5 leading-none <%= calendarHeaderClass %>"><%= monthShort %></span>
-              <span class="text-base font-black text-slate-800 dark:text-slate-100 leading-none mt-1"><%= dayNum %></span>
-            </div>
-            
-            <div class="flex-1 min-w-0">
-              <h3 class="font-bold text-xs sm:text-sm leading-snug truncate <%= diffDays < 0 ? 'text-slate-400 dark:text-slate-500 line-through' : 'text-slate-800 dark:text-slate-200' %>">
+          <div class="py-2.5 first:pt-0 last:pb-0 flex items-center justify-between gap-3 text-xs">
+            <div class="min-w-0">
+              <div class="font-medium truncate <%= diffDays < 0 ? 'text-slate-400 dark:text-slate-500 line-through' : 'text-slate-800 dark:text-slate-200' %>">
                 <%= exam.subjectName %>
-              </h3>
-              <span class="text-[10px] font-semibold text-slate-400 dark:text-slate-500 block mt-0.5">
-                Term <%= exam.term || '3-2' %> &bull; <%= examDate.toLocaleDateString() %>
-              </span>
+              </div>
+              <div class="text-[11px] font-mono-code text-slate-400 dark:text-slate-500 mt-0.5">
+                <%= examDate.toLocaleDateString(undefined, { day: '2-digit', month: 'short', year: 'numeric' }) %>
+              </div>
             </div>
-            
-            <span class="flex-shrink-0 text-[9px] font-black px-2.5 py-1 rounded-full tracking-wider uppercase <%= statusClass %> select-none">
-              <%= statusText %>
+            <span class="font-mono-code text-[11px] text-slate-500 dark:text-slate-400 flex-shrink-0">
+              <%= diffDays < 0 ? 'Done' : diffDays === 0 ? 'Today' : `${diffDays}d` %>
             </span>
           </div>
         <% }) %>
       </div>
     <% } %>
   </div>
-
 </div>
 
-<!-- 3. COURSES SECTION FOR SELECTED SEMESTER -->
+<!-- Courses List Section -->
 <div class="mb-12">
-  <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
-    <div>
-      <div class="flex items-center gap-2.5">
-        <h2 class="text-2xl font-black text-slate-900 dark:text-white font-display">
-          <%= currentTermId === 'all' ? 'All Semester Courses' : `${currentTermObj.name} Courses` %>
-        </h2>
-        <span class="px-2.5 py-0.5 text-xs font-extrabold rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20">
-          <%= courses.length %> <%= courses.length === 1 ? 'Course' : 'Courses' %>
-        </span>
-      </div>
-      <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-0.5">
-        <%= currentTermObj.bnTitle %> &bull; <%= currentTermObj.codeSeries %>
-      </p>
-    </div>
-
-    <div class="flex items-center gap-2">
-      <% if (currentTermId !== '4-1') { %>
-        <a href="/?term=4-1" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-extrabold bg-amber-500/10 text-amber-700 dark:text-amber-300 border border-amber-500/25 hover:bg-amber-500/20 transition-all">
-          <span>🔥</span>
-          <span>Switch to 4-1 (Current)</span>
-        </a>
-      <% } %>
-      <% if (currentTermId !== '3-2') { %>
-        <a href="/?term=3-2" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-extrabold bg-indigo-500/10 text-indigo-700 dark:text-indigo-300 border border-indigo-500/25 hover:bg-indigo-500/20 transition-all">
-          <span>📚</span>
-          <span>View 3-2 Courses (5)</span>
-        </a>
-      <% } %>
-    </div>
+  <div class="flex items-center justify-between mb-4">
+    <h2 class="text-base font-semibold text-slate-900 dark:text-white">
+      <%= currentTermId === 'all' ? 'All Courses' : `Courses — Term ${currentTermId}` %>
+    </h2>
+    <span class="text-xs font-mono-code text-slate-400 dark:text-slate-500">
+      <%= courses.length %> <%= courses.length === 1 ? 'course' : 'courses' %>
+    </span>
   </div>
   
   <% if (courses.length === 0) { %>
-    <!-- Empty State Tailored for 4-1 (Current Term) or Other Semesters -->
-    <div class="bg-white dark:bg-slate-900 rounded-3xl p-8 sm:p-12 border border-slate-200/80 dark:border-slate-800 shadow-xs relative overflow-hidden">
-      <div class="absolute -right-16 -bottom-16 w-64 h-64 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
-      <div class="max-w-xl mx-auto text-center">
-        <div class="w-16 h-16 rounded-2xl <%= currentTermId === '4-1' ? 'bg-amber-500/15 text-amber-600 dark:text-amber-400 border border-amber-500/30' : 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20' %> flex items-center justify-center text-3xl mx-auto mb-5 font-black">
-          <%= currentTermId %>
+    <div class="bg-white dark:bg-[#111217] rounded-lg p-8 border border-slate-200 dark:border-slate-800">
+      <div class="max-w-lg">
+        <div class="text-xs font-mono-code uppercase text-slate-400 dark:text-slate-500">
+          Term <%= currentTermId %> &bull; <%= currentTermObj.codeSeries %>
         </div>
-
-        <% if (currentTermId === '4-1') { %>
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-black bg-amber-500/15 text-amber-700 dark:text-amber-300 border border-amber-500/30 uppercase tracking-wider mb-3">
-            🔥 এইবারের টার্ম • 4-1 Workspace Ready
-          </span>
-          <h3 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white font-display">
-            Term 4-1 (৪র্থ বর্ষ ১ম টার্ম) এর জন্য প্রস্তুত!
-          </h3>
-          <p class="text-slate-500 dark:text-slate-400 text-sm mt-2 leading-relaxed">
-            এইবারের নতুন <strong>4-1 Term (4100 Series)</strong> এর কোর্স, লেকচার নোট, স্লাইড এবং প্রশ্নোত্তর যোগ করার সাথে সাথেই এখানে কার্ড আকারে চলে আসবে। আর আগের <strong>3-2 Term</strong>-এর সব কোর্স দেখতে নিচের বাটনে ক্লিক করো!
-          </p>
-        <% } else { %>
-          <h3 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white font-display">
-            No Courses Added to <%= currentTermObj.name %> Yet
-          </h3>
-          <p class="text-slate-500 dark:text-slate-400 text-sm mt-2 leading-relaxed">
-            <strong><%= currentTermObj.fullTitle %> (<%= currentTermObj.bnTitle %>)</strong>-এ এখনো কোনো কোর্স যুক্ত করা হয়নি। যেকোনো সময় এই টার্মে কোর্স ও নোট যুক্ত করা যাবে।
-          </p>
-        <% } %>
-
-        <div class="mt-7 flex flex-wrap items-center justify-center gap-3">
-          <a href="/?term=3-2" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-xs sm:text-sm font-extrabold bg-indigo-600 hover:bg-indigo-700 text-white shadow-md shadow-indigo-500/20 transition-all">
-            <span>📚</span>
-            <span>Browse Term 3-2 Archive (5 Courses • 454 Q&As)</span>
+        <h3 class="text-lg font-semibold text-slate-900 dark:text-white mt-1">
+          <% if (currentTermId === '4-1') { %>
+            Term 4-1 Workspace Ready
+          <% } else { %>
+            No courses added for Term <%= currentTermId %> yet
+          <% } %>
+        </h3>
+        <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1.5 leading-relaxed">
+          <% if (currentTermId === '4-1') { %>
+            এইবারের চলমান 4-1 টার্মের (4100 Series) কোর্স, লেকচার নোট এবং প্রশ্নোত্তর যোগ করার সাথে সাথেই এখানে তালিকাভুক্ত হবে। আগের 3-2 টার্মের কোর্সগুলো দেখতে নিচের বাটনে ক্লিক করো।
+          <% } else { %>
+            এই সেমিস্টারে এখনো কোনো কোর্স যুক্ত করা হয়নি।
+          <% } %>
+        </p>
+        <div class="mt-5 flex items-center gap-3">
+          <a href="/?term=3-2" class="px-4 py-2 rounded-md text-xs font-medium bg-slate-900 text-white dark:bg-white dark:text-slate-900 hover:opacity-90 transition-opacity">
+            Open Term 3-2 Archive (5 Courses)
           </a>
-          <button type="button" onclick="openTermModal()" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-xs sm:text-sm font-bold bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 transition-all cursor-pointer">
-            <span>🎓</span>
-            <span>All Semesters (1-1 to 4-2)</span>
+          <button type="button" onclick="openTermModal()" class="px-4 py-2 rounded-md text-xs font-medium border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:border-slate-400 transition-colors cursor-pointer">
+            Select Another Term
           </button>
         </div>
       </div>
     </div>
   <% } else { %>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       <% courses.forEach(course => { %>
-        <a href="/courses/<%= course.id %>" class="group bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-3xl p-6 shadow-xs hover:shadow-xl hover:border-indigo-400/60 dark:hover:border-indigo-500/50 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
-          <div class="absolute top-0 right-0 w-32 h-32 bg-indigo-500/5 rounded-full blur-2xl pointer-events-none group-hover:bg-indigo-500/10 transition-all"></div>
-
+        <a href="/courses/<%= course.id %>" class="group bg-white dark:bg-[#111217] border border-slate-200 dark:border-slate-800 rounded-lg p-5 hover:border-slate-400 dark:hover:border-slate-600 transition-colors flex flex-col justify-between">
           <div>
-            <!-- Top Badges Row -->
-            <div class="flex items-center justify-between gap-2 mb-4">
-              <div class="flex items-center gap-2">
-                <span class="px-2.5 py-1 rounded-lg text-xs font-black bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20">
-                  <%= course.code %>
-                </span>
-                <span class="px-2.5 py-1 rounded-lg text-[11px] font-bold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
-                  Term <%= course.term || '3-2' %>
-                </span>
-              </div>
-              <span class="text-xs font-black <%= course.percentage === 100 ? 'text-emerald-600 dark:text-emerald-400' : 'text-indigo-600 dark:text-indigo-400' %>">
-                <%= course.percentage %>% Done
-              </span>
+            <div class="flex items-center justify-between gap-2 text-xs font-mono-code text-slate-500 dark:text-slate-400 mb-2">
+              <span><%= course.code %></span>
+              <span>Term <%= course.term || '3-2' %></span>
             </div>
 
-            <h3 class="text-xl font-extrabold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors leading-snug font-display">
+            <h3 class="text-base font-semibold text-slate-900 dark:text-white group-hover:underline leading-snug">
               <%= course.name %>
             </h3>
             
             <% if (course.sections && course.sections.length > 0) { %>
-              <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 font-medium line-clamp-1">
-                👨‍🏫 <%= course.sections.map(s => s.teacherName).filter(t => t).join(' • ') || 'Section A & B' %>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1.5 truncate">
+                <%= course.sections.map(s => s.teacherName).filter(t => t).join(', ') || 'Section A & B' %>
               </p>
             <% } %>
 
-            <div class="flex items-center gap-3 mt-5 text-xs font-semibold text-slate-600 dark:text-slate-300">
-              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-50 dark:bg-slate-800/80 border border-slate-200/60 dark:border-slate-700/60">
-                <span>🗂️</span>
-                <span><%= course.topicsCount %> Topics</span>
-              </span>
-              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-50 dark:bg-slate-800/80 border border-slate-200/60 dark:border-slate-700/60">
-                <span>❓</span>
-                <span><%= course.questionsCount %> Questions</span>
-              </span>
+            <div class="flex items-center gap-4 mt-4 text-xs font-mono-code text-slate-500 dark:text-slate-400">
+              <span><%= course.topicsCount %> topics</span>
+              <span>&bull;</span>
+              <span><%= course.questionsCount %> questions</span>
             </div>
           </div>
 
-          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800">
-            <div class="flex justify-between items-center text-[11px] font-bold text-slate-400 dark:text-slate-500 mb-1.5">
-              <span>SOLVED: <%= course.solvedQuestionsCount %>/<%= course.questionsCount %></span>
-              <span class="text-indigo-600 dark:text-indigo-400 group-hover:translate-x-0.5 transition-transform">Open Vault &rarr;</span>
+          <div class="mt-5 pt-3.5 border-t border-slate-100 dark:border-slate-800/80">
+            <div class="flex justify-between items-center text-[11px] font-mono-code text-slate-400 dark:text-slate-500 mb-1.5">
+              <span><%= course.solvedQuestionsCount %>/<%= course.questionsCount %> solved</span>
+              <span><%= course.percentage %>%</span>
             </div>
-            <div class="w-full bg-slate-100 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
-              <div class="bg-gradient-to-r from-indigo-600 to-violet-500 dark:from-indigo-400 dark:to-violet-400 h-full rounded-full transition-all duration-300" style="width: <%= course.percentage %>%"></div>
+            <div class="w-full bg-slate-100 dark:bg-slate-800 h-1 rounded-full overflow-hidden">
+              <div class="bg-slate-900 dark:bg-white h-full transition-all duration-300" style="width: <%= course.percentage %>%"></div>
             </div>
           </div>
         </a>
@@ -489,60 +248,29 @@
   <% } %>
 </div>
 
-<!-- 4. COMPLETE 4-YEAR ACADEMIC ROADMAP (1-1 TO 4-2) -->
-<div class="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-3xl p-6 sm:p-8 shadow-xs">
-  <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
-    <div>
-      <span class="text-[11px] font-black uppercase tracking-widest text-indigo-600 dark:text-indigo-400">4-Year B.Sc. Agriculture Roadmap</span>
-      <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white mt-0.5 font-display">
-        All Semesters at a Glance (Term 1-1 to 4-2)
-      </h2>
-    </div>
-    <button type="button" onclick="openTermModal()" class="self-start sm:self-auto inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition-colors cursor-pointer">
-      <span>🎓</span>
-      <span>Open Term Portal</span>
-    </button>
+<!-- Minimalist 8-Semester Index Table / Grid (1-1 to 4-2) -->
+<div class="border-t border-slate-200 dark:border-slate-800/80 pt-8">
+  <div class="flex items-center justify-between mb-4">
+    <h2 class="text-xs font-mono-code uppercase tracking-wider text-slate-500 dark:text-slate-400">
+      Academic Index (Terms 1-1 to 4-2)
+    </h2>
   </div>
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-    <% [1, 2, 3, 4].forEach(yearNum => { 
-         const yearTerms = allTermsList.filter(t => t.year === yearNum);
-         const yearLabels = { 1: '1st Year (১ম বর্ষ)', 2: '2nd Year (২য় বর্ষ)', 3: '3rd Year (৩য় বর্ষ)', 4: '4th Year (৪র্থ বর্ষ)' };
+  <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2.5">
+    <% allTermsList.forEach(t => { 
+         const isSelected = currentTermId === t.id;
     %>
-      <div class="rounded-2xl p-4 bg-slate-50/70 dark:bg-slate-800/40 border border-slate-200/70 dark:border-slate-800 flex flex-col gap-3">
-        <div class="flex items-center justify-between border-b border-slate-200/60 dark:border-slate-700/60 pb-2.5">
-          <span class="text-xs font-black uppercase tracking-wider text-slate-700 dark:text-slate-200"><%= yearLabels[yearNum] %></span>
-          <span class="text-[10px] font-bold px-2 py-0.5 rounded-md bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 border border-slate-200/60 dark:border-slate-700">Level <%= yearNum %></span>
+      <a href="/?term=<%= t.id %>" class="p-3 rounded-md border transition-colors <%= isSelected ? 'border-slate-900 dark:border-white bg-white dark:bg-[#111217]' : 'border-slate-200 dark:border-slate-800/80 bg-white/60 dark:bg-[#111217]/60 hover:border-slate-400 dark:hover:border-slate-600' %>">
+        <div class="flex items-center justify-between">
+          <span class="font-mono-code text-xs font-semibold text-slate-900 dark:text-white"><%= t.id %></span>
+          <% if (t.id === '4-1') { %>
+            <span class="text-[10px] font-mono-code text-slate-500">Now</span>
+          <% } %>
         </div>
-
-        <div class="space-y-2.5">
-          <% yearTerms.forEach(t => { 
-               const isSelected = currentTermId === t.id;
-               const isCurrent41 = t.id === '4-1';
-               const isPrev32 = t.id === '3-2';
-          %>
-            <a href="/?term=<%= t.id %>" class="block p-3.5 rounded-xl border transition-all duration-200 <%= isSelected ? 'bg-indigo-600 text-white border-indigo-600 shadow-md' : 'bg-white dark:bg-slate-900 border-slate-200/80 dark:border-slate-700/80 hover:border-indigo-400 dark:hover:border-indigo-500' %>">
-              <div class="flex items-center justify-between gap-2">
-                <div class="flex items-center gap-2">
-                  <span class="text-base font-black <%= isSelected ? 'text-white' : isCurrent41 ? 'text-amber-600 dark:text-amber-400' : isPrev32 ? 'text-indigo-600 dark:text-indigo-400' : 'text-slate-900 dark:text-white' %>">
-                    Term <%= t.id %>
-                  </span>
-                  <% if (isCurrent41) { %>
-                    <span class="text-[9px] font-black px-2 py-0.5 rounded-full <%= isSelected ? 'bg-amber-400 text-slate-950' : 'bg-amber-500/20 text-amber-700 dark:text-amber-300' %> uppercase">Current</span>
-                  <% } else if (isPrev32) { %>
-                    <span class="text-[9px] font-black px-2 py-0.5 rounded-full <%= isSelected ? 'bg-white/20 text-white' : 'bg-indigo-500/15 text-indigo-600 dark:text-indigo-400' %> uppercase">Archive</span>
-                  <% } %>
-                </div>
-                <span class="text-xs font-bold <%= isSelected ? 'text-indigo-100' : 'text-slate-400' %>">&rarr;</span>
-              </div>
-              <div class="mt-1.5 flex items-center justify-between text-[11px] font-semibold <%= isSelected ? 'text-indigo-100' : 'text-slate-500 dark:text-slate-400' %>">
-                <span><%= t.codeSeries %></span>
-                <span><%= t.coursesCount %> Courses &bull; <%= t.questionsCount %> Qs</span>
-              </div>
-            </a>
-          <% }) %>
+        <div class="text-[11px] text-slate-400 dark:text-slate-500 mt-1 font-mono-code">
+          <%= t.coursesCount %>c / <%= t.questionsCount %>q
         </div>
-      </div>
+      </a>
     <% }) %>
   </div>
 </div>

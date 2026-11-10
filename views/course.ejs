@@ -1,351 +1,234 @@
 <%- include('partials/header') %>
 
-<!-- Back Link & Breadcrumbs -->
-<div class="mb-6 flex items-center justify-between flex-wrap gap-3">
-  <a href="/?term=<%= course.term || '3-2' %>" class="inline-flex items-center gap-1.5 text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors">
-    <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-    </svg>
-    Back to Term <%= course.term || '3-2' %> Dashboard
-  </a>
-  <span class="text-xs font-extrabold px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20">
-    🎓 Academic Term <%= course.term || '3-2' %>
+<!-- Breadcrumb -->
+<div class="mb-6 flex items-center justify-between flex-wrap gap-3 text-xs">
+  <div class="flex items-center gap-2 text-slate-500 dark:text-slate-400">
+    <a href="/?term=<%= course.term || '3-2' %>" class="hover:text-slate-900 dark:hover:text-white transition-colors">
+      &larr; Term <%= course.term || '3-2' %>
+    </a>
+    <span>/</span>
+    <span class="text-slate-900 dark:text-white font-medium"><%= course.code %></span>
+  </div>
+  <span class="font-mono-code text-slate-400 dark:text-slate-500">
+    Term <%= course.term || '3-2' %>
   </span>
 </div>
 
-<!-- Course Title -->
-<div class="mb-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 p-6 sm:p-8 rounded-3xl shadow-xs">
+<!-- Course Header -->
+<div class="mb-8 bg-white dark:bg-[#111217] border border-slate-200 dark:border-slate-800 p-6 rounded-lg flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
   <div>
-    <div class="flex items-center gap-2 flex-wrap">
-      <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-500/10 px-3 py-1 rounded-full uppercase tracking-wider border border-indigo-500/20">Course Vault</span>
-      <span class="text-xs font-black text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">Term <%= course.term || '3-2' %></span>
-      <span class="text-xs font-black text-emerald-700 dark:text-emerald-300 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">Code: <%= course.code %></span>
+    <div class="text-xs font-mono-code text-slate-400 dark:text-slate-500">
+      Course <%= course.code %> &bull; Term <%= course.term || '3-2' %>
     </div>
-    <h1 class="text-3xl font-black text-slate-900 dark:text-white mt-3 tracking-tight font-display"><%= course.name %> (<%= course.code %>)</h1>
+    <h1 class="text-2xl sm:text-3xl font-semibold text-slate-900 dark:text-white mt-1 tracking-tight">
+      <%= course.name %>
+    </h1>
   </div>
-  <div class="flex flex-wrap gap-4">
-    <a href="/downloads/course_<%= course.id %>_questions.docx" class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-500 hover:from-blue-700 hover:to-indigo-600 text-white font-bold py-3 px-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5" download>
-      <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-      </svg>
-      Previous Year Questions
+  <div class="flex flex-wrap gap-2.5">
+    <a href="/downloads/course_<%= course.id %>_questions.docx" class="px-3.5 py-2 rounded-md text-xs font-medium border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:border-slate-400 dark:hover:border-slate-600 transition-colors" download>
+      Previous Questions (.docx)
     </a>
-    <a href="/downloads/course_<%= course.id %>_solve.docx" class="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-600 to-teal-500 hover:from-emerald-700 hover:to-teal-600 text-white font-bold py-3 px-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5" download>
-      <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-      Previous Year Solve
+    <a href="/downloads/course_<%= course.id %>_solve.docx" class="px-3.5 py-2 rounded-md text-xs font-medium bg-slate-900 text-white dark:bg-white dark:text-slate-900 hover:opacity-90 transition-opacity" download>
+      Solved Archive (.docx)
     </a>
   </div>
 </div>
 
 <!-- Sections List -->
-<div class="grid grid-cols-1 gap-8">
+<div class="space-y-6">
   <% if (course.Sections && course.Sections.length > 0) { %>
     <% course.Sections.forEach(section => { %>
-      <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-all">
-        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 pb-6 border-b border-slate-100 dark:border-slate-700">
+      <div class="bg-white dark:bg-[#111217] border border-slate-200 dark:border-slate-800 rounded-lg p-6">
+        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 pb-5 border-b border-slate-100 dark:border-slate-800">
           <div>
             <div class="flex items-center gap-3 flex-wrap">
-              <h2 class="text-2xl font-bold text-slate-900 dark:text-white"><%= section.name %></h2>
-              <button onclick="openAnalysisModal('<%= section.id %>', '<%= section.name %>')" class="inline-flex items-center gap-1.5 bg-indigo-50 hover:bg-indigo-100 dark:bg-indigo-950 dark:hover:bg-indigo-900 text-indigo-700 dark:text-indigo-300 text-xs font-extrabold px-3 py-1.5 rounded-lg border border-indigo-100 dark:border-indigo-900 transition-all cursor-pointer">
-                <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-                Question Analysis
+              <h2 class="text-lg font-semibold text-slate-900 dark:text-white"><%= section.name %></h2>
+              <button onclick="openAnalysisModal('<%= section.id %>', '<%= section.name %>')" class="text-xs font-medium px-2.5 py-1 rounded border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:border-slate-400 dark:hover:border-slate-600 transition-colors cursor-pointer">
+                Syllabus &amp; Exam Pattern
               </button>
             </div>
-            <p class="text-sm font-medium text-slate-500 dark:text-slate-400 mt-1">Instructor: <%= section.teacherName || 'Not Specified' %></p>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+              Instructor: <%= section.teacherName || 'Not Specified' %>
+            </p>
           </div>
           
-          <!-- Section level progress info -->
-          <div class="flex items-center gap-6 self-start lg:self-center">
-            <div class="text-right">
-              <span class="text-xs text-slate-400 dark:text-slate-500 font-bold block uppercase mb-1">Section Solved</span>
-              <span class="text-sm font-bold text-slate-700 dark:text-slate-200">
-                <%= section.solvedCount %>/<%= section.totalCount %> Questions (<%= section.percentage %>%)
-              </span>
+          <div class="flex items-center gap-4">
+            <div class="text-xs font-mono-code text-slate-500 dark:text-slate-400">
+              <%= section.solvedCount %>/<%= section.totalCount %> solved (<%= section.percentage %>%)
             </div>
-            <div class="w-32 bg-slate-100 dark:bg-slate-700 h-2 rounded-full overflow-hidden">
-              <div class="bg-indigo-600 dark:bg-indigo-400 h-full rounded-full" style="width: <%= section.percentage %>%"></div>
+            <div class="w-24 bg-slate-100 dark:bg-slate-800 h-1 rounded-full overflow-hidden">
+              <div class="bg-slate-900 dark:bg-white h-full" style="width: <%= section.percentage %>%"></div>
             </div>
           </div>
         </div>
 
-        <!-- Action Options Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-          
-          <!-- Option 1: Course Content -->
-          <a href="/courses/<%= course.id %>/notes?sectionId=<%= section.id %>" class="flex items-center gap-5 p-6 rounded-2xl border border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 hover:bg-indigo-50/50 dark:hover:bg-slate-850 hover:border-indigo-200 dark:hover:border-slate-600 transition-all group shadow-sm">
-            <div class="p-4 bg-indigo-100 dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 rounded-2xl group-hover:scale-110 transition-transform">
-              <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
+        <!-- Section Links -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5">
+          <a href="/courses/<%= course.id %>/notes?sectionId=<%= section.id %>" class="p-4 rounded-md border border-slate-200 dark:border-slate-800 hover:border-slate-400 dark:hover:border-slate-600 transition-colors flex items-center justify-between">
+            <div>
+              <span class="block font-medium text-sm text-slate-900 dark:text-white">Course Notes &amp; Lectures</span>
+              <span class="block text-xs text-slate-500 dark:text-slate-400 mt-0.5">Structured lecture material, tables, and figures</span>
             </div>
-            <div class="text-left">
-              <span class="block font-extrabold text-lg text-slate-800 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Course Content</span>
-              <span class="block text-xs text-slate-400 dark:text-slate-500 mt-0.5">Lecture notes, lists, tables and diagrams</span>
-            </div>
+            <span class="text-xs text-slate-400">&rarr;</span>
           </a>
 
-          <!-- Option 2: Questions & Answers -->
-          <a href="/courses/<%= course.id %>/qa?sec=<%= section.id %>" class="flex items-center gap-5 p-6 rounded-2xl border border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 hover:bg-indigo-50/50 dark:hover:bg-slate-850 hover:border-indigo-200 dark:hover:border-slate-600 transition-all group shadow-sm">
-            <div class="p-4 bg-indigo-100 dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 rounded-2xl group-hover:scale-110 transition-transform">
-              <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
+          <a href="/courses/<%= course.id %>/qa?sec=<%= section.id %>" class="p-4 rounded-md border border-slate-200 dark:border-slate-800 hover:border-slate-400 dark:hover:border-slate-600 transition-colors flex items-center justify-between">
+            <div>
+              <span class="block font-medium text-sm text-slate-900 dark:text-white">Questions &amp; Answers (<%= section.totalCount %>)</span>
+              <span class="block text-xs text-slate-500 dark:text-slate-400 mt-0.5">Topic-wise questions with verified answers</span>
             </div>
-            <div class="text-left">
-              <span class="block font-extrabold text-lg text-slate-800 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Questions &amp; Answers</span>
-              <span class="block text-xs text-slate-400 dark:text-slate-500 mt-0.5">Collapsible Q&amp;As with solving checkmarks</span>
-            </div>
+            <span class="text-xs text-slate-400">&rarr;</span>
           </a>
-
         </div>
 
-        <!-- PDF Section -->
-        <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-750 flex items-center justify-between gap-4 text-xs font-semibold text-slate-500 dark:text-slate-400">
-          <div class="flex items-center gap-1.5">
-            <span>📄</span>
-            <span>Study Guide PDF:</span>
-          </div>
-          <div class="flex gap-4">
-            <a href="/courses/<%= course.id %>/pdf/<%= section.id %>/view" target="_blank" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors flex items-center gap-1">
-              <span>👁️</span> View PDF
+        <!-- PDF Footer -->
+        <div class="mt-5 pt-4 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
+          <span>Section Reference PDF</span>
+          <div class="flex gap-4 font-medium">
+            <a href="/courses/<%= course.id %>/pdf/<%= section.id %>/view" target="_blank" class="hover:text-slate-900 dark:hover:text-white transition-colors">
+              View PDF
             </a>
-            <a href="/courses/<%= course.id %>/pdf/<%= section.id %>/download" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors flex items-center gap-1">
-              <span>📥</span> Download PDF
+            <a href="/courses/<%= course.id %>/pdf/<%= section.id %>/download" class="hover:text-slate-900 dark:hover:text-white transition-colors">
+              Download PDF
             </a>
           </div>
         </div>
-
-
       </div>
     <% }) %>
   <% } else { %>
-    <div class="bg-white dark:bg-slate-800 rounded-2xl p-12 text-center border border-slate-200 dark:border-slate-700">
-      <div class="text-4xl mb-4">🗂️</div>
-      <h3 class="text-lg font-bold text-slate-800 dark:text-white mb-1">No sections created</h3>
-      <p class="text-slate-500 dark:text-slate-400 max-w-sm mx-auto text-sm">Please update seed or database structure.</p>
+    <div class="bg-white dark:bg-[#111217] rounded-lg p-10 text-center border border-slate-200 dark:border-slate-800">
+      <h3 class="text-sm font-semibold text-slate-800 dark:text-white">No sections available</h3>
     </div>
   <% } %>
 </div>
 
-<!-- Question Analysis Modal -->
-<div id="analysis-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm transition-opacity duration-250 opacity-0 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-  <div class="fixed inset-0 transition-opacity" onclick="closeAnalysisModal()"></div>
+<!-- Minimalist Analysis Modal -->
+<div id="analysis-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-[2px] transition-opacity duration-200 opacity-0 hidden" role="dialog" aria-modal="true">
+  <div class="fixed inset-0" onclick="closeAnalysisModal()"></div>
   
-  <div class="relative bg-white dark:bg-slate-800 rounded-2xl max-w-2xl w-full max-h-[85vh] shadow-2xl border border-slate-200 dark:border-slate-700/80 modal-content-panel transform scale-95 opacity-0 transition-all duration-250 flex flex-col overflow-hidden">
-    <!-- Header -->
-    <div class="bg-white dark:bg-slate-800 border-b border-slate-100 dark:border-slate-700 px-6 py-4 flex items-center justify-between z-10">
+  <div class="relative bg-white dark:bg-[#111217] rounded-lg max-w-2xl w-full max-h-[85vh] shadow-xl border border-slate-200 dark:border-slate-800 modal-content-panel transform scale-95 opacity-0 transition-all duration-200 flex flex-col overflow-hidden z-10">
+    <div class="border-b border-slate-200 dark:border-slate-800 px-6 py-4 flex items-center justify-between">
       <div>
-        <h3 class="text-xl font-extrabold text-slate-900 dark:text-white flex items-center gap-2">
-          <span>📊</span> Question Analysis: <span id="modal-section-title">Section A</span>
+        <h3 class="text-base font-semibold text-slate-900 dark:text-white">
+          Question Analysis &mdash; <span id="modal-section-title">Section</span>
         </h3>
-        <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Instructor: <span id="modal-teacher-name" class="font-semibold text-indigo-600 dark:text-indigo-400">Sabiha Mam</span></p>
+        <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Instructor: <span id="modal-teacher-name"></span></p>
       </div>
-      <button onclick="closeAnalysisModal()" class="text-slate-400 hover:text-slate-600 dark:hover:text-white p-1.5 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-xl transition-all cursor-pointer">
-        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
+      <button onclick="closeAnalysisModal()" class="text-xs font-mono-code text-slate-400 hover:text-slate-700 dark:hover:text-white px-2 py-1 cursor-pointer">
+        ESC
       </button>
     </div>
 
-    <!-- Tabs Header -->
-    <div class="flex border-b border-slate-100 dark:border-slate-700/80 px-6 bg-slate-50/50 dark:bg-slate-900/30">
-      <button onclick="switchTab('overview')" id="tab-btn-overview" class="py-3 px-4 text-xs font-black border-b-2 border-indigo-600 text-indigo-600 dark:text-indigo-400 dark:border-indigo-400 transition-all cursor-pointer uppercase tracking-wider">
-        📋 Overview &amp; Persona
+    <div class="flex border-b border-slate-200 dark:border-slate-800 px-6">
+      <button onclick="switchTab('overview')" id="tab-btn-overview" class="py-2.5 px-3 text-xs font-medium border-b-2 border-slate-900 dark:border-white text-slate-900 dark:text-white cursor-pointer">
+        Overview
       </button>
-      <button onclick="switchTab('topics')" id="tab-btn-topics" class="py-3 px-4 text-xs font-bold text-slate-500 hover:text-slate-750 dark:text-slate-400 dark:hover:text-slate-200 border-b-2 border-transparent transition-all cursor-pointer uppercase tracking-wider">
-        🔥 High-Yield Topics
+      <button onclick="switchTab('topics')" id="tab-btn-topics" class="py-2.5 px-3 text-xs font-medium text-slate-500 dark:text-slate-400 border-b-2 border-transparent cursor-pointer">
+        Key Topics
       </button>
-      <button onclick="switchTab('action')" id="tab-btn-action" class="py-3 px-4 text-xs font-bold text-slate-500 hover:text-slate-750 dark:text-slate-400 dark:hover:text-slate-200 border-b-2 border-transparent transition-all cursor-pointer uppercase tracking-wider">
-        💡 Prep Action Plan
+      <button onclick="switchTab('action')" id="tab-btn-action" class="py-2.5 px-3 text-xs font-medium text-slate-500 dark:text-slate-400 border-b-2 border-transparent cursor-pointer">
+        Preparation Notes
       </button>
     </div>
     
-    <!-- Body -->
-    <div class="p-6 overflow-y-auto flex-1 max-h-[calc(85vh-160px)]">
-      
-      <!-- Tab Content: Overview & Persona -->
-      <div id="tab-content-overview" class="space-y-5">
-        <!-- Style Description -->
-        <div class="bg-indigo-50/30 dark:bg-slate-900/40 p-5 rounded-2xl border border-indigo-100/30 dark:border-slate-700/50">
-          <div class="flex items-center gap-2 mb-2.5">
-            <span class="text-[9px] font-black bg-indigo-600 text-white px-2.5 py-0.5 rounded-full uppercase tracking-wider" id="modal-style-badge">Conceptual & Mechanism-Oriented</span>
-            <span class="text-xs font-bold text-slate-400 dark:text-slate-500">Question Style</span>
-          </div>
-          <p class="text-sm text-slate-650 dark:text-slate-300 leading-relaxed" id="modal-desc">
-            Sabiha Mam focuses heavily on the basic biological mechanisms of plant diseases...
-          </p>
+    <div class="p-6 overflow-y-auto flex-1 space-y-4">
+      <div id="tab-content-overview" class="space-y-4">
+        <div class="p-4 rounded-md border border-slate-200 dark:border-slate-800">
+          <div class="text-[11px] font-mono-code uppercase text-slate-400 mb-1" id="modal-style-badge"></div>
+          <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed" id="modal-desc"></p>
         </div>
-        
-        <!-- Exam Structure Card -->
-        <div class="bg-slate-50 dark:bg-slate-900/25 p-5 rounded-2xl border border-slate-150 dark:border-slate-700/50">
-          <h4 class="font-extrabold text-sm text-slate-900 dark:text-white flex items-center gap-2 mb-2.5">
-            <span>📝</span> Exam Structure &amp; Format
-          </h4>
-          <p class="text-xs text-slate-600 dark:text-slate-350 leading-relaxed font-semibold" id="modal-structure">
-            - Section A: 4 questions total, must answer 3. Total marks: 30.
-          </p>
+        <div class="p-4 rounded-md border border-slate-200 dark:border-slate-800">
+          <h4 class="font-semibold text-xs uppercase tracking-wider text-slate-500 mb-1.5">Exam Format</h4>
+          <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed" id="modal-structure"></p>
         </div>
-
-        <!-- Instructor Persona Card -->
-        <div class="bg-slate-50 dark:bg-slate-900/25 p-5 rounded-2xl border border-slate-150 dark:border-slate-700/50">
-          <h4 class="font-extrabold text-sm text-slate-900 dark:text-white flex items-center gap-2 mb-2.5">
-            <span>🎓</span> Instructor's Grading Mindset
-          </h4>
-          <p class="text-xs text-slate-650 dark:text-slate-350 leading-relaxed" id="modal-persona">
-            Sabiha Mam appreciates precise scientific definitions...
-          </p>
+        <div class="p-4 rounded-md border border-slate-200 dark:border-slate-800">
+          <h4 class="font-semibold text-xs uppercase tracking-wider text-slate-500 mb-1.5">Evaluation Focus</h4>
+          <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed" id="modal-persona"></p>
         </div>
       </div>
 
-      <!-- Tab Content: High-Yield Topics -->
-      <div id="tab-content-topics" class="space-y-4 hidden">
-        <div class="grid grid-cols-1 gap-4" id="modal-topics-list">
-          <!-- Dynamically populated topics -->
-        </div>
+      <div id="tab-content-topics" class="space-y-3 hidden">
+        <div class="space-y-3" id="modal-topics-list"></div>
       </div>
 
-      <!-- Tab Content: Prep Action Plan -->
-      <div id="tab-content-action" class="space-y-5 hidden">
-        <!-- Chronological Trends -->
-        <div class="bg-amber-50/20 dark:bg-amber-950/5 p-5 rounded-2xl border border-amber-100/30 dark:border-amber-900/30">
-          <h4 class="font-extrabold text-sm text-slate-900 dark:text-white flex items-center gap-2 mb-3">
-            <span>📅</span> Chronological &amp; Alternate Year Trends
-          </h4>
-          <ul class="space-y-2 list-none p-0" id="modal-trends-list">
-            <!-- Dynamically populated trends -->
-          </ul>
+      <div id="tab-content-action" class="space-y-4 hidden">
+        <div class="p-4 rounded-md border border-slate-200 dark:border-slate-800">
+          <h4 class="font-semibold text-xs uppercase tracking-wider text-slate-500 mb-2.5">Recurrent Patterns</h4>
+          <ul class="space-y-2 list-disc pl-4 text-xs text-slate-700 dark:text-slate-300" id="modal-trends-list"></ul>
         </div>
-
-        <!-- Action Plan Checklist -->
-        <div class="bg-emerald-50/20 dark:bg-emerald-950/5 p-5 rounded-2xl border border-emerald-100/30 dark:border-emerald-900/30">
-          <h4 class="font-extrabold text-sm text-slate-900 dark:text-white flex items-center gap-2 mb-3">
-            <span>💡</span> Action Plan Checklist
-          </h4>
-          <ul class="space-y-2.5 list-none p-0" id="modal-tips-list">
-            <!-- Dynamically populated checklist -->
-          </ul>
+        <div class="p-4 rounded-md border border-slate-200 dark:border-slate-800">
+          <h4 class="font-semibold text-xs uppercase tracking-wider text-slate-500 mb-2.5">Study Checklist</h4>
+          <ul class="space-y-2 list-disc pl-4 text-xs text-slate-700 dark:text-slate-300" id="modal-tips-list"></ul>
         </div>
       </div>
-      
     </div>
 
-    <!-- Footer -->
-    <div class="border-t border-slate-100 dark:border-slate-750 px-6 py-4 flex justify-end bg-slate-50 dark:bg-slate-900/30">
-      <button onclick="closeAnalysisModal()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 px-6 rounded-xl text-sm transition-all shadow-md shadow-indigo-200 dark:shadow-none cursor-pointer">
-        Got it, thanks!
+    <div class="border-t border-slate-200 dark:border-slate-800 px-6 py-3.5 flex justify-end">
+      <button onclick="closeAnalysisModal()" class="px-4 py-1.5 rounded text-xs font-medium bg-slate-900 text-white dark:bg-white dark:text-slate-900 cursor-pointer">
+        Close
       </button>
     </div>
   </div>
 </div>
 
 <script>
-  // Dynamic client data injected from Express Course object
   const sectionsAnalysis = <%- JSON.stringify(course.Sections.reduce((acc, sec) => { acc[sec.id] = sec.analysis; return acc; }, {})) %>;
-  let activeTab = 'overview';
   
   function switchTab(tabId) {
-    activeTab = tabId;
-    
-    // Hide all tab contents
-    document.getElementById('tab-content-overview').classList.add('hidden');
-    document.getElementById('tab-content-topics').classList.add('hidden');
-    document.getElementById('tab-content-action').classList.add('hidden');
-    
-    // Deactivate all tab headers style
-    const tabs = ['overview', 'topics', 'action'];
-    tabs.forEach(t => {
-      const btn = document.getElementById(`tab-btn-${t}`);
-      btn.className = "py-3 px-4 text-xs font-bold text-slate-500 hover:text-slate-750 dark:text-slate-400 dark:hover:text-slate-200 border-b-2 border-transparent transition-all cursor-pointer uppercase tracking-wider";
+    ['overview', 'topics', 'action'].forEach(t => {
+      document.getElementById(`tab-content-${t}`).classList.add('hidden');
+      document.getElementById(`tab-btn-${t}`).className = "py-2.5 px-3 text-xs font-medium text-slate-500 dark:text-slate-400 border-b-2 border-transparent cursor-pointer";
     });
-    
-    // Show active tab content
     document.getElementById(`tab-content-${tabId}`).classList.remove('hidden');
-    
-    // Activate active tab header style
-    const activeBtn = document.getElementById(`tab-btn-${tabId}`);
-    activeBtn.className = "py-3 px-4 text-xs font-black border-b-2 border-indigo-600 text-indigo-600 dark:text-indigo-400 dark:border-indigo-400 transition-all cursor-pointer uppercase tracking-wider";
+    document.getElementById(`tab-btn-${tabId}`).className = "py-2.5 px-3 text-xs font-medium border-b-2 border-slate-900 dark:border-white text-slate-900 dark:text-white cursor-pointer";
   }
   
   function openAnalysisModal(sectionId, sectionName) {
     const analysis = sectionsAnalysis[sectionId];
     if (!analysis) return;
     
-    // Set title and subtitle
     document.getElementById('modal-section-title').textContent = sectionName;
-    document.getElementById('modal-teacher-name').textContent = analysis.teacher || 'the Instructor';
-    document.getElementById('modal-style-badge').textContent = analysis.style || 'Standard Style';
+    document.getElementById('modal-teacher-name').textContent = analysis.teacher || 'Instructor';
+    document.getElementById('modal-style-badge').textContent = analysis.style || '';
     document.getElementById('modal-desc').textContent = analysis.desc || '';
     document.getElementById('modal-structure').textContent = analysis.examStructure || '';
     document.getElementById('modal-persona').textContent = analysis.teacherPersona || '';
     
-    // Render Important Topics
     const topicsContainer = document.getElementById('modal-topics-list');
     topicsContainer.innerHTML = '';
     analysis.importantTopics.forEach(topic => {
-      let weightColor = 'bg-slate-100 text-slate-800 dark:bg-slate-700 dark:text-slate-200';
-      if (topic.weight === 'Critical') {
-        weightColor = 'bg-rose-100 text-rose-850 dark:bg-rose-950 dark:text-rose-200 border border-rose-200 dark:border-rose-900';
-      } else if (topic.weight === 'Very High') {
-        weightColor = 'bg-amber-100 text-amber-850 dark:bg-amber-950 dark:text-amber-200 border border-amber-200 dark:border-amber-900';
-      } else if (topic.weight === 'High') {
-        weightColor = 'bg-indigo-100 text-indigo-850 dark:bg-indigo-950 dark:text-indigo-200 border border-indigo-200 dark:border-indigo-900';
-      }
-      
       const topicEl = document.createElement('div');
-      topicEl.className = 'border border-slate-150 dark:border-slate-700/60 p-4 rounded-xl bg-slate-50/50 dark:bg-slate-900/40';
+      topicEl.className = 'border border-slate-200 dark:border-slate-800 p-4 rounded-md';
       topicEl.innerHTML = `
-        <div class="flex items-center justify-between gap-3 flex-wrap">
-          <h4 class="font-bold text-sm text-slate-800 dark:text-slate-250">${topic.name}</h4>
-          <span class="text-[10px] font-bold px-2 py-0.5 rounded-full ${weightColor}">${topic.weight}</span>
+        <div class="flex items-center justify-between gap-2">
+          <h4 class="font-semibold text-xs sm:text-sm text-slate-900 dark:text-white">${topic.name}</h4>
+          <span class="text-[10px] font-mono-code px-2 py-0.5 rounded border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300">${topic.weight}</span>
         </div>
-        <div class="mt-2.5 space-y-2">
-          <div>
-            <span class="block text-[9px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider">Typical Questions</span>
-            <span class="block text-xs text-slate-600 dark:text-slate-355 leading-relaxed">${topic.typicalQuestions}</span>
-          </div>
-          <div>
-            <span class="block text-[9px] font-bold text-indigo-400 dark:text-indigo-500 uppercase tracking-wider">Scoring Secrets</span>
-            <span class="block text-xs text-indigo-650 dark:text-indigo-300 leading-relaxed bg-indigo-50/30 dark:bg-indigo-950/20 p-2.5 rounded-lg border border-indigo-100/20 dark:border-indigo-900/20">${topic.scoringTips}</span>
-          </div>
-        </div>
+        <p class="mt-2 text-xs text-slate-600 dark:text-slate-300 leading-relaxed"><strong>Questions:</strong> ${topic.typicalQuestions}</p>
+        <p class="mt-1.5 text-xs text-slate-500 dark:text-slate-400 leading-relaxed"><strong>Note:</strong> ${topic.scoringTips}</p>
       `;
       topicsContainer.appendChild(topicEl);
     });
     
-    // Render Chronological Trends
     const trendsContainer = document.getElementById('modal-trends-list');
     trendsContainer.innerHTML = '';
     analysis.chronologicalTrends.forEach(trend => {
       const li = document.createElement('li');
-      li.className = 'flex gap-2.5 items-start text-xs text-slate-650 dark:text-slate-350 leading-relaxed';
-      li.innerHTML = `<span class="text-amber-500 font-bold select-none mt-0.5">⏱</span> <span>${trend}</span>`;
+      li.textContent = trend;
       trendsContainer.appendChild(li);
     });
     
-    // Render Prep Tips
     const tipsContainer = document.getElementById('modal-tips-list');
     tipsContainer.innerHTML = '';
     analysis.prepTips.forEach(tip => {
-      const tipEl = document.createElement('li');
-      tipEl.className = 'flex gap-2.5 items-start text-xs text-slate-650 dark:text-slate-300 leading-relaxed';
-      tipEl.innerHTML = `
-        <span class="text-emerald-500 font-bold select-none">✓</span>
-        <span>${tip}</span>
-      `;
-      tipsContainer.appendChild(tipEl);
+      const li = document.createElement('li');
+      li.textContent = tip;
+      tipsContainer.appendChild(li);
     });
     
-    // Reset to overview tab
     switchTab('overview');
-    
-    // Show Modal
     const modal = document.getElementById('analysis-modal');
     modal.classList.remove('hidden');
-    // Trigger animations
     setTimeout(() => {
       modal.classList.remove('opacity-0');
       modal.querySelector('.modal-content-panel').classList.remove('scale-95', 'opacity-0');
@@ -358,7 +241,7 @@
     modal.querySelector('.modal-content-panel').classList.add('scale-95', 'opacity-0');
     setTimeout(() => {
       modal.classList.add('hidden');
-    }, 250);
+    }, 200);
   }
 </script>
 

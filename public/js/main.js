@@ -36,57 +36,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
           if (data.courses.length === 0 && data.topics.length === 0 && data.questions.length === 0) {
             searchResults.innerHTML = `
-              <div class="px-4 py-3 text-sm text-slate-500 dark:text-slate-400">
+              <div class="px-3.5 py-2.5 text-xs text-slate-500 dark:text-slate-400">
                 No results found for "${query}"
               </div>
             `;
             return;
           }
 
-          // Render Courses
           if (data.courses.length > 0) {
             const courseHeader = document.createElement('div');
-            courseHeader.className = 'px-4 py-1.5 text-xs font-bold text-slate-400 uppercase border-b border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-800';
+            courseHeader.className = 'px-3.5 py-1.5 text-[10px] font-mono-code uppercase text-slate-400 border-b border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-900';
             courseHeader.textContent = 'Courses';
             searchResults.appendChild(courseHeader);
 
             data.courses.forEach(c => {
               const item = document.createElement('a');
               item.href = `/courses/${c.id}`;
-              item.className = 'flex items-center justify-between px-4 py-2.5 text-sm text-slate-700 dark:text-slate-200 hover:bg-indigo-50 dark:hover:bg-slate-700 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors';
-              item.innerHTML = `<span class="font-semibold">${c.name} (${c.code})</span> <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-600 dark:text-indigo-400">Term ${c.term || '3-2'}</span>`;
+              item.className = 'flex items-center justify-between px-3.5 py-2 text-xs text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/80 transition-colors';
+              item.innerHTML = `<span class="font-medium">${c.name} (${c.code})</span> <span class="text-[10px] font-mono-code text-slate-400">Term ${c.term || '3-2'}</span>`;
               searchResults.appendChild(item);
             });
           }
 
-          // Render Topics
           if (data.topics.length > 0) {
             const topicHeader = document.createElement('div');
-            topicHeader.className = 'px-4 py-1.5 text-xs font-bold text-slate-400 uppercase border-b border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-800';
+            topicHeader.className = 'px-3.5 py-1.5 text-[10px] font-mono-code uppercase text-slate-400 border-b border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-900';
             topicHeader.textContent = 'Topics';
             searchResults.appendChild(topicHeader);
 
             data.topics.forEach(t => {
               const item = document.createElement('a');
               item.href = `/courses/${t.Section.courseId}/qa?sec=${t.Section.id}#topic-${t.id}`;
-              item.className = 'block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-indigo-50 dark:hover:bg-slate-700 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors';
-              item.innerHTML = `<span class="font-medium">${t.name}</span> <span class="text-xs text-slate-400 dark:text-slate-500">(${t.Section.Course.name} • Term ${t.Section.Course.term || '3-2'})</span>`;
+              item.className = 'block px-3.5 py-2 text-xs text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/80 transition-colors';
+              item.innerHTML = `<span class="font-medium">${t.name}</span> <span class="text-[11px] text-slate-400">(${t.Section.Course.name} • ${t.Section.Course.term || '3-2'})</span>`;
               searchResults.appendChild(item);
             });
           }
 
-          // Render Questions
           if (data.questions.length > 0) {
             const questionHeader = document.createElement('div');
-            questionHeader.className = 'px-4 py-1.5 text-xs font-bold text-slate-400 uppercase border-b border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-800';
-            questionHeader.textContent = 'Questions & Answers';
+            questionHeader.className = 'px-3.5 py-1.5 text-[10px] font-mono-code uppercase text-slate-400 border-b border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-900';
+            questionHeader.textContent = 'Questions';
             searchResults.appendChild(questionHeader);
 
             data.questions.forEach(q => {
               const item = document.createElement('a');
               item.href = `/courses/${q.Topic.Section.courseId}/qa?sec=${q.Topic.Section.id}&question=${q.id}#item-${q.id}`;
-              item.className = 'block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-indigo-50 dark:hover:bg-slate-700 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors truncate';
-              item.innerHTML = `<span class="font-medium">${q.questionText}</span> <br/> <span class="text-xs text-slate-400 dark:text-slate-500">${q.Topic.name} — ${q.Topic.Section.Course.name} (Term ${q.Topic.Section.Course.term || '3-2'})</span>`;
+              item.className = 'block px-3.5 py-2 text-xs text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/80 transition-colors truncate';
+              item.innerHTML = `<span class="font-medium">${q.questionText}</span> <br/> <span class="text-[11px] text-slate-400">${q.Topic.name} — ${q.Topic.Section.Course.name} (${q.Topic.Section.Course.term || '3-2'})</span>`;
               searchResults.appendChild(item);
             });
           }
@@ -96,7 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       };
 
-      // Debounced search trigger (300ms)
       let timeout;
       searchInput.addEventListener('input', (e) => {
         clearTimeout(timeout);
@@ -105,7 +101,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 300);
       });
 
-      // Close dropdown on click outside
       document.addEventListener('click', (e) => {
         if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
           searchResults.classList.add('hidden');
@@ -114,47 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Setup search for both Desktop and Mobile elements
   setupSearch('global-search-input', 'search-results-dropdown');
   setupSearch('mobile-search-input', 'mobile-search-results-dropdown');
-
-  // Exam Countdown Live Timer Logic
-  const countdownContainer = document.getElementById('exam-countdown');
-  if (countdownContainer) {
-    const examDateStr = countdownContainer.dataset.date;
-    const examDate = new Date(examDateStr).getTime();
-
-    const daysEl = document.getElementById('cd-days');
-    const hoursEl = document.getElementById('cd-hours');
-    const minutesEl = document.getElementById('cd-minutes');
-    const secondsEl = document.getElementById('cd-seconds');
-
-    const updateTimer = () => {
-      const now = new Date().getTime();
-      const distance = examDate - now;
-
-      if (distance < 0) {
-        clearInterval(timerInterval);
-        if (daysEl) daysEl.textContent = '00';
-        if (hoursEl) hoursEl.textContent = '00';
-        if (minutesEl) minutesEl.textContent = '00';
-        if (secondsEl) secondsEl.textContent = '00';
-        return;
-      }
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      if (daysEl) daysEl.textContent = String(days).padStart(2, '0');
-      if (hoursEl) hoursEl.textContent = String(hours).padStart(2, '0');
-      if (minutesEl) minutesEl.textContent = String(minutes).padStart(2, '0');
-      if (secondsEl) secondsEl.textContent = String(seconds).padStart(2, '0');
-    };
-
-    updateTimer();
-    const timerInterval = setInterval(updateTimer, 1000);
-  }
-
 });
