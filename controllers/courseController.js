@@ -463,7 +463,7 @@ exports.getCourse = async (req, res) => {
 
 exports.getTopics = async (req, res) => {
   try {
-    const { sectionId } = req.query;
+    const sectionId = req.query.sectionId || req.query.sec;
     const allCourses = await Course.findAll();
     const solvedIds = getSolvedFromCookie(req);
     const termsOverview = buildTermsOverview(allCourses, solvedIds);
@@ -500,7 +500,8 @@ exports.getTopics = async (req, res) => {
 
 exports.getQA = async (req, res) => {
   try {
-    const { sec } = req.query;
+    const sectionId = req.query.sec || req.query.sectionId;
+    const sec = sectionId;
     const allCourses = await Course.findAll();
     const solvedIds = getSolvedFromCookie(req);
     const termsOverview = buildTermsOverview(allCourses, solvedIds);
@@ -580,7 +581,7 @@ exports.getQA = async (req, res) => {
 
 exports.getNotes = async (req, res) => {
   try {
-    const { sectionId } = req.query;
+    const sectionId = req.query.sectionId || req.query.sec;
     const allCourses = await Course.findAll();
     const solvedIds = getSolvedFromCookie(req);
     const termsOverview = buildTermsOverview(allCourses, solvedIds);
