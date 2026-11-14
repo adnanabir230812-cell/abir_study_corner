@@ -556,6 +556,531 @@
               ]
             }
           ]
+        },
+        {
+          "id": 14,
+          "courseId": 8,
+          "name": "Section B",
+          "teacherName": "Section B Instructor (AT-4101)",
+          "Note": {
+            "id": 14,
+            "sectionId": 14,
+            "title": "AT 4101: Plant Breeding (Section B) — Slide Map & Organized Question Bank",
+            "content": "# Khulna University — Agrotechnology Discipline\n## Course: AT 4101 (Plant Breeding — Section B)\n### Master Syllabus, Slide Deck Map & Extracted Question Organization (2016–2026)\n\n> **Status:** All **77 past exam questions** (2016–2017 through 2026) have been extracted without omission and mapped topic-by-topic to the 10 official Section B lecture slide decks (`G:\\genetics\\section b`). Solutions will be written strictly after matching with classroom handwritten notes.\n\n---\n\n### Slide Decks Analyzed (10 Files)\n1. `1.1. Introduction to Plant Breeding,2026.pptx` *(20 slides)* — Objectives, history, Green Revolution, conventional vs. modern breeding.\n2. `2.1. Genetics knowledge for PB,2026.pptx` *(23 slides)* — Mendelian genetics, dominance, gene interaction, linkage, polygenic traits, heritability.\n3. `2.2. Knowledge of Genetics,2026.pptx` *(13 slides)* — Cytogenetics, quantitative genetics, molecular genetics, mutation genetics, cytoplasmic inheritance.\n4. `3. Distant hybridization.pptx` *(35 slides)* — Wide crossing, pre- & post-fertilization barriers, embryo rescue, bridge cross, somatic hybridization, Triticale.\n5. `4. Ploidy Manipulation,2026.pptx` *(90 slides)* — Heteroploidy, aneuploidy, haploid/DH, optimum ploidy, auto- & allopolyploids, wheat evolution, Brassica U's Triangle, homoeologous chromosomes.\n6. `5. Mutation breeding, 2026.pptx` *(62 slides)* — Types of mutations, molecular mechanisms, tautomeric shifts, mutagens (physical/chemical/biological), oligogenic & polygenic mutagenesis.\n7. `5.1. Mutation Breeding, 2026.pptx` *(14 slides)* — General procedure, $M_2$ importance, EMS rice mutation breeding schemes (Schemes 1–3).\n8. `6. Heterosis, 2026 new.pptx` *(38 slides)* — Concepts, MP/BP/Standard heterosis calculations, dominance/overdominance/epistasis, physiological basis, inbreeding depression, GMS/CMS/CGMS, SI, A/B/R hybrid rice, hybrid cross combinations.\n9. `7. Quantitative Inheritance, 2026.pptx` *(31 slides)* — Polygenic traits, $P = G + E$, modifying genes, Nilsson-Ehle's wheat kernel color, transgressive variation, Hardy-Weinberg, heritability (sessional reference).\n10. `8. Stress Breeding,2026.pptx` *(18 slides)* — Biotic/abiotic stress classification, strategies, breeding protocol for rice salinity tolerance.\n\n---\n\n### Organized Topic Distribution (77 Total Questions)\n| Topic | Title | Questions | Exam Question Slot |\n| :---: | :--- | :---: | :--- |\n| **1** | Distant (Wide) Hybridization, Barriers & Applications | **15** | Question 5 |\n| **2** | Ploidy Manipulation, Polyploidy & Aneuploidy | **18** | Question 6 (+ Q5a/5b/5d) |\n| **3** | Mutation Breeding & Mutagenesis | **14** | Question 7 / Q6 |\n| **4** | Heterosis & Inbreeding Depression | **12** | Question 8 / Q7 |\n| **5** | Male Sterility, Self-Incompatibility & Hybrid Seed Production | **6** | Question 7c / Q8a / Q8b |\n| **6** | Quantitative Inheritance, Multiple Factor Hypothesis & Gene Action | **8** | Question 8 |\n| **7** | Heritability & Biometrical Statistics | **4** | Question 8 |\n| **Total** | **All 6 Exams (2016–2026)** | **77** | **100% Extracted** |\n"
+          },
+          "Topics": [
+            {
+              "id": 340,
+              "sectionId": 14,
+              "name": "1. Distant (Wide) Hybridization, Barriers & Applications",
+              "Questions": [
+                {
+                  "id": 5105,
+                  "topicId": 340,
+                  "questionText": "[2026] Question 5(a) — Explain the causes of hybrid sterility in distant hybridization. [L2; CLO3] (Marks: 3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `3. Distant hybridization.pptx (Slides 18, 21, 26)`\n\n**Slide Key Focus:** Failure of homologous chromosomes to pair in meiosis -> univalents, laggards, aneuploid gametes; chromosomal & genetic incompatibility."
+                },
+                {
+                  "id": 5106,
+                  "topicId": 340,
+                  "questionText": "[2026] Question 5(b) — Justify the use of distant hybridization in modern plant breeding programs. [L5; CLO3] (Marks: 4.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `3. Distant hybridization.pptx (Slides 8–11, 28–33)`\n\n**Slide Key Focus:** Introgressing disease/insect resistance, abiotic stress tolerance, broadening genetic diversity, CMS transfer, chromosome engineering, novel crops."
+                },
+                {
+                  "id": 5107,
+                  "topicId": 340,
+                  "questionText": "[2026] Question 5(c) — Illustrate how colchicine is used in restoring the fertility of interspecific hybrids. [L3; CLO3] (Marks: 3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `3. Distant hybridization.pptx (Slides 21, 26–27) & 4. Ploidy Manipulation (Slides 52, 66–67, 89)`\n\n**Slide Key Focus:** Colchicine blocks spindle formation -> chromosome doubling (2n -> 4n amphidiploid) -> each chromosome gets a homologous partner for bivalent pairing."
+                },
+                {
+                  "id": 5108,
+                  "topicId": 340,
+                  "questionText": "[2024 | 2022-23] Question 5(a) — 'The somatic hybridization technique can be used to produce distant hybrids.' Elucidate. (Marks: 3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `3. Distant hybridization.pptx (Slide 5, 35)`\n\n**Slide Key Focus:** Protoplast fusion bypasses sexual incompatibility, transfers cytoplasmic genes (CMS/chloroplast), creates novel somatic hybrids."
+                },
+                {
+                  "id": 5109,
+                  "topicId": 340,
+                  "questionText": "[2024 | 2022-23] Question 5(c) — Briefly discuss the role of wild species in crop improvement. (Marks: 2.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `3. Distant hybridization.pptx (Slides 9–11, 28–33)`\n\n**Slide Key Focus:** Wild relatives harbor genes absent in cultivated varieties (rust resistance from Aegilops, salinity/drought/cold tolerance, yield & quality)."
+                },
+                {
+                  "id": 5110,
+                  "topicId": 340,
+                  "questionText": "[2024 | 2022-23] Question 5(d) — Enumerate the roles of wide-crossing in crop improvements. (Marks: 2.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `3. Distant hybridization.pptx (Slides 8–11, 27–33)`\n\n**Slide Key Focus:** Disease/pest resistance, abiotic stress, broadening genetic base, yield & quality, CMS transfer, creation of new crop species (e.g., Triticale)."
+                },
+                {
+                  "id": 5111,
+                  "topicId": 340,
+                  "questionText": "[2023 | 2021-22] Question 5(b) — Differentiate between hybrid sterility and hybrid breakdown. Elucidate the main cause of hybrid sterility. (Marks: 2+2=4.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `3. Distant hybridization.pptx (Slides 18–21, 26)`\n\n**Slide Key Focus:** Hybrid sterility occurs in F1 (meiotic pairing failure) vs. Hybrid breakdown occurs in F2 or later generations (recombination breaks harmonious gene complexes)."
+                },
+                {
+                  "id": 5112,
+                  "topicId": 340,
+                  "questionText": "[2023 | 2021-22] Question 5(c) — Describe the benefits of distant hybridization for crop improvement. (Marks: 3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `3. Distant hybridization.pptx (Slides 8–11)`\n\n**Slide Key Focus:** 8 major benefits listed in Slides 10–11 with crop examples (Wheat x Aegilops, Triticale, Rice x Wild rice)."
+                },
+                {
+                  "id": 5113,
+                  "topicId": 340,
+                  "questionText": "[2020-21] Question 5(b) — Why interspecific hybridization has often failed to produce desired results? What remedial measures would you adopt to make it more successful? (Marks: 4.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `3. Distant hybridization.pptx (Slides 14, 16, 18–23, 34–35)`\n\n**Slide Key Focus:** Pre- & post-fertilization barriers vs. remedies (hormones, bud/cut-style/mentor pollen, embryo rescue, bridge cross, colchicine chromosome doubling)."
+                },
+                {
+                  "id": 5114,
+                  "topicId": 340,
+                  "questionText": "[2017-18] Question 5(a) — Annotate briefly the role of wide crossing in crop improvement. (Marks: 2.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `3. Distant hybridization.pptx (Slides 8–11)`\n\n**Slide Key Focus:** Key roles in transferring resistance, stress tolerance, widening diversity, and creating amphidiploids."
+                },
+                {
+                  "id": 5115,
+                  "topicId": 340,
+                  "questionText": "[2017-18] Question 5(b) — 'Hybrid break down is a major problem in distant hybridization' -elucidate. (Marks: 3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `3. Distant hybridization.pptx (Slide 21)`\n\n**Slide Key Focus:** Reduced vigor and fertility in F2/later segregating generations due to disharmonious genetic recombination; solved by repeated selection & backcrossing."
+                },
+                {
+                  "id": 5116,
+                  "topicId": 340,
+                  "questionText": "[2017-18] Question 5(c) — What does the term hybrid inviability signify? Explain the main reasons of hybrid inviability in case of wide hybridization. (Marks: 3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `3. Distant hybridization.pptx (Slides 18–21)`\n\n**Slide Key Focus:** Post-fertilization failure of zygote/embryo to survive into a mature F1 plant (endosperm failure, lethal gene interactions, disharmonious chromosome sets)."
+                },
+                {
+                  "id": 5117,
+                  "topicId": 340,
+                  "questionText": "[2016-17] Question 5(a) — How did plant breeders remove the associated problems in developing the new rice NERICA? (Marks: 3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `3. Distant hybridization.pptx (Slides 6, 12, 20–23) + Classroom Note`\n\n**Slide Key Focus:** Oryza sativa x Oryza glaberrima: overcoming hybrid sterility via embryo rescue, backcrossing to O. sativa, and anther culture/doubled haploids."
+                },
+                {
+                  "id": 5118,
+                  "topicId": 340,
+                  "questionText": "[2016-17] Question 5(b) — Formulate some guidelines to overcome the limitations of interspecific hybridization. (Marks: 4.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `3. Distant hybridization.pptx (Slides 20–23, 34–35)`\n\n**Slide Key Focus:** Adjust flowering time, special pollination (bud, mentor, cut-style), hormone treatment, embryo rescue, bridge cross, colchicine, protoplast fusion."
+                },
+                {
+                  "id": 5119,
+                  "topicId": 340,
+                  "questionText": "[2016-17] Question 5(c) — What are alien-addition and alien-substitution lines? (Marks: 3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `3. Distant hybridization.pptx (Slide 11) & 4. Ploidy Manipulation (Slide 82) + Classroom Note`\n\n**Slide Key Focus:** Chromosome engineering lines carrying an extra pair of alien chromosomes (addition) or replacing a host chromosome pair with an alien pair (substitution)."
+                }
+              ]
+            },
+            {
+              "id": 341,
+              "sectionId": 14,
+              "name": "2. Ploidy Manipulation, Polyploidy & Aneuploidy",
+              "Questions": [
+                {
+                  "id": 5120,
+                  "topicId": 341,
+                  "questionText": "[2026] Question 6(a) — Define homoeologous chromosomes. [L2; CLO3] (Marks: 1.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `4. Ploidy Manipulation,2026.pptx (Slides 84–86)`\n\n**Slide Key Focus:** Partially homologous chromosomes from different but related ancestral species coexisting in an allopolyploid (e.g., A, B, D genomes in wheat)."
+                },
+                {
+                  "id": 5121,
+                  "topicId": 341,
+                  "questionText": "[2026] Question 6(b) — Analyze how allopolyploidy leads to heterosis-like effects in crop plants. [L4; CLO3] (Marks: 3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `4. Ploidy Manipulation,2026.pptx (Slides 62–70) & 6. Heterosis (Slide 19)`\n\n**Slide Key Focus:** Fixed heterozygosity across divergent sub-genomes prevents segregation, combines diverse parental genomes/gene dosages for sustained hybrid vigor."
+                },
+                {
+                  "id": 5122,
+                  "topicId": 341,
+                  "questionText": "[2026] Question 6(c) — A polyploid crop shows increased size but reduced yield—explain this observation in relation to the optimum ploidy level. [L4; CLO3] (Marks: 3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `4. Ploidy Manipulation,2026.pptx (Slides 46, 56–60)`\n\n**Slide Key Focus:** Gigas characters vs. high water content, reduced fertility, slow growth, and meiotic abnormalities when ploidy exceeds species optimum (2x rice/maize, 3x banana, 4x potato)."
+                },
+                {
+                  "id": 5123,
+                  "topicId": 341,
+                  "questionText": "[2026] Question 6(d) — Give a short overview of different techniques used to manipulate ploidy levels. [L3; CLO3] (Marks: 3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `4. Ploidy Manipulation,2026.pptx (Slides 8, 32–33, 40, 50–53, 89)`\n\n**Slide Key Focus:** Chemical induction (colchicine, nitrous oxide), physical agents (heat/cold, X-ray), tissue culture/anther culture (DH lines), unreduced gametes, triploid bridges."
+                },
+                {
+                  "id": 5124,
+                  "topicId": 341,
+                  "questionText": "[2024 | 2022-23] Question 5(b) — 'Distant hybridization leads to different ploidy levels in plants.' Justify the statement with suitable examples. (Marks: 3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `3. Distant hybridization.pptx (Slide 27) & 4. Ploidy Manipulation (Slides 62–74, 78–79)`\n\n**Slide Key Focus:** Formation of sterile F1 hybrids followed by chromosome doubling into fertile allopolyploids/amphidiploids (Wheat AABBDD, Brassica U's triangle, Triticale)."
+                },
+                {
+                  "id": 5125,
+                  "topicId": 341,
+                  "questionText": "[2024 | 2022-23] Question 6(b) — Describe the practical applications of polyploidy in crop plants. (Marks: 3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `4. Ploidy Manipulation,2026.pptx (Slides 59, 68–70, 78–82, 88–90)`\n\n**Slide Key Focus:** Seedless fruits (3x banana/watermelon), larger vegetative/fodder organs (4x berseem/rye), bridging crosses, new species synthesis (Triticale), interspecific gene transfer."
+                },
+                {
+                  "id": 5126,
+                  "topicId": 341,
+                  "questionText": "[2023 | 2021-22] Question 5(a) — 'Allopolyploids are the product of distant hybridization'- justify the statement with a suitable example. (Marks: 3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `4. Ploidy Manipulation,2026.pptx (Slides 62–67, 71–74, 78–79) & 3. Distant hybridization (Slide 27)`\n\n**Slide Key Focus:** Allopolyploids arise from wide crossing between distinct species + chromosome doubling (e.g., Triticum aestivum, Triticale, Raphanobrassica, Nicotiana)."
+                },
+                {
+                  "id": 5127,
+                  "topicId": 341,
+                  "questionText": "[2023 | 2021-22] Question 6(a) — Establish the link between meiotic abnormalities and the generation of different kinds of aneuploidy. (Marks: 3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `4. Ploidy Manipulation,2026.pptx (Slides 13, 20–25, 34) + 2.2 Slide 2 + Classroom Note`\n\n**Slide Key Focus:** Nondisjunction and lagging chromosomes during Meiosis I/II form (n-1) and (n+1) gametes -> monosomy (2n-1), nullisomy (2n-2), trisomy (2n+1), tetrasomy (2n+2)."
+                },
+                {
+                  "id": 5128,
+                  "topicId": 341,
+                  "questionText": "[2023 | 2021-22] Question 6(b) — Why autopolyploidy is important for crop improvement? (Marks: 2.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `4. Ploidy Manipulation,2026.pptx (Slides 49, 54, 56, 59, 88)`\n\n**Slide Key Focus:** Gigas effects (larger flowers, fruits, tubers, leaves), seedless triploids (banana, watermelon), high biomass forage crops, potato (4x)."
+                },
+                {
+                  "id": 5129,
+                  "topicId": 341,
+                  "questionText": "[2020-21] Question 5(a) — Triticum aestivum having a genomic formula AABBDD, is a product of wide crossing as well as polyploidy, -justify. (Marks: 3+3=6.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `4. Ploidy Manipulation,2026.pptx (Slides 71–72, 79, 90) & 3. Distant hybridization (Slide 27)`\n\n**Slide Key Focus:** Two sequential wide hybridization + chromosome doubling events: AA (T. urartu) x BB (Ae. speltoides) -> AABB (T. turgidum) x DD (Ae. tauschii) -> AABBDD (6x)."
+                },
+                {
+                  "id": 5130,
+                  "topicId": 341,
+                  "questionText": "[2020-21] Question 6(a) — Cite some examples of autotriploid crops having commercial value. Why these plants are sterile? (Marks: 1+2=3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `4. Ploidy Manipulation,2026.pptx (Slides 46, 49, 54)`\n\n**Slide Key Focus:** Examples: commercial banana, seedless watermelon, Winesap apples. Sterility due to irregular trivalent pairing & unbalanced aneuploid gametes in meiosis."
+                },
+                {
+                  "id": 5131,
+                  "topicId": 341,
+                  "questionText": "[2017-18] Question 5(d) — Write the basic diploid species of Brassica with corresponding scientific names and chromosome numbers. (Marks: 2.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `4. Ploidy Manipulation,2026.pptx (Slides 73–74)`\n\n**Slide Key Focus:** U's Triangle basics: B. rapa/campestris (AA, 2n=20), B. nigra (BB, 2n=16), B. oleracea (CC, 2n=18)."
+                },
+                {
+                  "id": 5132,
+                  "topicId": 341,
+                  "questionText": "[2017-18] Question 6(a) — Illustrate the process of formation of aneuploids by nondisjunction of homologous chromosomes. (Marks: 2.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `4. Ploidy Manipulation,2026.pptx (Slides 13, 34) + Classroom Note`\n\n**Slide Key Focus:** Failure of homologous chromosomes/sister chromatids to separate at Anaphase I/II producing (n+1) and (n-1) gametes -> trisomics & monosomics upon fertilization."
+                },
+                {
+                  "id": 5133,
+                  "topicId": 341,
+                  "questionText": "[2017-18] Question 6(b) — \"Polyploidy is not common\" - comment on it. Cite examples of some polyploidy crops. (Marks: 3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `4. Ploidy Manipulation,2026.pptx (Slides 42–45, 65, 90)`\n\n**Slide Key Focus:** Rare in animals (sex chromosome disruption) vs. ~30-35% of flowering plants & ~50% of crop species (wheat 6x, potato 4x, cotton 4x, banana 3x, sugarcane)."
+                },
+                {
+                  "id": 5134,
+                  "topicId": 341,
+                  "questionText": "[2017-18] Question 6(c) — Delineate the effect of autopolyploidy on plants. (Marks: 3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `4. Ploidy Manipulation,2026.pptx (Slides 56–57)`\n\n**Slide Key Focus:** Gigas morphology (larger cells, stomata, leaves, flowers, pollen), slower growth rate, higher water content, altered self-incompatibility, reduced fertility."
+                },
+                {
+                  "id": 5135,
+                  "topicId": 341,
+                  "questionText": "[2017-18] Question 6(d) — Mention the differences between auto- and alloploids. (Marks: 2.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `4. Ploidy Manipulation,2026.pptx (Slides 76–77)`\n\n**Slide Key Focus:** Genome origin (same species AAAA vs. different species AABB), multivalent vs. bivalent pairing, segregation ratios, fertility & speciation role."
+                },
+                {
+                  "id": 5136,
+                  "topicId": 341,
+                  "questionText": "[2016-17] Question 6(a) — Distinguish between monoploids and polyploids. How could you induce haploids artificially? Delineate the use of haploid in crop improvement. (Marks: 7.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `4. Ploidy Manipulation,2026.pptx (Slides 31–33, 38–39) + Classroom Note`\n\n**Slide Key Focus:** Monoploid (1x) vs. Haploid (n) vs. Polyploid (>2x); artificial induction (anther/pollen culture, wide crossing chromosome elimination, X-ray); DH line breeding uses."
+                },
+                {
+                  "id": 5137,
+                  "topicId": 341,
+                  "questionText": "[2016-17] Question 6(b) — How can you apply the knowledge of allopolyploids in crop improvement? (Marks: 3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `4. Ploidy Manipulation,2026.pptx (Slides 80–82)`\n\n**Slide Key Focus:** Three applications: 1) Bridging crosses, 2) Creation of new crop species (Triticale), 3) Interspecific gene transfer (alien addition/substitution/translocation)."
+                }
+              ]
+            },
+            {
+              "id": 342,
+              "sectionId": 14,
+              "name": "3. Mutation Breeding & Mutagenesis",
+              "Questions": [
+                {
+                  "id": 5138,
+                  "topicId": 342,
+                  "questionText": "[2026] Question 7(a) — Mutation breeding is said to complement conventional breeding rather than replace it. Justify this statement with examples. [L5; CLO4] (Marks: 2.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `5.1. Mutation Breeding, 2026.pptx (Slides 9–11) & 5. Mutation breeding (Slide 61)`\n\n**Slide Key Focus:** Creates new alleles/traits lacking in existing germplasm (e.g., dwarfness, earliness, salt/disease tolerance) while still relying on crossing & selection to fix elite lines."
+                },
+                {
+                  "id": 5139,
+                  "topicId": 342,
+                  "questionText": "[2026] Question 7(b) — How do spontaneous gene mutations happen? [L2; CLO4] (Marks: 3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `5. Mutation breeding, 2026.pptx (Slides 27–29, 44–46, 48)`\n\n**Slide Key Focus:** DNA replication errors, tautomeric shifts of nitrogenous bases, depurination/deamination, spontaneous errors & natural background radiation/mutagens."
+                },
+                {
+                  "id": 5140,
+                  "topicId": 342,
+                  "questionText": "[2026] Question 7(c) — Formulate a breeding program using EMS to enhance disease resistance in rice. [L6; CLO4] (Marks: 5.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `5.1. Mutation Breeding, 2026.pptx (Slides 6–7, 12–14) & 8. Stress Breeding (Slides 13–18)`\n\n**Slide Key Focus:** Complete M0 -> EMS seed treatment (LD50) -> M1 planting -> M2 disease screening (homozygous recessive mutants expressed) -> M3-M5 confirmation -> M6+ yield trials."
+                },
+                {
+                  "id": 5141,
+                  "topicId": 342,
+                  "questionText": "[2024 | 2022-23] Question 6(a) — Classify and discuss different mutations. (Marks: 4.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `5. Mutation breeding, 2026.pptx (Slides 13–26, 31)`\n\n**Slide Key Focus:** Chromosomal vs Genomic vs Gene/Point; Germinal vs Somatic vs Cytoplasmic; Addition/Deletion (frameshift) vs Substitution (transition/transversion); Silent/Missense/Nonsense."
+                },
+                {
+                  "id": 5142,
+                  "topicId": 342,
+                  "questionText": "[2024 | 2022-23] Question 6(c) — 'Mutations are the raw materials of evolution.' Argue. (Marks: 3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `5. Mutation breeding, 2026.pptx (Slides 4, 8–9, 52–53)`\n\n**Slide Key Focus:** Mutation is the ultimate source of all new alleles & heritable genetic variation upon which natural/artificial selection acts to drive evolution."
+                },
+                {
+                  "id": 5143,
+                  "topicId": 342,
+                  "questionText": "[2023 | 2021-22] Question 6(c) — Describe the mutagenesis process in plants for oligogenic traits. (Marks: 5.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `5. Mutation breeding, 2026.pptx (Slides 54, 58–59) & 5.1 (Slide 6–7)`\n\n**Slide Key Focus:** Step-by-step M1 -> M2 (individual plant progeny selection for visible qualitative mutants) -> M3 progeny row confirmation -> M4-M5 trials."
+                },
+                {
+                  "id": 5144,
+                  "topicId": 342,
+                  "questionText": "[2020-21] Question 6(b) — Outline a generalized procedure of mutation breeding. (Marks: 4.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `5.1. Mutation Breeding, 2026.pptx (Slides 6–7) & 5. Mutation breeding (Slides 58–60)`\n\n**Slide Key Focus:** Choice of variety/mutagen -> Determining LD50 dose -> Mutagenic treatment (M0) -> Raising M1 -> Screening M2 -> Confirmation in M3 -> Yield trials & release."
+                },
+                {
+                  "id": 5145,
+                  "topicId": 342,
+                  "questionText": "[2020-21] Question 6(c) — Discuss the applications of mutation breeding. (Marks: 3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `5.1. Mutation Breeding, 2026.pptx (Slides 8–9) & 5. Mutation breeding (Slide 61)`\n\n**Slide Key Focus:** Developing semi-dwarf architecture, early maturity, disease/pest resistance, abiotic tolerance, improved oil/protein quality, >3200 mutant varieties."
+                },
+                {
+                  "id": 5146,
+                  "topicId": 342,
+                  "questionText": "[2017-18] Question 7(a) — Classify gene mutations with brief description of each class. (Marks: 3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `5. Mutation breeding, 2026.pptx (Slides 17, 21–26, 31)`\n\n**Slide Key Focus:** Structural base changes (Transition/Transversion substitutions, Additions, Deletions/Frameshift, Inversion) & Functional effects (Silent, Missense, Nonsense)."
+                },
+                {
+                  "id": 5147,
+                  "topicId": 342,
+                  "questionText": "[2017-18] Question 7(b) — \"DNA sequence variation in a gene can change the protein produced by genetic codes.\" - justify. (Marks: 3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `5. Mutation breeding, 2026.pptx (Slides 18–26, 31) & 2.1 Slide 7`\n\n**Slide Key Focus:** Central Dogma (DNA -> mRNA codons -> Amino acid sequence): base substitutions (missense/nonsense) or indels (frameshift) alter codon reading and protein function."
+                },
+                {
+                  "id": 5148,
+                  "topicId": 342,
+                  "questionText": "[2017-18] Question 7(c) — Schematically represent the procedure of mutagenesis for polygenic traits. (Marks: 4.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `5. Mutation breeding, 2026.pptx (Slide 60)`\n\n**Slide Key Focus:** M1 -> M2 normal-looking plants selected -> M3 progeny test for quantitative shifts (mean/variance) -> M4-M5 replicated trials -> M6-M8 multi-location testing."
+                },
+                {
+                  "id": 5149,
+                  "topicId": 342,
+                  "questionText": "[2016-17] Question 7(a) — \"Mutation usually reduces viability of the individuals that carry them\" - justify. (Marks: 3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `5. Mutation breeding, 2026.pptx (Slides 12, 49–51)`\n\n**Slide Key Focus:** Random alterations in well-adapted, co-adapted gene networks are mostly recessive and deleterious/lethal (only <0.1% are beneficial)."
+                },
+                {
+                  "id": 5150,
+                  "topicId": 342,
+                  "questionText": "[2016-17] Question 7(b) — Compare between mutation breeding and conventional breeding. (Marks: 2.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `5.1. Mutation Breeding, 2026.pptx (Slide 11)`\n\n**Slide Key Focus:** Comparison table: Source of variation, precision/randomness, time required, breaking undesirable linkages, screening population size."
+                },
+                {
+                  "id": 5151,
+                  "topicId": 342,
+                  "questionText": "[2016-17] Question 7(c) — Design an experiment of mutagenesis in rice for the development of salt tolerant genotype. (Marks: 5.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `5.1. Mutation Breeding, 2026.pptx (Slides 6, 12–14) & 8. Stress Breeding (Slides 13–18)`\n\n**Slide Key Focus:** Salt-sensitive elite rice -> Gamma/EMS LD50 treatment -> M1 -> M2 hydroponic/saline soil screening (EC levels) -> M3 confirmation -> Multi-location saline yield trials."
+                }
+              ]
+            },
+            {
+              "id": 343,
+              "sectionId": 14,
+              "name": "4. Heterosis & Inbreeding Depression",
+              "Questions": [
+                {
+                  "id": 5152,
+                  "topicId": 343,
+                  "questionText": "[2026] Question 8(a) — Differentiate between mutational and balanced true heterosis. [L2; CLO4] (Marks: 2.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `6. Heterosis, 2026 new.pptx (Slides 7, 19) + Classroom Note`\n\n**Slide Key Focus:** Classification of True Heterosis: Mutational heterosis (masking of deleterious recessive alleles at a locus) vs. Balanced heterosis (well-balanced favorable polygenic combinations)."
+                },
+                {
+                  "id": 5153,
+                  "topicId": 343,
+                  "questionText": "[2026] Question 8(b) — A hybrid rice shows 6.5 t/ha yield, while the check variety shows 5.0 t/ha. Calculate standard heterosis. [L5; CLO4] (Marks: 2.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `6. Heterosis, 2026 new.pptx (Slides 8–9)`\n\n**Slide Key Focus:** Formula: Standard Heterosis (%) = [(F1 - Check) / Check] * 100 = [(6.5 - 5.0) / 5.0] * 100 = 30.0%."
+                },
+                {
+                  "id": 5154,
+                  "topicId": 343,
+                  "questionText": "[2026] Question 8(c) — Why is standard heterosis more important for variety release? [L4; CLO3] (Marks: 2.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `6. Heterosis, 2026 new.pptx (Slides 8–11)`\n\n**Slide Key Focus:** Compares F1 directly against the best existing commercial check variety cultivated by farmers; proves real economic/commercial superiority."
+                },
+                {
+                  "id": 5155,
+                  "topicId": 343,
+                  "questionText": "[2024 | 2022-23] Question 7(a) — Explain the dominance and over-dominance hypotheses for heterosis. (Marks: 3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `6. Heterosis, 2026 new.pptx (Slides 13–15, 17)`\n\n**Slide Key Focus:** Dominance (Davenport/Jones: masking of deleterious recessives, AA=Aa>aa) vs. Overdominance (Shull/East/Hull: heterozygote Aa superiority over both AA and aa)."
+                },
+                {
+                  "id": 5156,
+                  "topicId": 343,
+                  "questionText": "[2024 | 2022-23] Question 7(b) — Define heterosis. How can heterosis be exploited in crop plants? (Marks: 1+2=3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `6. Heterosis, 2026 new.pptx (Slides 3, 6, 19, 36–38)`\n\n**Slide Key Focus:** Superiority of F1 over parents/check; exploited via F1 hybrids (maize, rice, vegetables), clonal propagation, apomixis, and synthetic varieties."
+                },
+                {
+                  "id": 5157,
+                  "topicId": 343,
+                  "questionText": "[2023 | 2021-22] Question 7(a) — Differentiate heterosis from inbreeding depression. (Marks: 2.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `6. Heterosis, 2026 new.pptx (Slides 3, 20–21)`\n\n**Slide Key Focus:** Increase in vigor upon crossing unrelated parents (increased heterozygosity) vs. loss of vigor/fertility upon selfing (increased homozygosity)."
+                },
+                {
+                  "id": 5158,
+                  "topicId": 343,
+                  "questionText": "[2020-21] Question 7(a) — Classify and explain heterosis based on origin and nature. (Marks: 3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `6. Heterosis, 2026 new.pptx (Slides 7–8) + Classroom Note`\n\n**Slide Key Focus:** Based on origin/nature: True heterosis (Euheterosis: Mutational & Balanced; Luxuriance) vs. Estimation types (Mid-parent, Better-parent, Standard)."
+                },
+                {
+                  "id": 5159,
+                  "topicId": 343,
+                  "questionText": "[2020-21] Question 7(b) — Elucidate the physiological basis of heterosis. (Marks: 3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `6. Heterosis, 2026 new.pptx (Slide 18)`\n\n**Slide Key Focus:** 4 physiological mechanisms: Initial capital/large embryo, Balanced metabolism (enzyme efficiency), Mitochondrial complementation (P/O ratio), Nutrient uptake."
+                },
+                {
+                  "id": 5160,
+                  "topicId": 343,
+                  "questionText": "[2017-18] Question 8(a) — How heterosis is manifested in plants? -Explain. (Marks: 3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `6. Heterosis, 2026 new.pptx (Slides 4–5)`\n\n**Slide Key Focus:** 8 manifestations: Increased yield, size & general vigor, better quality, greater adaptability, disease resistance, higher fertility, faster growth, earliness."
+                },
+                {
+                  "id": 5161,
+                  "topicId": 343,
+                  "questionText": "[2017-18] Question 8(b) — \"Hybrid vigour is essentially a physiological manifestation\" -comment upon the statement. (Marks: 3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `6. Heterosis, 2026 new.pptx (Slide 18)`\n\n**Slide Key Focus:** Explains initial capital, enzyme efficiency, mitochondrial complementation, higher carboxylase/photophosphorylation & nutrient assimilation."
+                },
+                {
+                  "id": 5162,
+                  "topicId": 343,
+                  "questionText": "[2016-17] Question 8(a) — Describe various features of heterosis in crop plants. (Marks: 3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `6. Heterosis, 2026 new.pptx (Slides 3–6, 19)`\n\n**Slide Key Focus:** Positive & negative directions, higher in cross-pollinated species, maximum in F1 & declines in F2, reproducible via controlled crossing or fixation."
+                },
+                {
+                  "id": 5163,
+                  "topicId": 343,
+                  "questionText": "[2016-17] Question 8(c) — The mean numbers of seeds produced per plant by two inbred lines of a particular plant species are 69.8 and 45.4, respectively. The F₁ hybrid produces a mean number of seeds per plant equal to 76.8. Calculate the amount of average heterosis shown by F₁. (Marks: 3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `6. Heterosis, 2026 new.pptx (Slides 8–9)`\n\n**Slide Key Focus:** Average/Mid-parent heterosis: MP = (69.8 + 45.4)/2 = 57.6; % Average Heterosis = [(76.8 - 57.6)/57.6] * 100."
+                }
+              ]
+            },
+            {
+              "id": 344,
+              "sectionId": 14,
+              "name": "5. Male Sterility, Self-Incompatibility & Hybrid Seed Production",
+              "Questions": [
+                {
+                  "id": 5164,
+                  "topicId": 344,
+                  "questionText": "[2024 | 2022-23] Question 7(c) — Discuss the phenomenon of male sterility, its types, and utilization in hybrid seed production. (Marks: 4.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `6. Heterosis, 2026 new.pptx (Slides 23–25, 29–34)`\n\n**Slide Key Focus:** Failure to produce viable functional pollen while female fertility remains intact; GMS, CMS, CGMS; eliminates manual emasculation in commercial hybrid seed production."
+                },
+                {
+                  "id": 5165,
+                  "topicId": 344,
+                  "questionText": "[2023 | 2021-22] Question 7(b) — Distinguish between self-incompatibility and male sterility. (Marks: 3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `6. Heterosis, 2026 new.pptx (Slides 23–28)`\n\n**Slide Key Focus:** Normal viable pollen fails to fertilize same flower (GSI/SSI) vs. absence/non-functionality of viable pollen itself (GMS/CMS/CGMS)."
+                },
+                {
+                  "id": 5166,
+                  "topicId": 344,
+                  "questionText": "[2023 | 2021-22] Question 7(c) — Discuss the steps involved in the development of hybrid rice variety. (Marks: 5.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `6. Heterosis, 2026 new.pptx (Slides 29–34)`\n\n**Slide Key Focus:** Three-line (CGMS) system: A-line (CMS), B-line (Maintainer), R-line (Restorer); 2-step multiplication: A x B (maintains A) and A x R (commercial hybrid seed)."
+                },
+                {
+                  "id": 5167,
+                  "topicId": 344,
+                  "questionText": "[2023 | 2021-22] Question 8(a) — Using four (4) inbred lines, show the possible number of single, three-way, and double-crosses. (Marks: 3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `6. Heterosis, 2026 new.pptx (Slide 35) + Classroom Note`\n\n**Slide Key Focus:** Combinatorial formulas for n=4 inbreds: Single = n(n-1)/2 = 6; Three-way = n(n-1)(n-2)/2 = 12; Double = n(n-1)(n-2)(n-3)/8 = 3."
+                },
+                {
+                  "id": 5168,
+                  "topicId": 344,
+                  "questionText": "[2020-21] Question 7(c) — What is CMS line? How is it made artificially? (Marks: 1+3=4.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `6. Heterosis, 2026 new.pptx (Slides 24, 29, 31) & 3. Distant hybridization (Slide 35)`\n\n**Slide Key Focus:** Cytoplasmic Male Sterile (A-line) controlled by mitochondrial cytoplasm; developed via interspecific/wide backcrossing (substituting nuclear genome into sterile cytoplasm) or protoplast fusion."
+                },
+                {
+                  "id": 5169,
+                  "topicId": 344,
+                  "questionText": "[2016-17] Question 8(b) — Outline a procedure of hybrid seed production in rice. (Marks: 4.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `6. Heterosis, 2026 new.pptx (Slides 29–34)`\n\n**Slide Key Focus:** Isolation plots, row ratios of A-line and R-line, synchronization of flowering, supplementary pollination (rope pulling/GA3), harvesting hybrid seed on A-line."
+                }
+              ]
+            },
+            {
+              "id": 345,
+              "sectionId": 14,
+              "name": "6. Quantitative Inheritance, Multiple Factor Hypothesis & Gene Action",
+              "Questions": [
+                {
+                  "id": 5170,
+                  "topicId": 345,
+                  "questionText": "[2026] Question 8(d) — Define the multiple factor hypothesis. [L1, L2; CLO4] (Marks: 2.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `7. Quantitative Inheritance, 2026.pptx (Slides 11–16, 20)`\n\n**Slide Key Focus:** Quantitative traits are governed by many independent genes (multiple factors/polygenes), each contributing small, equal, cumulative/additive phenotypic effects without dominance."
+                },
+                {
+                  "id": 5171,
+                  "topicId": 345,
+                  "questionText": "[2026] Question 8(e) — Explain how kernel color in wheat supports multiple-factor inheritance. [L3; CLO4] (Marks: 2.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `7. Quantitative Inheritance, 2026.pptx (Slides 11, 13–16)`\n\n**Slide Key Focus:** Nilsson-Ehle's cross of dark red (AABB) x white (aabb) -> F1 medium red (AaBb) -> F2 continuous 1:4:6:4:1 gradient based on dosage of contributing uppercase alleles (4, 3, 2, 1, 0)."
+                },
+                {
+                  "id": 5172,
+                  "topicId": 345,
+                  "questionText": "[2024 | 2022-23] Question 8(c) — Contrast between qualitative and quantitative traits. (Marks: 2.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `7. Quantitative Inheritance, 2026.pptx (Slides 4–5) & 2.2 Slide 10`\n\n**Slide Key Focus:** Oligogenic (1-2 major genes) vs. Polygenic; discrete classes vs. continuous distribution; low vs. high environmental influence."
+                },
+                {
+                  "id": 5173,
+                  "topicId": 345,
+                  "questionText": "[2024 | 2022-23] Question 8(d) — Explain the multiple-factor hypothesis with a suitable example. (Marks: 3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `7. Quantitative Inheritance, 2026.pptx (Slides 11–16)`\n\n**Slide Key Focus:** Statement of hypothesis + Nilsson-Ehle's wheat kernel color cross showing 1:4:6:4:1 F2 phenotypic ratio."
+                },
+                {
+                  "id": 5174,
+                  "topicId": 345,
+                  "questionText": "[2023 | 2021-22] Question 8(b) — Explain transgressive segregation with an example. (Marks: 2.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `7. Quantitative Inheritance, 2026.pptx (Slides 24–25)`\n\n**Slide Key Focus:** Appearance of F2 or later progeny exceeding both extreme parents when complementary favorable alleles (e.g., AAbb x aaBB -> AABB) recombine."
+                },
+                {
+                  "id": 5175,
+                  "topicId": 345,
+                  "questionText": "[2020-21] Question 8(a) — Make a comparison between qualitative and quantitative traits. (Marks: 2.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `7. Quantitative Inheritance, 2026.pptx (Slides 4–5) & 2.2 Slide 10`\n\n**Slide Key Focus:** Gene number, discontinuous vs. continuous variation, environmental effect, statistical vs. ratio analysis."
+                },
+                {
+                  "id": 5176,
+                  "topicId": 345,
+                  "questionText": "[2020-21] Question 8(b) — Briefly describe different types gene action. (Marks: 3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `7. Quantitative Inheritance, 2026.pptx (Slides 7–8) & 2.1 Slides 13–14 & 2.2 Slide 10`\n\n**Slide Key Focus:** Additive (A), Dominance (D), and Epistatic/Non-allelic interaction (I = additive x additive, additive x dominance, dominance x dominance)."
+                },
+                {
+                  "id": 5177,
+                  "topicId": 345,
+                  "questionText": "[2020-21] Question 8(c) — Prove polygenic inheritance with Nilsson-Ehle's multiple factor hypothesis. (Marks: 5.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `7. Quantitative Inheritance, 2026.pptx (Slides 11–16)`\n\n**Slide Key Focus:** Complete proof with Dark Red (AABB / AABBCC) x White (aabb / aabbcc) F1 & Punnett square yielding 1:4:6:4:1 (2 genes) or 1:6:15:20:15:6:1 (3 genes)."
+                }
+              ]
+            },
+            {
+              "id": 346,
+              "sectionId": 14,
+              "name": "7. Heritability & Biometrical Statistics",
+              "Questions": [
+                {
+                  "id": 5178,
+                  "topicId": 346,
+                  "questionText": "[2024 | 2022-23] Question 8(a) — Differentiate between broad sense and narrow sense heritability. (Marks: 2.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `7. Quantitative Inheritance, 2026.pptx (Slide 30 - Sessional) & 2.1 (Slide 19)`\n\n**Slide Key Focus:** Broad-sense (H2 = Vg / Vp, total genetic variance) vs. Narrow-sense (h2 = Va / Vp, only transmissible additive genetic variance)."
+                },
+                {
+                  "id": 5179,
+                  "topicId": 346,
+                  "questionText": "[2024 | 2022-23] Question 8(b) — Explain the factors affecting heritability estimates. (Marks: 3.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `7. Quantitative Inheritance, 2026.pptx (Slide 30 - Sessional) + Classroom Note`\n\n**Slide Key Focus:** Genetic variability of population, environmental uniformity, experimental sample size/design, trait complexity (polygenic vs. oligogenic), method of estimation."
+                },
+                {
+                  "id": 5180,
+                  "topicId": 346,
+                  "questionText": "[2017-18] Question 8(c) — Define heritability. Differentiate broad sense and narrow sense heritability. Why is heritability estimated? (Marks: 1+2+1=4.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `7. Quantitative Inheritance, 2026.pptx (Slides 3, 30–31) & 2.1 (Slide 19)`\n\n**Slide Key Focus:** Proportion of phenotypic variance attributable to genetic variance; H2 vs h2; used to predict selection response (Genetic Advance) and choose breeding strategy."
+                },
+                {
+                  "id": 5181,
+                  "topicId": 346,
+                  "questionText": "[2023 | 2021-22] Question 8(c) — In a sample of 100 plants drawn from an F₂ population, individual plants were classified for the number of tillers. Data are given below:\n\n| No of tillers (x) | Frequency (f) |\n| :---: | :---: |\n| 1 | 2 |\n| 2 | 20 |\n| 3 | 50 |\n| 4 | 25 |\n| 5 | 1 |\n| 6 | 2 |\n\ni) What is the average number of tillers?\nii) What is the standard deviation for number of tillers?\niii) What will be the CV (%)?\n(Marks: 5.0)",
+                  "answerText": "> **Status:** ⏳ Organized (Pending Solution — awaiting classroom notes before final solving)\n\n**Mapped Lecture Slides:** `7. Quantitative Inheritance, 2026.pptx (Slide 30 - Sessional) + Classroom Note`\n\n**Slide Key Focus:** Biometrical numerical: Mean = sum(f*x)/N; SD = sqrt(sum(f*(x-mean)^2)/(N-1) or N); CV(%) = (SD/Mean)*100."
+                }
+              ]
+            }
+          ]
         }
       ]
     },
