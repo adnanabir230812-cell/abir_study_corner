@@ -1,6 +1,505 @@
 {
   "courses": [
     {
+      "id": 10,
+      "name": "Pomology",
+      "code": "AT 4103",
+      "term": "4-1",
+      "credit": 3,
+      "Sections": [
+        {
+          "id": 17,
+          "CourseId": 10,
+          "name": "Section A",
+          "Topics": [
+            {
+              "id": 366,
+              "SectionId": 17,
+              "name": "Section A: All Past Term Questions (Topic Split Pending)",
+              "Questions": [
+                {
+                  "id": 5282,
+                  "TopicId": 366,
+                  "questionText": "Distinguish between botanical fruit and horticultural fruit. (21-22, Old-4)x2",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5283,
+                  "TopicId": 366,
+                  "questionText": "Define true fruit and pseudofruit with examples. How will you distinguish them? (Old-1, Old-3)x2",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5284,
+                  "TopicId": 366,
+                  "questionText": "'Fruit production is nutritionally and economically beneficial / important.' Justify / Explain. (25-26, 22-23, 21-22, 20-21, Old-1, Old-2, Old-3, Old-4)x8",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5285,
+                  "TopicId": 366,
+                  "questionText": "Analyze the economic role of fruit production and how different fruits affect the economy of Bangladesh. (20-21, 19-20)x2",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5286,
+                  "TopicId": 366,
+                  "questionText": "Analyze the present status / situation of fruit production in Bangladesh. (Old-2, Old-3, Old-4)x3",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5287,
+                  "TopicId": 366,
+                  "questionText": "'There is enough / ample scope for increasing fruit production in Bangladesh.' Explain. (25-26, 22-23, Old-2)x3",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5288,
+                  "TopicId": 366,
+                  "questionText": "'Different parts of Bangladesh are suitable for growing different fruits' / Explain the regional distribution of fruit production in Bangladesh. (21-22, 20-21, 19-20, Old-2, Old-3, Old-4)x6",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5289,
+                  "TopicId": 366,
+                  "questionText": "List the challenges / constraints of fruit production and why the average yield of fruit is low in Bangladesh. How can it be overcome / improved? (25-26, 21-22, 20-21, Old-1, Old-4)x5",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5290,
+                  "TopicId": 366,
+                  "questionText": "What are the ten bases of fruit classification? Classify fleshy indehiscent fruits. (25-26, 22-23)x2",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5291,
+                  "TopicId": 366,
+                  "questionText": "Classify fruits based on the number of ovaries involved in fruit formation. (20-21, Old-1, Old-4)x3",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5292,
+                  "TopicId": 366,
+                  "questionText": "Classify fruits on the basis of relative salt tolerance, drought tolerance, and flowering habit with examples. (21-22, Old-1)x2",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5293,
+                  "TopicId": 366,
+                  "questionText": "Write the family name, scientific name, botanical fruit types, and edible parts of jackfruit, banana, pineapple, litchi, guava, and sapota. (Old-2, Old-3)x2",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5294,
+                  "TopicId": 366,
+                  "questionText": "State scientific names of two fruits from each of Anacardiaceae, Moraceae, and Myrtaceae family. (Old-3)",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": false
+                },
+                {
+                  "id": 5295,
+                  "TopicId": 366,
+                  "questionText": "Write the botanical fruit types and characteristics of citrus fruits. (Old-1)",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": false
+                },
+                {
+                  "id": 5296,
+                  "TopicId": 366,
+                  "questionText": "Enlist the ecological factors affecting fruit production and defend how they control global production and distribution of fruits. (25-26, 20-21, Old-2, Old-3, Old-4)x5",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5297,
+                  "TopicId": 366,
+                  "questionText": "What is the most important ecological factor other than temperature affecting cultivation of fruit? Justify your statement. (22-23)",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": false
+                },
+                {
+                  "id": 5298,
+                  "TopicId": 366,
+                  "questionText": "Analyze the impact of light and temperature on growth, development, and production of quality fruits. (22-23, 21-22)x2",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5299,
+                  "TopicId": 366,
+                  "questionText": "Which region of the world is most important/suitable for fruit production? Write characteristics, 5 countries, and 5 fruits of Mediterranean (and Tropical/Sub-tropical) zones. (25-26, 22-23, 21-22, 20-21, 19-20, Old-1, Old-2, Old-3, Old-4)x9",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5300,
+                  "TopicId": 366,
+                  "questionText": "Is the edapho-climatic condition of Bangladesh suitable for cultivating Mediterranean fruits? Explain. (19-20)",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": false
+                },
+                {
+                  "id": 5301,
+                  "TopicId": 366,
+                  "questionText": "Enumerate the indicator soil quality for fruit production. (21-22)",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": false
+                },
+                {
+                  "id": 5302,
+                  "TopicId": 366,
+                  "questionText": "Analyze the factors that should be considered in site selection and fertilizer management of a fruit orchard. (25-26, 22-23)x2",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5303,
+                  "TopicId": 366,
+                  "questionText": "You want to plant mango and lemon in two parts of your orchard. What planting systems would you follow and why? (19-20)",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": false
+                },
+                {
+                  "id": 5304,
+                  "TopicId": 366,
+                  "questionText": "What is orchard floor management? Write its objectives and briefly discuss different operations for orchard soil management. (21-22)",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": false
+                },
+                {
+                  "id": 5305,
+                  "TopicId": 366,
+                  "questionText": "'Growth regulators are important for propagation of fruit crops.' Justify and discuss PGR application & importance of auxin in fruit plant growth. (25-26, 22-23, 20-21)x3",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5306,
+                  "TopicId": 366,
+                  "questionText": "Suggest alternative ways of propagation for the fruit plants that cannot be propagated by cutting and layering. (19-20)",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": false
+                },
+                {
+                  "id": 5307,
+                  "TopicId": 366,
+                  "questionText": "Enlist the causes of unfruitfulness (general and in jackfruit) and formulate remedial measures / solutions. (25-26, 21-22, 20-21, Old-2, Old-4)x5",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5308,
+                  "TopicId": 366,
+                  "questionText": "What is alternate bearing (biennial bearing)? Explain its causes in mango orchards and discuss remedies including training and pruning. (25-26, 22-23, 21-22, 20-21, 19-20, Old-2, Old-3, Old-4)x8",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5309,
+                  "TopicId": 366,
+                  "questionText": "Write the uses and medicinal value of different plant parts of mango. (25-26)",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": false
+                },
+                {
+                  "id": 5310,
+                  "TopicId": 366,
+                  "questionText": "Classify mango depending on the period of availability with examples. (Old-3, Old-4)x2",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5311,
+                  "TopicId": 366,
+                  "questionText": "Write the growth phases / flushes of mango and factors regulating mango flowering and fruitfulness. Which flush is important for flowering? (25-26, 22-23, Old-1)x3",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5312,
+                  "TopicId": 366,
+                  "questionText": "What is sucker? Explain the different types of suckers/planting materials found in banana and pineapple, best propagating material for pineapple, and best planting time for banana with reasons. (22-23, 21-22, Old-1, Old-2, Old-3)x5",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5313,
+                  "TopicId": 366,
+                  "questionText": "Enumerate / Write a short note on the sex expression of papaya. (20-21, Old-1, Old-2, Old-4)x4",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5314,
+                  "TopicId": 366,
+                  "questionText": "Why does coconut grow well in the coastal regions of Bangladesh? (20-21, Old-1, Old-4)x3",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5315,
+                  "TopicId": 366,
+                  "questionText": "State the symptoms of coconut mite attack and suggest its control measures. (Old-4)",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": false
+                },
+                {
+                  "id": 5316,
+                  "TopicId": 366,
+                  "questionText": "Briefly describe the edible species of genus Artocarpus and state which part of Bangladesh is most suitable for jackfruit production with reasons. (Old-1, Old-4)x2",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5317,
+                  "TopicId": 366,
+                  "questionText": "Describe the soil and edaphoclimatic requirements for pineapple, coconut, banana, and guava cultivation. (22-23, Old-2, Old-3, Old-4)x4",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5318,
+                  "TopicId": 366,
+                  "questionText": "Illustrate the intercultural operations for guava, jujube, and litchi cultivation. (20-21, Old-2)x2",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5319,
+                  "TopicId": 366,
+                  "questionText": "Draw a flow diagram of post-harvest handling of fruits. (Old-1, Old-2, Old-3)x3",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "CourseId": 10,
+          "name": "Section B",
+          "Topics": [
+            {
+              "id": 367,
+              "SectionId": 18,
+              "name": "Section B: All Past Term Questions (Topic Split Pending)",
+              "Questions": [
+                {
+                  "id": 5320,
+                  "TopicId": 367,
+                  "questionText": "Define the term 'Plant Nutrient' and write down its classification with examples. (22-23, 21-22)x2",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5321,
+                  "TopicId": 367,
+                  "questionText": "Illustrate the factors that affect nutrition requirement of fruit plants. (25-26)",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": false
+                },
+                {
+                  "id": 5322,
+                  "TopicId": 367,
+                  "questionText": "How do antagonistic and synergistic relations affect plant nutrient availability? Explain. (25-26)",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": false
+                },
+                {
+                  "id": 5323,
+                  "TopicId": 367,
+                  "questionText": "Briefly explain the role of secondary and micro-nutrients in plant nutrition. Which micronutrient is considered the most important for fruit crops and why? (21-22, 19-20)x2",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5324,
+                  "TopicId": 367,
+                  "questionText": "How does boron (B) act within citrus plants? Discuss the B deficiency symptoms in citrus. (25-26)",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": false
+                },
+                {
+                  "id": 5325,
+                  "TopicId": 367,
+                  "questionText": "Give a chart / flow diagram showing nutrient mobility and deficiency/toxicity symptoms expressed in old and new leaves. (22-23, 21-22, 20-21)x3",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5326,
+                  "TopicId": 367,
+                  "questionText": "Explain the deficiency and toxicity symptoms of primary nutrients in plants, and differentiate between the deficiency symptoms of N and S. (21-22, 19-20)x2",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5327,
+                  "TopicId": 367,
+                  "questionText": "Make a brief discussion on the role and toxicity effects of P, S, and Fe, and how P and K play important roles (and excess effects) in fruit crops. (20-21, 19-20)x2",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5328,
+                  "TopicId": 367,
+                  "questionText": "Explain the deficiency and toxicity symptoms in plants in respect of Iron (Fe), Manganese (Mn), and Zinc (Zn). (22-23)",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": false
+                },
+                {
+                  "id": 5329,
+                  "TopicId": 367,
+                  "questionText": "How do juvenility and dormancy of fruit plants affect flowering? (21-22, 20-21, 19-20)x3",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5330,
+                  "TopicId": 367,
+                  "questionText": "How are evergreen and deciduous fruit trees different in respect of climatic requirements? (19-20)",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": false
+                },
+                {
+                  "id": 5331,
+                  "TopicId": 367,
+                  "questionText": "Give examples on the influence of photoperiod on flowering of fruit trees, and justify whether climate change affects flowering. (21-22)",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": false
+                },
+                {
+                  "id": 5332,
+                  "TopicId": 367,
+                  "questionText": "Is water stress harmful or beneficial for flowering in fruit crops? Discuss the effect of temperature and water stress on flowering with examples. (22-23, 21-22, 20-21, 19-20)x4",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5333,
+                  "TopicId": 367,
+                  "questionText": "Illustrate the process of mango flower formation according to Lang. How does the C:N ratio influence flowering and fruiting of plants? (25-26)",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": false
+                },
+                {
+                  "id": 5334,
+                  "TopicId": 367,
+                  "questionText": "List the major factors affecting fruit set. Explain pollination, pollinator, pollinizers, necessity of pollination, and number of seeds on fruit development. (25-26, 22-23, 21-22, 20-21, 19-20)x5",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5335,
+                  "TopicId": 367,
+                  "questionText": "How does the phenomenon of dichogamy influence fruit set in trees? Explain the sex expression phenomenon of avocado flowers. (25-26, 19-20)x2",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5336,
+                  "TopicId": 367,
+                  "questionText": "List out the phases of fruit development and briefly explain them (with a short note on hormonal changes). (22-23, 21-22)x2",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5337,
+                  "TopicId": 367,
+                  "questionText": "Make a brief discussion on the factors affecting the development and quality of fruits. (22-23)",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": false
+                },
+                {
+                  "id": 5338,
+                  "TopicId": 367,
+                  "questionText": "'The day and night temperatures are crucial for strawberry production.' Justify and describe the morphology and edaphoclimatic requirements of strawberry. (25-26, 22-23, 20-21)x3",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5339,
+                  "TopicId": 367,
+                  "questionText": "Describe the cultural management of bullock's heart and pomegranate. (25-26)",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": false
+                },
+                {
+                  "id": 5340,
+                  "TopicId": 367,
+                  "questionText": "Distinguish spur and cane pruning in grape vine with diagram. (20-21)",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": false
+                },
+                {
+                  "id": 5341,
+                  "TopicId": 367,
+                  "questionText": "Define minor fruits. Give a list of four minor fruits (with scientific and family names) from your locality. (21-22)",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": false
+                },
+                {
+                  "id": 5342,
+                  "TopicId": 367,
+                  "questionText": "Assess the scope, challenges, and commercial potential of introducing exotic fruit crops (avocado, apple) in Bangladesh with justification. (25-26, 22-23, 20-21, 19-20)x4",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5343,
+                  "TopicId": 367,
+                  "questionText": "Discuss the physiological and biochemical changes during maturation and ripening (with flow diagram). Why does harvesting mango and watermelon at physiological maturity differ from horticultural maturity? (25-26, 22-23, 20-21, 19-20)x4",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5344,
+                  "TopicId": 367,
+                  "questionText": "Classify fruits with examples on the basis of respiration, and explain how internal and external factors affect postharvest respiration. (22-23, 20-21, 19-20)x3",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5345,
+                  "TopicId": 367,
+                  "questionText": "What is shelf life / postharvest storage life? Enlist key processes determining storage life and describe how pre-harvest and post-harvest factors affect shelf life and quality of fruits. (22-23, 21-22, 20-21)x3",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5346,
+                  "TopicId": 367,
+                  "questionText": "Enlist the causes of postharvest fruit losses (physiological changes & storage conditions) and explain how post-harvest losses can be minimized. (25-26, 21-22)x2",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                },
+                {
+                  "id": 5347,
+                  "TopicId": 367,
+                  "questionText": "List the objectives and principles of preparation of value-added products from fruits, and write a short note on the bacteriostatic method of preservation. (25-26, 22-23)x2",
+                  "answerText": "*Answer pending — Will be organized by topic and solved once lecture topics/slides are provided.*",
+                  "isImportant": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": 9,
       "name": "Stresses in Agriculture and Disaster Management",
       "code": "AT 4107",
